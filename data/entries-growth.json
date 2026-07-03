@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "inbox-engine",
+    "title": "Inbox Engine",
+    "tagline": "One domain sending 5,000 cold emails/day gets burned. A hundred domains sending 50 each don't.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/inbox-engine",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "lead-agent",
+    "title": "Lead Agent",
+    "tagline": "A whiteboard tree of agents that finds leads, emails them, and books the Zoom call before you wake up.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/lead-agent",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "leadkit",
+    "title": "LeadKit",
+    "tagline": "The $100/mo outreach SaaS, except it's ~240 Node agents on your own machine and mostly runs on $0.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/leadkit",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "creator-hunt",
+    "title": "Creator Hunt",
+    "tagline": "Finds 10k-follower founders on four platforms and offers them $50 to post. Refuses to send without a mailing address.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/creator-hunt",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "cold-1m-machine",
+    "title": "Cold 1M Machine",
+    "tagline": "Planned a million cold emails, fact-checked itself, and concluded: don't send a million cold emails.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/cold-1m-machine",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "website-scaler",
+    "title": "Website Scaler",
+    "tagline": "Ten agents find businesses with no website, build them one, and email a $50 invoice-shaped offer.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/website-scaler",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "cold-email-deliverability-playbook",
+    "title": "Cold Email Deliverability Playbook",
+    "tagline": "Everything learned sending cold at scale, written down so the next domain doesn't die finding out.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/cold-email-deliverability-playbook",
+    "live": null,
+    "lang": "Markdown",
+    "year": "2026"
+  }
+]

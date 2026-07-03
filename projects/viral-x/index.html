@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>viral-x — Angus Duncan</title>
+<meta name="description" content="Reverse-engineers why tweets go viral, writes its own, and learns from real view counts. 100% local, $0.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="importmap">{
+  "imports": {
+    "lenis": "https://esm.sh/lenis@1.1.18",
+    "cwe/smooth-scroll-stage": "/cwe/smooth-scroll-stage.js",
+    "cwe/kinetic-type": "/cwe/kinetic-type.js",
+    "cwe/magnetic-cursor": "/cwe/magnetic-cursor.js",
+    "cwe/stage": "/cwe/stage.js"
+  }
+}</script>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>viral-x</h1>
+    <div class="meta mono">
+      <span>AI agents &amp; orchestration</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/viral-x" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/viral-x.webp" alt="viral-x"></div>
+  <article class="body">
+<p>An agent that reverse-engineers <em>why</em> tweets go viral, writes its own candidates, and learns from real view counts. 100% local Ollama — no API keys, no token spend, no platform API either.</p>
+<h2>How it works</h2>
+<p>The loop is harvest → analyze → generate → score → post (gated) → measure → re-weight. A corpus of >1M-view tweets (seed set included; live harvest via a Chrome extension) gets dissected by qwen2.5:32b, which names the one lever that made each tweet spread — reciprocity, curiosity gap, embarrassment, tribal agreement, utility — and distills a ranked playbook. <code>generate.js</code> then writes candidates for your niche against each high-power pattern, scores every one 0–100 for predicted virality, and flags cringe/policy/generic risk; only the best surface. Nothing auto-posts: <code>post.js</code> prints the exact text and a human posts it. About 24 hours later you record the real view count, and patterns that actually broke 100k views get weighted up in the next run — a multi-armed bandit over your own audience. Each post is a labeled experiment, so <code>experiment.js report</code> shows average views per pattern for <em>your</em> account, not generic advice.</p>
+<h2>Stack</h2>
+<p>Node.js, Ollama (qwen2.5:32b for analysis, llama3.2:3b for bulk generation), Chrome extension for harvest</p>
+<h2>Status</h2>
+<p>Working — posting and live harvest deliberately kept manual/gated; bulk auto-posting risks the account.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+<script type="module">
+  import { initSmoothScroll } from 'cwe/smooth-scroll-stage';
+  initSmoothScroll({ lerp: 0.09, parallax: false });
+  import { initMagneticCursor } from 'cwe/magnetic-cursor';
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  initMagneticCursor(document.body, { size: 30, dotSize: 4, color: dark ? '#e8e6e2' : '#111', blend: false, hoverScale: 1.5, magnetStrength: 0.25 });
+  import { initKineticType } from 'cwe/kinetic-type';
+  const h = document.querySelector('[data-headline]');
+  if (h) initKineticType(h, { split: 'chars', mode: 'reveal', stagger: 0.035, duration: 0.7, rise: 1.1, skew: 6 });
+</script>
+</body>
+</html>

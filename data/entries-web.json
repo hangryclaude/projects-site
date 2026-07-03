@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "crazy-web-effects",
+    "title": "Crazy Web Effects",
+    "tagline": "Every expensive agency web effect, rebuilt as 31 skills you can just ask for",
+    "category": "Web & creative",
+    "repo": "hangryclaude/crazy-web-effects",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "website-maker",
+    "title": "Website Maker",
+    "tagline": "An agent that builds websites, grades its own work 0–100, and retries until it clears the bar",
+    "category": "Web & creative",
+    "repo": "hangryclaude/website-maker",
+    "live": "https://wm-showcase.vercel.app",
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "heynox-tunnel",
+    "title": "Heynox Tunnel",
+    "tagline": "Fly a WebGL tunnel of notifications to reach the Nox vault. Technically, an ad",
+    "category": "Web & creative",
+    "repo": "hangryclaude/heynox-tunnel",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "nox-bullet",
+    "title": "NOX Bullet",
+    "tagline": "A bullet fires into the logo. Click to fire again. That's it, that's the site",
+    "category": "Web & creative",
+    "repo": "hangryclaude/nox-bullet",
+    "live": "https://hangryclaude.github.io/nox-bullet/",
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "lusion-wallpaper",
+    "title": "Lusion Wallpaper",
+    "tagline": "Six octaves of noise pretending to be a lava lamp, following your cursor around",
+    "category": "Web & creative",
+    "repo": "hangryclaude/lusion-wallpaper",
+    "live": "https://lusion-wallpaper.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "madebyangus",
+    "title": "Made by Angus",
+    "tagline": "The portfolio site, plus four complete fake agencies living in its basement",
+    "category": "Web & creative",
+    "repo": "hangryclaude/madebyangus",
+    "live": "https://agentworks-xi.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "plinth",
+    "title": "PLINTH",
+    "tagline": "Serious furniture for unserious objects. The UFO lamp comes with a cow, non-negotiable",
+    "category": "Web & creative",
+    "repo": null,
+    "live": "https://plinth-mauve.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "mini-men",
+    "title": "Mini Men",
+    "tagline": "Tiny construction workers build a giant pizza. $2 a video, and someone always falls in the oven",
+    "category": "Web & creative",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  }
+]

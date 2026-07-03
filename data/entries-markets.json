@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "kalshi-copybot",
+    "title": "Kalshi Copybot",
+    "tagline": "Tried to copy Kalshi's best traders. The tape is anonymous, so it stalks large prints instead.",
+    "category": "Markets & bots",
+    "repo": "hangryclaude/kalshi-copybot",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "polymarket-copybot",
+    "title": "Polymarket Copybot",
+    "tagline": "Follows Polymarket whales with a $17 bankroll and five layers of risk checks between it and a trade.",
+    "category": "Markets & bots",
+    "repo": "hangryclaude/polymarket-copybot",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "coin-sniper",
+    "title": "Coin Sniper",
+    "tagline": "pump.fun mints 1,000 coins an hour. This texts me the handful where the creator put real SOL in.",
+    "category": "Markets & bots",
+    "repo": "hangryclaude/coin-sniper",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  }
+]

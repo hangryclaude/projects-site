@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini Men — Angus Duncan</title>
+<meta name="description" content="Tiny construction workers build a giant pizza. $2 a video, and someone always falls in the oven">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="importmap">{
+  "imports": {
+    "lenis": "https://esm.sh/lenis@1.1.18",
+    "cwe/smooth-scroll-stage": "/cwe/smooth-scroll-stage.js",
+    "cwe/kinetic-type": "/cwe/kinetic-type.js",
+    "cwe/magnetic-cursor": "/cwe/magnetic-cursor.js",
+    "cwe/stage": "/cwe/stage.js"
+  }
+}</script>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>Mini Men</h1>
+    <div class="meta mono">
+      <span>Web &amp; creative</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/mini-men.webp" alt="Mini Men"></div>
+  <article class="body">
+<p>A generator for the viral TikTok genre where tiny construction workers build giant food. One command turns a subject — "pizza", "ramen bowl", "giant sneaker" — into a finished 9:16 reel with caption and hashtags, for $1–2 per video.</p>
+<h2>How it works</h2>
+<p>All the genre knowledge is baked into a single CLI: phase templates (site prep → assembly → detail work → reveal), a prompt formula for the tilt-shift miniature-diorama look, a gag bank, and caption generation. It renders image-first — per-phase stills carry the miniature aesthetic, then image-to-video models (Kling 2.5 Pro by default; Wan for drafts, Veo 3 for hero tier) add motion, and ffmpeg stitches the 1080×1920 output. Runs through the ai-vfx-reel pipeline on fal.ai.</p>
+<p>Two rules are load-bearing. Orange vests, yellow hard hats, and tilt-shift language are genre constants — restyle them and it stops reading as the genre. And every video keeps a peril gag ("someone's in the oven"), because that's the comment engine.</p>
+<p><code>--ideas 10</code> prints subjects for free, <code>--series 3 --render</code> batches videos, <code>--dry</code> previews the full spec and prompts without spending anything.</p>
+<h2>Stack</h2>
+<p>Node, fal.ai (Kling 2.5 Pro / Wan / Veo 3, flux stills), ffmpeg</p>
+<h2>Status</h2>
+<p>Working — ships as a Claude Code skill; renders take 2–5 min per shot.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+<script type="module">
+  import { initSmoothScroll } from 'cwe/smooth-scroll-stage';
+  initSmoothScroll({ lerp: 0.09, parallax: false });
+  import { initMagneticCursor } from 'cwe/magnetic-cursor';
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  initMagneticCursor(document.body, { size: 30, dotSize: 4, color: dark ? '#e8e6e2' : '#111', blend: false, hoverScale: 1.5, magnetStrength: 0.25 });
+  import { initKineticType } from 'cwe/kinetic-type';
+  const h = document.querySelector('[data-headline]');
+  if (h) initKineticType(h, { split: 'chars', mode: 'reveal', stagger: 0.035, duration: 0.7, rise: 1.1, skew: 6 });
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "lib",
+    "title": "lib",
+    "tagline": "One require() every script routes AI calls through — free providers first, paid API as a genuine last resort.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/lib",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "ai-brain",
+    "title": "AI Brain",
+    "tagline": "Chat with a 3D brain that fires while it thinks, then hands you the prompting lesson. It remembers.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/ai-brain",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "second-take",
+    "title": "Second Take",
+    "tagline": "Your command failed? A free AI already diagnosed it before Claude starts flailing. Same wall never costs twice.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/second-take",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "spend-guard",
+    "title": "spend-guard",
+    "tagline": "A watchdog with a kill-switch, so a runaway AI bot costs at most $20 before everything shuts off and texts me.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/spend-guard",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "malware-scanner",
+    "title": "malware-scanner",
+    "tagline": "Six engines and a jury of free models vote on whether a website is hostile. 0% false positives, by design.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/malware-scanner",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "laptop-agent",
+    "title": "laptop-agent",
+    "tagline": "Queue a task, a headless Claude drives the Mac's GUI itself. Stuck on 2FA? It texts me and waits.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/laptop-agent",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "jarvis",
+    "title": "Jarvis",
+    "tagline": "Call the number and Claude picks up. Text it and it texts back. Memory, tools, and a phone line — no app.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/jarvis",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "voice-caller",
+    "title": "voice-caller",
+    "tagline": "An AI that dials a lead, holds a real conversation, books the follow-up, and hangs up. FCC disclosure built in.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/voice-caller",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "cheat-glasses",
+    "title": "cheat-glasses",
+    "tagline": "Camera sees the homework, Claude solves it, the answer arrives in your ear. The name says what it's for.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/cheat-glasses",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "viral-x",
+    "title": "viral-x",
+    "tagline": "Reverse-engineers why tweets go viral, writes its own, and learns from real view counts. 100% local, $0.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/viral-x",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "graham",
+    "title": "Graham",
+    "tagline": "Feed it a dossier and it reads a person the way Graham Duncan would — rubric distilled from his actual essays.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/graham",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "samewave",
+    "title": "samewave",
+    "tagline": "Log in with Spotify and it scores your vibe against someone else's out of 100, songs to bridge included.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/samewave",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  }
+]

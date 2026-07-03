@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coin Sniper — Angus Duncan</title>
+<meta name="description" content="pump.fun mints 1,000 coins an hour. This texts me the handful where the creator put real SOL in.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="importmap">{
+  "imports": {
+    "lenis": "https://esm.sh/lenis@1.1.18",
+    "cwe/smooth-scroll-stage": "/cwe/smooth-scroll-stage.js",
+    "cwe/kinetic-type": "/cwe/kinetic-type.js",
+    "cwe/magnetic-cursor": "/cwe/magnetic-cursor.js",
+    "cwe/stage": "/cwe/stage.js"
+  }
+}</script>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>Coin Sniper</h1>
+    <div class="meta mono">
+      <span>Markets &amp; bots</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/coin-sniper" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/coin-sniper.webp" alt="Coin Sniper"></div>
+  <article class="body">
+<p>Watches pump.fun on Solana and texts me the instant a new coin is minted. Alert-only — no wallet, no keys, no money at risk. The itch: pump.fun launches move in minutes, and by the time you see one on Twitter you're the exit liquidity. This gets the alert to my phone at creation time.</p>
+<h2>How it works</h2>
+<p>One Node process holds a websocket open to PumpPortal's free new-token feed (no API key needed) and pipes matches through <code>cc-text</code>, my Mac-to-iMessage notifier. The hard part isn't the plumbing, it's the firehose: pump.fun mints over 1,000 coins an hour, nearly all garbage. So filters do the work — <code>MIN_SOL</code> only alerts when the creator's own first buy is at least N SOL (default 2; skin in the game is the best spam filter), and <code>NAME_FILTER</code> narrows to a keyword like "ai" or "dog". Every coin still lands in <code>coins.log</code> pre-filter, with a <code>seen.json</code> dedupe cache.</p>
+<p>Runs 24/7 as a launchd agent: auto-starts on login, auto-restarts on crash or websocket disconnect. Tuning is editing env vars in the plist and reloading.</p>
+<h2>Stack</h2>
+<p>Node.js, WebSocket (PumpPortal feed), launchd, cc-text/iMessage</p>
+<h2>Status</h2>
+<p>Live — running around the clock on my Mac.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+<script type="module">
+  import { initSmoothScroll } from 'cwe/smooth-scroll-stage';
+  initSmoothScroll({ lerp: 0.09, parallax: false });
+  import { initMagneticCursor } from 'cwe/magnetic-cursor';
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  initMagneticCursor(document.body, { size: 30, dotSize: 4, color: dark ? '#e8e6e2' : '#111', blend: false, hoverScale: 1.5, magnetStrength: 0.25 });
+  import { initKineticType } from 'cwe/kinetic-type';
+  const h = document.querySelector('[data-headline]');
+  if (h) initKineticType(h, { split: 'chars', mode: 'reveal', stagger: 0.035, duration: 0.7, rise: 1.1, skew: 6 });
+</script>
+</body>
+</html>

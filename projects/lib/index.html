@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lib — Angus Duncan</title>
+<meta name="description" content="One require() every script routes AI calls through — free providers first, paid API as a genuine last resort.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="importmap">{
+  "imports": {
+    "lenis": "https://esm.sh/lenis@1.1.18",
+    "cwe/smooth-scroll-stage": "/cwe/smooth-scroll-stage.js",
+    "cwe/kinetic-type": "/cwe/kinetic-type.js",
+    "cwe/magnetic-cursor": "/cwe/magnetic-cursor.js",
+    "cwe/stage": "/cwe/stage.js"
+  }
+}</script>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>lib</h1>
+    <div class="meta mono">
+      <span>AI agents &amp; orchestration</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/lib" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/lib.webp" alt="lib"></div>
+  <article class="body">
+<p>Every AI project I build needs to call a model, and paid API tokens leak fast when bots run overnight. <code>lib</code> is the fix: one shared module every script on my machine requires, and the single place any AI call is allowed to happen. It routes free-first — a learned chain of free hosted providers (Ollama Cloud, GitHub Models, Groq, Gemini, OpenRouter, Cerebras, and more) handles the bulk, quality work goes through my flat Claude Max plan at $0 marginal, and the metered Anthropic API is a genuine last resort.</p>
+<h2>How it works</h2>
+<p>Callers ask for a tier, never a model id: <code>ask("prompt", { tier: "fast" })</code>. Tiers map to routes — <code>free</code> and <code>fast</code> walk the free chain and rotate tokens on 429s, <code>smart</code>/<code>deep</code> go to Sonnet/Opus via <code>claude -p</code>, and <code>genius</code> has a free model draft, then Claude verify and refine. <code>clone-agent.cjs</code> rebuilds the agent layer on free models too: recall from a memory DB, plan into typed sub-tasks, fan out to the best-fit model per type (picked by a capability benchmark), synthesize, remember. Every call appends a cost line to <code>~/.spend/usage.jsonl</code>, which is what spend-guard watches, and a lockdown flag can refuse all paid fallback stack-wide.</p>
+<h2>Stack</h2>
+<p>Node.js, zero runtime deps in the router, GitHub Models, Ollama Cloud, Groq, Gemini, OpenRouter, Anthropic (fallback only)</p>
+<h2>Status</h2>
+<p>Working — it's the choke point every other project here routes through daily.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+<script type="module">
+  import { initSmoothScroll } from 'cwe/smooth-scroll-stage';
+  initSmoothScroll({ lerp: 0.09, parallax: false });
+  import { initMagneticCursor } from 'cwe/magnetic-cursor';
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  initMagneticCursor(document.body, { size: 30, dotSize: 4, color: dark ? '#e8e6e2' : '#111', blend: false, hoverScale: 1.5, magnetStrength: 0.25 });
+  import { initKineticType } from 'cwe/kinetic-type';
+  const h = document.querySelector('[data-headline]');
+  if (h) initKineticType(h, { split: 'chars', mode: 'reveal', stagger: 0.035, duration: 0.7, rise: 1.1, skew: 6 });
+</script>
+</body>
+</html>

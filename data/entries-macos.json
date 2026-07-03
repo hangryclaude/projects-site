@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "ghostype",
+    "title": "Ghostype",
+    "tagline": "Cursor's Tab-autocomplete, except in Messages, Mail, and everywhere else you type. Learns your voice.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/ghostype",
+    "live": null,
+    "lang": "Swift",
+    "year": "2026"
+  },
+  {
+    "slug": "habit-warden",
+    "title": "Habit Warden",
+    "tagline": "A habit tracker that blocks your distractions and plays David Goggins at you when you slack off.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/habit-warden",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "dropkit",
+    "title": "dropkit",
+    "tagline": "AirDrop as a CLI: fleet fan-out, watch folders, live radar. Refuses to spam strangers on principle.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/dropkit",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "spellfix",
+    "title": "SpellFix",
+    "tagline": "iPhone autocorrect for your Mac. Fixes teh → the in every app, leaves your lol alone.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/spellfix",
+    "live": null,
+    "lang": "Swift",
+    "year": "2026"
+  },
+  {
+    "slug": "deepworkscore",
+    "title": "DeepWorkScore",
+    "tagline": "Scores your day 0–100 from what you worked on plus how well you prompted. Doom-scrolling costs points.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/deepworkscore",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "eyesite-saver",
+    "title": "EyeSite Saver",
+    "tagline": "Every 20 minutes it takes over your screen until you look 20 feet away for 20 seconds. Non-negotiable.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/eyesite-saver",
+    "live": null,
+    "lang": "Swift",
+    "year": "2026"
+  },
+  {
+    "slug": "openclaw-warden",
+    "title": "OpenClaw Warden",
+    "tagline": "A parole officer for jailbroken local models: timed sessions, RAM checks, and a kill switch.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/openclaw-warden",
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "term-tile",
+    "title": "term-tile",
+    "tagline": "One command and every terminal window snaps into a neat grid. Stdlib only, zero dependencies.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/term-tile",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "mathsnap",
+    "title": "MathSnap",
+    "tagline": "Drag-select any math problem on screen; Claude solves it and reads the answer aloud. Raycast-ready.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/mathsnap",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "replykey",
+    "title": "ReplyKey",
+    "tagline": "An iOS keyboard with one extra key: ✨. Tap it and it writes your reply, in any app, for $0.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/ReplyKey",
+    "live": null,
+    "lang": "Swift",
+    "year": "2026"
+  }
+]
