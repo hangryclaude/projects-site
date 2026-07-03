@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
+const BASE = process.env.BASE || '';
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/projects.json'), 'utf8'));
 const { projects, categories, meta } = data;
 
@@ -60,7 +61,7 @@ function nav(active) {
   return `<nav class="site-nav">
   <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
   <div class="links mono">
-    <a href="/" ${active === 'projects' ? 'aria-current="page"' : ''} data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="${BASE}/" ${active === 'projects' ? 'aria-current="page"' : ''} data-magnetic><span class="navnum">01</span> Projects</a>
     <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
     <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
   </div>
@@ -88,7 +89,7 @@ function page({ title, desc, body, pathDepth = 0 }) {
 ${FAVICON}
 ${FONTS}
 ${IMPORTMAP}
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="${BASE}/assets/css/site.css">
 </head>
 <body>
 ${body}
@@ -100,9 +101,9 @@ ${EFFECTS}
 
 /* ── index ── */
 function card(p) {
-  const href = `/projects/${p.slug}/`;
+  const href = `${BASE}/projects/${p.slug}/`;
   return `<a class="card" href="${href}">
-  <div class="card-img"><img loading="lazy" src="/assets/thumbs/${p.slug}.webp" alt="${esc(p.title)} thumbnail"></div>
+  <div class="card-img"><img loading="lazy" src="${BASE}/assets/thumbs/${p.slug}.webp" alt="${esc(p.title)} thumbnail"></div>
   <div class="card-text">
     <p class="card-title">${esc(p.title)}</p>
     <p class="card-desc">${esc(p.tagline)}</p>
@@ -154,7 +155,7 @@ for (const p of projects) {
   ].filter(Boolean).join('\n    ');
   const body = `${nav('projects')}
 <main class="wrap detail">
-  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <a class="back mono" href="${BASE}/" data-magnetic>← All projects</a>
   <header class="detail-head">
     <h1 data-headline>${esc(p.title)}</h1>
     <div class="meta mono">
@@ -164,7 +165,7 @@ for (const p of projects) {
     ${links}
     </div>
   </header>
-  <div class="hero-img"><img src="/assets/thumbs/${p.slug}.webp" alt="${esc(p.title)}"></div>
+  <div class="hero-img"><img src="${BASE}/assets/thumbs/${p.slug}.webp" alt="${esc(p.title)}"></div>
   <article class="body">
 ${bodyHtml}
   </article>
