@@ -47,16 +47,8 @@ function md(src) {
   return out.join('\n');
 }
 
-/* ── shared page chrome ── */
-const IMPORTMAP = `<script type="importmap">{
-  "imports": {
-    "lenis": "https://esm.sh/lenis@1.1.18",
-    "cwe/smooth-scroll-stage": "/cwe/smooth-scroll-stage.js",
-    "cwe/kinetic-type": "/cwe/kinetic-type.js",
-    "cwe/magnetic-cursor": "/cwe/magnetic-cursor.js",
-    "cwe/stage": "/cwe/stage.js"
-  }
-}</script>`;
+/* ── shared page chrome (no JS effects — plain and solid) ── */
+const IMPORTMAP = '';
 
 const FONTS = `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,16 +75,7 @@ const FOOT = `<footer class="site-foot">
   </div>
 </footer>`;
 
-const EFFECTS = `<script type="module">
-  import { initSmoothScroll } from 'cwe/smooth-scroll-stage';
-  initSmoothScroll({ lerp: 0.09, parallax: false });
-  import { initMagneticCursor } from 'cwe/magnetic-cursor';
-  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-  initMagneticCursor(document.body, { size: 30, dotSize: 4, color: dark ? '#e8e6e2' : '#111', blend: false, hoverScale: 1.5, magnetStrength: 0.25 });
-  import { initKineticType } from 'cwe/kinetic-type';
-  const h = document.querySelector('[data-headline]');
-  if (h) initKineticType(h, { split: 'chars', mode: 'reveal', stagger: 0.035, duration: 0.7, rise: 1.1, skew: 6 });
-</script>`;
+const EFFECTS = '';
 
 function page({ title, desc, body, pathDepth = 0 }) {
   return `<!doctype html>
