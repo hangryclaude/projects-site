@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math Academy Solver — Angus Duncan</title>
+<meta name="description" content="The v2: now it can see the diagrams. Auto-solves whole tasks until it gets one wrong.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>Math Academy Solver</h1>
+    <div class="meta mono">
+      <span>School &amp; learning</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/mathacademy-solver" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/mathacademy-solver.webp" alt="Math Academy Solver"></div>
+  <article class="body">
+<p>The v2 of the Math Academy auto-solver, and yes, it is exactly what it sounds like: a cheat tool. It reads the current question — text, answer choices, and this time the diagram image too — answers it with a vision model, fills it in, submits, and in Auto mode advances to the next question until it gets one wrong or runs out.</p>
+<h2>How it works</h2>
+<p>A Chrome MV3 extension captures the question from the page and messages its background worker, which POSTs to a local server on <code>127.0.0.1:7676</code>. The server routes through the shared <code>ai.cjs</code> brain: free GitHub Models <code>gpt-4o</code> vision by default ($0), auto-upgrading to Claude Sonnet if an Anthropic key exists. Doing the localhost fetch from the background worker instead of the page sidesteps Chrome's mixed-content and private-network blocking — the diagram never leaves the machine except to the model API. A floating panel offers "Solve one" and "Auto-solve all"; every call logs to the spend tracker.</p>
+<p>Supports multiple choice (clicks the option), MathQuill free response (best-effort typing), and diagram questions via vision.</p>
+<h2>Stack</h2>
+<p>Chrome extension (MV3), Node.js local server, GitHub Models gpt-4o / Claude Sonnet vision, ai.cjs free-first router</p>
+<h2>Status</h2>
+<p>Working. Kept local and quiet, for obvious reasons.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

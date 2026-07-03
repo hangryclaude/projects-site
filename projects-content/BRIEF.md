@@ -29,6 +29,8 @@ Max ~110 chars. No period-spam, no exclamation unless earned.
 
 Do NOT pad. If a project is thin, say what it is in fewer words rather than inflating it. Honesty about "parked" or "prototype" is on-brand.
 
+**Full-catalog rule:** small/scrap projects get 60–120 words total (hook + a How it works of 1-2 sentences + Stack + Status). A one-day experiment described honestly in 70 words beats 250 words of inflation. The volume across the whole site IS the story — each entry just has to be true and specific.
+
 ## Entry JSON
 Each agent also writes `data/entries-<category>.json`:
 ```json
@@ -44,6 +46,8 @@ Each agent also writes `data/entries-<category>.json`:
 }]
 ```
 slug = repo name lowercased. Title = human name (e.g. "ReplyKey", "Crazy Web Effects").
+Valid categories (use EXACTLY the string given for each project in your batch list): "Growth machine", "NOX & RPLY", "AI agents & orchestration", "macOS power tools", "Web & creative", "Commerce & hustles", "School & learning", "Markets & bots", "Games, family & chaos", "Scraps & experiments".
+For LOCAL projects (no repo): repo null, read the local path given in your batch list.
 
 ## Sources
 - `~/dev/projects-site/content-src/<name>.md` (README, may be empty) and `<name>.meta.json` (description, homepageUrl, language, pushedAt).

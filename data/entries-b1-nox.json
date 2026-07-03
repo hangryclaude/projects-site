@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "howdynox",
+    "title": "howdynox",
+    "tagline": "A static mirror of the RPLY site with exactly one job: hijack every download button.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/howdynox",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "howdynox-app",
+    "title": "howdynox-app",
+    "tagline": "The real heynox.com source, redeployed on a second domain so the campaign never touches prod.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/howdynox-app",
+    "live": "https://howdynox.com",
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "heynox-proto",
+    "title": "heynox-proto",
+    "tagline": "\"Everyone is screaming at you. One calm inbox.\" — landing-page prototypes for the NOX pitch.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/heynox-proto",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "heynox-ad",
+    "title": "heynox-ad",
+    "tagline": "A 9-second Revolut-style TikTok ad for RPLY, rendered for $0 — down to the synthesized soundtrack.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/heynox-ad",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "heynox-higgsfield",
+    "title": "heynox-higgsfield",
+    "tagline": "The tunnel ad again, but AI-video: WebGL frames in, Higgsfield cinematics out.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/heynox-higgsfield",
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "nox-explode",
+    "title": "nox-explode",
+    "tagline": "Click anywhere, detonate an explosion in slow motion. There's a slider for how slow.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/nox-explode",
+    "live": "https://nox-explode.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "nox-logo-explode",
+    "title": "nox-logo-explode",
+    "tagline": "Two more ways to destroy the NOX logo: detonate, or shatter it like glass.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/nox-logo-explode",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "nox-domain-sites",
+    "title": "nox-domain-sites",
+    "tagline": "22 domains, 22 AI-written brand voices, one script to attach them all to Vercel.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/nox-domain-sites",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "nox-redirect",
+    "title": "nox-redirect",
+    "tagline": "A tiny 302 with a memory — token-checked download links that log every click.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/nox-redirect",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "rply-console",
+    "title": "RPLY Console",
+    "tagline": "The campaign war room: influencer finder, burn-and-replace mail pool, and a go-live runbook.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/rply-console",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "rply-contacts",
+    "title": "RPLY Contacts",
+    "tagline": "An iPhone app that cleans your address book — first names, monogram avatars, merged dupes. All on-device.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/rply-contacts",
+    "live": null,
+    "lang": "Swift",
+    "year": "2026"
+  },
+  {
+    "slug": "rply-phone",
+    "title": "RPLY Phone",
+    "tagline": "RPLY on iPhone via the only loophole iOS allows: a keyboard that reads your clipboard.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/rply-phone",
+    "live": null,
+    "lang": "Swift",
+    "year": "2026"
+  },
+  {
+    "slug": "rply-launch",
+    "title": "rply-launch",
+    "tagline": "The Product Hunt + Show HN launch package for RPLY, written and waiting on founder sign-off.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/rply-launch",
+    "live": null,
+    "lang": "Markdown",
+    "year": "2026"
+  },
+  {
+    "slug": "hopperleads-heynox",
+    "title": "HopperLeads: heynox edition",
+    "tagline": "The homeowner-leads desktop app, rebadged to drip 116 scored RPLY influencer prospects.",
+    "category": "NOX & RPLY",
+    "repo": "hangryclaude/hopperleads-heynox",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "heynox-referral",
+    "title": "heynox-referral",
+    "tagline": "A one-file NOX fan landing page with a slot for your referral code. Swap one constant, deploy anywhere.",
+    "category": "NOX & RPLY",
+    "repo": null,
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "crew-kit",
+    "title": "Crew Kit",
+    "tagline": "The madebyangus tiny construction crew as React components: fifteen workers, a crane, an hourglass.",
+    "category": "NOX & RPLY",
+    "repo": null,
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  }
+]

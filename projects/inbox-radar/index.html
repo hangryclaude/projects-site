@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox Radar — Angus Duncan</title>
+<meta name="description" content="Listens for people drowning in their inbox, drafts a helpful reply, and waits for my approval.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>Inbox Radar</h1>
+    <div class="meta mono">
+      <span>Growth machine</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/inbox-radar" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/inbox-radar.webp" alt="Inbox Radar"></div>
+  <article class="body">
+<p>Social listening for RPLY/heynox: it scans the web for people complaining about the exact pains the product solves — inbox overload, drowning in DMs, behind on replies — scores each post with the free AI ensemble, drafts a genuinely helpful reply, and queues it for review. Nothing is ever auto-posted; approving copies the draft to your clipboard and you post it yourself, in your own name.</p>
+<h2>How it works</h2>
+<p><code>radar.cjs</code> runs gather → score → draft → queue. Source adapters in <code>sources.cjs</code> pull posts (Hacker News and Lemmy work keyless; Reddit and Bluesky — the real yield — activate when keys land in <code>~/.ai.env</code>), a free-AI batch scorer rates 0–100 relevance and keeps ≥70, then a second pass drafts a peer-to-peer reply into <code>data/queue.json</code>. <code>review.cjs</code> walks the queue: approve, skip, reject, open. Each run texts a digest via <code>cc-text</code>, and <code>run-loop.sh</code> re-scans every 90 minutes. Adapters fail soft — a dead source logs one line and the run continues. All AI is $0 via <code>~/Tools/lib/ai.cjs</code>.</p>
+<h2>Stack</h2>
+<p>Node, free AI ensemble (<code>ai.cjs</code>), HN/Lemmy/Reddit/Bluesky APIs, cc-text.</p>
+<h2>Status</h2>
+<p>Working — HN + Lemmy live out of the box; Reddit/Bluesky pending keys.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

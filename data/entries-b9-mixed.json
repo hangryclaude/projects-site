@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "pitchbet",
+    "title": "PitchBet",
+    "tagline": "Play-money prediction market for pitch competitions — the audience bets fake cash on who wins, odds move live.",
+    "category": "Markets & bots",
+    "repo": "hangryclaude/pitchbet",
+    "live": "https://pitchbet.vercel.app",
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "revenue-dashboard",
+    "title": "Revenue Dashboard",
+    "tagline": "One page answering the only question that matters: is anything actually making money?",
+    "category": "Markets & bots",
+    "repo": "hangryclaude/revenue-dashboard",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "caspian-game",
+    "title": "Caspian",
+    "tagline": "A game that so far is just a machine for generating 2,000 fake in-game emails trying to sell you something.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/caspian-game",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "robloxbr",
+    "title": "RobloxBR",
+    "tagline": "A Rivals-style Roblox battle royale, written as readable Rojo source instead of a black-box place file.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/RobloxBR",
+    "live": null,
+    "lang": "Luau",
+    "year": "2026"
+  },
+  {
+    "slug": "meme-race",
+    "title": "Meme Race",
+    "tagline": "Turn $20 into $10K before Will does — leveraged meme-coin bets racing a rival down a synthwave 3D track.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/meme-race",
+    "live": "https://meme-race-silk.vercel.app",
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "ghostbike",
+    "title": "Ghostbike",
+    "tagline": "A stealth range computer that tells your Sur-Ron how far it can really go, not the optimistic number on the dash.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/ghostbike",
+    "live": "https://ghostbike.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "sneaking-out",
+    "title": "Sneaking Out",
+    "tagline": "A location spoofer with an honest name — push fake GPS to a tethered iPhone and walk a route you're not on.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/sneaking-out",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "camera-watch",
+    "title": "Camera Watch",
+    "tagline": "Maps the license-plate-reader cameras near you, so you know exactly when you're being recorded.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/camera-watch",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "macintosh-disk",
+    "title": "Macintosh Disk",
+    "tagline": "A Mac OS 8 boot disk chopped into 95MB chunks so a browser can Range-fetch and boot it.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/macintosh-disk",
+    "live": "https://madebyangus.com/mac",
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "hacking-resources-mirror",
+    "title": "Hacking Resources Mirror",
+    "tagline": "14,600 infosec cheatsheets and payloads, harvested text-only so you can read them without running anything.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/hacking-resources-mirror",
+    "live": null,
+    "lang": "CSS",
+    "year": "2026"
+  },
+  {
+    "slug": "dad-birthday",
+    "title": "Dad's Birthday Sites",
+    "tagline": "Every year my dad gets a birthday website. This is three years of the tradition.",
+    "category": "Games, family & chaos",
+    "repo": "hangryclaude/dad-birthday",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "night-shift",
+    "title": "Night Shift",
+    "tagline": "Boot the Mac, watch a sci-fi startup sequence, and land in six terminals already running Claude.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/night-shift",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "glitchpilled",
+    "title": "Glitchpilled",
+    "tagline": "A PIL script that prints one persona's banner and pfp in an NZT gold-and-cyan glitch palette.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/glitchpilled",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "agents805",
+    "title": "805 Agents",
+    "tagline": "AI agents built and installed in person for Santa Barbara businesses. Flat $500, then monthly.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/agents805",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "ug-social",
+    "title": "UG Social",
+    "tagline": "Point it at a Shopify store and it renders daily 9:16 product videos with a local model — $0, no editor.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/ug-social",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "work-report",
+    "title": "Work Report",
+    "tagline": "Turns a week of git commits into a styled report someone would actually read.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/work-report",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "cf-migrate",
+    "title": "CF Migrate",
+    "tagline": "One idempotent script to repoint 22 Porkbun domains at Cloudflare DNS. Dry-run first.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/cf-migrate",
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "term-organizer",
+    "title": "Term Organizer",
+    "tagline": "Inventory, tile, and cull twenty open Terminal windows without touching the mouse.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/term-organizer",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "pycharmprojects",
+    "title": "PycharmProjects",
+    "tagline": "The default PyCharm hello-world, committed for an honest catalog. It does nothing.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/PycharmProjects",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "insta-bots",
+    "title": "Insta Bots",
+    "tagline": "An Instagram-bot idea that never got past its README. An empty repo, told honestly.",
+    "category": "Scraps & experiments",
+    "repo": "hangryclaude/insta-bots",
+    "live": null,
+    "lang": "HTML",
+    "year": "2025"
+  }
+]

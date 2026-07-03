@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>brain-sync — Angus Duncan</title>
+<meta name="description" content="Turns the whole machine into one wikilinked Obsidian map — every tool, skill, agent, and repo a node.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>brain-sync</h1>
+    <div class="meta mono">
+      <span>macOS power tools</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/brain-sync.webp" alt="brain-sync"></div>
+  <article class="body">
+<p>Regenerates an Obsidian vault at <code>~/Brain</code> from live system state, so there's one wikilinked map of the whole stack — every <code>~/bin</code> tool, Claude skill, subagent, GitHub repo, local project, and memory note becomes a node.</p>
+<h2>How it works</h2>
+<p>A Node script that scans the machine (reads <code>~/bin</code>, <code>~/.claude/skills</code> and <code>agents</code>, <code>gh repo list</code>, <code>~/dev</code> + <code>~/Tools</code>, the memory folder) and writes one Markdown note per thing, cross-linking anything that shares a name across tool/skill/repo/project. Only files carrying <code>generated: true</code> get wiped and rebuilt — hand-written notes in <code>System/</code> and <code>Inbox/</code> are never touched. It also emits an "Unsaved Work" dashboard flagging repos with uncommitted or unpushed changes. <code>--push</code> commits and pushes to <code>hangryclaude/brain</code>; a launchd job runs it every 4 hours.</p>
+<h2>Stack</h2>
+<p>Node.js (stdlib), gh CLI, git, Obsidian, launchd</p>
+<h2>Status</h2>
+<p>Live. Auto-syncs every 4 hours; <code>--push</code> mirrors to GitHub.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

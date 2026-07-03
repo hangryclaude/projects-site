@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biz Finder — Angus Duncan</title>
+<meta name="description" content="A local llama brainstorms business models; RDAP proves nobody owns the name. $0 in API bills.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>Biz Finder</h1>
+    <div class="meta mono">
+      <span>Commerce &amp; hustles</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/biz-finder" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/biz-finder.webp" alt="Biz Finder"></div>
+  <article class="body">
+<p>An agent that finds proven business models and pairs each with a brandable name nobody owns — so you can launch without a trademark fight. Runs entirely free: local model + public registries, no keys.</p>
+<h2>How it works</h2>
+<p>Local Ollama (<code>llama3.2:3b</code>) brainstorms business models real owners make money with today and invents a short brandable name for each. Every name gets checked against live domain registries over RDAP — an unclaimed exact-match domain is a strong proxy that nobody owns the mark. Each result ships with a one-click USPTO knockout-search link for the five-second official confirm. Output is a ranked <code>latest-report.md</code> (model, why it makes money, startup cost, open domains) plus an append-only <code>results.jsonl</code> of everything ever checked. Optional cron: 8am daily, top hits texted via cc-text.</p>
+<h2>Stack</h2>
+<p>JavaScript, Ollama (local, free), RDAP, USPTO search links.</p>
+<h2>Status</h2>
+<p>Working. "Clear" means the domain is open — a proxy, not legal advice.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

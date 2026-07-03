@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stack-doctor — Angus Duncan</title>
+<meta name="description" content="One command, green/red lines on the whole AI stack. Catches silent breakage before it burns tokens.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>stack-doctor</h1>
+    <div class="meta mono">
+      <span>macOS power tools</span><span>Shell</span><span>2026</span>
+    </div>
+    <div class="actions">
+    
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/stack-doctor.webp" alt="stack-doctor"></div>
+  <article class="body">
+<p>A one-shot health check for the whole AI/token stack. Run it and get green/red lines on everything that has to be working — toolchain, free <code>ai</code> providers, daemons, hooks — so a silent breakage doesn't cost paid tokens for days before you notice.</p>
+<h2>How it works</h2>
+<p>A read-only zsh script that probes each subsystem in turn: node/ollama/rustc/gh versions, <code>~/bin</code> symlinks resolving, <code>ai --state</code> (live free providers, sub readiness, lockdown), local Ollama and the <code>:7600</code> AI gateway, the spend-guard and second-take token guards, the clone-agent brain, custom subagents and slash commands, Playwright/Chromium, format hooks, and today's spend. Everything is a green ✓, yellow !, or red ✗ — a glanceable dashboard, nothing mutated.</p>
+<h2>Stack</h2>
+<p>zsh, curl, launchctl, node, ollama, gh</p>
+<h2>Status</h2>
+<p>Working plain CLI. Safe/read-only; run anytime.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -11,15 +11,20 @@ const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'assets/thumbs');
 const { projects } = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/projects.json'), 'utf8'));
 
-/* live pages worth shooting (slug → url). Everything else gets a tile. */
+/* slug → url overrides; every entry with a `live` URL is also shot.
+ * NEVER_SHOOT: known to render black/blank headless — straight to tile. */
 const SHOTS = {
   'madebyangus': 'https://agentworks-xi.vercel.app',
   'plinth': 'https://plinth-mauve.vercel.app',
   'website-maker': 'https://wm-showcase.vercel.app',
-  /* lusion-wallpaper renders black in headless WebGL — tile instead */
   'ai-brain': 'http://localhost:7910',
   'nox-bullet': 'https://hangryclaude.github.io/nox-bullet/',
 };
+const NEVER_SHOOT = new Set(['lusion-wallpaper']);
+for (const p of projects) {
+  if (p.live && !SHOTS[p.slug] && !NEVER_SHOOT.has(p.slug)) SHOTS[p.slug] = p.live;
+}
+for (const s of NEVER_SHOOT) delete SHOTS[s];
 
 const CAT_KEY = {
   'Growth machine': 'growth',
@@ -48,16 +53,32 @@ async function toWebp(page, pngBuffer) {
   const page = await browser.newPage({ viewport: { width: 1200, height: 750 }, deviceScaleFactor: 2 });
   const results = { shot: [], tile: [], failed: [] };
 
+  const missingOnly = only.includes('--missing');
+  const slugArgs = only.filter(a => a !== '--missing');
   for (const p of projects) {
-    if (only.length && !only.includes(p.slug)) continue;
+    if (slugArgs.length && !slugArgs.includes(p.slug)) continue;
     const dest = path.join(OUT, `${p.slug}.webp`);
+    if (missingOnly && fs.existsSync(dest)) continue;
     const url = SHOTS[p.slug];
     try {
       let png;
       if (url) {
-        await page.goto(url, { waitUntil: 'networkidle', timeout: 25000 }).catch(() => {});
+        const res = await page.goto(url, { waitUntil: 'networkidle', timeout: 25000 }).catch(() => null);
         await page.waitForTimeout(3500); // let WebGL/animations settle into something
-        png = await page.screenshot({ type: 'png' });
+        png = res && res.ok() !== false ? await page.screenshot({ type: 'png' }) : null;
+        // flat/blank detection: sample a 24x15 downscale, count distinct coarse colors
+        if (png) {
+          const distinct = await page.evaluate(async (b64) => {
+            const img = new Image(); img.src = 'data:image/png;base64,' + b64; await img.decode();
+            const c = document.createElement('canvas'); c.width = 24; c.height = 15;
+            const g = c.getContext('2d'); g.drawImage(img, 0, 0, 24, 15);
+            const d = g.getImageData(0, 0, 24, 15).data, set = new Set();
+            for (let i = 0; i < d.length; i += 4) set.add(`${d[i] >> 5},${d[i+1] >> 5},${d[i+2] >> 5}`);
+            return set.size;
+          }, png.toString('base64'));
+          if (distinct < 4) png = null; // basically one color — dead render
+        }
+        if (!png) throw Object.assign(new Error('blank'), { fallback: true });
         results.shot.push(p.slug);
       } else {
         const tileUrl = 'file://' + path.join(__dirname, 'tile.html') +
@@ -71,8 +92,21 @@ async function toWebp(page, pngBuffer) {
       fs.writeFileSync(dest, Buffer.from(webpB64, 'base64'));
       console.log(`${url ? 'SHOT' : 'TILE'} ${p.slug} (${(fs.statSync(dest).size / 1024).toFixed(0)}kb)`);
     } catch (e) {
-      results.failed.push(`${p.slug}: ${e.message.split('\n')[0]}`);
-      console.error(`FAIL ${p.slug}: ${e.message.split('\n')[0]}`);
+      /* live shot failed or blank → tile fallback */
+      try {
+        const tileUrl = 'file://' + path.join(__dirname, 'tile.html') +
+          `?slug=${encodeURIComponent(p.slug)}&cat=${CAT_KEY[p.category] || 'agents'}`;
+        await page.goto(tileUrl);
+        await page.waitForFunction('window.__done === true', { timeout: 5000 });
+        const png = await page.locator('#c').screenshot({ type: 'png' });
+        const webpB64 = await toWebp(page, png);
+        fs.writeFileSync(dest, Buffer.from(webpB64, 'base64'));
+        results.tile.push(p.slug);
+        console.log(`TILE ${p.slug} (fallback: ${e.message.split('\n')[0]})`);
+      } catch (e2) {
+        results.failed.push(`${p.slug}: ${e2.message.split('\n')[0]}`);
+        console.error(`FAIL ${p.slug}: ${e2.message.split('\n')[0]}`);
+      }
     }
   }
   await browser.close();

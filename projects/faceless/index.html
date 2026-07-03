@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faceless — Angus Duncan</title>
+<meta name="description" content="One daemon running ten anonymous TikTok brands: writes, voices, renders, schedules. Nobody on camera.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>Faceless</h1>
+    <div class="meta mono">
+      <span>AI agents &amp; orchestration</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/faceless" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/faceless.webp" alt="Faceless"></div>
+  <article class="body">
+<p>A content factory for anonymous short-form brands — nobody on camera, nobody at the keyboard. One daemon writes, voices, renders, and schedules AI faceless videos for ~10 brands across TikTok, YouTube Shorts, and Reels.</p>
+<h2>How it works</h2>
+<p>A knowledge base drives the writing: per-niche JSON files (motivation, finance, scary-stories, luxury, eight more) plus hook and structure libraries distilled from what the algorithm rewards. The pipeline per video: pick a topic, script it through local Ollama (free), synthesize a voiceover, pull b-roll, burn in captions and overlays, render with ffmpeg, thumbnail it. A node-cron scheduler daemon ticks through each brand's posting calendar; state lives in SQLite, and Playwright handles the posting end. Each brand is a folder with a <code>brand.json</code> and seed content.</p>
+<h2>Stack</h2>
+<p>Node.js, better-sqlite3, node-cron, Ollama, ffmpeg, Playwright</p>
+<h2>Status</h2>
+<p>Built end-to-end; pipeline works. Not currently running the ten-brand empire.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

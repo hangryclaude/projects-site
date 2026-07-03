@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leads Cold Call — Angus Duncan</title>
+<meta name="description" content="Scrape realtors off Google Maps for free, then a call cockpit A/B tests which price closes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>Leads Cold Call</h1>
+    <div class="meta mono">
+      <span>Growth machine</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/leads-cold-call" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/leads-cold-call.webp" alt="Leads Cold Call"></div>
+  <article class="body">
+<p>A cold-calling cockpit for pitching heynox to real-estate offices. Scrapes phone numbers for free, feeds you a live script with rotating A/B prices, and keeps score on which price actually closes. You place every call yourself — it just makes sure you never dial blind.</p>
+<h2>How it works</h2>
+<p>Three scripts. <code>scrape.js</code> drives Google Maps with Playwright over every niche × city in <code>config.js</code>, scrolls the feeds, qualifies leads on rating/reviews/phone, and dedupes into <code>leads.db</code> — no API, no cost. <code>call.js</code> pulls the next best lead (warm ones first), prints the pitch from <code>pitch.js</code> with a rotating price variant (monthly / annual / lifetime), and logs the outcome; a <code>sold</code> fires an iMessage via <code>cc-text</code>. <code>stats.js</code> reports answer rate, close rate, and the pricing A/B scoreboard, optionally texted to me.</p>
+<p>The pitch: heynox drafts the perfect reply in any app in ~2 seconds, and in real estate speed-to-lead wins deals. $100/seat, team-wide.</p>
+<h2>Stack</h2>
+<p>Node, Playwright, SQLite, cc-text (iMessage).</p>
+<h2>Status</h2>
+<p>Working — nothing dials automatically by design; DNC compliance is on the caller.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

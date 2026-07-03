@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "outreach-engine",
+    "title": "Outreach Engine",
+    "tagline": "The 24/7 cold-email pipeline, generalized: 13 module docs, a control panel, and a 149-task roadmap.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/outreach-engine",
+    "live": null,
+    "lang": "Markdown",
+    "year": "2026"
+  },
+  {
+    "slug": "leads-cold-call",
+    "title": "Leads Cold Call",
+    "tagline": "Scrape realtors off Google Maps for free, then a call cockpit A/B tests which price closes.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/leads-cold-call",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "cold-call-bot",
+    "title": "Cold Call Bot",
+    "tagline": "A Claude agent hunts 5-star businesses with no website and turns them into a Google Doc call list.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/cold-call-bot",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "website-builder",
+    "title": "Website Builder",
+    "tagline": "No website? We already built you one. That'll be $50.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/website-builder",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "inbox-radar",
+    "title": "Inbox Radar",
+    "tagline": "Listens for people drowning in their inbox, drafts a helpful reply, and waits for my approval.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/inbox-radar",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "x-growth",
+    "title": "X Growth",
+    "tagline": "Drafts replies and reposts in my voice on the free AI stack. Posts nothing until I say so.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/x-growth",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "sendlab-engine",
+    "title": "SendLab",
+    "tagline": "Your own Resend, in a box: routes every email to the cheapest provider, with failover and a Mac app.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/sendlab-engine",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "ai-coldcalling-research",
+    "title": "AI Cold-Calling Research",
+    "tagline": "How fast does an AI have to talk before the other end stops hanging up? A research brief.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/ai-coldcalling-research",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "carly-seo",
+    "title": "Carly SEO",
+    "tagline": "SEO console for a wedding photographer whose name must never appear in the rankings it's winning.",
+    "category": "Growth machine",
+    "repo": "hangryclaude/carly-seo",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  }
+]

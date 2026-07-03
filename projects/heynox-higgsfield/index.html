@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heynox-higgsfield — Angus Duncan</title>
+<meta name="description" content="The tunnel ad again, but AI-video: WebGL frames in, Higgsfield cinematics out.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>heynox-higgsfield</h1>
+    <div class="meta mono">
+      <span>NOX &amp; RPLY</span><span>Shell</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/heynox-higgsfield" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/heynox-higgsfield.webp" alt="heynox-higgsfield"></div>
+  <article class="body">
+<p>An AI-video cut of the RPLY tunnel ad. The live WebGL version (heynox-tunnel) already had perfectly on-brand frames, so the play here was image-to-video: feed those exact renders to Higgsfield as start frames, let it add cinematic camera motion and grade, stitch the clips.</p>
+<h2>How it works</h2>
+<p>The repo is a production kit, not code: 16:9 and 9:16 start frames exported from the WebGL build, a <code>SHOTLIST.md</code> storyboard with per-shot prompts and motion presets, copy-paste <code>prompts.txt</code>, and <code>assemble.sh</code> (ffmpeg concat + audio) to produce <code>out/final.mp4</code> once the generated clips land in <code>clips/</code>. Generation needs a human with a Higgsfield account — the one step that can't be automated.</p>
+<h2>Stack</h2>
+<p>Shell, ffmpeg, Higgsfield (image-to-video), WebGL-exported frames</p>
+<h2>Status</h2>
+<p>Kit complete; final render blocked on Higgsfield credits.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

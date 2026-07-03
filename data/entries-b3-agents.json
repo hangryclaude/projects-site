@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "ruflo-test",
+    "title": "ruflo-test",
+    "tagline": "What a 15-agent Byzantine-consensus swarm framework leaves behind when you point it at an empty repo.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/ruflo-test",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "mindread",
+    "title": "Mindread",
+    "tagline": "Paste the message you're about to send. Find out how it lands before the other person tells you.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/mindread",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "oneword",
+    "title": "oneword",
+    "tagline": "A chatbot that answers anything — essay prompts, panics, jailbreak attempts — in exactly one word. Yes.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/oneword",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "lockin",
+    "title": "Lockin",
+    "tagline": "Close the laptop mid-thought. Tomorrow every conversation and terminal is exactly where you left it.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/lockin",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "jarvis-dashboard",
+    "title": "Jarvis Dashboard",
+    "tagline": "Seventeen tabs, a ticker tape, a pulsing brain-eye, and a $100k scoreboard. Iron Man suit not included.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/jarvis-dashboard",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "faceless",
+    "title": "Faceless",
+    "tagline": "One daemon running ten anonymous TikTok brands: writes, voices, renders, schedules. Nobody on camera.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/faceless",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "savic-ai",
+    "title": "SavicAI",
+    "tagline": "Watches a TikTok editor's whole catalog, learns his transition mix, then cuts your footage like he would.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/savic-ai",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "brainstorm",
+    "title": "brainstorm",
+    "tagline": "Type one sentence, get a full project plan filed away for the day you have time to build it.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/brainstorm",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "local-llm",
+    "title": "local-llm",
+    "tagline": "OpenAI's open-weight 20B running on the laptop — ChatGPT-style UI included, wifi optional.",
+    "category": "AI agents & orchestration",
+    "repo": "hangryclaude/local-llm",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "ai-stack-map",
+    "title": "AI Stack Map",
+    "tagline": "Click a task type and watch energy pulse along the wires to whichever brain actually handles it.",
+    "category": "AI agents & orchestration",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "sira",
+    "title": "Sira",
+    "tagline": "Siri with one letter swapped and the brain replaced: Apple ears, Claude thoughts, spoken back out loud.",
+    "category": "AI agents & orchestration",
+    "repo": null,
+    "live": null,
+    "lang": "Swift",
+    "year": "2026"
+  },
+  {
+    "slug": "animforge",
+    "title": "animforge",
+    "tagline": "Tells a free model to improve the animation, screenshots it, and argues until it renders clean.",
+    "category": "AI agents & orchestration",
+    "repo": null,
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  }
+]

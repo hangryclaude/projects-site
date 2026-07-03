@@ -2,22 +2,87 @@
   "meta": {
     "title": "Projects — Angus Duncan",
     "heading": "Projects",
-    "subheading": "40 things I actually shipped, out of a lot more repos than that. Agents, cold email at scale, Mac tools, and websites that move."
+    "subheading": "All 166 of them — every repo, tool, site, bot, and experiment. Some are live products, some died in a day. That's the point."
   },
   "categories": [
     "Growth machine",
+    "NOX & RPLY",
     "AI agents & orchestration",
     "macOS power tools",
     "Web & creative",
-    "Markets & bots"
+    "Commerce & hustles",
+    "School & learning",
+    "Markets & bots",
+    "Games, family & chaos",
+    "Scraps & experiments"
   ],
   "projects": [
+    {
+      "slug": "ai-coldcalling-research",
+      "title": "AI Cold-Calling Research",
+      "tagline": "How fast does an AI have to talk before the other end stops hanging up? A research brief.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/ai-coldcalling-research",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "carly-seo",
+      "title": "Carly SEO",
+      "tagline": "SEO console for a wedding photographer whose name must never appear in the rankings it's winning.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/carly-seo",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "cold-1m-machine",
+      "title": "Cold 1M Machine",
+      "tagline": "Planned a million cold emails, fact-checked itself, and concluded: don't send a million cold emails.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/cold-1m-machine",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "cold-call-bot",
+      "title": "Cold Call Bot",
+      "tagline": "A Claude agent hunts 5-star businesses with no website and turns them into a Google Doc call list.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/cold-call-bot",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "cold-email-deliverability-playbook",
+      "title": "Cold Email Deliverability Playbook",
+      "tagline": "Everything learned sending cold at scale, written down so the next domain doesn't die finding out.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/cold-email-deliverability-playbook",
+      "live": null,
+      "lang": "Markdown",
+      "year": "2026"
+    },
     {
       "slug": "inbox-engine",
       "title": "Inbox Engine",
       "tagline": "One domain sending 5,000 cold emails/day gets burned. A hundred domains sending 50 each don't.",
       "category": "Growth machine",
       "repo": "hangryclaude/inbox-engine",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "inbox-radar",
+      "title": "Inbox Radar",
+      "tagline": "Listens for people drowning in their inbox, drafts a helpful reply, and waits for my approval.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/inbox-radar",
       "live": null,
       "lang": "JavaScript",
       "year": "2026"
@@ -43,23 +108,43 @@
       "year": "2026"
     },
     {
-      "slug": "creator-hunt",
-      "title": "Creator Hunt",
-      "tagline": "Finds 10k-follower founders on four platforms and offers them $50 to post. Refuses to send without a mailing address.",
+      "slug": "leads-cold-call",
+      "title": "Leads Cold Call",
+      "tagline": "Scrape realtors off Google Maps for free, then a call cockpit A/B tests which price closes.",
       "category": "Growth machine",
-      "repo": "hangryclaude/creator-hunt",
+      "repo": "hangryclaude/leads-cold-call",
       "live": null,
       "lang": "JavaScript",
       "year": "2026"
     },
     {
-      "slug": "cold-1m-machine",
-      "title": "Cold 1M Machine",
-      "tagline": "Planned a million cold emails, fact-checked itself, and concluded: don't send a million cold emails.",
+      "slug": "outreach-engine",
+      "title": "Outreach Engine",
+      "tagline": "The 24/7 cold-email pipeline, generalized: 13 module docs, a control panel, and a 149-task roadmap.",
       "category": "Growth machine",
-      "repo": "hangryclaude/cold-1m-machine",
+      "repo": "hangryclaude/outreach-engine",
       "live": null,
-      "lang": "HTML",
+      "lang": "Markdown",
+      "year": "2026"
+    },
+    {
+      "slug": "sendlab-engine",
+      "title": "SendLab",
+      "tagline": "Your own Resend, in a box: routes every email to the cheapest provider, with failover and a Mac app.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/sendlab-engine",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "website-builder",
+      "title": "Website Builder",
+      "tagline": "No website? We already built you one. That'll be $50.",
+      "category": "Growth machine",
+      "repo": "hangryclaude/website-builder",
+      "live": null,
+      "lang": "TypeScript",
       "year": "2026"
     },
     {
@@ -73,23 +158,193 @@
       "year": "2026"
     },
     {
-      "slug": "cold-email-deliverability-playbook",
-      "title": "Cold Email Deliverability Playbook",
-      "tagline": "Everything learned sending cold at scale, written down so the next domain doesn't die finding out.",
+      "slug": "x-growth",
+      "title": "X Growth",
+      "tagline": "Drafts replies and reposts in my voice on the free AI stack. Posts nothing until I say so.",
       "category": "Growth machine",
-      "repo": "hangryclaude/cold-email-deliverability-playbook",
+      "repo": "hangryclaude/x-growth",
       "live": null,
-      "lang": "Markdown",
+      "lang": "JavaScript",
       "year": "2026"
     },
     {
-      "slug": "lib",
-      "title": "lib",
-      "tagline": "One require() every script routes AI calls through — free providers first, paid API as a genuine last resort.",
-      "category": "AI agents & orchestration",
-      "repo": "hangryclaude/lib",
+      "slug": "creator-hunt",
+      "title": "Creator Hunt",
+      "tagline": "Finds 10k-follower founders on four platforms and offers them $50 to post. Refuses to send without a mailing address.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/creator-hunt",
       "live": null,
       "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "heynox-tunnel",
+      "title": "Heynox Tunnel",
+      "tagline": "Fly a WebGL tunnel of notifications to reach the Nox vault. Technically, an ad",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/heynox-tunnel",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "heynox-ad",
+      "title": "heynox-ad",
+      "tagline": "A 9-second Revolut-style TikTok ad for RPLY, rendered for $0 — down to the synthesized soundtrack.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/heynox-ad",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "heynox-higgsfield",
+      "title": "heynox-higgsfield",
+      "tagline": "The tunnel ad again, but AI-video: WebGL frames in, Higgsfield cinematics out.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/heynox-higgsfield",
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "heynox-proto",
+      "title": "heynox-proto",
+      "tagline": "\"Everyone is screaming at you. One calm inbox.\" — landing-page prototypes for the NOX pitch.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/heynox-proto",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "heynox-referral",
+      "title": "heynox-referral",
+      "tagline": "A one-file NOX fan landing page with a slot for your referral code. Swap one constant, deploy anywhere.",
+      "category": "NOX & RPLY",
+      "repo": null,
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "hopperleads-heynox",
+      "title": "HopperLeads: heynox edition",
+      "tagline": "The homeowner-leads desktop app, rebadged to drip 116 scored RPLY influencer prospects.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/hopperleads-heynox",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "howdynox",
+      "title": "howdynox",
+      "tagline": "A static mirror of the RPLY site with exactly one job: hijack every download button.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/howdynox",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "howdynox-app",
+      "title": "howdynox-app",
+      "tagline": "The real heynox.com source, redeployed on a second domain so the campaign never touches prod.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/howdynox-app",
+      "live": "https://howdynox.com",
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "nox-bullet",
+      "title": "NOX Bullet",
+      "tagline": "A bullet fires into the logo. Click to fire again. That's it, that's the site",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/nox-bullet",
+      "live": "https://hangryclaude.github.io/nox-bullet/",
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "nox-domain-sites",
+      "title": "nox-domain-sites",
+      "tagline": "22 domains, 22 AI-written brand voices, one script to attach them all to Vercel.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/nox-domain-sites",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "nox-explode",
+      "title": "nox-explode",
+      "tagline": "Click anywhere, detonate an explosion in slow motion. There's a slider for how slow.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/nox-explode",
+      "live": "https://nox-explode.vercel.app",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "nox-logo-explode",
+      "title": "nox-logo-explode",
+      "tagline": "Two more ways to destroy the NOX logo: detonate, or shatter it like glass.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/nox-logo-explode",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "nox-redirect",
+      "title": "nox-redirect",
+      "tagline": "A tiny 302 with a memory — token-checked download links that log every click.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/nox-redirect",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "rply-console",
+      "title": "RPLY Console",
+      "tagline": "The campaign war room: influencer finder, burn-and-replace mail pool, and a go-live runbook.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/rply-console",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "rply-contacts",
+      "title": "RPLY Contacts",
+      "tagline": "An iPhone app that cleans your address book — first names, monogram avatars, merged dupes. All on-device.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/rply-contacts",
+      "live": null,
+      "lang": "Swift",
+      "year": "2026"
+    },
+    {
+      "slug": "rply-phone",
+      "title": "RPLY Phone",
+      "tagline": "RPLY on iPhone via the only loophole iOS allows: a keyboard that reads your clipboard.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/rply-phone",
+      "live": null,
+      "lang": "Swift",
+      "year": "2026"
+    },
+    {
+      "slug": "rply-launch",
+      "title": "rply-launch",
+      "tagline": "The Product Hunt + Show HN launch package for RPLY, written and waiting on founder sign-off.",
+      "category": "NOX & RPLY",
+      "repo": "hangryclaude/rply-launch",
+      "live": null,
+      "lang": "Markdown",
       "year": "2026"
     },
     {
@@ -103,63 +358,33 @@
       "year": "2026"
     },
     {
-      "slug": "second-take",
-      "title": "Second Take",
-      "tagline": "Your command failed? A free AI already diagnosed it before Claude starts flailing. Same wall never costs twice.",
+      "slug": "ai-stack-map",
+      "title": "AI Stack Map",
+      "tagline": "Click a task type and watch energy pulse along the wires to whichever brain actually handles it.",
       "category": "AI agents & orchestration",
-      "repo": "hangryclaude/second-take",
+      "repo": null,
       "live": null,
       "lang": "JavaScript",
       "year": "2026"
     },
     {
-      "slug": "spend-guard",
-      "title": "spend-guard",
-      "tagline": "A watchdog with a kill-switch, so a runaway AI bot costs at most $20 before everything shuts off and texts me.",
+      "slug": "animforge",
+      "title": "animforge",
+      "tagline": "Tells a free model to improve the animation, screenshots it, and argues until it renders clean.",
       "category": "AI agents & orchestration",
-      "repo": "hangryclaude/spend-guard",
+      "repo": null,
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "brainstorm",
+      "title": "brainstorm",
+      "tagline": "Type one sentence, get a full project plan filed away for the day you have time to build it.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/brainstorm",
       "live": null,
       "lang": "JavaScript",
-      "year": "2026"
-    },
-    {
-      "slug": "malware-scanner",
-      "title": "malware-scanner",
-      "tagline": "Six engines and a jury of free models vote on whether a website is hostile. 0% false positives, by design.",
-      "category": "AI agents & orchestration",
-      "repo": "hangryclaude/malware-scanner",
-      "live": null,
-      "lang": "JavaScript",
-      "year": "2026"
-    },
-    {
-      "slug": "laptop-agent",
-      "title": "laptop-agent",
-      "tagline": "Queue a task, a headless Claude drives the Mac's GUI itself. Stuck on 2FA? It texts me and waits.",
-      "category": "AI agents & orchestration",
-      "repo": "hangryclaude/laptop-agent",
-      "live": null,
-      "lang": "JavaScript",
-      "year": "2026"
-    },
-    {
-      "slug": "jarvis",
-      "title": "Jarvis",
-      "tagline": "Call the number and Claude picks up. Text it and it texts back. Memory, tools, and a phone line — no app.",
-      "category": "AI agents & orchestration",
-      "repo": "hangryclaude/jarvis",
-      "live": null,
-      "lang": "TypeScript",
-      "year": "2026"
-    },
-    {
-      "slug": "voice-caller",
-      "title": "voice-caller",
-      "tagline": "An AI that dials a lead, holds a real conversation, books the follow-up, and hangs up. FCC disclosure built in.",
-      "category": "AI agents & orchestration",
-      "repo": "hangryclaude/voice-caller",
-      "live": null,
-      "lang": "TypeScript",
       "year": "2026"
     },
     {
@@ -173,11 +398,11 @@
       "year": "2026"
     },
     {
-      "slug": "viral-x",
-      "title": "viral-x",
-      "tagline": "Reverse-engineers why tweets go viral, writes its own, and learns from real view counts. 100% local, $0.",
+      "slug": "faceless",
+      "title": "Faceless",
+      "tagline": "One daemon running ten anonymous TikTok brands: writes, voices, renders, schedules. Nobody on camera.",
       "category": "AI agents & orchestration",
-      "repo": "hangryclaude/viral-x",
+      "repo": "hangryclaude/faceless",
       "live": null,
       "lang": "JavaScript",
       "year": "2026"
@@ -193,6 +418,106 @@
       "year": "2026"
     },
     {
+      "slug": "jarvis",
+      "title": "Jarvis",
+      "tagline": "Call the number and Claude picks up. Text it and it texts back. Memory, tools, and a phone line — no app.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/jarvis",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "jarvis-dashboard",
+      "title": "Jarvis Dashboard",
+      "tagline": "Seventeen tabs, a ticker tape, a pulsing brain-eye, and a $100k scoreboard. Iron Man suit not included.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/jarvis-dashboard",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "laptop-agent",
+      "title": "laptop-agent",
+      "tagline": "Queue a task, a headless Claude drives the Mac's GUI itself. Stuck on 2FA? It texts me and waits.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/laptop-agent",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "lib",
+      "title": "lib",
+      "tagline": "One require() every script routes AI calls through — free providers first, paid API as a genuine last resort.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/lib",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "local-llm",
+      "title": "local-llm",
+      "tagline": "OpenAI's open-weight 20B running on the laptop — ChatGPT-style UI included, wifi optional.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/local-llm",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "lockin",
+      "title": "Lockin",
+      "tagline": "Close the laptop mid-thought. Tomorrow every conversation and terminal is exactly where you left it.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/lockin",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "malware-scanner",
+      "title": "malware-scanner",
+      "tagline": "Six engines and a jury of free models vote on whether a website is hostile. 0% false positives, by design.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/malware-scanner",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "mindread",
+      "title": "Mindread",
+      "tagline": "Paste the message you're about to send. Find out how it lands before the other person tells you.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/mindread",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "oneword",
+      "title": "oneword",
+      "tagline": "A chatbot that answers anything — essay prompts, panics, jailbreak attempts — in exactly one word. Yes.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/oneword",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "ruflo-test",
+      "title": "ruflo-test",
+      "tagline": "What a 15-agent Byzantine-consensus swarm framework leaves behind when you point it at an empty repo.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/ruflo-test",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
       "slug": "samewave",
       "title": "samewave",
       "tagline": "Log in with Spotify and it scores your vibe against someone else's out of 100, songs to bridge included.",
@@ -200,6 +525,116 @@
       "repo": "hangryclaude/samewave",
       "live": null,
       "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "savic-ai",
+      "title": "SavicAI",
+      "tagline": "Watches a TikTok editor's whole catalog, learns his transition mix, then cuts your footage like he would.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/savic-ai",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "second-take",
+      "title": "Second Take",
+      "tagline": "Your command failed? A free AI already diagnosed it before Claude starts flailing. Same wall never costs twice.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/second-take",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "sira",
+      "title": "Sira",
+      "tagline": "Siri with one letter swapped and the brain replaced: Apple ears, Claude thoughts, spoken back out loud.",
+      "category": "AI agents & orchestration",
+      "repo": null,
+      "live": null,
+      "lang": "Swift",
+      "year": "2026"
+    },
+    {
+      "slug": "spend-guard",
+      "title": "spend-guard",
+      "tagline": "A watchdog with a kill-switch, so a runaway AI bot costs at most $20 before everything shuts off and texts me.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/spend-guard",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "viral-x",
+      "title": "viral-x",
+      "tagline": "Reverse-engineers why tweets go viral, writes its own, and learns from real view counts. 100% local, $0.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/viral-x",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "voice-caller",
+      "title": "voice-caller",
+      "tagline": "An AI that dials a lead, holds a real conversation, books the follow-up, and hangs up. FCC disclosure built in.",
+      "category": "AI agents & orchestration",
+      "repo": "hangryclaude/voice-caller",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "brain-sync",
+      "title": "brain-sync",
+      "tagline": "Turns the whole machine into one wikilinked Obsidian map — every tool, skill, agent, and repo a node.",
+      "category": "macOS power tools",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "deepworkscore",
+      "title": "DeepWorkScore",
+      "tagline": "Scores your day 0–100 from what you worked on plus how well you prompted. Doom-scrolling costs points.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/deepworkscore",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "dropkit",
+      "title": "dropkit",
+      "tagline": "AirDrop as a CLI: fleet fan-out, watch folders, live radar. Refuses to spam strangers on principle.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/dropkit",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "eyesite-saver",
+      "title": "EyeSite Saver",
+      "tagline": "Every 20 minutes it takes over your screen until you look 20 feet away for 20 seconds. Non-negotiable.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/eyesite-saver",
+      "live": null,
+      "lang": "Swift",
+      "year": "2026"
+    },
+    {
+      "slug": "file-warden",
+      "title": "file-warden",
+      "tagline": "A janitor for Home, Desktop, and Downloads. Idle files get filed by type and month. Never deletes.",
+      "category": "macOS power tools",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
       "year": "2026"
     },
     {
@@ -223,61 +658,11 @@
       "year": "2026"
     },
     {
-      "slug": "dropkit",
-      "title": "dropkit",
-      "tagline": "AirDrop as a CLI: fleet fan-out, watch folders, live radar. Refuses to spam strangers on principle.",
+      "slug": "screentime-remover",
+      "title": "Lockless",
+      "tagline": "Locked yourself out of Screen Time? Brute-force your own forgotten PIN out of an old iTunes backup.",
       "category": "macOS power tools",
-      "repo": "hangryclaude/dropkit",
-      "live": null,
-      "lang": "JavaScript",
-      "year": "2026"
-    },
-    {
-      "slug": "spellfix",
-      "title": "SpellFix",
-      "tagline": "iPhone autocorrect for your Mac. Fixes teh → the in every app, leaves your lol alone.",
-      "category": "macOS power tools",
-      "repo": "hangryclaude/spellfix",
-      "live": null,
-      "lang": "Swift",
-      "year": "2026"
-    },
-    {
-      "slug": "deepworkscore",
-      "title": "DeepWorkScore",
-      "tagline": "Scores your day 0–100 from what you worked on plus how well you prompted. Doom-scrolling costs points.",
-      "category": "macOS power tools",
-      "repo": "hangryclaude/deepworkscore",
-      "live": null,
-      "lang": "Python",
-      "year": "2026"
-    },
-    {
-      "slug": "eyesite-saver",
-      "title": "EyeSite Saver",
-      "tagline": "Every 20 minutes it takes over your screen until you look 20 feet away for 20 seconds. Non-negotiable.",
-      "category": "macOS power tools",
-      "repo": "hangryclaude/eyesite-saver",
-      "live": null,
-      "lang": "Swift",
-      "year": "2026"
-    },
-    {
-      "slug": "openclaw-warden",
-      "title": "OpenClaw Warden",
-      "tagline": "A parole officer for jailbroken local models: timed sessions, RAM checks, and a kill switch.",
-      "category": "macOS power tools",
-      "repo": "hangryclaude/openclaw-warden",
-      "live": null,
-      "lang": "Shell",
-      "year": "2026"
-    },
-    {
-      "slug": "term-tile",
-      "title": "term-tile",
-      "tagline": "One command and every terminal window snaps into a neat grid. Stdlib only, zero dependencies.",
-      "category": "macOS power tools",
-      "repo": "hangryclaude/term-tile",
+      "repo": "hangryclaude/screentime-remover",
       "live": null,
       "lang": "Python",
       "year": "2026"
@@ -293,6 +678,26 @@
       "year": "2026"
     },
     {
+      "slug": "morning-brief",
+      "title": "morning-brief",
+      "tagline": "A daily machine status text with no cloud and no MCP — so it still fires when everything else is down.",
+      "category": "macOS power tools",
+      "repo": null,
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "openclaw-warden",
+      "title": "OpenClaw Warden",
+      "tagline": "A parole officer for jailbroken local models: timed sessions, RAM checks, and a kill switch.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/openclaw-warden",
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
       "slug": "replykey",
       "title": "ReplyKey",
       "tagline": "An iOS keyboard with one extra key: ✨. Tap it and it writes your reply, in any app, for $0.",
@@ -300,6 +705,196 @@
       "repo": "hangryclaude/ReplyKey",
       "live": null,
       "lang": "Swift",
+      "year": "2026"
+    },
+    {
+      "slug": "shrink",
+      "title": "shrink",
+      "tagline": "Squeeze text before it hits an LLM. Heuristic for free, or --ai for a 2–5× semantic cut that keeps the facts.",
+      "category": "macOS power tools",
+      "repo": null,
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "skillify",
+      "title": "skillify",
+      "tagline": "Point it at a script or repo and it becomes a permanent Claude skill. The 'now do this forever' button.",
+      "category": "macOS power tools",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "spellfix",
+      "title": "SpellFix",
+      "tagline": "iPhone autocorrect for your Mac. Fixes teh → the in every app, leaves your lol alone.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/spellfix",
+      "live": null,
+      "lang": "Swift",
+      "year": "2026"
+    },
+    {
+      "slug": "stack-doctor",
+      "title": "stack-doctor",
+      "tagline": "One command, green/red lines on the whole AI stack. Catches silent breakage before it burns tokens.",
+      "category": "macOS power tools",
+      "repo": null,
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "startup-claude",
+      "title": "startup-claude",
+      "tagline": "Log in, watch a boot animation, and land in six terminals already running Claude — one per project.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/startup-claude",
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "term-grid",
+      "title": "term-grid",
+      "tagline": "Twelve real terminals in a browser grid. Every cell is a live PTY, not a log — type into any of them.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/term-grid",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "term-tile",
+      "title": "term-tile",
+      "tagline": "One command and every terminal window snaps into a neat grid. Stdlib only, zero dependencies.",
+      "category": "macOS power tools",
+      "repo": "hangryclaude/term-tile",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "webshot",
+      "title": "webshot",
+      "tagline": "Screenshot any URL or HTML file to PNG in one command. Won't hang on long-polling sites.",
+      "category": "macOS power tools",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "agent-setup-sb",
+      "title": "Agent·SB",
+      "tagline": "I'll come to your house in Santa Barbara and install an AI agent on your computer. Pricing on request.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/agent-setup-sb",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "agentpath",
+      "title": "Agentpath",
+      "tagline": "A one-page pitch for custom AI agents, where the demo agent does the selling",
+      "category": "Web & creative",
+      "repo": "hangryclaude/agentpath",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "ai-vfx-reel",
+      "title": "AI VFX Reel",
+      "tagline": "Feed it a logo, an emoji, or your face — get back a viral-style 9:16 VFX reel for about $1.50.",
+      "category": "Web & creative",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "alpha-bank",
+      "title": "Alpha Bank",
+      "tagline": "A real-time bank for classroom play-money, replacing the spreadsheet the class broke",
+      "category": "Web & creative",
+      "repo": "hangryclaude/alpha-bank",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "alpha-sites",
+      "title": "Alpha Sites",
+      "tagline": "Finds businesses with no website, builds them one with Claude, emails a $50 offer",
+      "category": "Web & creative",
+      "repo": "hangryclaude/alpha-sites",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "angusagentmaker",
+      "title": "Angus Agent Maker",
+      "tagline": "Drop your phone number, I text you, you get a Claude-powered agent for your business.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/angusagentmaker",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "angusangus",
+      "title": "angusangus.com",
+      "tagline": "My calling card: an ∞ glyph sphere-traced in 3D and printed entirely out of flowing type.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/angusangus",
+      "live": "https://angusangus.com",
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "animations",
+      "title": "Animations",
+      "tagline": "The Blender models, renders, and scripts feeding visuals into everything else.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/animations",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "apex-web",
+      "title": "APEX",
+      "tagline": "GPS telemetry for kids on Surrons — record a run, get splits, claim the podium",
+      "category": "Web & creative",
+      "repo": "hangryclaude/apex-web",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "aws-console-clone",
+      "title": "AWS Console Clone",
+      "tagline": "EC2, S3, Lambda and CloudWatch, faithfully cloned — minus the bill",
+      "category": "Web & creative",
+      "repo": "hangryclaude/aws-console-clone",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "claude-anim",
+      "title": "Claude Anim",
+      "tagline": "The Claude logo, animated in five acts, in your terminal, with zero dependencies.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/claude-anim",
+      "live": null,
+      "lang": "Python",
       "year": "2026"
     },
     {
@@ -313,33 +908,63 @@
       "year": "2026"
     },
     {
-      "slug": "website-maker",
-      "title": "Website Maker",
-      "tagline": "An agent that builds websites, grades its own work 0–100, and retries until it clears the bar",
+      "slug": "crew-kit",
+      "title": "Crew Kit",
+      "tagline": "The madebyangus tiny construction crew as React components: fifteen workers, a crane, an hourglass.",
       "category": "Web & creative",
-      "repo": "hangryclaude/website-maker",
-      "live": "https://wm-showcase.vercel.app",
+      "repo": null,
+      "live": null,
       "lang": "TypeScript",
       "year": "2026"
     },
     {
-      "slug": "heynox-tunnel",
-      "title": "Heynox Tunnel",
-      "tagline": "Fly a WebGL tunnel of notifications to reach the Nox vault. Technically, an ad",
+      "slug": "face-fx",
+      "title": "Face FX",
+      "tagline": "Three MediaPipe models watch your webcam and turn you into WebGL effects. Your face never leaves the tab.",
       "category": "Web & creative",
-      "repo": "hangryclaude/heynox-tunnel",
+      "repo": "hangryclaude/face-fx",
       "live": null,
       "lang": "JavaScript",
       "year": "2026"
     },
     {
-      "slug": "nox-bullet",
-      "title": "NOX Bullet",
-      "tagline": "A bullet fires into the logo. Click to fire again. That's it, that's the site",
+      "slug": "flowtype-site",
+      "title": "Flowtype Site",
+      "tagline": "I reverse-engineered andrew.net's flowing-type 3D glyph and made it a generator. Two sites shipped from it.",
       "category": "Web & creative",
-      "repo": "hangryclaude/nox-bullet",
-      "live": "https://hangryclaude.github.io/nox-bullet/",
+      "repo": null,
+      "live": null,
       "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "flux-store",
+      "title": "Flux Store",
+      "tagline": "A complete cart-to-checkout storefront for desk gadgets. Sells nothing, convincingly",
+      "category": "Web & creative",
+      "repo": "hangryclaude/flux-store",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "fundraiser-qr",
+      "title": "Fundraiser QR",
+      "tagline": "Prop an old phone on the table, whole room scans to donate. Turns any retired iPhone into a kiosk.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/fundraiser-qr",
+      "live": "https://hangryclaude.github.io/fundraiser-qr/",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "gesture-vfx",
+      "title": "Gesture VFX",
+      "tagline": "Neon trails, ghost echoes, and beat-synced clones tracked onto my own footage. Free, local, no AI video.",
+      "category": "Web & creative",
+      "repo": null,
+      "live": null,
+      "lang": "Python",
       "year": "2026"
     },
     {
@@ -363,6 +988,66 @@
       "year": "2026"
     },
     {
+      "slug": "madebyangus-v8",
+      "title": "Made by Angus v8",
+      "tagline": "Click the 3D laptop, fly into its screen — which is a real, clickable client site",
+      "category": "Web & creative",
+      "repo": "hangryclaude/madebyangus-v8",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "madebyangus-v9",
+      "title": "Made by Angus v9",
+      "tagline": "v8's sequel. The README still says v8 — the version number outran the docs",
+      "category": "Web & creative",
+      "repo": "hangryclaude/madebyangus-v9",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "madebyangus-models",
+      "title": "madebyangus Models",
+      "tagline": "Low-poly laptops and monitors, with paperwork on which model goes where.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/madebyangus-models",
+      "live": null,
+      "lang": "Blender",
+      "year": "2026"
+    },
+    {
+      "slug": "mini-men",
+      "title": "Mini Men",
+      "tagline": "Tiny construction workers build a giant pizza. $2 a video, and someone always falls in the oven",
+      "category": "Web & creative",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "onlywebsites",
+      "title": "OnlyWebsites",
+      "tagline": "A self-running cold-email bot selling $1k websites to OnlyFans creators, at $0 in AI spend",
+      "category": "Web & creative",
+      "repo": "hangryclaude/onlywebsites",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "orbital-sb",
+      "title": "ORBITAL",
+      "tagline": "A CRT ground station that sweeps live satellite imagery for abandoned buildings. 64 real ruins pre-pinned",
+      "category": "Web & creative",
+      "repo": "hangryclaude/orbital-sb",
+      "live": "https://orbital-sb.vercel.app",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
       "slug": "plinth",
       "title": "PLINTH",
       "tagline": "Serious furniture for unserious objects. The UFO lamp comes with a cow, non-negotiable",
@@ -373,11 +1058,401 @@
       "year": "2026"
     },
     {
-      "slug": "mini-men",
-      "title": "Mini Men",
-      "tagline": "Tiny construction workers build a giant pizza. $2 a video, and someone always falls in the oven",
+      "slug": "profile-site",
+      "title": "Profile Site",
+      "tagline": "The cold-email fleet's fake personas get a gallery — a friend names them and uploads headshots, live",
+      "category": "Web & creative",
+      "repo": "hangryclaude/profile-site",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "resend-clone-site",
+      "title": "Resend Clone",
+      "tagline": "Resend's landing page and dashboard, reproduced in plain HTML to learn why its UI is good",
+      "category": "Web & creative",
+      "repo": "hangryclaude/resend-clone-site",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "satellite-sb",
+      "title": "Satellite SB",
+      "tagline": "ORBITAL's deprecated twin, kept as a monument to editing the wrong repo",
+      "category": "Web & creative",
+      "repo": "hangryclaude/satellite-sb",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "site-forge",
+      "title": "Site Forge",
+      "tagline": "Five hand-built design systems so a website generator never has to improvise CSS.",
       "category": "Web & creative",
       "repo": null,
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "solei-sitter",
+      "title": "Solei Sitter",
+      "tagline": "A babysitter's booking site where the form texts her phone directly. No dashboard, no database.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/solei-sitter",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "tiger-site",
+      "title": "Tiger",
+      "tagline": "A tiger gallops across the page forever, spelled out of the word \"tiger\". That's it. That's the site.",
+      "category": "Web & creative",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "touchdesigner-kit",
+      "title": "TouchDesigner Kit",
+      "tagline": "Scripts that interrogate TouchDesigner until it admits where the hand-tracking data lives.",
+      "category": "Web & creative",
+      "repo": "hangryclaude/touchdesigner-kit",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "website-maker",
+      "title": "Website Maker",
+      "tagline": "An agent that builds websites, grades its own work 0–100, and retries until it clears the bar",
+      "category": "Web & creative",
+      "repo": "hangryclaude/website-maker",
+      "live": "https://wm-showcase.vercel.app",
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "wiggle",
+      "title": "Wiggle",
+      "tagline": "AI that writes the 'can I please…' text to your parents, argued well enough to land",
+      "category": "Web & creative",
+      "repo": "hangryclaude/wiggle",
+      "live": null,
+      "lang": "TypeScript",
+      "year": "2026"
+    },
+    {
+      "slug": "biz-finder",
+      "title": "Biz Finder",
+      "tagline": "A local llama brainstorms business models; RDAP proves nobody owns the name. $0 in API bills.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/biz-finder",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "depop-flipper",
+      "title": "Depop Flipper",
+      "tagline": "Sell the jacket first, buy it after. A no-inventory Depop arbitrage desk in one index.html.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/depop-flipper",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "depop-scout",
+      "title": "Depop Scout",
+      "tagline": "Drives my own Chrome through Depop and flags anything priced way under its cohort's median.",
+      "category": "Commerce & hustles",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "domain-grabber",
+      "title": "Domain Grabber",
+      "tagline": "AI brainstorms brandable domains; the registry itself says if they're free. No API keys.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/domain-grabber",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "domain-master",
+      "title": "Domain Master",
+      "tagline": "Brute-forces the entire 3-character .com space against Verisign RDAP, hunting for drops.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/domain-master",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "handlehunt",
+      "title": "Handlehunt",
+      "tagline": "Is @thatname free on GitHub, TikTok, Twitch and seven others? One command, no logins.",
+      "category": "Commerce & hustles",
+      "repo": null,
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "larp-shopify",
+      "title": "Larp Shopify",
+      "tagline": "Maple & Stone Co. — a complete storefront for a store that does not exist. That's the point.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/larp-shopify",
+      "live": "https://larp-shopify.vercel.app",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "profile-namer",
+      "title": "Profile Namer",
+      "tagline": "Infers people's real names from how they text you. Yes, it reads your iMessage history.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/profile-namer",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "shopfiycompleter",
+      "title": "ShopfiyCompleter",
+      "tagline": "A full multi-store Shopify admin panel. Yes, the name is misspelled. No, I'm not fixing it.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/ShopfiyCompleter",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "shopify-sim",
+      "title": "Shopify Sim",
+      "tagline": "A fake Shopify dashboard that pushes fake sale notifications to your very real phone.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/shopify-sim",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "snackshack",
+      "title": "Snack Shack",
+      "tagline": "A point-of-sale for an actual snack shack, running on a Google Sheet. Hosting cost: zero.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/snackshack",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "underground805-theme",
+      "title": "Underground 805 Theme",
+      "tagline": "The brand's front door: noise, scanlines, a blinking LIVE dot, EST. 805 / SANTA BARBARA.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/underground805-theme",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "underground-brand-sheets",
+      "title": "Underground Brand Sheets",
+      "tagline": "SMS list building at $0/month: storefront phone capture straight into a Google Sheet I own.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/underground-brand-sheets",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "undergroundbrandd",
+      "title": "UndergroundBrandd",
+      "tagline": "The whole streetwear-brand operating manual: theme, ads, SMS, suppliers — ~60 playbooks deep.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/UndergroundBrandd",
+      "live": null,
+      "lang": "Liquid",
+      "year": "2026"
+    },
+    {
+      "slug": "viral-kit",
+      "title": "Viral Kit",
+      "tagline": "The playbook for taking 50 private repos public without buying stars or doxxing myself.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/viral-kit",
+      "live": null,
+      "lang": "Markdown",
+      "year": "2026"
+    },
+    {
+      "slug": "web-projects",
+      "title": "Web Projects",
+      "tagline": "The junk drawer: client sites, two Shopify themes, and a Screen Time remover in one monorepo.",
+      "category": "Commerce & hustles",
+      "repo": "hangryclaude/Web-Projects",
+      "live": null,
+      "lang": "Liquid",
+      "year": "2026"
+    },
+    {
+      "slug": "enneagram-test",
+      "title": "Engram",
+      "tagline": "A free Enneagram test with wings, tritype, and a tiebreaker built to get past your ego's answers.",
+      "category": "School & learning",
+      "repo": "hangryclaude/enneagram-test",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "habit-tracker",
+      "title": "Habit Tracker",
+      "tagline": "Habit reminders that text you via iMessage — but only if you haven't already done the thing.",
+      "category": "School & learning",
+      "repo": "hangryclaude/habit-tracker",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "hour-tracker",
+      "title": "hour-tracker",
+      "tagline": "A time tracker styled as a rocket launch console, because a plain timer wasn't going to get used.",
+      "category": "School & learning",
+      "repo": "hangryclaude/hour-tracker",
+      "live": "https://hour-tracker-smoky.vercel.app",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "how-tech-works",
+      "title": "How Tech Works",
+      "tagline": "One page explaining how technology actually works. Writing it down is how you learn it.",
+      "category": "School & learning",
+      "repo": "hangryclaude/how-tech-works",
+      "live": "https://how-tech-works.vercel.app",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "kairos-gp",
+      "title": "Kairos GP",
+      "tagline": "The classroom tracker as a Grand Prix: students are race cars, good work moves them up the track.",
+      "category": "School & learning",
+      "repo": "hangryclaude/kairos-gp",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "kairos-tracker",
+      "title": "Kairos Tracker",
+      "tagline": "Every student is a rocket. A gamified classroom tracker in one 12,000-line HTML file.",
+      "category": "School & learning",
+      "repo": "hangryclaude/kairos-tracker",
+      "live": "https://kairostracker.com",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "math-academy-khan-extension",
+      "title": "Khan Academy Video for Math Academy",
+      "tagline": "Math Academy tells you what to learn, not how. This puts the right Khan video one click away.",
+      "category": "School & learning",
+      "repo": "hangryclaude/math-academy-khan-extension",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "math-academy-video",
+      "title": "Khan Booster",
+      "tagline": "The Khan-video extension, round two: saved mappings, history, and a no-API-key fallback.",
+      "category": "School & learning",
+      "repo": "hangryclaude/math-academy-video",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "learn-smth",
+      "title": "learn-smth",
+      "tagline": "Type \"Kafka\", get a sim game that teaches it — with a solvability proof so every level can be won.",
+      "category": "School & learning",
+      "repo": "hangryclaude/learn-smth",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "math-academy-agent",
+      "title": "Math Academy Agent",
+      "tagline": "Claude does the math homework, typing answers at a suspiciously human pace.",
+      "category": "School & learning",
+      "repo": "hangryclaude/math-academy-agent",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "mathacademy-solver",
+      "title": "Math Academy Solver",
+      "tagline": "The v2: now it can see the diagrams. Auto-solves whole tasks until it gets one wrong.",
+      "category": "School & learning",
+      "repo": "hangryclaude/mathacademy-solver",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "prompting-course",
+      "title": "Prompting Course",
+      "tagline": "A five-module course on prompting Claude, from \"what is an LLM\" to agents. One HTML file.",
+      "category": "School & learning",
+      "repo": "hangryclaude/prompting-course",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "rust-study",
+      "title": "rust-study",
+      "tagline": "Learning Rust with rustlings, clippy, and a $0 AI tutor. The borrow checker is the curriculum.",
+      "category": "School & learning",
+      "repo": null,
+      "live": null,
+      "lang": "Rust",
+      "year": "2026"
+    },
+    {
+      "slug": "skill-learner",
+      "title": "skill-learner",
+      "tagline": "Reads my Claude Code transcripts for corrections and writes them into memory. Fool me once.",
+      "category": "School & learning",
+      "repo": "hangryclaude/skill-learner",
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "coin-sniper",
+      "title": "Coin Sniper",
+      "tagline": "pump.fun mints 1,000 coins an hour. This texts me the handful where the creator put real SOL in.",
+      "category": "Markets & bots",
+      "repo": "hangryclaude/coin-sniper",
       "live": null,
       "lang": "JavaScript",
       "year": "2026"
@@ -393,6 +1468,16 @@
       "year": "2026"
     },
     {
+      "slug": "pitchbet",
+      "title": "PitchBet",
+      "tagline": "Play-money prediction market for pitch competitions — the audience bets fake cash on who wins, odds move live.",
+      "category": "Markets & bots",
+      "repo": "hangryclaude/pitchbet",
+      "live": "https://pitchbet.vercel.app",
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
       "slug": "polymarket-copybot",
       "title": "Polymarket Copybot",
       "tagline": "Follows Polymarket whales with a $17 bankroll and five layers of risk checks between it and a trade.",
@@ -403,13 +1488,193 @@
       "year": "2026"
     },
     {
-      "slug": "coin-sniper",
-      "title": "Coin Sniper",
-      "tagline": "pump.fun mints 1,000 coins an hour. This texts me the handful where the creator put real SOL in.",
+      "slug": "revenue-dashboard",
+      "title": "Revenue Dashboard",
+      "tagline": "One page answering the only question that matters: is anything actually making money?",
       "category": "Markets & bots",
-      "repo": "hangryclaude/coin-sniper",
+      "repo": "hangryclaude/revenue-dashboard",
       "live": null,
       "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "camera-watch",
+      "title": "Camera Watch",
+      "tagline": "Maps the license-plate-reader cameras near you, so you know exactly when you're being recorded.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/camera-watch",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "caspian-game",
+      "title": "Caspian",
+      "tagline": "A game that so far is just a machine for generating 2,000 fake in-game emails trying to sell you something.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/caspian-game",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "dad-birthday",
+      "title": "Dad's Birthday Sites",
+      "tagline": "Every year my dad gets a birthday website. This is three years of the tradition.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/dad-birthday",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "ghostbike",
+      "title": "Ghostbike",
+      "tagline": "A stealth range computer that tells your Sur-Ron how far it can really go, not the optimistic number on the dash.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/ghostbike",
+      "live": "https://ghostbike.vercel.app",
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "hacking-resources-mirror",
+      "title": "Hacking Resources Mirror",
+      "tagline": "14,600 infosec cheatsheets and payloads, harvested text-only so you can read them without running anything.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/hacking-resources-mirror",
+      "live": null,
+      "lang": "CSS",
+      "year": "2026"
+    },
+    {
+      "slug": "macintosh-disk",
+      "title": "Macintosh Disk",
+      "tagline": "A Mac OS 8 boot disk chopped into 95MB chunks so a browser can Range-fetch and boot it.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/macintosh-disk",
+      "live": "https://madebyangus.com/mac",
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "meme-race",
+      "title": "Meme Race",
+      "tagline": "Turn $20 into $10K before Will does — leveraged meme-coin bets racing a rival down a synthwave 3D track.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/meme-race",
+      "live": "https://meme-race-silk.vercel.app",
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "robloxbr",
+      "title": "RobloxBR",
+      "tagline": "A Rivals-style Roblox battle royale, written as readable Rojo source instead of a black-box place file.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/RobloxBR",
+      "live": null,
+      "lang": "Luau",
+      "year": "2026"
+    },
+    {
+      "slug": "sneaking-out",
+      "title": "Sneaking Out",
+      "tagline": "A location spoofer with an honest name — push fake GPS to a tethered iPhone and walk a route you're not on.",
+      "category": "Games, family & chaos",
+      "repo": "hangryclaude/sneaking-out",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "agents805",
+      "title": "805 Agents",
+      "tagline": "AI agents built and installed in person for Santa Barbara businesses. Flat $500, then monthly.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/agents805",
+      "live": null,
+      "lang": "HTML",
+      "year": "2026"
+    },
+    {
+      "slug": "cf-migrate",
+      "title": "CF Migrate",
+      "tagline": "One idempotent script to repoint 22 Porkbun domains at Cloudflare DNS. Dry-run first.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/cf-migrate",
+      "live": null,
+      "lang": "Shell",
+      "year": "2026"
+    },
+    {
+      "slug": "glitchpilled",
+      "title": "Glitchpilled",
+      "tagline": "A PIL script that prints one persona's banner and pfp in an NZT gold-and-cyan glitch palette.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/glitchpilled",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "insta-bots",
+      "title": "Insta Bots",
+      "tagline": "An Instagram-bot idea that never got past its README. An empty repo, told honestly.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/insta-bots",
+      "live": null,
+      "lang": "HTML",
+      "year": "2025"
+    },
+    {
+      "slug": "night-shift",
+      "title": "Night Shift",
+      "tagline": "Boot the Mac, watch a sci-fi startup sequence, and land in six terminals already running Claude.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/night-shift",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "pycharmprojects",
+      "title": "PycharmProjects",
+      "tagline": "The default PyCharm hello-world, committed for an honest catalog. It does nothing.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/PycharmProjects",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "term-organizer",
+      "title": "Term Organizer",
+      "tagline": "Inventory, tile, and cull twenty open Terminal windows without touching the mouse.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/term-organizer",
+      "live": null,
+      "lang": "Python",
+      "year": "2026"
+    },
+    {
+      "slug": "ug-social",
+      "title": "UG Social",
+      "tagline": "Point it at a Shopify store and it renders daily 9:16 product videos with a local model — $0, no editor.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/ug-social",
+      "live": null,
+      "lang": "JavaScript",
+      "year": "2026"
+    },
+    {
+      "slug": "work-report",
+      "title": "Work Report",
+      "tagline": "Turns a week of git commits into a styled report someone would actually read.",
+      "category": "Scraps & experiments",
+      "repo": "hangryclaude/work-report",
+      "live": null,
+      "lang": "HTML",
       "year": "2026"
     }
   ]

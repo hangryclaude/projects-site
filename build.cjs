@@ -110,10 +110,12 @@ function card(p) {
 </a>`;
 }
 
+const catId = c => c.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 const sections = categories.map(cat => {
   const items = projects.filter(p => p.category === cat);
   if (!items.length) return '';
-  return `<section class="cat">
+  return `<section class="cat" id="${catId(cat)}">
   <div class="cat-head">
     <h2>${esc(cat)}</h2>
     <span class="count mono">${String(items.length).padStart(2, '0')}</span>
@@ -129,6 +131,10 @@ const indexBody = `${nav('projects')}
   <header class="intro">
     <h1 data-headline>${esc(meta.heading)}</h1>
     <p class="sub">${esc(meta.subheading)}</p>
+    <nav class="toc mono">
+${categories.filter(c => projects.some(p => p.category === c)).map(c =>
+    `      <a href="#${catId(c)}">${esc(c)} <span>${String(projects.filter(p => p.category === c).length).padStart(2, '0')}</span></a>`).join('\n')}
+    </nav>
   </header>
 ${sections}
 </main>`;

@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "math-academy-agent",
+    "title": "Math Academy Agent",
+    "tagline": "Claude does the math homework, typing answers at a suspiciously human pace.",
+    "category": "School & learning",
+    "repo": "hangryclaude/math-academy-agent",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "mathacademy-solver",
+    "title": "Math Academy Solver",
+    "tagline": "The v2: now it can see the diagrams. Auto-solves whole tasks until it gets one wrong.",
+    "category": "School & learning",
+    "repo": "hangryclaude/mathacademy-solver",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "math-academy-khan-extension",
+    "title": "Khan Academy Video for Math Academy",
+    "tagline": "Math Academy tells you what to learn, not how. This puts the right Khan video one click away.",
+    "category": "School & learning",
+    "repo": "hangryclaude/math-academy-khan-extension",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "math-academy-video",
+    "title": "Khan Booster",
+    "tagline": "The Khan-video extension, round two: saved mappings, history, and a no-API-key fallback.",
+    "category": "School & learning",
+    "repo": "hangryclaude/math-academy-video",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "kairos-tracker",
+    "title": "Kairos Tracker",
+    "tagline": "Every student is a rocket. A gamified classroom tracker in one 12,000-line HTML file.",
+    "category": "School & learning",
+    "repo": "hangryclaude/kairos-tracker",
+    "live": "https://kairostracker.com",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "kairos-gp",
+    "title": "Kairos GP",
+    "tagline": "The classroom tracker as a Grand Prix: students are race cars, good work moves them up the track.",
+    "category": "School & learning",
+    "repo": "hangryclaude/kairos-gp",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "learn-smth",
+    "title": "learn-smth",
+    "tagline": "Type \"Kafka\", get a sim game that teaches it — with a solvability proof so every level can be won.",
+    "category": "School & learning",
+    "repo": "hangryclaude/learn-smth",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "skill-learner",
+    "title": "skill-learner",
+    "tagline": "Reads my Claude Code transcripts for corrections and writes them into memory. Fool me once.",
+    "category": "School & learning",
+    "repo": "hangryclaude/skill-learner",
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "prompting-course",
+    "title": "Prompting Course",
+    "tagline": "A five-module course on prompting Claude, from \"what is an LLM\" to agents. One HTML file.",
+    "category": "School & learning",
+    "repo": "hangryclaude/prompting-course",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "how-tech-works",
+    "title": "How Tech Works",
+    "tagline": "One page explaining how technology actually works. Writing it down is how you learn it.",
+    "category": "School & learning",
+    "repo": "hangryclaude/how-tech-works",
+    "live": "https://how-tech-works.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "hour-tracker",
+    "title": "hour-tracker",
+    "tagline": "A time tracker styled as a rocket launch console, because a plain timer wasn't going to get used.",
+    "category": "School & learning",
+    "repo": "hangryclaude/hour-tracker",
+    "live": "https://hour-tracker-smoky.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "habit-tracker",
+    "title": "Habit Tracker",
+    "tagline": "Habit reminders that text you via iMessage — but only if you haven't already done the thing.",
+    "category": "School & learning",
+    "repo": "hangryclaude/habit-tracker",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "enneagram-test",
+    "title": "Engram",
+    "tagline": "A free Enneagram test with wings, tritype, and a tiebreaker built to get past your ego's answers.",
+    "category": "School & learning",
+    "repo": "hangryclaude/enneagram-test",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "rust-study",
+    "title": "rust-study",
+    "tagline": "Learning Rust with rustlings, clippy, and a $0 AI tutor. The borrow checker is the curriculum.",
+    "category": "School & learning",
+    "repo": null,
+    "live": null,
+    "lang": "Rust",
+    "year": "2026"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "agent-setup-sb",
+    "title": "Agent·SB",
+    "tagline": "I'll come to your house in Santa Barbara and install an AI agent on your computer. Pricing on request.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/agent-setup-sb",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "angusagentmaker",
+    "title": "Angus Agent Maker",
+    "tagline": "Drop your phone number, I text you, you get a Claude-powered agent for your business.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/angusagentmaker",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "solei-sitter",
+    "title": "Solei Sitter",
+    "tagline": "A babysitter's booking site where the form texts her phone directly. No dashboard, no database.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/solei-sitter",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "touchdesigner-kit",
+    "title": "TouchDesigner Kit",
+    "tagline": "Scripts that interrogate TouchDesigner until it admits where the hand-tracking data lives.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/touchdesigner-kit",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "claude-anim",
+    "title": "Claude Anim",
+    "tagline": "The Claude logo, animated in five acts, in your terminal, with zero dependencies.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/claude-anim",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "animations",
+    "title": "Animations",
+    "tagline": "The Blender models, renders, and scripts feeding visuals into everything else.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/animations",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "face-fx",
+    "title": "Face FX",
+    "tagline": "Three MediaPipe models watch your webcam and turn you into WebGL effects. Your face never leaves the tab.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/face-fx",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "madebyangus-models",
+    "title": "madebyangus Models",
+    "tagline": "Low-poly laptops and monitors, with paperwork on which model goes where.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/madebyangus-models",
+    "live": null,
+    "lang": "Blender",
+    "year": "2026"
+  },
+  {
+    "slug": "fundraiser-qr",
+    "title": "Fundraiser QR",
+    "tagline": "Prop an old phone on the table, whole room scans to donate. Turns any retired iPhone into a kiosk.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/fundraiser-qr",
+    "live": "https://hangryclaude.github.io/fundraiser-qr/",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "angusangus",
+    "title": "angusangus.com",
+    "tagline": "My calling card: an ∞ glyph sphere-traced in 3D and printed entirely out of flowing type.",
+    "category": "Web & creative",
+    "repo": "hangryclaude/angusangus",
+    "live": "https://angusangus.com",
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "tiger-site",
+    "title": "Tiger",
+    "tagline": "A tiger gallops across the page forever, spelled out of the word \"tiger\". That's it. That's the site.",
+    "category": "Web & creative",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "site-forge",
+    "title": "Site Forge",
+    "tagline": "Five hand-built design systems so a website generator never has to improvise CSS.",
+    "category": "Web & creative",
+    "repo": null,
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "gesture-vfx",
+    "title": "Gesture VFX",
+    "tagline": "Neon trails, ghost echoes, and beat-synced clones tracked onto my own footage. Free, local, no AI video.",
+    "category": "Web & creative",
+    "repo": null,
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "ai-vfx-reel",
+    "title": "AI VFX Reel",
+    "tagline": "Feed it a logo, an emoji, or your face — get back a viral-style 9:16 VFX reel for about $1.50.",
+    "category": "Web & creative",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "flowtype-site",
+    "title": "Flowtype Site",
+    "tagline": "I reverse-engineered andrew.net's flowing-type 3D glyph and made it a generator. Two sites shipped from it.",
+    "category": "Web & creative",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  }
+]

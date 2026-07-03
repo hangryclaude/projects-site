@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RPLY Console — Angus Duncan</title>
+<meta name="description" content="The campaign war room: influencer finder, burn-and-replace mail pool, and a go-live runbook.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="https://madebyangus.com" data-magnetic>Angus Duncan</a>
+  <div class="links mono">
+    <a href="/" aria-current="page" data-magnetic><span class="navnum">01</span> Projects</a>
+    <a href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic><span class="navnum">02</span> GitHub</a>
+    <a href="https://madebyangus.com" data-magnetic><span class="navnum">03</span> Hire me</a>
+  </div>
+</nav>
+<main class="wrap detail">
+  <a class="back mono" href="/" data-magnetic>← All projects</a>
+  <header class="detail-head">
+    <h1 data-headline>RPLY Console</h1>
+    <div class="meta mono">
+      <span>NOX &amp; RPLY</span><span>JavaScript</span><span>2026</span>
+    </div>
+    <div class="actions">
+    <a class="btn mono" href="https://github.com/hangryclaude/rply-console" target="_blank" rel="noopener" data-magnetic>GitHub ↗</a>
+    </div>
+  </header>
+  <div class="hero-img"><img src="/assets/thumbs/rply-console.webp" alt="RPLY Console"></div>
+  <article class="body">
+<p>The war room for the RPLY download campaign: one repo holding the influencer pipeline, the cold-email sending engine, and the runbooks that tie them together.</p>
+<h2>How it works</h2>
+<p>Three main pieces. <code>influencer-finder/</code> scores and ranks micro-influencer prospects from seed lists (<code>find.cjs</code>), then generates outreach (<code>outreach.cjs</code>) — its output is the 116-prospect list that hopperleads-heynox streams. <code>mailpool/</code> is a portable cold-email engine: bulk Cloudflare zone setup, account provisioning, Resend sending, suppression logs, and lane-health checks, built on a burn-and-replace domain model so one torched apex doesn't sink the rest. Around them: a campaign console dashboard (<code>index.html</code>) and battle docs — RUNBOOK, MASS_SCALE_PLAN, BUY-LIST, COMPETITOR-PLAYBOOK. Everything dry-runs before it sends.</p>
+<h2>Stack</h2>
+<p>Node.js, Cloudflare API, Resend, vanilla HTML dashboard</p>
+<h2>Status</h2>
+<p>Built and preflight-checked; go-live was blocked on a Resend key and domain purchases.</p>
+  </article>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="mono">© 2026 Angus Duncan</span>
+    <span class="mono">built by hand, shipped by habit</span>
+    <a class="mono" href="https://github.com/hangryclaude" target="_blank" rel="noopener" data-magnetic>github/hangryclaude</a>
+  </div>
+</footer>
+
+</body>
+</html>

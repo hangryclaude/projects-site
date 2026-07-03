@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "screentime-remover",
+    "title": "Lockless",
+    "tagline": "Locked yourself out of Screen Time? Brute-force your own forgotten PIN out of an old iTunes backup.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/screentime-remover",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "startup-claude",
+    "title": "startup-claude",
+    "tagline": "Log in, watch a boot animation, and land in six terminals already running Claude — one per project.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/startup-claude",
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "term-grid",
+    "title": "term-grid",
+    "tagline": "Twelve real terminals in a browser grid. Every cell is a live PTY, not a log — type into any of them.",
+    "category": "macOS power tools",
+    "repo": "hangryclaude/term-grid",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "file-warden",
+    "title": "file-warden",
+    "tagline": "A janitor for Home, Desktop, and Downloads. Idle files get filed by type and month. Never deletes.",
+    "category": "macOS power tools",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "brain-sync",
+    "title": "brain-sync",
+    "tagline": "Turns the whole machine into one wikilinked Obsidian map — every tool, skill, agent, and repo a node.",
+    "category": "macOS power tools",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "webshot",
+    "title": "webshot",
+    "tagline": "Screenshot any URL or HTML file to PNG in one command. Won't hang on long-polling sites.",
+    "category": "macOS power tools",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "skillify",
+    "title": "skillify",
+    "tagline": "Point it at a script or repo and it becomes a permanent Claude skill. The 'now do this forever' button.",
+    "category": "macOS power tools",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "stack-doctor",
+    "title": "stack-doctor",
+    "tagline": "One command, green/red lines on the whole AI stack. Catches silent breakage before it burns tokens.",
+    "category": "macOS power tools",
+    "repo": null,
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "shrink",
+    "title": "shrink",
+    "tagline": "Squeeze text before it hits an LLM. Heuristic for free, or --ai for a 2–5× semantic cut that keeps the facts.",
+    "category": "macOS power tools",
+    "repo": null,
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  },
+  {
+    "slug": "morning-brief",
+    "title": "morning-brief",
+    "tagline": "A daily machine status text with no cloud and no MCP — so it still fires when everything else is down.",
+    "category": "macOS power tools",
+    "repo": null,
+    "live": null,
+    "lang": "Shell",
+    "year": "2026"
+  }
+]

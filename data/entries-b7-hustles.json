@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "depop-flipper",
+    "title": "Depop Flipper",
+    "tagline": "Sell the jacket first, buy it after. A no-inventory Depop arbitrage desk in one index.html.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/depop-flipper",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "depop-scout",
+    "title": "Depop Scout",
+    "tagline": "Drives my own Chrome through Depop and flags anything priced way under its cohort's median.",
+    "category": "Commerce & hustles",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "shopify-sim",
+    "title": "Shopify Sim",
+    "tagline": "A fake Shopify dashboard that pushes fake sale notifications to your very real phone.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/shopify-sim",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "shopfiycompleter",
+    "title": "ShopfiyCompleter",
+    "tagline": "A full multi-store Shopify admin panel. Yes, the name is misspelled. No, I'm not fixing it.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/ShopfiyCompleter",
+    "live": null,
+    "lang": "Python",
+    "year": "2026"
+  },
+  {
+    "slug": "undergroundbrandd",
+    "title": "UndergroundBrandd",
+    "tagline": "The whole streetwear-brand operating manual: theme, ads, SMS, suppliers — ~60 playbooks deep.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/UndergroundBrandd",
+    "live": null,
+    "lang": "Liquid",
+    "year": "2026"
+  },
+  {
+    "slug": "underground805-theme",
+    "title": "Underground 805 Theme",
+    "tagline": "The brand's front door: noise, scanlines, a blinking LIVE dot, EST. 805 / SANTA BARBARA.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/underground805-theme",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "underground-brand-sheets",
+    "title": "Underground Brand Sheets",
+    "tagline": "SMS list building at $0/month: storefront phone capture straight into a Google Sheet I own.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/underground-brand-sheets",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "larp-shopify",
+    "title": "Larp Shopify",
+    "tagline": "Maple & Stone Co. — a complete storefront for a store that does not exist. That's the point.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/larp-shopify",
+    "live": "https://larp-shopify.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "snackshack",
+    "title": "Snack Shack",
+    "tagline": "A point-of-sale for an actual snack shack, running on a Google Sheet. Hosting cost: zero.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/snackshack",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "viral-kit",
+    "title": "Viral Kit",
+    "tagline": "The playbook for taking 50 private repos public without buying stars or doxxing myself.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/viral-kit",
+    "live": null,
+    "lang": "Markdown",
+    "year": "2026"
+  },
+  {
+    "slug": "biz-finder",
+    "title": "Biz Finder",
+    "tagline": "A local llama brainstorms business models; RDAP proves nobody owns the name. $0 in API bills.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/biz-finder",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "domain-grabber",
+    "title": "Domain Grabber",
+    "tagline": "AI brainstorms brandable domains; the registry itself says if they're free. No API keys.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/domain-grabber",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "domain-master",
+    "title": "Domain Master",
+    "tagline": "Brute-forces the entire 3-character .com space against Verisign RDAP, hunting for drops.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/domain-master",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "profile-namer",
+    "title": "Profile Namer",
+    "tagline": "Infers people's real names from how they text you. Yes, it reads your iMessage history.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/profile-namer",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "web-projects",
+    "title": "Web Projects",
+    "tagline": "The junk drawer: client sites, two Shopify themes, and a Screen Time remover in one monorepo.",
+    "category": "Commerce & hustles",
+    "repo": "hangryclaude/Web-Projects",
+    "live": null,
+    "lang": "Liquid",
+    "year": "2026"
+  },
+  {
+    "slug": "handlehunt",
+    "title": "Handlehunt",
+    "tagline": "Is @thatname free on GitHub, TikTok, Twitch and seven others? One command, no logins.",
+    "category": "Commerce & hustles",
+    "repo": null,
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "slug": "agentpath",
+    "title": "Agentpath",
+    "tagline": "A one-page pitch for custom AI agents, where the demo agent does the selling",
+    "category": "Web & creative",
+    "repo": "hangryclaude/agentpath",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "profile-site",
+    "title": "Profile Site",
+    "tagline": "The cold-email fleet's fake personas get a gallery — a friend names them and uploads headshots, live",
+    "category": "Web & creative",
+    "repo": "hangryclaude/profile-site",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "madebyangus-v8",
+    "title": "Made by Angus v8",
+    "tagline": "Click the 3D laptop, fly into its screen — which is a real, clickable client site",
+    "category": "Web & creative",
+    "repo": "hangryclaude/madebyangus-v8",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "madebyangus-v9",
+    "title": "Made by Angus v9",
+    "tagline": "v8's sequel. The README still says v8 — the version number outran the docs",
+    "category": "Web & creative",
+    "repo": "hangryclaude/madebyangus-v9",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "orbital-sb",
+    "title": "ORBITAL",
+    "tagline": "A CRT ground station that sweeps live satellite imagery for abandoned buildings. 64 real ruins pre-pinned",
+    "category": "Web & creative",
+    "repo": "hangryclaude/orbital-sb",
+    "live": "https://orbital-sb.vercel.app",
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "satellite-sb",
+    "title": "Satellite SB",
+    "tagline": "ORBITAL's deprecated twin, kept as a monument to editing the wrong repo",
+    "category": "Web & creative",
+    "repo": "hangryclaude/satellite-sb",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "alpha-sites",
+    "title": "Alpha Sites",
+    "tagline": "Finds businesses with no website, builds them one with Claude, emails a $50 offer",
+    "category": "Web & creative",
+    "repo": "hangryclaude/alpha-sites",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "alpha-bank",
+    "title": "Alpha Bank",
+    "tagline": "A real-time bank for classroom play-money, replacing the spreadsheet the class broke",
+    "category": "Web & creative",
+    "repo": "hangryclaude/alpha-bank",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "apex-web",
+    "title": "APEX",
+    "tagline": "GPS telemetry for kids on Surrons — record a run, get splits, claim the podium",
+    "category": "Web & creative",
+    "repo": "hangryclaude/apex-web",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "flux-store",
+    "title": "Flux Store",
+    "tagline": "A complete cart-to-checkout storefront for desk gadgets. Sells nothing, convincingly",
+    "category": "Web & creative",
+    "repo": "hangryclaude/flux-store",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "resend-clone-site",
+    "title": "Resend Clone",
+    "tagline": "Resend's landing page and dashboard, reproduced in plain HTML to learn why its UI is good",
+    "category": "Web & creative",
+    "repo": "hangryclaude/resend-clone-site",
+    "live": null,
+    "lang": "HTML",
+    "year": "2026"
+  },
+  {
+    "slug": "aws-console-clone",
+    "title": "AWS Console Clone",
+    "tagline": "EC2, S3, Lambda and CloudWatch, faithfully cloned — minus the bill",
+    "category": "Web & creative",
+    "repo": "hangryclaude/aws-console-clone",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  },
+  {
+    "slug": "onlywebsites",
+    "title": "OnlyWebsites",
+    "tagline": "A self-running cold-email bot selling $1k websites to OnlyFans creators, at $0 in AI spend",
+    "category": "Web & creative",
+    "repo": "hangryclaude/onlywebsites",
+    "live": null,
+    "lang": "JavaScript",
+    "year": "2026"
+  },
+  {
+    "slug": "wiggle",
+    "title": "Wiggle",
+    "tagline": "AI that writes the 'can I please…' text to your parents, argued well enough to land",
+    "category": "Web & creative",
+    "repo": "hangryclaude/wiggle",
+    "live": null,
+    "lang": "TypeScript",
+    "year": "2026"
+  }
+]
