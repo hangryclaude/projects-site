@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a desktop app streaming ranked, scored micro-influencers routed to landing domains */
+  #scene { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:26px; }
+  #scene::before { content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(54% 50% at 50% 46%, rgba(124,92,255,0.2), transparent 70%); }
+  .hd { position:relative; z-index:2; display:flex; align-items:baseline; gap:16px; }
+  .hd .n { color:#a78bfa; font: 800 46px "SF Mono", Menlo, monospace; letter-spacing:-0.02em; }
+  .hd .t { color:rgba(235,232,226,0.55); font: 400 27px "SF Mono", Menlo, monospace; }
+  .list { position:relative; z-index:1; display:flex; flex-direction:column; gap:12px; width:940px; }
+  .row { display:flex; align-items:center; gap:20px; background:rgba(235,232,226,0.03);
+    border:1px solid rgba(235,232,226,0.1); border-radius:12px; padding:14px 22px; }
+  .row.top { border-color:rgba(167,139,250,0.55); background:rgba(167,139,250,0.08); }
+  .rk { color:rgba(235,232,226,0.4); font: 600 26px "SF Mono", Menlo, monospace; width:46px; }
+  .row.top .rk { color:#a78bfa; }
+  .hn { color:#ebe8e2; font: 500 28px "SF Mono", Menlo, monospace; width:230px; }
+  .track { flex:1; height:14px; border-radius:7px; background:rgba(235,232,226,0.08); overflow:hidden; }
+  .fill { height:100%; border-radius:7px; background:linear-gradient(90deg,#7c5cff,#a78bfa); }
+  .sc { color:#c9b8ff; font: 600 26px "SF Mono", Menlo, monospace; width:66px; text-align:right; }
+  .dm { color:rgba(235,232,226,0.5); font: 400 22px "SF Mono", Menlo, monospace; width:210px; text-align:right; }
+  .foot { position:relative; z-index:2; color:rgba(235,232,226,0.45); font: 400 25px "SF Mono", Menlo, monospace; }
+  .foot b { color:#ebe8e2; font-weight:500; }
+  /* bunny "new prospect" native toast */
+  .toast { position:absolute; top:52px; right:52px; z-index:3; display:flex; align-items:center; gap:14px;
+    background:rgba(20,16,32,0.95); border:1px solid rgba(167,139,250,0.5); border-radius:14px; padding:12px 18px 12px 14px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5); }
+  .toast .av { position:relative; width:40px; height:40px; border-radius:11px; background:#a78bfa; }
+  .toast .av::before, .toast .av::after { content:""; position:absolute; top:-13px; width:9px; height:20px; border-radius:5px; background:#a78bfa; }
+  .toast .av::before { left:8px; transform:rotate(-14deg); }
+  .toast .av::after { right:8px; transform:rotate(14deg); }
+  .toast .tx b { display:block; color:#ebe8e2; font: 600 22px "SF Mono", Menlo, monospace; }
+  .toast .tx span { color:rgba(235,232,226,0.5); font: 400 20px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="hopperleads-heynox">
+  <div id="scene">
+    <div class="toast"><div class="av"></div><div class="tx"><b>new prospect</b><span>fit 0.94 · routed</span></div></div>
+    <div class="hd"><span class="n">116</span><span class="t">scored micro-influencers · ranked live</span></div>
+    <div class="list">
+      <div class="row top"><span class="rk">01</span><span class="hn">@driftwave</span><span class="track"><span class="fill" style="width:96%"></span></span><span class="sc">0.96</span><span class="dm">heynox-07.com</span></div>
+      <div class="row"><span class="rk">02</span><span class="hn">@nocturne.fm</span><span class="track"><span class="fill" style="width:91%"></span></span><span class="sc">0.91</span><span class="dm">heynox-14.com</span></div>
+      <div class="row"><span class="rk">03</span><span class="hn">@calm.pixels</span><span class="track"><span class="fill" style="width:87%"></span></span><span class="sc">0.87</span><span class="dm">heynox-03.com</span></div>
+      <div class="row"><span class="rk">04</span><span class="hn">@lowfi.club</span><span class="track"><span class="fill" style="width:82%"></span></span><span class="sc">0.82</span><span class="dm">heynox-19.com</span></div>
+      <div class="row"><span class="rk">05</span><span class="hn">@quiet.hours</span><span class="track"><span class="fill" style="width:78%"></span></span><span class="sc">0.78</span><span class="dm">heynox-11.com</span></div>
+    </div>
+    <div class="foot"><b>22 landing domains</b> · highest-fit surfaces first · $0, all local</div>
+  </div>
+</div>
+</body>
+</html>

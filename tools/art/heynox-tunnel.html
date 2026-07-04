@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: fly down a receding tunnel of notification rings to the NOX vault light */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  #scene::before { content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(46% 46% at 50% 47%, rgba(124,92,255,0.28), transparent 68%); }
+  svg { position: relative; z-index: 1; }
+  .cap { position: absolute; right: 70px; bottom: 46px; z-index: 3;
+    color: rgba(235,232,226,0.5); font: 400 26px "SF Mono", Menlo, monospace; text-align: right; }
+  .cap b { color: #a78bfa; font-weight: 500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="heynox-tunnel">
+  <div id="scene">
+    <svg width="1000" height="640" viewBox="0 0 1000 640" fill="none">
+      <g fill="none" stroke="#a78bfa" stroke-width="3">
+        <rect x="30"  y="30"  width="940" height="560" rx="42" transform="rotate(0 500 310)"  opacity="0.16"/>
+        <rect x="115" y="80"  width="770" height="459" rx="34" transform="rotate(5 500 310)"  opacity="0.24"/>
+        <rect x="184" y="122" width="632" height="376" rx="28" transform="rotate(10 500 310)" opacity="0.33"/>
+        <rect x="241" y="156" width="518" height="309" rx="23" transform="rotate(15 500 310)" opacity="0.43"/>
+        <rect x="288" y="184" width="425" height="253" rx="19" transform="rotate(20 500 310)" opacity="0.54"/>
+        <rect x="326" y="206" width="349" height="208" rx="15" transform="rotate(25 500 310)" opacity="0.66"/>
+        <rect x="357" y="225" width="286" height="170" rx="12" transform="rotate(30 500 310)" opacity="0.78"/>
+        <rect x="383" y="240" width="234" height="140" rx="10" transform="rotate(35 500 310)" opacity="0.90"/>
+      </g>
+      <!-- streaming notification pills along the bore -->
+      <g opacity="0.85">
+        <g transform="translate(150 150)"><rect width="150" height="34" rx="17" fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="2"/><circle cx="21" cy="17" r="8" fill="#a78bfa"/><rect x="40" y="12" width="92" height="10" rx="5" fill="rgba(235,232,226,0.5)"/></g>
+        <g transform="translate(720 430) scale(0.8)"><rect width="150" height="34" rx="17" fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="2"/><circle cx="21" cy="17" r="8" fill="#a78bfa"/><rect x="40" y="12" width="92" height="10" rx="5" fill="rgba(235,232,226,0.5)"/></g>
+        <g transform="translate(700 130) scale(0.72)"><rect width="150" height="34" rx="17" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="2"/><circle cx="21" cy="17" r="8" fill="#a78bfa"/><rect x="40" y="12" width="92" height="10" rx="5" fill="rgba(235,232,226,0.45)"/></g>
+        <g transform="translate(190 420) scale(0.9)"><rect width="150" height="34" rx="17" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="2"/><circle cx="21" cy="17" r="8" fill="#a78bfa"/><rect x="40" y="12" width="92" height="10" rx="5" fill="rgba(235,232,226,0.45)"/></g>
+      </g>
+      <!-- vault light at the end -->
+      <circle cx="500" cy="310" r="66" fill="#7c5cff" opacity="0.22"/>
+      <circle cx="500" cy="310" r="42" fill="#a78bfa" opacity="0.45"/>
+      <circle cx="500" cy="310" r="24" fill="#d7ccff"/>
+      <circle cx="500" cy="310" r="11" fill="#ffffff"/>
+    </svg>
+    <div class="cap">steer through the noise<br><b>→ into the vault</b></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a "found" business-idea card — proven model + brandable name whose domain is open & mark is clear */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .card {
+    width: 760px; background: #141416;
+    border: 1.5px solid rgba(235,232,226,0.16); border-radius: 20px;
+    padding: 48px 54px 44px; position: relative;
+  }
+  .rank { position: absolute; top: -26px; left: 44px;
+    background: #34d372; color: #0f0f11; font: 800 30px "SF Mono", Menlo, monospace;
+    padding: 8px 20px; border-radius: 12px; letter-spacing: 0.02em; }
+  .model { color: rgba(235,232,226,0.5); font: 500 27px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; text-transform: uppercase; }
+  .why { color: rgba(235,232,226,0.4); font: 400 25px/1.4 "SF Mono", Menlo, monospace; margin-top: 10px; }
+  .name { color: #ebe8e2; font: 700 92px/1 -apple-system, system-ui, sans-serif; letter-spacing: -0.03em; margin: 34px 0 6px; }
+  .tld { color: rgba(235,232,226,0.35); font-weight: 400; }
+  .pills { display: flex; gap: 18px; margin-top: 32px; }
+  .pill { display: flex; align-items: center; gap: 12px;
+    border: 1.5px solid rgba(52,211,114,0.5); background: rgba(52,211,114,0.1);
+    color: #34d372; font: 500 26px "SF Mono", Menlo, monospace; padding: 12px 22px; border-radius: 999px; }
+  .dot { width: 13px; height: 13px; border-radius: 50%; background: #34d372; }
+</style>
+</head><body>
+<div id="frame" data-label="biz-finder">
+  <div id="scene">
+    <div class="card">
+      <div class="rank">#1 · $0 to start</div>
+      <div class="model">niche invoicing SaaS</div>
+      <div class="why">recurring B2B · low churn · people pay to get paid</div>
+      <div class="name">Loomvia<span class="tld">.com</span></div>
+      <div class="pills">
+        <span class="pill"><span class="dot"></span>domain open</span>
+        <span class="pill"><span class="dot"></span>USPTO clear</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

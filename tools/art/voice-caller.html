@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a live AI phone call — voice waveform, real back-and-forth, follow-up booked, AI disclosed */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; }
+  .call { width: 850px; display: flex; flex-direction: column; gap: 26px; }
+  .status { display: flex; align-items: center; gap: 16px; font: 500 27px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .status .live { width: 14px; height: 14px; border-radius: 50%; background: #3fdc82; box-shadow: 0 0 14px rgba(63,220,130,0.8); }
+  .status .ph { color: #a78bfa; }
+  .status .t { margin-left: auto; color: rgba(235,232,226,0.5); }
+  .wave { display: flex; align-items: center; gap: 6px; height: 130px; justify-content: center; }
+  .wave span { width: 8px; border-radius: 999px; background: #a78bfa; }
+  .msg { max-width: 620px; padding: 18px 26px; border-radius: 18px; font: 400 27px/1.38 "SF Mono", Menlo, monospace; }
+  .ai { align-self: flex-start; background: rgba(167,139,250,0.13); border: 1px solid rgba(167,139,250,0.4); color: #ebe8e2; border-bottom-left-radius: 6px; }
+  .hu { align-self: flex-end; background: rgba(235,232,226,0.08); color: rgba(235,232,226,0.72); border-bottom-right-radius: 6px; }
+  .pills { display: flex; gap: 18px; }
+  .pill { display: flex; align-items: center; gap: 12px; padding: 12px 24px; border-radius: 999px; font: 500 25px "SF Mono", Menlo, monospace; }
+  .disc { border: 1.5px solid rgba(167,139,250,0.5); color: #a78bfa; }
+  .book { border: 1.5px solid rgba(63,220,130,0.55); background: rgba(63,220,130,0.1); color: #3fdc82; }
+  .cap { font: 400 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+</style>
+</head>
+<body>
+<div id="frame" data-label="voice-caller">
+  <div id="scene">
+    <div class="call">
+      <div class="status"><span class="live"></span><span class="ph">&#9742;</span> on call &middot; +1&nbsp;805&nbsp;&middot;&middot;&middot; <span class="t">02:14</span></div>
+      <div class="wave">
+        <span style="height:22px"></span><span style="height:38px"></span><span style="height:56px"></span><span style="height:78px"></span><span style="height:96px"></span><span style="height:66px"></span><span style="height:40px"></span><span style="height:28px"></span><span style="height:50px"></span><span style="height:74px"></span><span style="height:100px"></span><span style="height:118px"></span><span style="height:88px"></span><span style="height:58px"></span><span style="height:34px"></span><span style="height:24px"></span><span style="height:42px"></span><span style="height:64px"></span><span style="height:92px"></span><span style="height:112px"></span><span style="height:124px"></span><span style="height:98px"></span><span style="height:70px"></span><span style="height:46px"></span><span style="height:26px"></span><span style="height:22px"></span><span style="height:40px"></span><span style="height:62px"></span><span style="height:84px"></span><span style="height:104px"></span><span style="height:82px"></span><span style="height:56px"></span><span style="height:36px"></span><span style="height:24px"></span><span style="height:44px"></span><span style="height:68px"></span><span style="height:90px"></span><span style="height:66px"></span><span style="height:42px"></span><span style="height:26px"></span>
+      </div>
+      <div class="msg ai">Hi, quick heads-up &mdash; this is an AI assistant calling for Angus. Got two minutes?</div>
+      <div class="msg hu">uh, sure, what's this about?</div>
+    </div>
+    <div class="pills">
+      <span class="pill disc">&#9650; AI disclosed</span>
+      <span class="pill book">&#10003; booked &middot; 15 min follow-up</span>
+    </div>
+    <div class="cap">ElevenLabs voice &middot; Claude brain &middot; Twilio line</div>
+  </div>
+</div>
+</body>
+</html>

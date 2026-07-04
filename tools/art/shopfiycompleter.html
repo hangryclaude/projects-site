@@ -1,0 +1,61 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a multi-store Shopify admin panel; title deliberately misspelled w/ spellcheck squiggle */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .win { width: 940px; height: 540px; border-radius: 14px; overflow: hidden;
+    border: 1.5px solid rgba(235,232,226,0.16); background: #141417; display: flex; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+  .side { width: 300px; background: #101013; border-right: 1px solid rgba(235,232,226,0.1); padding: 30px 0; }
+  .switch { margin: 0 24px 26px; padding: 18px 22px; border-radius: 10px; border: 1.5px solid rgba(52,211,114,0.5);
+    background: rgba(52,211,114,0.1); display: flex; align-items: center; justify-content: space-between; }
+  .switch .s { font: 700 27px "SF Mono", Menlo, monospace; color: #34d372; }
+  .switch .cv { color: rgba(235,232,226,0.5); font-size: 24px; }
+  .switch .badge { font: 600 20px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .nav { list-style: none; }
+  .nav li { padding: 17px 30px; font: 500 28px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.6);
+    display: flex; align-items: center; gap: 16px; }
+  .nav li .ic { width: 20px; height: 20px; border-radius: 5px; border: 2px solid rgba(235,232,226,0.35); }
+  .nav li.on { color: #ebe8e2; background: rgba(235,232,226,0.06); border-left: 4px solid #34d372; padding-left: 26px; }
+  .nav li.on .ic { border-color: #34d372; background: rgba(52,211,114,0.4); }
+  .main { flex: 1; padding: 40px 44px; }
+  .h1 { font: 800 58px/1 -apple-system, system-ui, sans-serif; letter-spacing: -0.02em; color: #ebe8e2; display: inline-block; }
+  .miss { position: relative; }
+  .miss::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px;
+    background: repeating-linear-gradient(135deg, #ff453a 0 4px, transparent 4px 7px);
+    -webkit-mask: repeating-linear-gradient(135deg, #000 0 4px, transparent 4px 7px); }
+  .fix { margin-top: 22px; font: 500 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .fix s { color: #ff453a; text-decoration: none; }
+  .cards { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .card { padding: 26px 28px; border-radius: 10px; background: #1a1a1e; border: 1px solid rgba(235,232,226,0.08); }
+  .card .k { font: 500 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .card .v { margin-top: 10px; font: 700 46px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .card .v b { color: #34d372; }
+</style>
+</head><body>
+<div id="frame" data-label="shopfiycompleter">
+  <div id="scene">
+    <div class="win">
+      <div class="side">
+        <div class="switch"><span class="s">store &#9662;</span><span class="badge">4 stores</span></div>
+        <ul class="nav">
+          <li class="on"><span class="ic"></span>Products</li>
+          <li><span class="ic"></span>Orders</li>
+          <li><span class="ic"></span>Inventory</li>
+          <li><span class="ic"></span>Customers</li>
+          <li><span class="ic"></span>Themes</li>
+        </ul>
+      </div>
+      <div class="main">
+        <h1 class="h1"><span class="miss">Shopfiy</span> Completer</h1>
+        <div class="fix"><s>&#9744; fix spelling?</s> &mdash; no. it stays.</div>
+        <div class="cards">
+          <div class="card"><div class="k">connected</div><div class="v"><b>4</b> stores</div></div>
+          <div class="card"><div class="k">auth</div><div class="v">OAuth</div></div>
+          <div class="card"><div class="k">orders today</div><div class="v">312</div></div>
+          <div class="card"><div class="k">access</div><div class="v">RBAC</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

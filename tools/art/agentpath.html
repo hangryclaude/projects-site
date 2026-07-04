@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: one landing page whose only job is to catch your email — gradient hero + capture field + magnetic cursor */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .win { position: relative; width: 800px; height: 500px; border-radius: 20px; overflow: hidden;
+         background: #141419; border: 1.5px solid rgba(235,232,226,0.16); }
+  .bar { display: flex; align-items: center; gap: 12px; padding: 20px 26px; border-bottom: 1px solid rgba(235,232,226,0.12); }
+  .d { width: 15px; height: 15px; border-radius: 50%; border: 1.5px solid rgba(235,232,226,0.35); }
+  .url { margin-left: 16px; color: rgba(235,232,226,0.4); font: 400 22px "SF Mono", Menlo, monospace; }
+  .hero { position: relative; height: 200px;
+    background:
+      radial-gradient(120% 140% at 18% 8%, #a78bfa 0%, transparent 55%),
+      radial-gradient(130% 150% at 92% 96%, #4fc3ff 0%, transparent 55%),
+      linear-gradient(120deg, #6d4bd0, #2a2350); }
+  .h1 { position: absolute; left: 40px; bottom: 34px; right: 40px;
+        color: #ebe8e2; font: 600 40px/1.15 -apple-system, system-ui, sans-serif; letter-spacing: -0.01em; }
+  .caprow { display: flex; align-items: center; gap: 18px; padding: 40px; }
+  .field { flex: 1; display: flex; align-items: center; height: 66px; padding: 0 24px; border-radius: 12px;
+    border: 1.5px solid rgba(167,139,250,0.55); background: rgba(167,139,250,0.06);
+    color: rgba(235,232,226,0.85); font: 400 27px "SF Mono", Menlo, monospace; }
+  .caret2 { display: inline-block; width: 3px; height: 32px; background: #a78bfa; margin-left: 2px; }
+  .btn { height: 66px; padding: 0 30px; display: flex; align-items: center; border-radius: 12px;
+    background: #a78bfa; color: #17141f; font: 600 26px "SF Mono", Menlo, monospace; }
+  .cursor { position: absolute; right: 90px; bottom: 66px; z-index: 10;
+    filter: drop-shadow(0 0 22px rgba(167,139,250,0.85)); }
+  .tag { position: absolute; left: 40px; top: 108px; color: rgba(235,232,226,0.5);
+    font: 400 24px "SF Mono", Menlo, monospace; }
+  .tag b { color: #a78bfa; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="agentpath">
+  <div id="scene">
+    <div class="win">
+      <div class="bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">agentpath.ai</span></div>
+      <div class="hero"><div class="h1">An agent for the busywork.</div></div>
+      <div class="tag"><b>one page.</b> one job: your email.</div>
+      <div class="caprow">
+        <div class="field">you@company.com<span class="caret2"></span></div>
+        <div class="btn">Get an agent</div>
+      </div>
+      <div class="cursor">
+        <svg width="66" height="74" viewBox="0 0 66 74"><path d="M8 3 L8 55 L21 43 L31 68 L41 64 L31 40 L49 39 Z"
+          fill="#a78bfa" stroke="#17141f" stroke-width="3" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: one daemon feeding a row of vertical brand feeds — every avatar faceless */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  svg { display: block; }
+  .cap { font: 400 30px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap b { color: #a78bfa; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="faceless">
+  <div id="scene">
+    <svg width="960" height="480" viewBox="0 0 960 480" fill="none">
+      <defs>
+        <!-- a faceless avatar: head + shoulders with a diagonal slash -->
+        <g id="noface">
+          <circle cx="0" cy="-14" r="15" fill="none" stroke="rgba(235,232,226,0.5)" stroke-width="2.5"/>
+          <path d="M-24 26 A24 22 0 0 1 24 26" fill="none" stroke="rgba(235,232,226,0.5)" stroke-width="2.5"/>
+          <line x1="-22" y1="20" x2="22" y2="-26" stroke="#a78bfa" stroke-width="3"/>
+        </g>
+        <!-- a vertical phone/brand feed -->
+        <g id="feed">
+          <rect x="-58" y="-118" width="116" height="236" rx="16" fill="rgba(235,232,226,0.03)" stroke="rgba(235,232,226,0.28)" stroke-width="2"/>
+          <use href="#noface" x="0" y="-52"/>
+          <rect x="-40" y="30" width="80" height="9" rx="4" fill="rgba(235,232,226,0.18)"/>
+          <rect x="-40" y="48" width="58" height="9" rx="4" fill="rgba(235,232,226,0.14)"/>
+          <path d="M-10 78 L14 92 L-10 106 z" fill="rgba(167,139,250,0.7)"/>
+        </g>
+      </defs>
+
+      <!-- daemon core -->
+      <rect x="378" y="20" width="204" height="70" rx="16" fill="rgba(167,139,250,0.16)" stroke="#a78bfa" stroke-width="3"/>
+      <text x="480" y="64" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="27" font-weight="600" text-anchor="middle">1 daemon</text>
+
+      <!-- fan-out wires -->
+      <g stroke="rgba(167,139,250,0.35)" stroke-width="2">
+        <line x1="480" y1="92" x2="120" y2="210"/>
+        <line x1="480" y1="92" x2="300" y2="210"/>
+        <line x1="480" y1="92" x2="480" y2="210"/>
+        <line x1="480" y1="92" x2="660" y2="210"/>
+        <line x1="480" y1="92" x2="840" y2="210"/>
+      </g>
+
+      <!-- the brand feeds -->
+      <use href="#feed" x="120" y="332"/>
+      <use href="#feed" x="300" y="332"/>
+      <use href="#feed" x="480" y="332"/>
+      <use href="#feed" x="660" y="332"/>
+      <use href="#feed" x="840" y="332"/>
+    </svg>
+    <div class="cap">10 brands &middot; <b>nobody on camera &middot; nobody at the keyboard</b></div>
+  </div>
+</div>
+</body></html>

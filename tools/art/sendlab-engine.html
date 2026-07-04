@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the router ranks every provider by cost and picks the cheapest to send through */
+  #scene { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 34px; padding: 0 120px; }
+  .head { display: flex; align-items: baseline; gap: 20px; align-self: flex-start; margin-left: 6px; }
+  .head .t { color: #ebe8e2; font: 600 34px "SF Mono", Menlo, monospace; }
+  .head .d { color: rgba(235,232,226,0.45); font: 400 25px "SF Mono", Menlo, monospace; }
+
+  .panel { width: 100%; display: flex; flex-direction: column; gap: 14px; }
+  .row { display: grid; grid-template-columns: 270px 1fr 190px 118px; align-items: center; gap: 24px;
+         padding: 16px 26px; border: 1.5px solid rgba(235,232,226,0.16); border-radius: 12px; }
+  .row .p { color: rgba(235,232,226,0.8); font: 500 30px "SF Mono", Menlo, monospace; }
+  .track { height: 12px; border-radius: 6px; background: rgba(235,232,226,0.09); position: relative; }
+  .track i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: rgba(235,232,226,0.32); }
+  .cost { color: rgba(235,232,226,0.6); font: 500 27px "SF Mono", Menlo, monospace; text-align: right; white-space: nowrap; }
+  .pick { text-align: right; }
+
+  .row.win { border-color: #3fdc82; background: rgba(63,220,130,0.08); box-shadow: 0 0 46px rgba(63,220,130,0.16); }
+  .row.win .p { color: #3fdc82; }
+  .row.win .track i { background: #3fdc82; }
+  .row.win .cost { color: #3fdc82; }
+  .badge { display: inline-flex; align-items: center; gap: 9px; color: #3fdc82; font: 700 24px "SF Mono", Menlo, monospace; }
+  .badge svg { width: 24px; height: 24px; }
+  .row.dim .p, .row.dim .cost { color: rgba(235,232,226,0.4); }
+
+  .foot { align-self: flex-start; margin-left: 6px; color: rgba(235,232,226,0.42);
+          font: 400 25px "SF Mono", Menlo, monospace; }
+  .foot b { color: #ebe8e2; font-weight: 500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="sendlab-engine">
+  <div id="scene">
+    <div class="head"><span class="t">router</span><span class="d">· ranks providers by cost, sends through the cheapest</span></div>
+    <div class="panel">
+      <div class="row win">
+        <span class="p">Elastic Email</span>
+        <span class="track"><i style="width:16%"></i></span>
+        <span class="cost">$0.09 / 1k</span>
+        <span class="pick"><span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="#3fdc82" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 L10 18.5 L20 5.5"/></svg>SEND</span></span>
+      </div>
+      <div class="row">
+        <span class="p">SMTP host</span>
+        <span class="track"><i style="width:44%"></i></span>
+        <span class="cost">$0.30 / 1k</span>
+        <span class="pick"></span>
+      </div>
+      <div class="row">
+        <span class="p">Mailgun</span>
+        <span class="track"><i style="width:82%"></i></span>
+        <span class="cost">$0.80 / 1k</span>
+        <span class="pick"></span>
+      </div>
+      <div class="row dim">
+        <span class="p">dryrun</span>
+        <span class="track"><i style="width:3%"></i></span>
+        <span class="cost">$0.00 · sim</span>
+        <span class="pick"></span>
+      </div>
+    </div>
+    <div class="foot">failover + circuit breaker · <b>5 fails → skip 30s</b> — a dead one never tanks throughput</div>
+  </div>
+</div>
+</body>
+</html>

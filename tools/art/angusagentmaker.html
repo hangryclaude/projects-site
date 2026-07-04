@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: drop your number, I text back and build the agent — Claude-coral burst logo */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 44px; }
+  .logo { display: flex; align-items: center; gap: 22px; }
+  .logo .name { color: #ebe8e2; font: 600 40px "SF Mono", Menlo, monospace; letter-spacing: -0.01em; }
+  .stack { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+  .field { display: flex; align-items: center; gap: 22px; width: 560px; height: 82px; padding: 0 30px;
+    border-radius: 16px; border: 1.5px solid rgba(224,120,92,0.6); background: rgba(224,120,92,0.07);
+    color: #ebe8e2; font: 500 40px "SF Mono", Menlo, monospace; }
+  .field .pre { color: rgba(235,232,226,0.45); }
+  .caret2 { display: inline-block; width: 3px; height: 40px; background: #e0785c; }
+  .bubble { align-self: flex-end; margin-right: 12px; position: relative;
+    padding: 20px 30px; border-radius: 22px 22px 6px 22px;
+    background: #e0785c; color: #21140f; font: 500 28px "SF Mono", Menlo, monospace;
+    box-shadow: 0 0 40px rgba(224,120,92,0.25); }
+  .hint { color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head><body>
+<div id="frame" data-label="angusagentmaker">
+  <div id="scene">
+    <div class="logo">
+      <svg width="66" height="66" viewBox="0 0 66 66">
+        <g stroke="#e0785c" stroke-width="5" stroke-linecap="round">
+          <line x1="33" y1="6" x2="33" y2="20"/><line x1="33" y1="46" x2="33" y2="60"/>
+          <line x1="6" y1="33" x2="20" y2="33"/><line x1="46" y1="33" x2="60" y2="33"/>
+          <line x1="14" y1="14" x2="24" y2="24"/><line x1="42" y1="42" x2="52" y2="52"/>
+          <line x1="52" y1="14" x2="42" y2="24"/><line x1="24" y1="42" x2="14" y2="52"/>
+        </g>
+        <circle cx="33" cy="33" r="12" fill="#e0785c"/>
+      </svg>
+      <span class="name">Angus Agent Maker</span>
+    </div>
+    <div class="stack">
+      <div class="field"><span class="pre">+1</span> (805) 555-0142<span class="caret2"></span></div>
+      <div class="bubble">on it — building your agent →</div>
+      <div class="hint">drop your number · I text back</div>
+    </div>
+  </div>
+</div>
+</body></html>

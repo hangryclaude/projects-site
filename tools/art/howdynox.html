@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a parked static mirror — one REDIRECT_URL reroutes every Download button */
+  #scene { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:46px; }
+  #scene::before { content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(50% 46% at 50% 44%, rgba(124,92,255,0.14), transparent 70%); }
+  .flow { position:relative; z-index:1; display:flex; align-items:center; gap:40px; }
+  .btn { display:flex; align-items:center; gap:16px; background:rgba(235,232,226,0.06);
+    border:1.5px solid rgba(235,232,226,0.5); border-radius:16px; padding:24px 34px;
+    color:#ebe8e2; font: 600 34px "SF Mono", Menlo, monospace; }
+  .btn .apple { font-size:38px; line-height:1; }
+  .arrow { display:flex; flex-direction:column; align-items:center; gap:8px; color:#a78bfa; }
+  .arrow svg { display:block; }
+  .arrow .lab { color:rgba(167,139,250,0.85); font: 500 22px "SF Mono", Menlo, monospace; }
+  .targets { display:flex; flex-direction:column; gap:14px; }
+  .targets .tg { color:rgba(235,232,226,0.6); font: 400 27px "SF Mono", Menlo, monospace;
+    border:1px dashed rgba(235,232,226,0.28); border-radius:10px; padding:10px 20px; }
+  .targets .tg b { color:#a78bfa; font-weight:500; }
+  .code { position:relative; z-index:1; background:#0b0b0d; border:1px solid rgba(235,232,226,0.18);
+    border-radius:12px; padding:20px 28px; font: 500 28px "SF Mono", Menlo, monospace; color:rgba(235,232,226,0.6); }
+  .code .k { color:#c9b8ff; } .code .v { color:#a78bfa; }
+  .stamp { position:absolute; z-index:2; top:150px; right:120px; transform:rotate(-13deg);
+    border:3px solid rgba(224,100,74,0.55); color:rgba(224,100,74,0.7); border-radius:12px;
+    font: 800 40px "SF Mono", Menlo, monospace; letter-spacing:0.14em; padding:8px 22px; }
+  .credit { position:absolute; right:70px; bottom:46px; z-index:2; color:rgba(235,232,226,0.4); font:400 24px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="howdynox">
+  <div id="scene">
+    <div class="stamp">PARKED</div>
+    <div class="flow">
+      <div class="btn"><span class="apple"></span>Download for Mac</div>
+      <div class="arrow">
+        <svg width="130" height="40" viewBox="0 0 130 40"><path d="M0 20 H112" stroke="#a78bfa" stroke-width="3"/><path d="M104 10 L120 20 L104 30" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round"/></svg>
+        <span class="lab">intercepted</span>
+      </div>
+      <div class="targets">
+        <div class="tg"><b>→</b> the installer</div>
+        <div class="tg"><b>→</b> App Store page</div>
+        <div class="tg"><b>→</b> any tracking link</div>
+      </div>
+    </div>
+    <div class="code"><span class="k">const</span> REDIRECT_URL = <span class="v">"…"</span>;</div>
+    <div class="credit">static mirror · superseded by howdynox-app</div>
+  </div>
+</div>
+</body>
+</html>

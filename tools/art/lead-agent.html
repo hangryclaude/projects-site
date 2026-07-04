@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the whiteboard agent tree — Overview over 5 workers, parked mid-build */
+  #scene{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;}
+  svg{display:block;}
+  .cap{font:400 26px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.5);}
+  .cap b{color:#f5a623;font-weight:600;}
+</style></head><body>
+<div id="frame" data-label="lead-agent"><div id="scene">
+  <svg width="1000" height="430" viewBox="0 0 1000 430" fill="none">
+    <g stroke="rgba(245,166,35,0.5)" stroke-width="2" fill="none">
+      <path d="M500 118 L500 176"/>
+      <path d="M108 176 L892 176"/>
+      <path d="M108 176 L108 258"/><path d="M304 176 L304 258"/><path d="M500 176 L500 258"/><path d="M696 176 L696 258"/><path d="M892 176 L892 258"/>
+    </g>
+    <!-- top node -->
+    <rect x="360" y="30" width="280" height="88" rx="16" fill="rgba(245,166,35,0.1)" stroke="#f5a623" stroke-width="2.5"/>
+    <text x="500" y="70" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="32" font-weight="700" fill="#f5a623">Overview</text>
+    <text x="500" y="100" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="22" fill="rgba(235,232,226,0.5)">100k / day</text>
+    <!-- children -->
+    <g font-family="SF Mono, Menlo, monospace" text-anchor="middle">
+      <rect x="24" y="258" width="168" height="98" rx="14" fill="rgba(245,166,35,0.06)" stroke="rgba(245,166,35,0.7)" stroke-width="2"/>
+      <text x="108" y="304" font-size="26" font-weight="600" fill="#ebe8e2">Lead</text><text x="108" y="334" font-size="26" font-weight="600" fill="#ebe8e2">Finder</text>
+      <rect x="220" y="258" width="168" height="98" rx="14" fill="rgba(245,166,35,0.06)" stroke="rgba(245,166,35,0.7)" stroke-width="2"/>
+      <text x="304" y="304" font-size="26" font-weight="600" fill="#ebe8e2">Email</text><text x="304" y="334" font-size="26" font-weight="600" fill="#ebe8e2">Crafter</text>
+      <rect x="416" y="258" width="168" height="98" rx="14" fill="rgba(245,166,35,0.06)" stroke="rgba(245,166,35,0.7)" stroke-width="2"/>
+      <text x="500" y="314" font-size="26" font-weight="600" fill="#ebe8e2">Validator</text>
+      <rect x="612" y="258" width="168" height="98" rx="14" fill="rgba(245,166,35,0.06)" stroke="rgba(245,166,35,0.7)" stroke-width="2"/>
+      <text x="696" y="314" font-size="26" font-weight="600" fill="#ebe8e2">Postman</text>
+      <rect x="808" y="258" width="168" height="98" rx="14" fill="rgba(245,166,35,0.14)" stroke="#f5a623" stroke-width="2.5"/>
+      <text x="892" y="304" font-size="26" font-weight="700" fill="#f5a623">Reply</text><text x="892" y="334" font-size="26" font-weight="700" fill="#f5a623">Handler</text>
+    </g>
+  </svg>
+  <div class="cap">reply &rarr; calendar &rarr; invoice, no hands &middot; <b>parked</b>, reborn in inbox&#8209;engine</div>
+</div></div></body></html>

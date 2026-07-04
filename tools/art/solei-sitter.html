@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a Miami-sunset sitter site — a booking request fires an instant text. the notification IS the product */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 70px; }
+  .site { width: 470px; height: 470px; border-radius: 26px; overflow: hidden; position: relative;
+    background: linear-gradient(200deg,#ff9e5e 0%,#ff5f8d 38%,#a15bff 72%,#5b3aa0 100%); }
+  .site .sun { position: absolute; left: 50%; top: 60%; transform: translate(-50%,-50%);
+    width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle,#fff3d6,#ffcaa0 55%,rgba(255,180,140,0) 72%); }
+  .site .nm { position: absolute; top: 78px; left: 0; right: 0; text-align: center;
+    font: 400 88px Georgia, serif; font-style: italic; color: #fff; text-shadow: 0 3px 30px rgba(90,30,80,0.5); }
+  .site .sub { position: absolute; top: 188px; left: 0; right: 0; text-align: center;
+    font: 400 23px "SF Mono", Menlo, monospace; color: rgba(255,255,255,0.92); letter-spacing: 0.03em; }
+  .site .book { position: absolute; bottom: 46px; left: 50%; transform: translateX(-50%);
+    background: rgba(255,255,255,0.94); color: #a1355f; border-radius: 999px;
+    padding: 18px 46px; font: 600 27px "SF Mono", Menlo, monospace; }
+  .flow { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .flow .dn { font-size: 46px; color: rgba(235,232,226,0.5); line-height: 1; }
+  .sms { width: 400px; border-radius: 22px; padding: 22px 26px;
+    background: rgba(235,232,226,0.06); border: 1.5px solid rgba(235,232,226,0.16);
+    display: flex; gap: 18px; align-items: flex-start; }
+  .sms .ic { width: 52px; height: 52px; border-radius: 13px; flex: none;
+    background: #39d98a; display: flex; align-items: center; justify-content: center;
+    font-size: 30px; color: #0f0f11; }
+  .sms .t { display: flex; flex-direction: column; gap: 5px; }
+  .sms .t .a { font: 600 25px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .sms .t .b { font: 400 24px/1.4 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.72); }
+  .sms .t .tm { font: 400 20px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .cap { position: absolute; bottom: 58px; right: 74px; font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+</style>
+</head><body>
+<div id="frame" data-label="solei-sitter">
+  <div id="scene">
+    <div class="site">
+      <div class="sun"></div>
+      <div class="nm">Solei</div>
+      <div class="sub">babysitting · house-sitting · SB</div>
+      <div class="book">request a date →</div>
+    </div>
+    <div class="flow">
+      <div class="sms">
+        <div class="ic">✉</div>
+        <div class="t"><span class="a">New booking request</span><span class="b">Sat 7pm — the Reyes family, 2 kids</span><span class="tm">Messages · now</span></div>
+      </div>
+      <div class="dn">↓ Twilio SMS</div>
+    </div>
+    <div class="cap">the notification is the product</div>
+  </div>
+</div>
+</body></html>

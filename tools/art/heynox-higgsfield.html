@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a WebGL start frame fed to image-to-video — filmstrip gaining motion */
+  #scene { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:52px; }
+  #scene::before { content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(52% 46% at 50% 44%, rgba(124,92,255,0.22), transparent 70%); }
+  .head { position:relative; z-index:2; color:rgba(235,232,226,0.55); font:400 30px "SF Mono", Menlo, monospace; letter-spacing:0.01em; }
+  .head b { color:#a78bfa; font-weight:500; }
+  .strip { position:relative; z-index:1; }
+  .foot { position:relative; z-index:2; display:flex; align-items:center; gap:20px; }
+  .chip { border:1px solid rgba(167,139,250,0.5); color:#c9b8ff; font:500 24px "SF Mono", Menlo, monospace; padding:8px 18px; border-radius:999px; background:rgba(167,139,250,0.08); }
+  .blocked { color:rgba(235,232,226,0.4); font:400 24px "SF Mono", Menlo, monospace; }
+  .blocked i { color:#e0a44a; font-style:normal; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="heynox-higgsfield">
+  <div id="scene">
+    <div class="head">start frame &nbsp;<b>→ i2v →</b>&nbsp; graded clip</div>
+    <svg class="strip" width="1020" height="300" viewBox="0 0 1020 300" fill="none">
+      <!-- filmstrip body -->
+      <rect x="10" y="30" width="1000" height="240" rx="14" fill="#16121f" stroke="rgba(235,232,226,0.16)" stroke-width="2"/>
+      <!-- sprocket holes -->
+      <g fill="rgba(235,232,226,0.22)">
+        <rect x="30" y="44" width="20" height="16" rx="4"/><rect x="90" y="44" width="20" height="16" rx="4"/><rect x="150" y="44" width="20" height="16" rx="4"/><rect x="210" y="44" width="20" height="16" rx="4"/><rect x="270" y="44" width="20" height="16" rx="4"/><rect x="330" y="44" width="20" height="16" rx="4"/><rect x="390" y="44" width="20" height="16" rx="4"/><rect x="450" y="44" width="20" height="16" rx="4"/><rect x="510" y="44" width="20" height="16" rx="4"/><rect x="570" y="44" width="20" height="16" rx="4"/><rect x="630" y="44" width="20" height="16" rx="4"/><rect x="690" y="44" width="20" height="16" rx="4"/><rect x="750" y="44" width="20" height="16" rx="4"/><rect x="810" y="44" width="20" height="16" rx="4"/><rect x="870" y="44" width="20" height="16" rx="4"/><rect x="930" y="44" width="20" height="16" rx="4"/>
+        <rect x="30" y="240" width="20" height="16" rx="4"/><rect x="90" y="240" width="20" height="16" rx="4"/><rect x="150" y="240" width="20" height="16" rx="4"/><rect x="210" y="240" width="20" height="16" rx="4"/><rect x="270" y="240" width="20" height="16" rx="4"/><rect x="330" y="240" width="20" height="16" rx="4"/><rect x="390" y="240" width="20" height="16" rx="4"/><rect x="450" y="240" width="20" height="16" rx="4"/><rect x="510" y="240" width="20" height="16" rx="4"/><rect x="570" y="240" width="20" height="16" rx="4"/><rect x="630" y="240" width="20" height="16" rx="4"/><rect x="690" y="240" width="20" height="16" rx="4"/><rect x="750" y="240" width="20" height="16" rx="4"/><rect x="810" y="240" width="20" height="16" rx="4"/><rect x="870" y="240" width="20" height="16" rx="4"/><rect x="930" y="240" width="20" height="16" rx="4"/>
+      </g>
+      <defs>
+        <linearGradient id="frm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2870"/><stop offset="1" stop-color="#160e2c"/></linearGradient>
+        <clipPath id="c1"><rect x="70" y="78" width="270" height="144" rx="8"/></clipPath>
+        <clipPath id="c2"><rect x="375" y="78" width="270" height="144" rx="8"/></clipPath>
+        <clipPath id="c3"><rect x="680" y="78" width="270" height="144" rx="8"/></clipPath>
+      </defs>
+      <!-- frame 1: crisp start frame (tunnel motif) -->
+      <g clip-path="url(#c1)"><rect x="70" y="78" width="270" height="144" fill="url(#frm)"/>
+        <g fill="none" stroke="#a78bfa" stroke-width="2.5"><rect x="150" y="108" width="110" height="84" rx="10" opacity="0.4"/><rect x="172" y="122" width="66" height="56" rx="7" opacity="0.7"/></g>
+        <circle cx="205" cy="150" r="12" fill="#d7ccff"/></g>
+      <rect x="70" y="78" width="270" height="144" rx="8" fill="none" stroke="rgba(235,232,226,0.3)" stroke-width="2"/>
+      <!-- frame 2: motion streaks -->
+      <g clip-path="url(#c2)"><rect x="375" y="78" width="270" height="144" fill="url(#frm)"/>
+        <g stroke="#a78bfa" stroke-width="3" stroke-linecap="round" opacity="0.75"><line x1="400" y1="110" x2="470" y2="100"/><line x1="400" y1="150" x2="500" y2="140"/><line x1="400" y1="190" x2="460" y2="182"/></g>
+        <g fill="none" stroke="#d7ccff" stroke-width="2.5"><rect x="470" y="118" width="120" height="66" rx="9" opacity="0.55"/></g></g>
+      <rect x="375" y="78" width="270" height="144" rx="8" fill="none" stroke="rgba(235,232,226,0.3)" stroke-width="2"/>
+      <!-- frame 3: graded clip with play button -->
+      <g clip-path="url(#c3)"><rect x="680" y="78" width="270" height="144" fill="url(#frm)"/>
+        <rect x="680" y="78" width="270" height="144" fill="rgba(124,92,255,0.18)"/>
+        <g stroke="#c9b8ff" stroke-width="3" stroke-linecap="round" opacity="0.5"><line x1="700" y1="120" x2="770" y2="112"/><line x1="700" y1="185" x2="760" y2="178"/></g></g>
+      <circle cx="815" cy="150" r="30" fill="rgba(15,15,17,0.55)" stroke="#ebe8e2" stroke-width="2.5"/>
+      <path d="M806 136 L806 164 L830 150 Z" fill="#ebe8e2"/>
+      <rect x="680" y="78" width="270" height="144" rx="8" fill="none" stroke="rgba(235,232,226,0.3)" stroke-width="2"/>
+    </svg>
+    <div class="foot">
+      <span class="chip">WebGL frames → Higgsfield</span>
+      <span class="blocked"><i>◐</i> final render blocked on credits</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

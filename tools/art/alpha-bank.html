@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a play-money balance card for the classroom — checking + savings in Alpha currency, kids get confetti */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .card { position: relative; width: 760px; height: 452px; border-radius: 28px; padding: 46px 50px;
+    background: linear-gradient(150deg, #15281d 0%, #10221a 55%, #0f1a15 100%);
+    border: 1.5px solid rgba(52,211,114,0.4);
+    box-shadow: 0 0 80px rgba(52,211,114,0.1); overflow: hidden; }
+  .top { display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 16px; color: #ebe8e2; font: 600 32px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; }
+  .mark { width: 50px; height: 50px; border-radius: 14px; border: 2.5px solid #34d372;
+    display: flex; align-items: center; justify-content: center; color: #34d372; font: 700 32px "SF Mono", Menlo, monospace; }
+  .chip { width: 58px; height: 44px; border-radius: 9px; background: linear-gradient(135deg, #e9c24a, #b8912e); }
+  .lab { margin-top: 54px; color: rgba(235,232,226,0.5); font: 400 25px "SF Mono", Menlo, monospace; letter-spacing: 0.1em; }
+  .bal { margin-top: 6px; color: #ebe8e2; font: 700 96px/1 "SF Mono", Menlo, monospace; letter-spacing: -0.03em; }
+  .bal .a { color: #34d372; }
+  .split { margin-top: 44px; display: flex; gap: 64px; }
+  .col .k { color: rgba(235,232,226,0.45); font: 400 23px "SF Mono", Menlo, monospace; letter-spacing: 0.06em; }
+  .col .v { color: #ebe8e2; font: 600 38px "SF Mono", Menlo, monospace; margin-top: 4px; }
+  .col .v .a { color: #34d372; }
+  .cf { position: absolute; border-radius: 2px; }
+</style>
+</head><body>
+<div id="frame" data-label="alpha-bank">
+  <div id="scene">
+    <div class="card">
+      <!-- confetti -->
+      <div class="cf" style="width:16px;height:16px;background:#34d372;top:34px;left:560px;transform:rotate(20deg)"></div>
+      <div class="cf" style="width:12px;height:12px;background:#e9c24a;top:70px;left:640px;transform:rotate(-15deg)"></div>
+      <div class="cf" style="width:14px;height:14px;background:#4fc3ff;top:120px;left:600px;transform:rotate(35deg)"></div>
+      <div class="cf" style="width:10px;height:10px;background:#34d372;top:186px;left:672px;transform:rotate(10deg)"></div>
+      <div class="cf" style="width:13px;height:13px;background:#e9c24a;top:250px;left:610px;transform:rotate(-25deg)"></div>
+      <div class="cf" style="width:11px;height:11px;background:#ff8bd1;top:330px;left:664px;transform:rotate(18deg)"></div>
+      <div class="top">
+        <div class="brand"><span class="mark">α</span>ALPHA BANK</div>
+        <div class="chip"></div>
+      </div>
+      <div class="lab">TOTAL BALANCE</div>
+      <div class="bal"><span class="a">α</span> 1,240</div>
+      <div class="split">
+        <div class="col"><div class="k">CHECKING</div><div class="v"><span class="a">α</span> 980</div></div>
+        <div class="col"><div class="k">SAVINGS</div><div class="v"><span class="a">α</span> 260</div></div>
+        <div class="col"><div class="k">BADGES</div><div class="v">7 ★</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

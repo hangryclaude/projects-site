@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the 805 as a wedge — a map pin + the in-person offer, editorial serif */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 84px; padding: 0 130px; }
+  .pin { display: block; flex: none; }
+  .copy { display: flex; flex-direction: column; gap: 24px; max-width: 560px; }
+  .kicker { font: 500 24px "SF Mono", Menlo, monospace; letter-spacing: 0.2em; text-transform: uppercase; color: #e0a340; }
+  .head { font: 600 60px/1.08 Georgia, "Times New Roman", serif; color: #ebe8e2; letter-spacing: -0.01em; }
+  .head em { font-style: italic; color: #e0a340; }
+  .offer { font: 400 30px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .offer b { color: #ebe8e2; font-weight: 600; }
+  .geo { font: 400 23px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); margin-top: 4px; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="agents805">
+  <div id="scene">
+    <svg class="pin" width="230" height="310" viewBox="0 0 200 270">
+      <path d="M100 10 C45 10 10 48 10 98 C10 166 100 258 100 258 C100 258 190 166 190 98 C190 48 155 10 100 10 Z"
+            fill="rgba(224,163,64,0.12)" stroke="#e0a340" stroke-width="4"/>
+      <text x="100" y="118" text-anchor="middle" fill="#ebe8e2" font-family="Georgia, serif" font-weight="700" font-size="72" letter-spacing="-2">805</text>
+    </svg>
+    <div class="copy">
+      <div class="kicker">in person · your county</div>
+      <div class="head">Agents, <em>installed</em> in your shop.</div>
+      <div class="offer"><b>$500</b> flat setup · then monthly, per agent</div>
+      <div class="geo">Santa Barbara · Goleta · Carpinteria</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

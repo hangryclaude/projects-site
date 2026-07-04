@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a Math Academy question auto-answered, typed at a human-like pace */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 110px; gap: 46px; }
+  .tag { color: rgba(235,232,226,0.45); font: 500 25px "SF Mono", Menlo, monospace; letter-spacing: 0.06em; }
+  .q { color: #ebe8e2; font: 400 56px "SF Mono", Menlo, monospace; letter-spacing: -0.01em; }
+  .sup { font-size: 34px; vertical-align: 20px; }
+  .ans { display: flex; align-items: center; gap: 24px; }
+  .box { display: inline-flex; align-items: center; min-width: 132px; height: 82px; padding: 0 30px;
+         border: 2px solid #7aa2ff; border-radius: 14px; background: rgba(122,162,255,0.08);
+         color: #ebe8e2; font: 500 50px "SF Mono", Menlo, monospace; }
+  .caret { display: inline-block; width: 4px; height: 50px; background: #7aa2ff; margin-left: 4px; }
+  .ok { color: #3fdc82; font: 600 40px "SF Mono", Menlo, monospace; }
+  .pace { display: flex; align-items: center; gap: 16px; margin-top: 6px; }
+  .pace .dots { display: flex; align-items: center; gap: 10px; }
+  .pace .d { width: 12px; height: 12px; border-radius: 50%; background: rgba(122,162,255,0.85); }
+  .pace .d:nth-child(2){ margin-left: 20px; } .pace .d:nth-child(4){ margin-left: 30px; }
+  .pace .lab { color: rgba(235,232,226,0.5); font: 400 26px "SF Mono", Menlo, monospace; }
+  .note { color: rgba(235,232,226,0.4); font: 400 25px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="math-academy-agent">
+  <div id="scene">
+    <div class="tag">mathacademy.com · question 41</div>
+    <div class="q">&#8747;<span class="sup">1</span><sub>0</sub> (3x<span class="sup">2</span> + 2x) dx&nbsp;&nbsp;=</div>
+    <div class="ans">
+      <span class="box">2<span class="caret"></span></span>
+      <span class="ok">&#10003; submitted</span>
+    </div>
+    <div class="pace">
+      <div class="dots"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></div>
+      <span class="lab">typed over 3.8s · randomised delays, reads like a person</span>
+    </div>
+    <div class="note">diagram questions the model can't see → flagged for you</div>
+  </div>
+</div>
+</body>
+</html>

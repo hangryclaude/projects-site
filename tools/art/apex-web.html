@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a GPS run traced across the hill — live speed HUD, split markers, and you're P1 */
+  #scene { background-image:
+      linear-gradient(rgba(61,217,224,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(61,217,224,0.06) 1px, transparent 1px);
+    background-size: 70px 70px; }
+  svg.route { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hud { position: absolute; top: 92px; right: 88px; display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+  .speed { display: flex; align-items: baseline; gap: 14px; color: #ebe8e2; }
+  .speed .n { font: 700 128px/1 "SF Mono", Menlo, monospace; letter-spacing: -0.04em; color: #3dd9e0; text-shadow: 0 0 40px rgba(61,217,224,0.4); }
+  .speed .u { font: 500 34px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .p1 { display: flex; align-items: center; gap: 16px; padding: 14px 26px; border-radius: 14px;
+    border: 1.5px solid #3dd9e0; background: rgba(61,217,224,0.08);
+    font: 600 30px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .p1 b { color: #3dd9e0; }
+  .cap { position: absolute; right: 88px; bottom: 64px; color: rgba(235,232,226,0.45);
+    font: 400 26px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; }
+</style>
+</head><body>
+<div id="frame" data-label="apex-web">
+  <div id="scene">
+    <svg class="route" viewBox="0 0 1200 750" fill="none">
+      <path d="M150 640 C 300 640, 300 500, 460 500 C 640 500, 560 380, 780 380 C 870 380, 880 372, 940 368"
+            stroke="rgba(61,217,224,0.16)" stroke-width="30" stroke-linecap="round"/>
+      <path d="M150 640 C 300 640, 300 500, 460 500 C 640 500, 560 380, 780 380 C 870 380, 880 372, 940 368"
+            stroke="#3dd9e0" stroke-width="6" stroke-linecap="round"/>
+      <!-- split markers -->
+      <g stroke="rgba(235,232,226,0.7)" stroke-width="4" stroke-linecap="round">
+        <line x1="322" y1="572" x2="360" y2="608"/>
+        <line x1="600" y1="392" x2="636" y2="428"/>
+      </g>
+      <!-- start -->
+      <circle cx="150" cy="640" r="16" fill="none" stroke="#3dd9e0" stroke-width="5"/>
+      <circle cx="150" cy="640" r="6" fill="#3dd9e0"/>
+      <!-- finish flag -->
+      <g transform="translate(940,368)">
+        <line x1="0" y1="-4" x2="0" y2="52" stroke="#ebe8e2" stroke-width="4"/>
+        <rect x="0" y="-30" width="56" height="38" fill="#ebe8e2"/>
+        <g fill="#0f0f11">
+          <rect x="0" y="-30" width="14" height="9.5"/><rect x="28" y="-30" width="14" height="9.5"/>
+          <rect x="14" y="-20.5" width="14" height="9.5"/><rect x="42" y="-20.5" width="14" height="9.5"/>
+          <rect x="0" y="-11" width="14" height="9.5"/><rect x="28" y="-11" width="14" height="9.5"/>
+        </g>
+      </g>
+    </svg>
+    <div class="hud">
+      <div class="speed"><span class="n">48</span><span class="u">MPH</span></div>
+      <div class="p1"><b>P1</b> · surron · the hill</div>
+    </div>
+    <div class="cap">record · rank · podium</div>
+  </div>
+</div>
+</body></html>

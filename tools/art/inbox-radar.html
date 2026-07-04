@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a radar sweep finding people in pain, one blip scored + drafted */
+  #scene{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:38px;}
+  svg{display:block;}
+  .cap{font:400 27px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.5);}
+  .cap b{color:#34d372;font-weight:600;}
+</style></head><body>
+<div id="frame" data-label="inbox-radar"><div id="scene">
+  <svg width="500" height="500" viewBox="0 0 560 560" fill="none">
+    <defs>
+      <linearGradient id="sweep" x1="280" y1="280" x2="500" y2="120" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#34d372" stop-opacity="0.42"/>
+        <stop offset="1" stop-color="#34d372" stop-opacity="0"/>
+      </linearGradient>
+      <radialGradient id="blip" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#7bffb0"/>
+        <stop offset="1" stop-color="#34d372"/>
+      </radialGradient>
+    </defs>
+    <!-- rings -->
+    <circle cx="280" cy="280" r="258" stroke="rgba(52,211,114,0.22)" stroke-width="2"/>
+    <circle cx="280" cy="280" r="192" stroke="rgba(52,211,114,0.18)" stroke-width="2"/>
+    <circle cx="280" cy="280" r="126" stroke="rgba(52,211,114,0.16)" stroke-width="2"/>
+    <circle cx="280" cy="280" r="60" stroke="rgba(52,211,114,0.14)" stroke-width="2"/>
+    <line x1="280" y1="22" x2="280" y2="538" stroke="rgba(52,211,114,0.12)" stroke-width="1.5"/>
+    <line x1="22" y1="280" x2="538" y2="280" stroke="rgba(52,211,114,0.12)" stroke-width="1.5"/>
+    <!-- sweep sector -->
+    <path d="M280 280 L409 55 A258 258 0 0 1 536 246 Z" fill="url(#sweep)"/>
+    <line x1="280" y1="280" x2="536" y2="246" stroke="#34d372" stroke-width="2.5" stroke-opacity="0.8"/>
+    <!-- dim blips -->
+    <circle cx="190" cy="150" r="8" fill="rgba(52,211,114,0.4)"/>
+    <circle cx="150" cy="360" r="8" fill="rgba(52,211,114,0.4)"/>
+    <circle cx="420" cy="380" r="8" fill="rgba(52,211,114,0.4)"/>
+    <circle cx="335" cy="430" r="8" fill="rgba(52,211,114,0.4)"/>
+    <circle cx="470" cy="300" r="8" fill="rgba(52,211,114,0.55)"/>
+    <!-- the hot blip, in the sweep -->
+    <circle cx="380" cy="168" r="30" fill="rgba(52,211,114,0.16)"/>
+    <circle cx="380" cy="168" r="13" fill="url(#blip)"/>
+    <line x1="393" y1="155" x2="452" y2="118" stroke="#34d372" stroke-width="2"/>
+    <text x="462" y="112" font-family="SF Mono, Menlo, monospace" font-size="34" font-weight="800" fill="#7bffb0">92</text>
+    <text x="462" y="140" font-family="SF Mono, Menlo, monospace" font-size="19" fill="rgba(235,232,226,0.55)">drafted</text>
+    <!-- center -->
+    <circle cx="280" cy="280" r="7" fill="#34d372"/>
+  </svg>
+  <div class="cap">listens for the pain &middot; scores &middot; <b>you</b> post the reply</div>
+</div></div></body></html>

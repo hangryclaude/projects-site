@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the junk-drawer monorepo as an honest file tree — client sites, themes, odd experiments */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .win { width: 900px; border-radius: 14px; overflow: hidden;
+    border: 1.5px solid rgba(235,232,226,0.16); background: #141417; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+  .bar { display: flex; align-items: center; gap: 16px; padding: 24px 32px; border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .bar .dots { display: flex; gap: 12px; }
+  .bar .dots i { width: 15px; height: 15px; border-radius: 50%; background: rgba(235,232,226,0.22); }
+  .bar .path { font: 600 27px "SF Mono", Menlo, monospace; color: #c9a227; }
+  .bar .note { margin-left: auto; font: 500 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .tree { padding: 26px 40px 32px; }
+  .r { display: flex; align-items: baseline; padding: 11px 0; font: 500 31px/1 "SF Mono", Menlo, monospace; }
+  .r .g { color: rgba(235,232,226,0.32); white-space: pre; }
+  .r .nm { color: #ebe8e2; }
+  .r .tag { margin-left: auto; font-size: 25px; color: rgba(235,232,226,0.42); }
+  .r .nm.py { color: #7aa2ff; }
+</style>
+</head><body>
+<div id="frame" data-label="web-projects">
+  <div id="scene">
+    <div class="win">
+      <div class="bar">
+        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="path">web-projects/</span>
+        <span class="note">the junk drawer &mdash; honestly labeled</span>
+      </div>
+      <div class="tree">
+        <div class="r"><span class="g">├─ </span><span class="nm">moto-theme/</span><span class="tag">Shopify &middot; Liquid</span></div>
+        <div class="r"><span class="g">├─ </span><span class="nm">moto-theme-2/</span><span class="tag">Shopify &middot; Liquid</span></div>
+        <div class="r"><span class="g">├─ </span><span class="nm">carly-photo/</span><span class="tag">client site</span></div>
+        <div class="r"><span class="g">├─ </span><span class="nm">ethan-site/</span><span class="tag">client site</span></div>
+        <div class="r"><span class="g">├─ </span><span class="nm">larp-shopify/</span><span class="tag">the OG mockup</span></div>
+        <div class="r"><span class="g">├─ </span><span class="nm">khan-store/</span><span class="tag">webstore zip</span></div>
+        <div class="r"><span class="g">├─ </span><span class="nm py">screentime-rm/</span><span class="tag">python probe + tests</span></div>
+        <div class="r"><span class="g">└─ </span><span class="nm">how-tech-works/</span><span class="tag">explainer page</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

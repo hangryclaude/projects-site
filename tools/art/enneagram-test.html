@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the enneagram figure, core type 5 lit with wing 4 */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .node { fill: #0f0f11; stroke: rgba(235,232,226,0.5); stroke-width: 3; }
+  .num  { fill: rgba(235,232,226,0.6); font: 600 30px "SF Mono", Menlo, monospace; text-anchor: middle; }
+  .core { fill: #7aa2ff; stroke: #7aa2ff; }
+  .corenum { fill: #0f0f11; font-weight: 700; }
+  .wing { stroke: #7aa2ff; stroke-width: 4; }
+  .wingnum { fill: #7aa2ff; }
+  .cap { fill: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; text-anchor: middle; }
+  .tag { fill: #7aa2ff; font: 700 40px "SF Mono", Menlo, monospace; text-anchor: middle; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="enneagram-test">
+  <div id="scene">
+    <svg width="820" height="700" viewBox="130 40 940 680" fill="none">
+      <!-- outer circle -->
+      <circle cx="600" cy="375" r="210" stroke="rgba(235,232,226,0.28)" stroke-width="2.5"/>
+      <!-- inner lines: triangle 9-3-6 -->
+      <g stroke="rgba(235,232,226,0.32)" stroke-width="2.5" fill="none">
+        <polygon points="600,165 781.9,480 418.1,480"/>
+        <!-- hexad 1-4-2-8-5-7-1 -->
+        <polyline points="735,214.1 671.8,572.4 806.8,338.5 465,214.1 528.2,572.4 393.2,338.5 735,214.1"/>
+      </g>
+      <!-- nodes -->
+      <g>
+        <circle class="node" cx="600" cy="165" r="26"/><text class="num" x="600" y="175">9</text>
+        <circle class="node" cx="735" cy="214.1" r="26"/><text class="num" x="735" y="224.1">1</text>
+        <circle class="node" cx="806.8" cy="338.5" r="26"/><text class="num" x="806.8" y="348.5">2</text>
+        <circle class="node" cx="781.9" cy="480" r="26"/><text class="num" x="781.9" y="490">3</text>
+        <!-- wing 4 -->
+        <circle class="node wing" cx="671.8" cy="572.4" r="27"/><text class="num wingnum" x="671.8" y="582.4">4</text>
+        <!-- core 5 -->
+        <circle class="node core" cx="528.2" cy="572.4" r="40"/><text class="num corenum" x="528.2" y="586.4" font-size="42">5</text>
+        <circle class="node" cx="418.1" cy="480" r="26"/><text class="num" x="418.1" y="490">6</text>
+        <circle class="node" cx="393.2" cy="338.5" r="26"/><text class="num" x="393.2" y="348.5">7</text>
+        <circle class="node" cx="465" cy="214.1" r="26"/><text class="num" x="465" y="224.1">8</text>
+      </g>
+      <text class="tag" x="600" y="388">5w4</text>
+      <text class="cap" x="600" y="695">9 types · wing · tritype · instinct</text>
+    </svg>
+  </div>
+</div>
+</body>
+</html>

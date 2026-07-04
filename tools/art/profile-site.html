@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a persona gallery — gradient initial-avatars, one being given a real face */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 150px); gap: 30px 34px; }
+  .p { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .av { width: 118px; height: 118px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font: 700 42px "SF Mono", Menlo, monospace; color: #fff; }
+  .nm { font: 400 21px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .a1 { background: linear-gradient(150deg,#ff7a59,#d63a6a); }
+  .a2 { background: linear-gradient(150deg,#38c6ff,#2b5cf0); }
+  .a3 { background: linear-gradient(150deg,#39d98a,#0f9e6a); }
+  .a4 { background: linear-gradient(150deg,#b07bff,#6a3cf0); }
+  .a5 { background: linear-gradient(150deg,#ffc24b,#f0782b); }
+  .a6 { background: linear-gradient(150deg,#5b6470,#2e343d); }
+  .a7 { background: linear-gradient(150deg,#ff5fa2,#c02b8f); }
+  .a8 { background: linear-gradient(150deg,#22c9c2,#0f7d8e); }
+  /* the one being uploaded a real photo */
+  .up .av { background: rgba(235,232,226,0.05); border: 2.5px dashed #ebe8e2; color: rgba(235,232,226,0.7); font-size: 40px; }
+  .up .nm { color: #ebe8e2; }
+  .cap { font: 400 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .cap b { color: #ebe8e2; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="profile-site">
+  <div id="scene">
+    <div class="grid">
+      <div class="p"><div class="av a1">JD</div><div class="nm">Jordan D.</div></div>
+      <div class="p"><div class="av a2">MK</div><div class="nm">Mia K.</div></div>
+      <div class="p up"><div class="av">⤒</div><div class="nm">upload…</div></div>
+      <div class="p"><div class="av a4">RP</div><div class="nm">Ravi P.</div></div>
+      <div class="p"><div class="av a5">EC</div><div class="nm">Elena C.</div></div>
+      <div class="p"><div class="av a6">TN</div><div class="nm">Theo N.</div></div>
+      <div class="p"><div class="av a7">Sl</div><div class="nm">Sloane</div></div>
+      <div class="p"><div class="av a3">GA</div><div class="nm">Grace A.</div></div>
+      <div class="p"><div class="av a8">DV</div><div class="nm">Dev V.</div></div>
+      <div class="p"><div class="av a1" style="background:linear-gradient(150deg,#7ea0ff,#3a53d6)">Om</div><div class="nm">Omar</div></div>
+    </div>
+    <div class="cap">every persona gets a face · <b>edit live, no redeploy</b></div>
+  </div>
+</div>
+</body></html>

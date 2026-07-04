@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the v2 solver — a vision model READS the diagram, then clicks the right multiple-choice answer */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 0 90px; }
+  .stage { display: flex; align-items: center; gap: 70px; }
+  .diagram { position: relative; }
+  .eye { position: absolute; top: -30px; left: -30px; display: flex; align-items: center; gap: 10px;
+         color: #7aa2ff; font: 600 24px "SF Mono", Menlo, monospace; }
+  .opts { display: flex; flex-direction: column; gap: 18px; }
+  .opt { display: flex; align-items: center; gap: 20px; min-width: 300px;
+         border: 1.5px solid rgba(235,232,226,0.28); border-radius: 14px; padding: 16px 26px;
+         color: #ebe8e2; font: 500 34px "SF Mono", Menlo, monospace; }
+  .opt .k { color: rgba(235,232,226,0.5); font-size: 28px; }
+  .opt.pick { border-color: #3fdc82; background: rgba(63,220,130,0.12); }
+  .opt.pick .k { color: #3fdc82; }
+  .cursor { margin-left: auto; color: #3fdc82; font-size: 30px; }
+  .bar { display: flex; align-items: center; gap: 18px; }
+  .btn { border-radius: 12px; padding: 14px 30px; font: 600 27px "SF Mono", Menlo, monospace; }
+  .btn.a { background: #7aa2ff; color: #0f0f11; }
+  .btn.b { border: 2px solid rgba(122,162,255,0.7); color: #7aa2ff; }
+  .tag { color: rgba(235,232,226,0.45); font: 400 25px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="mathacademy-solver">
+  <div id="scene">
+    <div class="stage">
+      <div class="diagram">
+        <div class="eye">&#128065; vision</div>
+        <svg width="360" height="300" viewBox="0 0 360 300" fill="none">
+          <!-- vision reticle brackets -->
+          <g stroke="#7aa2ff" stroke-width="3" fill="none">
+            <path d="M14 40 L14 14 L40 14"/><path d="M320 14 L346 14 L346 40"/>
+            <path d="M346 260 L346 286 L320 286"/><path d="M40 286 L14 286 L14 260"/>
+          </g>
+          <!-- right triangle -->
+          <polygon points="70,250 290,250 70,70" fill="rgba(122,162,255,0.08)" stroke="#ebe8e2" stroke-width="3"/>
+          <!-- right-angle marker -->
+          <path d="M70 224 L96 224 L96 250" stroke="#ebe8e2" stroke-width="2.5" fill="none"/>
+          <!-- side labels -->
+          <text x="46" y="165" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="30" text-anchor="middle">6</text>
+          <text x="180" y="284" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="30" text-anchor="middle">8</text>
+          <text x="205" y="150" fill="#7aa2ff" font-family="SF Mono, Menlo, monospace" font-size="32" font-weight="600">x</text>
+        </svg>
+      </div>
+      <div class="opts">
+        <div class="opt pick"><span class="k">A</span> 10 <span class="cursor">&#9737;</span></div>
+        <div class="opt"><span class="k">B</span> 14</div>
+        <div class="opt"><span class="k">C</span> &#8730;28</div>
+        <div class="opt"><span class="k">D</span> 48</div>
+      </div>
+    </div>
+    <div class="bar">
+      <span class="btn a">Solve one</span>
+      <span class="btn b">Auto-solve all</span>
+      <span class="tag">· $0 vision · localhost only</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: twin cores + a live provider ring, one task routing along a lit green wire */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding-bottom: 96px; }
+  svg { display: block; }
+  .cap { font: 400 30px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap b { color: #3fdc82; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="ai-stack-map">
+  <div id="scene">
+    <svg width="820" height="560" viewBox="0 0 820 560" fill="none">
+      <!-- faint starfield -->
+      <g fill="rgba(235,232,226,0.18)">
+        <circle cx="70" cy="90" r="2"/><circle cx="180" cy="40" r="1.5"/><circle cx="330" cy="70" r="2"/>
+        <circle cx="620" cy="50" r="1.5"/><circle cx="760" cy="120" r="2"/><circle cx="740" cy="420" r="1.5"/>
+        <circle cx="90" cy="470" r="2"/><circle cx="250" cy="520" r="1.5"/><circle cx="560" cy="510" r="2"/>
+        <circle cx="40" cy="280" r="1.5"/><circle cx="790" cy="290" r="2"/>
+      </g>
+      <!-- ring wires from center to providers -->
+      <g stroke="rgba(167,139,250,0.28)" stroke-width="2">
+        <line x1="410" y1="280" x2="410" y2="80"/>
+        <line x1="410" y1="280" x2="590" y2="140"/>
+        <line x1="410" y1="280" x2="660" y2="330"/>
+        <line x1="410" y1="280" x2="560" y2="470"/>
+        <line x1="410" y1="280" x2="260" y2="470"/>
+        <line x1="410" y1="280" x2="160" y2="330"/>
+        <line x1="410" y1="280" x2="230" y2="140"/>
+      </g>
+      <!-- the LIVE routed wire (task router -> a free provider -> core), glowing green -->
+      <path d="M410 280 L160 330" stroke="#3fdc82" stroke-width="4"/>
+      <path d="M160 330 L60 380" stroke="#3fdc82" stroke-width="4"/>
+      <!-- provider dots (some dim = offline) -->
+      <g>
+        <circle cx="410" cy="80" r="15" fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="2.5"/>
+        <circle cx="590" cy="140" r="15" fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="2.5"/>
+        <circle cx="660" cy="330" r="15" fill="rgba(235,232,226,0.06)" stroke="rgba(235,232,226,0.3)" stroke-width="2.5"/>
+        <circle cx="560" cy="470" r="15" fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="2.5"/>
+        <circle cx="260" cy="470" r="15" fill="rgba(167,139,250,0.14)" stroke="#a78bfa" stroke-width="2.5"/>
+        <circle cx="160" cy="330" r="17" fill="rgba(63,220,130,0.2)" stroke="#3fdc82" stroke-width="3"/>
+        <circle cx="230" cy="140" r="15" fill="rgba(235,232,226,0.06)" stroke="rgba(235,232,226,0.3)" stroke-width="2.5"/>
+      </g>
+      <!-- task router chip, feeding in -->
+      <g>
+        <rect x="20" y="352" width="150" height="54" rx="12" fill="#0f0f11" stroke="#3fdc82" stroke-width="2"/>
+        <text x="95" y="386" fill="#3fdc82" font-family="SF Mono, Menlo, monospace" font-size="24" font-weight="600" text-anchor="middle">TASK</text>
+      </g>
+      <!-- twin cores in the center, side by side -->
+      <g>
+        <rect x="278" y="242" width="140" height="78" rx="18" fill="rgba(167,139,250,0.2)" stroke="#a78bfa" stroke-width="3"/>
+        <text x="348" y="289" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="26" font-weight="600" text-anchor="middle">Claude</text>
+        <rect x="428" y="248" width="120" height="66" rx="16" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="2.5"/>
+        <text x="488" y="288" fill="rgba(235,232,226,0.85)" font-family="SF Mono, Menlo, monospace" font-size="23" font-weight="500" text-anchor="middle">Codex</text>
+      </g>
+    </svg>
+    <div class="cap">task &rarr; <b>the brain that actually handles it</b></div>
+  </div>
+</div>
+</body></html>

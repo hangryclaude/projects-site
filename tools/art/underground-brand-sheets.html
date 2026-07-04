@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: storefront phone capture -> Google Sheet rows, $0/month, brand DNA */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 60px; }
+  .scan { position: absolute; inset: 0; z-index: 6; pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0 3px, rgba(0,0,0,0.20) 3px 4px); }
+  .est { position: absolute; top: 62px; left: 64px; z-index: 6;
+    font: 600 24px "SF Mono", Menlo, monospace; letter-spacing: 0.26em; color: rgba(235,232,226,0.5); }
+  .est b { color: #ff453a; }
+  .cap { width: 380px; }
+  .caplbl { font: 700 26px "SF Mono", Menlo, monospace; letter-spacing: 0.2em; color: rgba(235,232,226,0.55); text-transform: uppercase; }
+  .field { margin-top: 22px; display: flex; height: 92px; border: 2px solid rgba(235,232,226,0.4); border-radius: 10px; overflow: hidden; }
+  .field .num { flex: 1; display: flex; align-items: center; padding: 0 26px;
+    font: 500 40px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .field .num .car { width: 3px; height: 44px; background: #ff453a; margin-left: 6px; }
+  .field .btn { display: flex; align-items: center; padding: 0 32px; background: #34d372;
+    color: #07120b; font: 700 32px "SF Mono", Menlo, monospace; letter-spacing: 0.1em; }
+  .price { margin-top: 34px; font: 900 96px/1 -apple-system, system-ui, sans-serif; color: #34d372; letter-spacing: -0.02em; }
+  .pricesub { font: 500 30px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); letter-spacing: 0.04em; }
+  .arrow { font: 300 90px "SF Mono", Menlo, monospace; color: #34d372; }
+  .sheet { width: 430px; border-radius: 10px; overflow: hidden; border: 1.5px solid rgba(52,211,114,0.4); }
+  .sr { display: grid; grid-template-columns: 1fr 1fr; }
+  .sr > div { padding: 20px 22px; border-bottom: 1px solid rgba(52,211,114,0.18); border-right: 1px solid rgba(52,211,114,0.18);
+    font: 500 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.82); }
+  .sr.head > div { background: rgba(52,211,114,0.16); color: #34d372; font-weight: 700; letter-spacing: 0.04em; }
+  .sr .new { color: #34d372; }
+</style>
+</head><body>
+<div id="frame" data-label="underground-brand-sheets">
+  <div id="scene">
+    <div class="est"><b>&#9679;</b> UNDERGROUND 805</div>
+    <div class="cap">
+      <div class="caplbl">Get 15% &mdash; text drops</div>
+      <div class="field"><div class="num">+1 805 &bull;&bull;&bull;&bull;<span class="car"></span></div><div class="btn">JOIN</div></div>
+      <div class="price">$0<span class="pricesub">/mo</span></div>
+      <div class="pricesub">no Klaviyo bill &mdash; my list</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="sheet">
+      <div class="sr head"><div>phone</div><div>timestamp</div></div>
+      <div class="sr"><div>+1 805 442 118</div><div>10:41:03</div></div>
+      <div class="sr"><div>+1 805 907 550</div><div>10:41:29</div></div>
+      <div class="sr"><div>+1 805 233 087</div><div>10:42:12</div></div>
+      <div class="sr"><div class="new">+1 805 &bull;&bull;&bull;&bull;</div><div class="new">now</div></div>
+    </div>
+    <div class="scan"></div>
+  </div>
+</div>
+</body></html>

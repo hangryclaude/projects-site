@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: brute-force sweep of the 3-char .com space — a wall of codes, nearly all taken, one green hit expiring soon */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 70px; padding: 0 90px; }
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+  .t { width: 108px; height: 58px; display: flex; align-items: center; justify-content: center;
+    border-radius: 9px; font: 500 27px "SF Mono", Menlo, monospace;
+    background: rgba(235,232,226,0.05); color: rgba(235,232,226,0.28);
+    border: 1px solid rgba(235,232,226,0.09); }
+  .t.hit { background: rgba(52,211,114,0.16); border: 2px solid #34d372; color: #34d372; font-weight: 700;
+    box-shadow: 0 0 26px rgba(52,211,114,0.35); }
+  .side { display: flex; flex-direction: column; gap: 14px; width: 300px; }
+  .side .n { font: 700 62px/1 "SF Mono", Menlo, monospace; color: #ebe8e2; letter-spacing: -0.02em; }
+  .side .n .tld { color: rgba(235,232,226,0.35); font-weight: 400; }
+  .exp { display: inline-flex; align-items: center; gap: 12px; align-self: flex-start;
+    background: rgba(52,211,114,0.12); border: 1.5px solid rgba(52,211,114,0.5); border-radius: 999px;
+    color: #34d372; font: 600 25px "SF Mono", Menlo, monospace; padding: 10px 20px; margin-top: 8px; }
+  .side .sub { color: rgba(235,232,226,0.4); font: 400 24px/1.4 "SF Mono", Menlo, monospace; margin-top: 6px; }
+</style>
+</head><body>
+<div id="frame" data-label="domain-master">
+  <div id="scene">
+    <div class="grid">
+      <span class="t">qax</span><span class="t">vem</span><span class="t">koz</span><span class="t">niv</span><span class="t">rul</span><span class="t">jad</span><span class="t">wof</span>
+      <span class="t">bex</span><span class="t">zit</span><span class="t">lop</span><span class="t">huk</span><span class="t">dav</span><span class="t hit">q4z</span><span class="t">nem</span>
+      <span class="t">yop</span><span class="t">civ</span><span class="t">rax</span><span class="t">tul</span><span class="t">bog</span><span class="t">wex</span><span class="t">jiv</span>
+      <span class="t">kem</span><span class="t">luz</span><span class="t">pav</span><span class="t">dox</span><span class="t">rif</span><span class="t">van</span><span class="t">zuk</span>
+      <span class="t">heb</span><span class="t">mox</span><span class="t">quv</span><span class="t">liw</span><span class="t">gaz</span><span class="t">tep</span><span class="t">nub</span>
+    </div>
+    <div class="side">
+      <div class="n">q4z<span class="tld">.com</span></div>
+      <span class="exp">● expires in 4 days</span>
+      <div class="sub">34,999 taken · the drop is the edge</div>
+    </div>
+  </div>
+</div>
+</body></html>

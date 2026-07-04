@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the AWS console, faithfully cloned — services, chrome, and a bill that reads $0.00 */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .win { width: 1010px; border-radius: 16px; overflow: hidden; border: 1.5px solid rgba(235,232,226,0.14);
+    background: #10141a; }
+  .nav { display: flex; align-items: center; gap: 26px; height: 78px; padding: 0 28px; background: #232f3e; }
+  .logo { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+  .logo .t { color: #fff; font: 700 30px "SF Mono", Menlo, monospace; letter-spacing: 0.02em; }
+  .logo .s { width: 40px; height: 8px; margin-top: 3px; }
+  .menu { color: rgba(255,255,255,0.85); font: 500 24px "SF Mono", Menlo, monospace; }
+  .search { flex: 1; height: 44px; border-radius: 8px; background: rgba(255,255,255,0.08);
+    display: flex; align-items: center; padding: 0 18px; color: rgba(255,255,255,0.45);
+    font: 400 22px "SF Mono", Menlo, monospace; }
+  .region { color: rgba(255,255,255,0.75); font: 500 22px "SF Mono", Menlo, monospace; white-space: nowrap; }
+  .body { padding: 36px 38px 40px; }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .tile { border: 1px solid rgba(235,232,226,0.14); border-radius: 12px; padding: 22px 20px;
+    display: flex; flex-direction: column; gap: 16px; background: rgba(255,153,0,0.03); }
+  .tile .nm { color: #ebe8e2; font: 600 26px "SF Mono", Menlo, monospace; }
+  .tile .ds { color: rgba(235,232,226,0.4); font: 400 18px "SF Mono", Menlo, monospace; }
+  .bill { margin-top: 24px; display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 30px; border-radius: 12px; border: 1.5px solid #ff9900; background: rgba(255,153,0,0.07); }
+  .bill .l { color: rgba(235,232,226,0.6); font: 500 26px "SF Mono", Menlo, monospace; }
+  .bill .l b { color: #ebe8e2; font-weight: 700; }
+  .bill .amt { color: #ff9900; font: 700 60px/1 "SF Mono", Menlo, monospace; letter-spacing: -0.02em; }
+</style>
+</head><body>
+<div id="frame" data-label="aws-console-clone">
+  <div id="scene">
+    <div class="win">
+      <div class="nav">
+        <div class="logo"><span class="t">aws</span>
+          <svg class="s" viewBox="0 0 40 8"><path d="M2 2 C 14 9, 26 9, 38 2" fill="none" stroke="#ff9900" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <span class="menu">Services</span>
+        <div class="search">Search for services, features…</div>
+        <span class="region">N. Virginia ▾</span>
+      </div>
+      <div class="body">
+        <div class="tiles">
+          <div class="tile">
+            <svg width="42" height="42" viewBox="0 0 42 42"><rect x="6" y="6" width="30" height="30" rx="5" fill="none" stroke="#ff9900" stroke-width="3"/><rect x="14" y="14" width="14" height="14" rx="2" fill="#ff9900"/><path d="M14 3 v6 M28 3 v6 M14 33 v6 M28 33 v6 M3 14 h6 M3 28 h6 M33 14 h6 M33 28 h6" stroke="#ff9900" stroke-width="3" stroke-linecap="round"/></svg>
+            <div><div class="nm">EC2</div><div class="ds">launch wizard</div></div>
+          </div>
+          <div class="tile">
+            <svg width="42" height="42" viewBox="0 0 42 42"><path d="M9 10 h24 l-2 26 a1 1 0 0 1 -1 1 h-18 a1 1 0 0 1 -1 -1 z" fill="none" stroke="#ff9900" stroke-width="3" stroke-linejoin="round"/><ellipse cx="21" cy="10" rx="12" ry="4.5" fill="none" stroke="#ff9900" stroke-width="3"/></svg>
+            <div><div class="nm">S3</div><div class="ds">buckets</div></div>
+          </div>
+          <div class="tile">
+            <svg width="42" height="42" viewBox="0 0 42 42"><path d="M11 34 L22 8 h6 L18 34 z" fill="#ff9900"/><path d="M23 20 L31 34 h-7" fill="none" stroke="#ff9900" stroke-width="3" stroke-linejoin="round"/></svg>
+            <div><div class="nm">Lambda</div><div class="ds">functions</div></div>
+          </div>
+          <div class="tile">
+            <svg width="42" height="42" viewBox="0 0 42 42"><rect x="9" y="20" width="6" height="14" rx="1.5" fill="#ff9900"/><rect x="19" y="12" width="6" height="22" rx="1.5" fill="#ff9900"/><rect x="29" y="24" width="6" height="10" rx="1.5" fill="#ff9900"/></svg>
+            <div><div class="nm">CloudWatch</div><div class="ds">metrics</div></div>
+          </div>
+        </div>
+        <div class="bill">
+          <div class="l"><b>Monthly bill</b> — everything, except the billing</div>
+          <div class="amt">$0.00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

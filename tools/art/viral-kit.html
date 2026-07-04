@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: SCRUB checklist gate -> private repo flips public. no bought stars, no doxxing. */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 62px; }
+  .card { width: 540px; border-radius: 16px; background: #141417; border: 1.5px solid rgba(235,232,226,0.14); overflow: hidden; }
+  .bar { display: flex; align-items: center; gap: 16px; padding: 24px 30px; border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .bar .fn { font: 600 30px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .bar .fn .ext { color: rgba(235,232,226,0.4); }
+  .bar .tag { margin-left: auto; font: 600 22px "SF Mono", Menlo, monospace; color: #34d372; letter-spacing: 0.12em; }
+  .list { padding: 30px 34px; display: flex; flex-direction: column; gap: 24px; }
+  .ck { display: flex; align-items: center; gap: 22px; font: 500 34px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .box { width: 42px; height: 42px; border-radius: 9px; background: #34d372; display: flex; align-items: center; justify-content: center;
+    color: #07120b; font-size: 30px; font-weight: 800; flex: none; }
+  .never { padding: 22px 34px 30px; display: flex; gap: 40px; border-top: 1px solid rgba(235,232,226,0.1); }
+  .never .x { display: flex; align-items: center; gap: 12px; font: 500 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .never .x .m { color: #ff453a; font-weight: 800; font-size: 28px; }
+  .flow { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .state { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .lockic { font-size: 74px; line-height: 1; }
+  .slbl { font: 600 26px "SF Mono", Menlo, monospace; letter-spacing: 0.14em; }
+  .priv .slbl { color: rgba(235,232,226,0.5); }
+  .down { font: 300 56px "SF Mono", Menlo, monospace; color: #34d372; }
+  .go { padding: 20px 42px; border-radius: 12px; background: #34d372; color: #07120b;
+    font: 800 40px -apple-system, system-ui, sans-serif; letter-spacing: 0.02em; }
+  .pub .slbl { color: #34d372; }
+</style>
+</head><body>
+<div id="frame" data-label="viral-kit">
+  <div id="scene">
+    <div class="card">
+      <div class="bar"><span class="fn">SCRUB<span class="ext">.md</span></span><span class="tag">RUN FIRST</span></div>
+      <div class="list">
+        <div class="ck"><span class="box">&#10003;</span>strip PII</div>
+        <div class="ck"><span class="box">&#10003;</span>kill secrets</div>
+        <div class="ck"><span class="box">&#10003;</span>hide private business</div>
+      </div>
+      <div class="never">
+        <span class="x"><span class="m">&#10007;</span>no bought stars</span>
+        <span class="x"><span class="m">&#10007;</span>no doxxing</span>
+      </div>
+    </div>
+    <div class="flow">
+      <div class="state priv"><div class="lockic">&#128274;</div><div class="slbl">PRIVATE</div></div>
+      <div class="down">&darr;</div>
+      <div class="go">GO PUBLIC</div>
+    </div>
+  </div>
+</div>
+</body></html>

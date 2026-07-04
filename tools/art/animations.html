@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a Blender asset mid-render — wireframe on the left, shaded render sweeping in from the right */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; padding-top: 8px; }
+  .cap { color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; letter-spacing: 0.02em; }
+  .cap b { color: #e8843a; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="animations">
+  <div id="scene">
+    <svg width="470" height="440" viewBox="0 0 470 440" fill="none">
+      <defs>
+        <radialGradient id="shade" cx="38%" cy="30%" r="80%">
+          <stop offset="0" stop-color="#f6b968"/>
+          <stop offset="0.45" stop-color="#e8843a"/>
+          <stop offset="1" stop-color="#5f2f0c"/>
+        </radialGradient>
+        <clipPath id="rhalf"><rect x="235" y="20" width="220" height="400"/></clipPath>
+      </defs>
+      <!-- wireframe sphere -->
+      <g stroke="#e8843a" stroke-width="2.2" fill="none" opacity="0.9">
+        <circle cx="235" cy="220" r="170"/>
+        <ellipse cx="235" cy="220" rx="55" ry="170"/>
+        <ellipse cx="235" cy="220" rx="118" ry="170"/>
+        <line x1="235" y1="50" x2="235" y2="390"/>
+        <ellipse cx="235" cy="150" rx="155" ry="22"/>
+        <ellipse cx="235" cy="220" rx="170" ry="26"/>
+        <ellipse cx="235" cy="290" rx="155" ry="22"/>
+      </g>
+      <!-- rendered half sweeping in -->
+      <g clip-path="url(#rhalf)">
+        <circle cx="235" cy="220" r="170" fill="url(#shade)"/>
+        <ellipse cx="188" cy="158" rx="48" ry="30" fill="rgba(255,240,220,0.35)"/>
+      </g>
+      <!-- render seam -->
+      <line x1="235" y1="42" x2="235" y2="398" stroke="#ffd9a0" stroke-width="3" stroke-dasharray="6 9"/>
+      <!-- axis gizmo -->
+      <g transform="translate(388,372)" stroke-width="3.5" stroke-linecap="round">
+        <line x1="0" y1="0" x2="26" y2="-8" stroke="rgba(235,232,226,0.5)"/>
+        <line x1="0" y1="0" x2="-6" y2="-26" stroke="rgba(235,232,226,0.5)"/>
+        <line x1="0" y1="0" x2="-20" y2="14" stroke="rgba(235,232,226,0.5)"/>
+        <circle cx="0" cy="0" r="4" fill="rgba(235,232,226,0.6)"/>
+      </g>
+    </svg>
+    <div class="cap"><b>models</b> · renders · scripts</div>
+  </div>
+</div>
+</body></html>

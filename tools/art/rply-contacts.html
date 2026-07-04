@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; align-items: center; justify-content: center; gap: 44px; }
+  .col { display: flex; flex-direction: column; gap: 18px; width: 380px; }
+  .lab { font: 500 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); letter-spacing: 0.04em; margin-bottom: 4px; }
+  .row {
+    display: flex; align-items: center; gap: 18px;
+    padding: 16px 20px; border-radius: 16px; background: rgba(235,232,226,0.04); border: 1px solid rgba(235,232,226,0.1);
+  }
+  .av { width: 54px; height: 54px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center;
+        font: 700 26px -apple-system, system-ui, sans-serif; color: #fff; }
+  .av.empty { background: rgba(235,232,226,0.1); border: 1.5px dashed rgba(235,232,226,0.3); }
+  .av.g1 { background: linear-gradient(135deg,#9d8dff,#2b2a52); }
+  .av.g2 { background: linear-gradient(135deg,#6d5cff,#3a1f5c); }
+  .av.g3 { background: linear-gradient(135deg,#b18dff,#2b2a52); }
+  .nm { font: 500 28px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .nm.raw { color: rgba(235,232,226,0.5); font-size: 25px; }
+  .arrow { font: 400 44px "SF Mono", Menlo, monospace; color: #9d8dff; }
+</style>
+</head><body>
+<div id="frame" data-label="rply-contacts">
+  <div id="scene">
+    <div class="col">
+      <div class="lab">before</div>
+      <div class="row"><div class="av empty"></div><div class="nm raw">+1 (415) 555-0192</div></div>
+      <div class="row"><div class="av empty"></div><div class="nm raw">Sarah — from the gym</div></div>
+      <div class="row"><div class="av empty"></div><div class="nm raw">JESSICA MARTIN (2)</div></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <div class="lab">after · on-device</div>
+      <div class="row"><div class="av g1">M</div><div class="nm">Marcus</div></div>
+      <div class="row"><div class="av g2">S</div><div class="nm">Sarah</div></div>
+      <div class="row"><div class="av g3">J</div><div class="nm">Jessica</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: fake glassy sales dashboard climbing + a REAL phone push notification */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 70px; }
+  .dash { width: 560px; padding: 48px 52px; border-radius: 20px;
+    background: linear-gradient(160deg, rgba(52,211,114,0.1), rgba(255,255,255,0.03));
+    border: 1.5px solid rgba(52,211,114,0.28); box-shadow: 0 30px 80px rgba(0,0,0,0.5); backdrop-filter: blur(8px); }
+  .dl { font: 500 27px "SF Mono", Menlo, monospace; letter-spacing: 0.1em; color: rgba(235,232,226,0.55); text-transform: uppercase; }
+  .rev { margin-top: 12px; display: flex; align-items: baseline; gap: 18px; }
+  .rev .n { font: 800 104px/1 -apple-system, system-ui, sans-serif; letter-spacing: -0.03em; color: #ebe8e2; }
+  .rev .up { font: 700 40px "SF Mono", Menlo, monospace; color: #34d372; }
+  .spark { margin-top: 28px; }
+  .rowline { margin-top: 30px; display: flex; flex-direction: column; gap: 18px; }
+  .oi { display: flex; align-items: center; gap: 16px; font: 500 28px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.75); }
+  .oi .dot { width: 12px; height: 12px; border-radius: 50%; background: #34d372; }
+  .oi .amt { margin-left: auto; color: #34d372; font-weight: 700; }
+  .phone { width: 300px; height: 590px; border-radius: 46px; border: 5px solid rgba(235,232,226,0.28);
+    background: #050506; position: relative; padding: 26px 18px; }
+  .notch { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 110px; height: 26px; border-radius: 14px; background: rgba(235,232,226,0.18); }
+  .push { margin-top: 66px; padding: 22px 22px; border-radius: 18px; background: rgba(60,60,64,0.95);
+    border: 1px solid rgba(255,255,255,0.08); }
+  .push .top { display: flex; align-items: center; gap: 12px; }
+  .push .ap { width: 30px; height: 30px; border-radius: 8px; background: #34d372; }
+  .push .app { font: 600 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.6); }
+  .push .app .t { float: right; font-weight: 500; color: rgba(235,232,226,0.4); }
+  .push .body { margin-top: 12px; font: 700 27px/1.3 -apple-system, system-ui, sans-serif; color: #ebe8e2; }
+  .push .sub { margin-top: 6px; font: 500 24px "SF Mono", Menlo, monospace; color: #34d372; }
+  .tag { position: absolute; bottom: 54px; right: 64px; font: 500 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+</style>
+</head><body>
+<div id="frame" data-label="shopify-sim">
+  <div id="scene">
+    <div class="dash">
+      <div class="dl">Total sales &mdash; live</div>
+      <div class="rev"><span class="n">$4,812</span><span class="up">&#9650; 18%</span></div>
+      <svg class="spark" width="450" height="90" viewBox="0 0 450 90" fill="none">
+        <path d="M0 72 L60 66 L120 70 L180 50 L240 56 L300 34 L360 40 L450 8" stroke="#34d372" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M0 72 L60 66 L120 70 L180 50 L240 56 L300 34 L360 40 L450 8 L450 90 L0 90 Z" fill="rgba(52,211,114,0.12)"/>
+      </svg>
+      <div class="rowline">
+        <div class="oi"><span class="dot"></span>Tokyo &bull; hoodie<span class="amt">+$68</span></div>
+        <div class="oi"><span class="dot"></span>Brooklyn &bull; tee<span class="amt">+$42</span></div>
+      </div>
+    </div>
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="push">
+        <div class="top"><span class="ap"></span><span class="app">Underground805<span class="t">now</span></span></div>
+        <div class="body">New order &mdash; $48</div>
+        <div class="sub">cha-ching &#128176;</div>
+      </div>
+    </div>
+    <div class="tag">not real money</div>
+  </div>
+</div>
+</body></html>

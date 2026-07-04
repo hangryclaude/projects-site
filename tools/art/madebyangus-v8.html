@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a laptop in a warm void; its screen is a live client site you fly into */
+  .glow { position: absolute; left: 50%; top: 340px; transform: translate(-50%,-50%);
+    width: 820px; height: 640px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,160,77,0.22), transparent 65%); }
+  svg.lap { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .cmdk { position: absolute; top: 66px; right: 74px; display: flex; align-items: center; gap: 12px;
+    padding: 12px 22px; border: 1.5px solid rgba(235,232,226,0.28); border-radius: 12px;
+    font: 500 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.7); background: rgba(235,232,226,0.04); }
+  .cmdk b { color: #e8a04d; font-weight: 600; }
+  .cap { position: absolute; right: 84px; bottom: 74px; text-align: right;
+    font: 400 25px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap b { color: #e8a04d; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="madebyangus-v8">
+  <div id="scene">
+    <div class="glow"></div>
+    <svg class="lap" viewBox="0 0 1200 750">
+      <!-- base -->
+      <path d="M300 540 L900 540 L950 588 L250 588 Z" fill="#1c1c20" stroke="rgba(235,232,226,0.3)" stroke-width="2"/>
+      <rect x="540" y="540" width="120" height="10" rx="5" fill="#2a2a30"/>
+      <!-- lid / bezel -->
+      <rect x="350" y="150" width="500" height="392" rx="16" fill="#141418" stroke="rgba(235,232,226,0.34)" stroke-width="2.5"/>
+      <!-- screen = a live site -->
+      <rect x="372" y="172" width="456" height="348" rx="8" fill="#0c0c0e"/>
+      <!-- browser chrome -->
+      <circle cx="392" cy="196" r="6" fill="#e8664d"/><circle cx="414" cy="196" r="6" fill="#e8b84d"/><circle cx="436" cy="196" r="6" fill="#5ac77a"/>
+      <rect x="470" y="188" width="338" height="17" rx="8.5" fill="rgba(235,232,226,0.1)"/>
+      <!-- hero band -->
+      <rect x="392" y="222" width="416" height="120" rx="8" fill="url(#hg)"/>
+      <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8a04d"/><stop offset="1" stop-color="#c46a3a"/></linearGradient></defs>
+      <rect x="414" y="258" width="180" height="20" rx="5" fill="rgba(15,15,17,0.55)"/>
+      <rect x="414" y="292" width="120" height="14" rx="5" fill="rgba(15,15,17,0.35)"/>
+      <!-- content tiles -->
+      <rect x="392" y="360" width="196" height="80" rx="8" fill="rgba(235,232,226,0.09)"/>
+      <rect x="612" y="360" width="196" height="80" rx="8" fill="rgba(235,232,226,0.09)"/>
+      <rect x="392" y="456" width="416" height="16" rx="8" fill="rgba(235,232,226,0.07)"/>
+      <rect x="392" y="484" width="300" height="16" rx="8" fill="rgba(235,232,226,0.07)"/>
+      <!-- click cursor -->
+      <g transform="translate(628 372)">
+        <circle cx="0" cy="0" r="34" fill="none" stroke="#e8a04d" stroke-width="3" opacity="0.6"/>
+        <path d="M0 0 L0 34 L9 26 L15 39 L21 36 L15 23 L26 23 Z" fill="#ebe8e2" stroke="#0f0f11" stroke-width="1.5"/>
+      </g>
+    </svg>
+    <div class="cmdk">⌘K · <b>30</b> sites</div>
+    <div class="cap"><b>click the laptop</b><br>fly into 30 live sites</div>
+  </div>
+</div>
+</body></html>

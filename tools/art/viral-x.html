@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a viral tweet dissected — the one lever that made it spread + a virality score */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; }
+  .card {
+    width: 800px; border: 1.5px solid rgba(235,232,226,0.2); border-radius: 20px;
+    padding: 30px 34px; background: rgba(235,232,226,0.03);
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .top { display: flex; align-items: center; gap: 16px; }
+  .av { width: 54px; height: 54px; border-radius: 50%; background: rgba(167,139,250,0.25); border: 1.5px solid #a78bfa; }
+  .nm { font: 600 28px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .hd { font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .tw { font: 400 30px/1.4 "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .tw u { color: #a78bfa; text-decoration: none; background: rgba(167,139,250,0.14); border-radius: 5px; padding: 0 4px; }
+  .foot { font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .foot b { color: #3fdc82; font-weight: 600; }
+  .analysis { width: 800px; display: flex; align-items: center; gap: 26px; }
+  .lever { padding: 12px 24px; border: 1.5px solid rgba(167,139,250,0.5); border-radius: 999px;
+           font: 500 25px "SF Mono", Menlo, monospace; color: #a78bfa; white-space: nowrap; }
+  .meter { flex: 1; }
+  .meter .lab { font: 400 23px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); margin-bottom: 10px; }
+  .meter .lab b { color: #3fdc82; font-weight: 700; }
+  .track { height: 16px; border-radius: 999px; background: rgba(235,232,226,0.1); overflow: hidden; }
+  .fill { width: 92%; height: 100%; border-radius: 999px; background: #3fdc82; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="viral-x">
+  <div id="scene">
+    <div class="card">
+      <div class="top">
+        <div class="av"></div>
+        <div><div class="nm">growth guy</div><div class="hd">@buildinpublic</div></div>
+      </div>
+      <div class="tw">nobody talks about this, but my best cold email was 9 words. exact template <u>&darr;</u></div>
+      <div class="foot"><b>1.2M</b> views &middot; 8,400 reposts</div>
+    </div>
+    <div class="analysis">
+      <div class="lever">lever &#9656; curiosity gap</div>
+      <div class="meter">
+        <div class="lab">predicted virality &nbsp; <b>92</b>/100</div>
+        <div class="track"><div class="fill"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

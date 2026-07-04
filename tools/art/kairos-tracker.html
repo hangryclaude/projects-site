@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: classroom rocket race — rockets climb on behavior points, coins buy upgrades */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 70px; padding: 0 100px; }
+  .track { display: flex; align-items: flex-end; gap: 44px; height: 520px; }
+  .lane { position: relative; width: 78px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+  .lane::before { content:""; position:absolute; left:50%; top:0; bottom:60px; width:2px; transform:translateX(-50%);
+                  background: repeating-linear-gradient(#ffffff22 0 8px, transparent 8px 20px); }
+  .rk { position: relative; z-index: 2; }
+  .pts { color: #7aa2ff; font: 600 26px "SF Mono", Menlo, monospace; margin-top: 14px; }
+  .who { color: rgba(235,232,226,0.55); font: 400 22px "SF Mono", Menlo, monospace; margin-top: 4px; }
+  .hud { display: flex; flex-direction: column; gap: 30px; }
+  .htitle { color: rgba(235,232,226,0.5); font: 600 24px "SF Mono", Menlo, monospace; letter-spacing: 0.12em; }
+  .coins { display: flex; align-items: center; gap: 16px; color: #e6b455; font: 700 52px "SF Mono", Menlo, monospace; }
+  .coin { width: 46px; height: 46px; border-radius: 50%; background: #e6b455; display: flex; align-items: center; justify-content: center;
+          color: #0f0f11; font: 800 28px "SF Mono", Menlo, monospace; }
+  .shop { color: rgba(235,232,226,0.55); font: 400 26px/1.6 "SF Mono", Menlo, monospace; }
+  .shop b { color: #ebe8e2; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="kairos-tracker">
+  <div id="scene">
+    <div class="track">
+      <div class="lane" style="height:100%">
+        <svg class="rk" width="60" height="120" viewBox="0 0 60 120"><path d="M30 6 C46 30 50 62 50 84 L10 84 C10 62 14 30 30 6Z" fill="#ebe8e2"/><circle cx="30" cy="46" r="10" fill="#7aa2ff"/><path d="M10 72 L-2 100 L10 90Z" fill="#7aa2ff"/><path d="M50 72 L62 100 L50 90Z" fill="#7aa2ff"/><path d="M22 84 L38 84 L32 116 L28 116Z" fill="#e6b455"/></svg>
+        <div class="pts">910</div><div class="who">Maya</div>
+      </div>
+      <div class="lane" style="height:78%">
+        <svg class="rk" width="54" height="108" viewBox="0 0 60 120"><path d="M30 6 C46 30 50 62 50 84 L10 84 C10 62 14 30 30 6Z" fill="#cdd0d6"/><circle cx="30" cy="46" r="10" fill="#0f0f11"/><path d="M10 72 L-2 100 L10 90Z" fill="#7aa2ff"/><path d="M50 72 L62 100 L50 90Z" fill="#7aa2ff"/><path d="M22 84 L38 84 L32 112 L28 112Z" fill="#e6b455"/></svg>
+        <div class="pts">720</div><div class="who">Deshawn</div>
+      </div>
+      <div class="lane" style="height:58%">
+        <svg class="rk" width="50" height="100" viewBox="0 0 60 120"><path d="M30 6 C46 30 50 62 50 84 L10 84 C10 62 14 30 30 6Z" fill="#c68a4e"/><circle cx="30" cy="46" r="10" fill="#0f0f11"/><path d="M10 72 L-2 100 L10 90Z" fill="#7aa2ff"/><path d="M50 72 L62 100 L50 90Z" fill="#7aa2ff"/><path d="M22 84 L38 84 L32 110 L28 110Z" fill="#e6b455"/></svg>
+        <div class="pts">540</div><div class="who">Priya</div>
+      </div>
+    </div>
+    <div class="hud">
+      <div class="htitle">▸ RACE VIEW · LIVE</div>
+      <div class="coins"><span class="coin">G</span>128</div>
+      <div class="shop">spend on the <b>rocket shop</b>:<br>thrusters · trails · wings · shields</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

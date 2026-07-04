@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the full-screen break overlay takes over — dimmed desktop, ring, countdown, tip */
+  #scene { font-family: "SF Mono", Menlo, monospace; }
+  /* faint desktop windows behind the overlay */
+  .win { position: absolute; border: 1.5px solid rgba(235,232,226,0.07); border-radius: 12px; background: rgba(235,232,226,0.02); }
+  .veil { position: absolute; inset: 0; background: rgba(15,15,17,0.82); }
+  .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .tip { color: #ebe8e2; font: 400 40px "SF Mono", Menlo, monospace; letter-spacing: -0.01em; }
+  .sub { color: #7aa2ff; font: 500 26px "SF Mono", Menlo, monospace; letter-spacing: 0.18em; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="eyesite-saver">
+  <div id="scene">
+    <!-- desktop underneath -->
+    <div class="win" style="left:90px; top:96px; width:520px; height:300px"></div>
+    <div class="win" style="left:660px; top:150px; width:470px; height:420px"></div>
+    <div class="win" style="left:230px; top:430px; width:360px; height:230px"></div>
+    <div class="veil"></div>
+    <div class="center">
+      <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
+        <circle cx="150" cy="150" r="130" stroke="rgba(235,232,226,0.12)" stroke-width="8"/>
+        <circle cx="150" cy="150" r="130" stroke="#7aa2ff" stroke-width="8" stroke-linecap="round"
+                stroke-dasharray="816.8" stroke-dashoffset="286" transform="rotate(-90 150 150)"/>
+        <text x="150" y="172" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="76" font-weight="300" fill="#ebe8e2">0:14</text>
+      </svg>
+      <div class="tip">Look at something 20 feet away</div>
+      <div class="sub">20 · 20 · 20</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

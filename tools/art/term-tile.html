@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a chaotic pile of overlapping terminals → one command → a clean non-overlapping grid */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 70px; }
+  .side { position: relative; width: 430px; height: 420px; }
+  .w {
+    position: absolute; border: 1.5px solid rgba(235,232,226,0.28); border-radius: 9px;
+    background: #17171b; overflow: hidden;
+  }
+  .w .tb { height: 26px; display: flex; align-items: center; gap: 6px; padding: 0 11px;
+    background: rgba(235,232,226,0.06); border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .w .d { width: 8px; height: 8px; border-radius: 50%; background: rgba(235,232,226,0.3); }
+  .w .d.g { background: #7aa2ff; }
+  /* messy pile */
+  .pile .w1 { left: 12px; top: 30px; width: 250px; height: 168px; transform: rotate(-6deg); }
+  .pile .w2 { left: 120px; top: 8px; width: 240px; height: 158px; transform: rotate(5deg); }
+  .pile .w3 { left: 40px; top: 150px; width: 270px; height: 176px; transform: rotate(3deg); }
+  .pile .w4 { left: 150px; top: 200px; width: 250px; height: 170px; transform: rotate(-4deg); }
+  .pile .w5 { left: 70px; top: 250px; width: 230px; height: 150px; transform: rotate(8deg); }
+  /* clean grid */
+  .neat { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr);
+    gap: 16px; }
+  .neat .g2 { position: static; width: auto; height: auto; }
+  .arrow { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 150px; }
+  .cmd { color: #7aa2ff; font: 600 30px "SF Mono", Menlo, monospace; background: rgba(122,162,255,0.1);
+    border: 1.5px solid rgba(122,162,255,0.5); border-radius: 10px; padding: 8px 20px; }
+  .arrow svg { display: block; }
+</style></head><body>
+<div id="frame" data-label="term-tile">
+  <div id="scene">
+    <div class="side pile">
+      <div class="w w1"><div class="tb"><span class="d"></span><span class="d"></span><span class="d"></span></div></div>
+      <div class="w w2"><div class="tb"><span class="d"></span><span class="d"></span><span class="d"></span></div></div>
+      <div class="w w3"><div class="tb"><span class="d"></span><span class="d"></span><span class="d"></span></div></div>
+      <div class="w w4"><div class="tb"><span class="d"></span><span class="d"></span><span class="d"></span></div></div>
+      <div class="w w5"><div class="tb"><span class="d"></span><span class="d"></span><span class="d"></span></div></div>
+    </div>
+    <div class="arrow">
+      <span class="cmd">tile</span>
+      <svg width="120" height="34" viewBox="0 0 120 34" fill="none">
+        <path d="M2 17 H104" stroke="#7aa2ff" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M92 5 L112 17 L92 29" stroke="#7aa2ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="side neat">
+      <div class="w g2"><div class="tb"><span class="d g"></span><span class="d"></span><span class="d"></span></div></div>
+      <div class="w g2"><div class="tb"><span class="d g"></span><span class="d"></span><span class="d"></span></div></div>
+      <div class="w g2"><div class="tb"><span class="d g"></span><span class="d"></span><span class="d"></span></div></div>
+      <div class="w g2"><div class="tb"><span class="d g"></span><span class="d"></span><span class="d"></span></div></div>
+    </div>
+  </div>
+</div>
+</body></html>

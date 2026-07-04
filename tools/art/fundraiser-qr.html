@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the full-screen SCAN TO DONATE kiosk — a big QR the whole room points a camera at */
+  .head { position: absolute; top: 92px; left: 0; right: 0; text-align: center; }
+  .head .t { font: 700 62px/1 -apple-system, system-ui, sans-serif; letter-spacing: 0.06em; color: #ebe8e2; }
+  .head .s { margin-top: 16px; font: 500 30px "SF Mono", Menlo, monospace; color: #35d07f; }
+  svg.qr { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .mod { fill: #ebe8e2; }
+  .cap { position: absolute; right: 84px; bottom: 74px; text-align: right;
+    font: 400 25px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .cap b { color: #35d07f; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="fundraiser-qr">
+  <div id="scene">
+    <div class="head"><div class="t">SCAN TO DONATE</div><div class="s">♥ point · scan · give</div></div>
+    <svg class="qr" viewBox="0 0 1200 750">
+      <defs>
+        <g id="finder">
+          <rect class="mod" width="196" height="196"/>
+          <rect x="28" y="28" width="140" height="140" fill="#0f0f11"/>
+          <rect class="mod" x="56" y="56" width="84" height="84"/>
+        </g>
+      </defs>
+      <use href="#finder" x="390" y="240"/>
+      <use href="#finder" x="614" y="240"/>
+      <use href="#finder" x="390" y="464"/>
+      <g class="mod">
+        <!-- timing + data modules -->
+        <rect x="390" y="436" width="28" height="28"/><rect x="446" y="436" width="28" height="28"/><rect x="502" y="436" width="28" height="28"/><rect x="558" y="436" width="28" height="28"/><rect x="614" y="436" width="28" height="28"/><rect x="670" y="436" width="28" height="28"/><rect x="726" y="436" width="28" height="28"/><rect x="782" y="436" width="28" height="28"/>
+        <rect x="586" y="240" width="28" height="28"/><rect x="586" y="296" width="28" height="28"/><rect x="586" y="352" width="28" height="28"/><rect x="586" y="492" width="28" height="28"/><rect x="586" y="548" width="28" height="28"/><rect x="586" y="604" width="28" height="28"/>
+        <rect x="614" y="464" width="28" height="28"/><rect x="642" y="464" width="28" height="28"/><rect x="698" y="464" width="28" height="28"/><rect x="754" y="464" width="28" height="28"/><rect x="782" y="464" width="28" height="28"/>
+        <rect x="614" y="492" width="28" height="28"/><rect x="670" y="492" width="28" height="28"/><rect x="726" y="492" width="28" height="28"/><rect x="754" y="492" width="28" height="28"/>
+        <rect x="642" y="520" width="28" height="28"/><rect x="698" y="520" width="28" height="28"/><rect x="782" y="520" width="28" height="28"/>
+        <rect x="614" y="548" width="28" height="28"/><rect x="670" y="548" width="28" height="28"/><rect x="698" y="548" width="28" height="28"/><rect x="754" y="548" width="28" height="28"/>
+        <rect x="642" y="576" width="28" height="28"/><rect x="726" y="576" width="28" height="28"/><rect x="782" y="576" width="28" height="28"/>
+        <rect x="614" y="604" width="28" height="28"/><rect x="670" y="604" width="28" height="28"/><rect x="754" y="604" width="28" height="28"/><rect x="782" y="604" width="28" height="28"/>
+        <rect x="642" y="632" width="28" height="28"/><rect x="698" y="632" width="28" height="28"/><rect x="726" y="632" width="28" height="28"/>
+        <rect x="586" y="464" width="28" height="28"/><rect x="586" y="520" width="28" height="28"/><rect x="586" y="576" width="28" height="28"/><rect x="586" y="632" width="28" height="28"/>
+      </g>
+    </svg>
+    <div class="cap">any retired iphone →<br><b>a donation kiosk</b></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a controlled text-only harvest — repos kept, executables stripped, nothing run */
+  #scene { display:flex; align-items:center; justify-content:center; }
+  .term { width:960px; border:1.5px solid rgba(53,208,127,0.34); border-radius:14px; overflow:hidden;
+    background:rgba(53,208,127,0.03); box-shadow:0 0 60px rgba(53,208,127,0.06); }
+  .tbar { display:flex; align-items:center; gap:14px; padding:16px 26px;
+    border-bottom:1px solid rgba(53,208,127,0.2); color:#35d07f; font:600 25px "SF Mono",Menlo,monospace; }
+  .tbar .d { width:13px; height:13px; border-radius:50%; background:rgba(53,208,127,0.4); }
+  .tbar .ro { margin-left:auto; font-size:22px; color:rgba(53,208,127,0.7); }
+  .body { padding:28px 34px 30px; font:400 27px/1.62 "SF Mono",Menlo,monospace; color:#35d07f; }
+  .prompt { color:rgba(53,208,127,0.6); }
+  .ok::before { content:"✓ "; }
+  .repo { color:#35d07f; }
+  .ext { color:rgba(53,208,127,0.5); }
+  .strip { color:#ff6b6b; }
+  .strip::before { content:"✗ "; }
+  .rule { border:none; border-top:1px solid rgba(53,208,127,0.2); margin:16px 0; }
+  .sum { color:#0f0f11; background:#35d07f; display:inline-block; padding:6px 22px; border-radius:8px;
+    font-weight:700; letter-spacing:0.02em; }
+</style>
+</head><body>
+<div id="frame" data-label="hacking-resources-mirror"><div id="scene">
+  <div class="term">
+    <div class="tbar"><span class="d"></span>harvest --text-only<span class="ro">read-only ⛨</span></div>
+    <div class="body">
+      <div><span class="prompt">$</span> rsync from github:topic/hacking</div>
+      <div class="ok"><span class="repo">PayloadsAllTheThings/</span> &nbsp;<span class="ext">md&nbsp;txt</span></div>
+      <div class="ok"><span class="repo">nuclei-templates/</span> &nbsp;<span class="ext">yaml</span></div>
+      <div class="ok"><span class="repo">the-book-of-secret-knowledge/</span> &nbsp;<span class="ext">md</span></div>
+      <div class="ok"><span class="repo">h4cker/&nbsp;&nbsp;Hacker101/</span> &nbsp;<span class="ext">md&nbsp;json</span></div>
+      <div class="strip"><span class="ext">*.exe&nbsp;&nbsp;*.bin&nbsp;&nbsp;*.png&nbsp;&nbsp;.git/&nbsp;&nbsp;&rarr; stripped</span></div>
+      <hr class="rule">
+      <div><span class="sum">14,600 files &middot; 97 MB &middot; 0 executed</span></div>
+    </div>
+  </div>
+</div></div>
+</body></html>

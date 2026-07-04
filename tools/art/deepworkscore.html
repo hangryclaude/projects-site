@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the day's score dial + the blend that produced it */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 90px; }
+  .right { display: flex; flex-direction: column; gap: 26px; }
+  .bar { display: flex; align-items: center; gap: 20px; }
+  .blab { width: 262px; color: rgba(235,232,226,0.75); font: 400 26px "SF Mono", Menlo, monospace; text-align: right; }
+  .track { width: 290px; height: 16px; border-radius: 8px; background: rgba(235,232,226,0.08); overflow: hidden; }
+  .fill { display: block; height: 100%; border-radius: 8px; background: #7aa2ff; }
+  .fill.bad { background: #f4574d; }
+  .cap { position: absolute; left: 0; right: 0; bottom: 62px; text-align: center;
+         color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+  .cap b { color: #7aa2ff; font-weight: 400; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="deepworkscore">
+  <div id="scene">
+    <svg width="340" height="340" viewBox="0 0 340 340" fill="none">
+      <circle cx="170" cy="170" r="140" stroke="rgba(235,232,226,0.09)" stroke-width="20"/>
+      <circle cx="170" cy="170" r="140" stroke="#7aa2ff" stroke-width="20" stroke-linecap="round"
+              stroke-dasharray="879.6" stroke-dashoffset="114.3" transform="rotate(-90 170 170)"/>
+      <text x="170" y="188" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-size="118" font-weight="700" fill="#ebe8e2">87</text>
+      <text x="170" y="238" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="24" fill="rgba(235,232,226,0.4)">/ 100 today</text>
+    </svg>
+    <div class="right">
+      <div class="bar"><span class="blab">work activity</span><span class="track"><span class="fill" style="width:82%"></span></span></div>
+      <div class="bar"><span class="blab">prompt quality</span><span class="track"><span class="fill" style="width:91%"></span></span></div>
+      <div class="bar"><span class="blab">focus</span><span class="track"><span class="fill" style="width:74%"></span></span></div>
+      <div class="bar"><span class="blab">distraction</span><span class="track"><span class="fill bad" style="width:18%"></span></span></div>
+    </div>
+    <div class="cap">prompting well beats <b>looking busy</b></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: ten agents under one Commander running the find→build→pitch loop */
+  #scene { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; padding: 0 80px; }
+
+  .commander { display: flex; align-items: center; gap: 16px;
+    padding: 18px 34px; border: 2px solid #f5a623; border-radius: 14px;
+    background: rgba(245,166,35,0.1); box-shadow: 0 0 50px rgba(245,166,35,0.2);
+    color: #f5a623; font: 700 34px "SF Mono", Menlo, monospace; letter-spacing: 0.02em; }
+  .commander svg { width: 34px; height: 34px; }
+
+  .wires { width: 720px; height: 56px; }
+
+  .roster { display: grid; grid-template-columns: repeat(3, 210px); gap: 22px 30px; }
+  .agent { display: flex; align-items: center; justify-content: center; gap: 14px;
+    padding: 16px 20px; border: 1.5px solid rgba(235,232,226,0.18); border-radius: 12px;
+    background: rgba(235,232,226,0.03); }
+  .agent .ic { width: 26px; height: 26px; flex: none; }
+  .agent .ic svg { width: 26px; height: 26px; display: block; }
+  .agent .nm { color: rgba(235,232,226,0.82); font: 500 27px "SF Mono", Menlo, monospace; }
+  .agent .dot { margin-left: auto; width: 12px; height: 12px; border-radius: 50%; background: #3fdc82; }
+  .agent.work { border-color: #f5a623; background: rgba(245,166,35,0.08); box-shadow: 0 0 34px rgba(245,166,35,0.16); }
+  .agent.work .nm { color: #f5a623; }
+  .agent.work .dot { background: #f5a623; }
+  .ic svg { stroke: rgba(235,232,226,0.75); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .agent.work .ic svg { stroke: #f5a623; }
+
+  .foot { margin-top: 40px; color: rgba(235,232,226,0.42); font: 400 26px "SF Mono", Menlo, monospace; }
+  .foot b { color: #f5a623; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="website-scaler">
+  <div id="scene">
+    <div class="commander">
+      <svg viewBox="0 0 24 24" fill="#f5a623" stroke="none"><path d="M3 7l4 4 5-7 5 7 4-4v11H3z"/></svg>
+      Commander
+    </div>
+
+    <svg class="wires" viewBox="0 0 720 56" fill="none" stroke="rgba(245,166,35,0.4)" stroke-width="2">
+      <path d="M360 0 V16"/>
+      <path d="M120 56 V32 H600 V56"/>
+      <path d="M360 16 V32"/>
+      <path d="M120 32 V44 M360 32 V44 M600 32 V44"/>
+    </svg>
+
+    <div class="roster">
+      <div class="agent">
+        <span class="ic"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="M15 15l6 6"/></svg></span>
+        <span class="nm">Scout</span>
+      </div>
+      <div class="agent">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span>
+        <span class="nm">Scraper</span>
+      </div>
+      <div class="agent work">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-6h4v6"/></svg></span>
+        <span class="nm">Builder</span>
+      </div>
+      <div class="agent">
+        <span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 8l9 6 9-6"/></svg></span>
+        <span class="nm">Postman</span>
+      </div>
+      <div class="agent">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M8 7h6a3 3 0 010 6H9a3 3 0 000 6h7"/></svg></span>
+        <span class="nm">Accountant</span>
+      </div>
+      <div class="agent">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/></svg></span>
+        <span class="nm">Sentinel</span>
+      </div>
+    </div>
+
+    <div class="foot"><b>10 agents</b>, one command center · find → build → email the $50 offer, on repeat</div>
+  </div>
+</div>
+</body>
+</html>

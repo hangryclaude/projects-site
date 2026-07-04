@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: an editing timeline auto-cut in a named editor's style — clips joined by his signature transitions */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+  svg { display: block; }
+  .head { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .head b { color: #a78bfa; font-weight: 500; }
+  .cap { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .cap b { color: #a78bfa; font-weight: 500; }
+  .tl { font: 500 22px "SF Mono", Menlo, monospace; fill: #a78bfa; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="savic-ai">
+  <div id="scene">
+    <div class="head">learned <b>Nikolai Savic</b>'s transition mix</div>
+    <svg width="1010" height="300" viewBox="0 0 1010 300">
+      <defs>
+        <g id="clip">
+          <rect x="0" y="70" width="130" height="130" rx="8" fill="rgba(235,232,226,0.06)" stroke="rgba(235,232,226,0.32)" stroke-width="2"/>
+          <rect x="10" y="60" width="14" height="10" rx="2" fill="rgba(235,232,226,0.22)"/>
+          <rect x="58" y="60" width="14" height="10" rx="2" fill="rgba(235,232,226,0.22)"/>
+          <rect x="106" y="60" width="14" height="10" rx="2" fill="rgba(235,232,226,0.22)"/>
+          <rect x="10" y="200" width="14" height="10" rx="2" fill="rgba(235,232,226,0.22)"/>
+          <rect x="58" y="200" width="14" height="10" rx="2" fill="rgba(235,232,226,0.22)"/>
+          <rect x="106" y="200" width="14" height="10" rx="2" fill="rgba(235,232,226,0.22)"/>
+        </g>
+        <g id="xf">
+          <path d="M-30 80 L0 135 L-30 190 Z" fill="rgba(167,139,250,0.28)" stroke="#a78bfa" stroke-width="2"/>
+          <path d="M30 80 L0 135 L30 190 Z" fill="rgba(167,139,250,0.28)" stroke="#a78bfa" stroke-width="2"/>
+        </g>
+      </defs>
+      <use href="#clip" x="0"/>
+      <use href="#clip" x="220"/>
+      <use href="#clip" x="440"/>
+      <use href="#clip" x="660"/>
+      <use href="#clip" x="880"/>
+      <g transform="translate(175,0)"><use href="#xf"/></g>
+      <g transform="translate(395,0)"><use href="#xf"/></g>
+      <g transform="translate(615,0)"><use href="#xf"/></g>
+      <g transform="translate(835,0)"><use href="#xf"/></g>
+      <text class="tl" x="175" y="42" text-anchor="middle">whip pan</text>
+      <text class="tl" x="395" y="42" text-anchor="middle">zoom blur</text>
+      <text class="tl" x="615" y="42" text-anchor="middle">speed ramp</text>
+      <text class="tl" x="835" y="42" text-anchor="middle">mask reveal</text>
+    </svg>
+    <div class="cap">then auto-cuts <b>your footage</b> the way he would &middot; local &middot; $0</div>
+  </div>
+</div>
+</body>
+</html>

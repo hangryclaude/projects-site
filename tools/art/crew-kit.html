@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a React component library — import line, then the tiny hi-vis crew + crane it drops in */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 90px; gap: 8px; }
+  .imp { font: 500 29px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.7); white-space: nowrap; }
+  .imp .kw { color: #f5a623; }
+  .imp .id { color: #ebe8e2; }
+  .imp .str { color: rgba(235,232,226,0.5); }
+  .stage { position: relative; height: 360px; }
+  svg.crew { position: absolute; left: 0; bottom: 0; width: 100%; height: 360px; }
+  .ground { stroke: rgba(235,232,226,0.22); stroke-width: 2; }
+  .cap { position: absolute; right: 90px; bottom: 74px;
+    font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .cap b { color: #f5a623; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="crew-kit">
+  <div id="scene">
+    <div class="imp"><span class="kw">import</span> { <span class="id">Worker</span>, <span class="id">Crane</span>, <span class="id">Hourglass</span> } <span class="kw">from</span> <span class="str">'crew-kit'</span></div>
+    <div class="stage">
+      <svg class="crew" viewBox="0 0 1020 360">
+        <defs>
+          <!-- one worker: hard hat + hi-vis vest + legs -->
+          <g id="worker">
+            <rect x="-15" y="-46" width="30" height="14" rx="6" fill="#f5a623"/>
+            <rect x="-19" y="-34" width="38" height="5" rx="2.5" fill="#f5a623"/>
+            <path d="M-16 -28 L16 -28 L20 4 L-20 4 Z" fill="#ebe8e2"/>
+            <rect x="-16" y="-18" width="32" height="5" fill="#f5a623"/>
+            <rect x="-13" y="4" width="9" height="20" rx="2" fill="#ebe8e2"/>
+            <rect x="4" y="4" width="9" height="20" rx="2" fill="#ebe8e2"/>
+          </g>
+        </defs>
+        <line class="ground" x1="0" y1="330" x2="1020" y2="330"/>
+        <!-- crew at varying scales = drops in at any size -->
+        <use href="#worker" transform="translate(70 330) scale(2.6)"/>
+        <use href="#worker" transform="translate(190 330) scale(2.6)"/>
+        <use href="#worker" transform="translate(300 330) scale(4.0)"/>
+        <use href="#worker" transform="translate(430 330) scale(3.2)"/>
+        <use href="#worker" transform="translate(560 330) scale(1.9)"/>
+        <!-- tower crane -->
+        <g stroke="#f5a623" stroke-width="6" fill="none" stroke-linejoin="round">
+          <line x1="800" y1="330" x2="800" y2="70"/>
+          <line x1="770" y1="330" x2="830" y2="330"/>
+          <line x1="700" y1="70" x2="980" y2="70"/>
+          <line x1="740" y1="70" x2="800" y2="30"/>
+          <line x1="800" y1="30" x2="900" y2="70"/>
+        </g>
+        <line x1="930" y1="70" x2="930" y2="180" stroke="#ebe8e2" stroke-width="4"/>
+        <!-- the hook cargo: an hourglass -->
+        <g transform="translate(930 210)" stroke="#ebe8e2" stroke-width="5" fill="rgba(245,166,35,0.25)" stroke-linejoin="round">
+          <path d="M-22 -28 L22 -28 L2 0 L22 28 L-22 28 L-2 0 Z"/>
+        </g>
+      </svg>
+    </div>
+    <div class="cap"><b>15 workers</b> · a crane · normalized scale</div>
+  </div>
+</div>
+</body></html>

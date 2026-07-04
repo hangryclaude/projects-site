@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a 9:16 TikTok in-feed ad — phone, glowing app screen, install card, tagline */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 96px; }
+  #scene::before { content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(40% 50% at 42% 50%, rgba(124,92,255,0.22), transparent 70%); }
+  .phone { position: relative; z-index:1; width: 348px; height: 634px; border-radius: 46px;
+    border: 3px solid rgba(235,232,226,0.4);
+    background: linear-gradient(170deg, #2b1a52 0%, #1a1030 55%, #120a22 100%);
+    overflow: hidden; box-shadow: 0 0 60px rgba(124,92,255,0.25); }
+  .notch { position:absolute; top:16px; left:50%; transform:translateX(-50%); width:96px; height:20px; border-radius:12px; background: rgba(0,0,0,0.55); }
+  .appscreen { position:absolute; top:80px; left:50%; transform:translateX(-50%) rotate(-4deg);
+    width:180px; height:196px; border-radius:20px; background: linear-gradient(160deg,#efeadf,#c9c3f5);
+    box-shadow: 0 0 44px rgba(167,139,250,0.6); border:1px solid rgba(255,255,255,0.6); padding:16px; }
+  .appscreen .bar { height:12px; border-radius:6px; background: rgba(30,20,60,0.14); margin-bottom:11px; }
+  .appscreen .bar.s { width:62%; }
+  .appscreen .dot { position:absolute; top:14px; right:14px; width:16px; height:16px; border-radius:50%; background:#7c5cff; }
+  .tag { position:absolute; top:318px; left:50%; transform:translateX(-50%);
+    color:#ebe8e2; font: 700 38px/1.08 -apple-system, system-ui, sans-serif; letter-spacing:-0.01em; text-align:center; text-shadow:0 2px 22px rgba(124,92,255,0.85); }
+  .tag span { color:#c9b8ff; }
+  .rail { position:absolute; right:16px; bottom:150px; display:flex; flex-direction:column; gap:22px; align-items:center; }
+  .rail i { width:34px; height:34px; border-radius:50%; border:2px solid rgba(235,232,226,0.75); display:block; }
+  .cta { position:absolute; left:16px; right:16px; bottom:26px;
+    background: rgba(15,15,17,0.5); border:1px solid rgba(235,232,226,0.22); border-radius:14px;
+    padding:12px 14px; display:flex; align-items:center; justify-content:space-between; }
+  .cta .l { color:rgba(235,232,226,0.85); font: 500 18px "SF Mono", Menlo, monospace; }
+  .cta .l b { color:#a78bfa; }
+  .cta .get { background:#a78bfa; color:#160c2e; font: 700 18px "SF Mono", Menlo, monospace; padding:8px 18px; border-radius:9px; }
+  .side { position:relative; z-index:1; display:flex; flex-direction:column; gap:26px; }
+  .side .big { color:#ebe8e2; font: 700 46px/1.05 -apple-system, system-ui, sans-serif; letter-spacing:-0.02em; }
+  .side .big b { color:#a78bfa; }
+  .side .meta { color:rgba(235,232,226,0.5); font: 400 26px/1.6 "SF Mono", Menlo, monospace; }
+  .side .meta b { color:#ebe8e2; font-weight:500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="heynox-ad">
+  <div id="scene">
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="appscreen"><div class="dot"></div><div class="bar"></div><div class="bar s"></div><div class="bar"></div><div class="bar s"></div><div class="bar"></div></div>
+      <div class="tag">leave<br><span>read</span> behind.</div>
+      <div class="rail"><i></i><i></i><i></i></div>
+      <div class="cta"><span class="l">Ad · <b>RPLY</b></span><span class="get">Get</span></div>
+    </div>
+    <div class="side">
+      <div class="big">9 seconds.<br>zero <b>dollars.</b></div>
+      <div class="meta">modeled on Revolut<br><b>every app. one inbox.</b><br>no paid gen anywhere</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

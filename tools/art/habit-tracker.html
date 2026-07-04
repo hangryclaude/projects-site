@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: daily habit checklist + streak + a reminder that only fires if unchecked */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 78px; padding: 0 110px; }
+  .col { display: flex; flex-direction: column; }
+  .list { display: flex; flex-direction: column; gap: 26px; }
+  .item { display: flex; align-items: center; gap: 22px; font: 400 34px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .box { width: 40px; height: 40px; border-radius: 9px; border: 2.5px solid rgba(235,232,226,0.35); flex: none;
+         display: flex; align-items: center; justify-content: center; }
+  .box.done { background: #7aa2ff; border-color: #7aa2ff; }
+  .box.done svg { display: block; }
+  .item.skip .label { color: rgba(235,232,226,0.55); }
+  .box.skip { border-color: #e6b455; }
+  .bump { margin-left: 20px; color: #e6b455; font: 500 24px "SF Mono", Menlo, monospace; display: flex; align-items: center; gap: 10px; }
+  .streak { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .flame { font-size: 92px; line-height: 1; }
+  .snum { color: #e6b455; font: 700 84px "SF Mono", Menlo, monospace; line-height: 0.9; }
+  .slab { color: rgba(235,232,226,0.5); font: 400 26px "SF Mono", Menlo, monospace; }
+  .grid { display: grid; grid-template-columns: repeat(7, 26px); gap: 8px; margin-top: 30px; }
+  .cell { width: 26px; height: 26px; border-radius: 6px; background: rgba(235,232,226,0.12); }
+  .cell.f { background: #7aa2ff; }
+  .pct { color: rgba(235,232,226,0.5); font: 400 24px "SF Mono", Menlo, monospace; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="habit-tracker">
+  <div id="scene">
+    <div class="col list">
+      <div class="item"><span class="box done"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 12l5 5 11-12" stroke="#0f0f11" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="label">read 20 pages</span></div>
+      <div class="item"><span class="box done"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 12l5 5 11-12" stroke="#0f0f11" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="label">deep work 2h</span></div>
+      <div class="item skip"><span class="box skip"></span><span class="label">gym</span><span class="bump">→ pinged you</span></div>
+      <div class="item"><span class="box done"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 12l5 5 11-12" stroke="#0f0f11" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="label">no doomscroll</span></div>
+      <div class="grid">
+        <span class="cell f"></span><span class="cell f"></span><span class="cell f"></span><span class="cell f"></span><span class="cell f"></span><span class="cell"></span><span class="cell f"></span>
+        <span class="cell f"></span><span class="cell f"></span><span class="cell f"></span><span class="cell f"></span><span class="cell f"></span><span class="cell f"></span><span class="cell f"></span>
+      </div>
+      <div class="pct">30-day · 84% complete</div>
+    </div>
+    <div class="col streak">
+      <div class="flame">🔥</div>
+      <div class="snum">23</div>
+      <div class="slab">day streak</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

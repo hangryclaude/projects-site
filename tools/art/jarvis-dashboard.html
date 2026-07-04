@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: mission control for one operator — 17 tabs, brain-eye, $100k scoreboard, ticker */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .win {
+    width: 1000px; height: 560px; border-radius: 16px; border: 1.5px solid rgba(235,232,226,0.28);
+    background: rgba(235,232,226,0.02); overflow: hidden; display: flex; flex-direction: column;
+  }
+  /* tab strip */
+  .tabs { display: flex; align-items: center; gap: 8px; padding: 16px 22px; border-bottom: 1px solid rgba(235,232,226,0.14); }
+  .brain { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #a78bfa;
+           display: flex; align-items: center; justify-content: center; margin-right: 12px; flex: none;
+           box-shadow: 0 0 22px rgba(167,139,250,0.5); }
+  .brain i { width: 10px; height: 10px; border-radius: 50%; background: #a78bfa; }
+  .tab { height: 12px; border-radius: 6px; background: rgba(235,232,226,0.16); flex: none; }
+  .tab.on { background: #a78bfa; }
+  /* body: scoreboard + feed */
+  .body { flex: 1; display: flex; }
+  .main { flex: 1.4; border-right: 1px solid rgba(235,232,226,0.12); display: flex; flex-direction: column;
+          align-items: center; justify-content: center; gap: 14px; }
+  .main .k { font: 400 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); letter-spacing: 0.14em; }
+  .main .v { font: 700 96px/1 "SF Mono", Menlo, monospace; color: #3fdc82; letter-spacing: -0.03em; }
+  .main .d { font: 400 26px "SF Mono", Menlo, monospace; color: rgba(63,220,130,0.7); }
+  .feed { flex: 1; padding: 28px 30px; display: flex; flex-direction: column; gap: 18px; }
+  .ev { font: 400 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.6); }
+  .ev .t { color: #a78bfa; } .ev .g { color: #3fdc82; }
+  /* ticker */
+  .ticker { height: 52px; border-top: 1px solid rgba(235,232,226,0.14); background: rgba(167,139,250,0.06);
+            display: flex; align-items: center; padding: 0 24px; overflow: hidden; white-space: nowrap;
+            font: 500 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.7); }
+  .ticker b { color: #a78bfa; font-weight: 600; }
+  .ticker span { margin: 0 22px; }
+</style>
+</head><body>
+<div id="frame" data-label="jarvis-dashboard">
+  <div id="scene">
+    <div class="win">
+      <div class="tabs">
+        <div class="brain"><i></i></div>
+        <div class="tab on" style="width:70px"></div>
+        <div class="tab" style="width:52px"></div><div class="tab" style="width:64px"></div>
+        <div class="tab" style="width:48px"></div><div class="tab" style="width:58px"></div>
+        <div class="tab" style="width:70px"></div><div class="tab" style="width:44px"></div>
+        <div class="tab" style="width:60px"></div><div class="tab" style="width:50px"></div>
+        <div class="tab" style="width:66px"></div><div class="tab" style="width:46px"></div>
+        <div class="tab" style="width:56px"></div><div class="tab" style="width:62px"></div>
+        <div class="tab" style="width:48px"></div><div class="tab" style="width:54px"></div>
+        <div class="tab" style="width:58px"></div>
+      </div>
+      <div class="body">
+        <div class="main">
+          <div class="k">SCOREBOARD</div>
+          <div class="v">$100k</div>
+          <div class="d">&#9650; target</div>
+        </div>
+        <div class="feed">
+          <div class="ev"><span class="t">/operate</span> run_agent &rarr; leadkit</div>
+          <div class="ev"><span class="g">&#10003;</span> 3 workers fanned out</div>
+          <div class="ev"><span class="t">/idea</span> decomposed &rarr; 7 tasks</div>
+          <div class="ev">git: 12 commits synced</div>
+          <div class="ev"><span class="t">vision</span> webcam &rarr; reading&hellip;</div>
+        </div>
+      </div>
+      <div class="ticker">
+        <b>17 TABS</b><span>&middot;</span><b>mission control for one operator</b><span>&middot;</span>CHAT<span>&middot;</span>PLAN<span>&middot;</span>LEADS<span>&middot;</span>CRON<span>&middot;</span>GIT<span>&middot;</span>VISION<span>&middot;</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the borrow checker delivering the lesson — real rustc move error on a hand-built demo */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 110px; gap: 34px; }
+  .code { white-space: pre; font: 500 33px/1.5 "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .kw { color: #d9843b; }
+  .cm { color: rgba(235,232,226,0.4); }
+  .err { white-space: pre; font: 500 30px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.7); }
+  .etitle { color: #ff5c5c; font-weight: 700; }
+  .care { color: #ff5c5c; font-weight: 700; }
+  .gut { color: rgba(235,232,226,0.3); }
+  .foot { display: flex; align-items: center; gap: 22px; margin-top: 6px; }
+  .pill { border: 2px solid #d9843b; color: #d9843b; border-radius: 999px; padding: 8px 22px;
+          font: 600 25px "SF Mono", Menlo, monospace; }
+  .cap { color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="rust-study">
+  <div id="scene">
+    <div class="code"><span class="kw">let</span> s1 = String::from("hi");
+<span class="kw">let</span> s2 = s1;              <span class="cm">// value moved here</span>
+println!("{}", s1);       <span class="cm">// still using s1…</span></div>
+
+    <div class="err"><span class="etitle">error[E0382]</span>: borrow of moved value: `s1`
+  <span class="gut">|</span>
+  <span class="gut">|</span>   println!("{}", s1);
+  <span class="gut">|</span>                  <span class="care">^^ value borrowed here after move</span></div>
+
+    <div class="foot">
+      <span class="pill">rustlings · 34 / 90</span>
+      <span class="cap">the compiler is the tutor · clippy the best teacher in the room</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

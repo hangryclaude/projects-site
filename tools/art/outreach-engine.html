@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the one organizing idea as a formula — inbox placement = identity × wanted-ness */
+  #scene { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; }
+  .stages { position: absolute; top: 74px; right: 70px; display: flex; align-items: center; gap: 0; }
+  .stages .n { width: 15px; height: 15px; border-radius: 50%; border: 2px solid rgba(52,211,114,0.5); }
+  .stages .n.done { background: #34d372; border-color: #34d372; }
+  .stages .bar { width: 26px; height: 2px; background: rgba(52,211,114,0.35); }
+  .stages .lp { margin-left: 16px; color: rgba(235,232,226,0.4); font: 400 22px "SF Mono", Menlo, monospace; }
+
+  .eq { color: #ebe8e2; font: 500 66px/1 "SF Mono", Menlo, monospace; letter-spacing: -0.02em; }
+  .rule { width: 720px; height: 2px; background: rgba(235,232,226,0.25); margin: 40px 0 36px; }
+  .terms { display: flex; align-items: baseline; gap: 40px; }
+  .terms .op { color: rgba(235,232,226,0.4); font: 400 58px "SF Mono", Menlo, monospace; }
+  .term { text-align: center; }
+  .term .h { color: #34d372; font: 600 58px/1 "SF Mono", Menlo, monospace; }
+  .term .s { margin-top: 18px; color: rgba(235,232,226,0.5); font: 400 25px "SF Mono", Menlo, monospace; }
+
+  .cap { position: absolute; left: 0; right: 0; bottom: 66px; text-align: center;
+         color: rgba(235,232,226,0.42); font: 400 26px "SF Mono", Menlo, monospace; padding-right: 0; }
+  .cap b { color: #34d372; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="outreach-engine">
+  <div id="scene">
+    <div class="stages">
+      <span class="n done"></span><span class="bar"></span>
+      <span class="n done"></span><span class="bar"></span>
+      <span class="n done"></span><span class="bar"></span>
+      <span class="n done"></span><span class="bar"></span>
+      <span class="n done"></span><span class="bar"></span>
+      <span class="n done"></span><span class="bar"></span>
+      <span class="n done"></span>
+      <span class="lp">7 stages, self-run</span>
+    </div>
+
+    <div class="eq">inbox&nbsp;placement</div>
+    <div class="rule"></div>
+    <div class="terms">
+      <div class="term"><div class="h">identity</div><div class="s">real, authed senders</div></div>
+      <div class="op">×</div>
+      <div class="term"><div class="h">wanted-ness</div><div class="s">engagement + reputation</div></div>
+    </div>
+
+    <div class="cap">point it at a business &amp; its domains — it does the other six stages, forwards <b>every reply</b> to a human</div>
+  </div>
+</div>
+</body>
+</html>

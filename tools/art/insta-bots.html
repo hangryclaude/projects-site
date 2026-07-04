@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: an honest empty repo — one README, a blinking cursor, nothing built */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .win { width: 840px; border: 1px solid rgba(235,232,226,0.16); border-radius: 14px; overflow: hidden; background: rgba(235,232,226,0.015); }
+  .bar { display: flex; align-items: center; gap: 9px; padding: 16px 22px; border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .dot { width: 13px; height: 13px; border-radius: 50%; background: rgba(235,232,226,0.16); }
+  .bar .name { margin-left: 14px; font: 400 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .body { display: flex; min-height: 350px; }
+  .side { width: 250px; border-right: 1px solid rgba(235,232,226,0.1); padding: 26px 24px; font: 400 23px/2.1 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.34); white-space: nowrap; }
+  .side .root { color: rgba(235,232,226,0.55); }
+  .side .file { color: rgba(235,232,226,0.75); }
+  .side .empty { font-style: italic; opacity: 0.6; }
+  .main { flex: 1; padding: 34px 42px; font: 400 30px/1.75 "SF Mono", Menlo, monospace; }
+  .h1 { color: #ebe8e2; font-size: 36px; margin-bottom: 6px; }
+  .cursor { display: inline-block; width: 12px; height: 32px; background: #c86b9e; vertical-align: -5px; }
+  .todo { color: rgba(235,232,226,0.32); }
+  .foot { padding: 18px 42px; border-top: 1px solid rgba(235,232,226,0.1); font: 400 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .foot b { color: rgba(200,107,158,0.85); font-weight: 500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="insta-bots">
+  <div id="scene">
+    <div class="win">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="name">insta-bots — README.md</span></div>
+      <div class="body">
+        <div class="side">
+          <div class="root">insta-bots/</div>
+          <div class="file">&nbsp;&nbsp;README.md</div>
+          <div class="empty">&nbsp;&nbsp;(empty)</div>
+        </div>
+        <div class="main">
+          <div class="h1"># Insta Bots</div>
+          <div><span class="cursor"></span></div>
+          <div class="todo">// TODO: literally everything</div>
+        </div>
+      </div>
+      <div class="foot">1 file · <b>0 commits since</b> · abandoned the same night</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a dated Google-Doc call checklist — 5-star local biz with no website */
+  #scene{display:flex;align-items:center;justify-content:center;}
+  .doc{width:840px;border:1.5px solid rgba(235,232,226,0.22);border-radius:18px;overflow:hidden;background:rgba(235,232,226,0.02);}
+  .head{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;border-bottom:1.5px solid rgba(235,232,226,0.16);}
+  .head .t{font:600 32px "SF Mono",Menlo,monospace;color:#ebe8e2;}
+  .head .d{font:400 25px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.42);}
+  .row{display:flex;align-items:center;gap:24px;padding:24px 40px;border-bottom:1px solid rgba(235,232,226,0.08);}
+  .row:last-child{border-bottom:none;}
+  .box{width:34px;height:34px;border:2.5px solid rgba(235,232,226,0.4);border-radius:8px;flex:none;}
+  .box.done{background:#f5a623;border-color:#f5a623;display:flex;align-items:center;justify-content:center;color:#0f0f11;font-size:24px;font-weight:800;}
+  .name{font:600 30px "SF Mono",Menlo,monospace;color:#ebe8e2;flex:1;}
+  .row.done .name{color:rgba(235,232,226,0.45);text-decoration:line-through;}
+  .stars{font:600 26px "SF Mono",Menlo,monospace;color:#f5a623;}
+  .phone{font:400 26px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.55);}
+  .nosite{font:600 22px "SF Mono",Menlo,monospace;color:#f5a623;border:1.5px solid rgba(245,166,35,0.55);border-radius:999px;padding:6px 16px;}
+</style></head><body>
+<div id="frame" data-label="cold-call-bot"><div id="scene">
+  <div class="doc">
+    <div class="head"><span class="t">Call List &mdash; restaurants, SB</span><span class="d">Jul 3</span></div>
+    <div class="row done"><span class="box done">&#10003;</span><span class="name">La Super&#8209;Rica</span><span class="stars">&#9733;5.0</span><span class="phone">(805) 963&#8209;4940</span></div>
+    <div class="row"><span class="box"></span><span class="name">Bettina Pizzeria</span><span class="stars">&#9733;5.0</span><span class="phone">(805) 869&#8209;0202</span><span class="nosite">no site</span></div>
+    <div class="row"><span class="box"></span><span class="name">The Nook</span><span class="stars">&#9733;4.9</span><span class="phone">(805) 770&#8209;7891</span><span class="nosite">no site</span></div>
+    <div class="row"><span class="box"></span><span class="name">Corazon Cocina</span><span class="stars">&#9733;5.0</span><span class="phone">(805) 966&#8209;9999</span><span class="nosite">no site</span></div>
+  </div>
+</div></div></body></html>

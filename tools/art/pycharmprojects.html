@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the untouched PyCharm New Project template — stock print_hi hello world */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+  .win { width: 880px; border: 1px solid rgba(235,232,226,0.16); border-radius: 13px; overflow: hidden; background: rgba(235,232,226,0.015); }
+  .bar { display: flex; align-items: center; gap: 9px; padding: 15px 20px; border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(235,232,226,0.16); }
+  .bar .name { margin-left: 14px; font: 400 21px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .body { display: flex; }
+  .side { width: 240px; border-right: 1px solid rgba(235,232,226,0.1); padding: 22px 20px; font: 400 21px/2 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .side .root { color: rgba(235,232,226,0.6); }
+  .side .idea { color: rgba(235,232,226,0.34); }
+  .side .active { color: #ebe8e2; }
+  .code { flex: 1; padding: 24px 10px 24px 0; font: 400 25px/1.62 "SF Mono", Menlo, monospace; }
+  .ln { display: flex; }
+  .ln .n { width: 52px; text-align: right; padding-right: 22px; color: rgba(235,232,226,0.25); }
+  .kw { color: #8aa6d6; }
+  .str { color: #8fbf7f; }
+  .fn { color: #ebe8e2; }
+  .txt { color: rgba(235,232,226,0.85); }
+  .console { padding: 14px 24px; border-top: 1px solid rgba(235,232,226,0.1); font: 400 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); display: flex; align-items: center; gap: 14px; }
+  .console .ok { color: #8fbf7f; }
+  .foot { font: 400 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+</style>
+</head>
+<body>
+<div id="frame" data-label="pycharmprojects">
+  <div id="scene">
+    <div class="win">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="name">PycharmProjects — main.py</span></div>
+      <div class="body">
+        <div class="side">
+          <div class="root">PycharmProjects/</div>
+          <div class="idea">&nbsp;&nbsp;.idea/</div>
+          <div class="active">&nbsp;&nbsp;main.py</div>
+        </div>
+        <div class="code">
+          <div class="ln"><span class="n">1</span><span class="txt"><span class="kw">def</span> <span class="fn">print_hi</span>(name):</span></div>
+          <div class="ln"><span class="n">2</span><span class="txt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">print</span>(<span class="str">f'Hi, {name}'</span>)</span></div>
+          <div class="ln"><span class="n">3</span><span class="txt">&nbsp;</span></div>
+          <div class="ln"><span class="n">4</span><span class="txt"><span class="kw">if</span> __name__ == <span class="str">'__main__'</span>:</span></div>
+          <div class="ln"><span class="n">5</span><span class="txt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print_hi</span>(<span class="str">'PyCharm'</span>)</span></div>
+        </div>
+      </div>
+      <div class="console"><span class="ok">▸ Run</span><span>Hi, PyCharm</span><span class="ok">✓ exit 0</span></div>
+    </div>
+    <div class="foot">the untouched New Project template · committed for an honest catalog</div>
+  </div>
+</div>
+</body>
+</html>

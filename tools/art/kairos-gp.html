@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: classroom-as-Grand-Prix — cars on a track + live leaderboard */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 60px; padding: 0 90px; }
+  .board { display: flex; flex-direction: column; gap: 16px; }
+  .btitle { color: rgba(235,232,226,0.5); font: 600 24px "SF Mono", Menlo, monospace; letter-spacing: 0.12em; margin-bottom: 8px; }
+  .rank { display: flex; align-items: center; gap: 18px; font: 500 32px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .pos { width: 44px; height: 44px; border-radius: 9px; display: flex; align-items: center; justify-content: center;
+         font: 700 26px "SF Mono", Menlo, monospace; color: #0f0f11; background: rgba(235,232,226,0.35); }
+  .pos.p1 { background: #e6b455; } .pos.p2 { background: #cdd0d6; } .pos.p3 { background: #c68a4e; }
+  .name { min-width: 150px; }
+  .pts { color: #7aa2ff; font-weight: 600; }
+  .car { width: 46px; height: 24px; border-radius: 6px 12px 12px 6px; position: relative; flex: none; }
+  .car::before { content:""; position:absolute; left:14px; top:-6px; width:20px; height:36px; border-radius:6px; background:inherit; opacity:.85; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="kairos-gp">
+  <div id="scene">
+    <svg width="560" height="560" viewBox="0 0 560 560" fill="none">
+      <!-- track -->
+      <path d="M150 90 H410 A130 130 0 0 1 410 350 H150 A130 130 0 0 1 150 90 Z" stroke="rgba(235,232,226,0.16)" stroke-width="86"/>
+      <path d="M150 90 H410 A130 130 0 0 1 410 350 H150 A130 130 0 0 1 150 90 Z" stroke="rgba(235,232,226,0.35)" stroke-width="2.5" stroke-dasharray="3 20"/>
+      <!-- cars on track -->
+      <g>
+        <rect x="300" y="72" width="40" height="20" rx="6" fill="#e6b455" transform="rotate(0 320 82)"/>
+        <rect x="470" y="200" width="40" height="20" rx="6" fill="#7aa2ff" transform="rotate(90 490 210)"/>
+        <rect x="210" y="348" width="40" height="20" rx="6" fill="#cdd0d6"/>
+      </g>
+      <!-- checkered flag -->
+      <g transform="translate(430,60)">
+        <line x1="0" y1="0" x2="0" y2="70" stroke="#ebe8e2" stroke-width="4"/>
+        <g fill="#ebe8e2"><rect x="4" y="2" width="14" height="14"/><rect x="32" y="2" width="14" height="14"/><rect x="18" y="16" width="14" height="14"/><rect x="4" y="30" width="14" height="14"/><rect x="32" y="30" width="14" height="14"/></g>
+        <rect x="2" y="2" width="44" height="42" fill="none" stroke="rgba(235,232,226,0.3)" stroke-width="1.5"/>
+      </g>
+    </svg>
+    <div class="board">
+      <div class="btitle">▸ LIVE LEADERBOARD</div>
+      <div class="rank"><span class="pos p1">1</span><span class="car" style="background:#e6b455"></span><span class="name">Maya</span><span class="pts">+340</span></div>
+      <div class="rank"><span class="pos p2">2</span><span class="car" style="background:#7aa2ff"></span><span class="name">Deshawn</span><span class="pts">+295</span></div>
+      <div class="rank"><span class="pos p3">3</span><span class="car" style="background:#c68a4e"></span><span class="name">Priya</span><span class="pts">+270</span></div>
+      <div class="rank"><span class="pos">4</span><span class="car" style="background:#cdd0d6"></span><span class="name">Leo</span><span class="pts">+240</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

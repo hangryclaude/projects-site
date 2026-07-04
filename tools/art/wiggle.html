@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the "can I please…" ask, drafted to actually land — honest persuasion, not manipulation */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 62px; }
+  .phone { width: 476px; border-radius: 40px; border: 2px solid rgba(235,232,226,0.16);
+    background: rgba(235,232,226,0.03); padding: 0 0 24px; overflow: hidden; }
+  .to { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 26px 0 20px;
+    border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .to .av { width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(150deg,#7aa2ff,#4b6ef0); }
+  .to .n { font: 500 25px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .to .r { font: 400 20px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .thread { padding: 24px 24px 6px; display: flex; flex-direction: column; gap: 16px; }
+  .bub { max-width: 90%; padding: 17px 22px; font: 400 25px/1.4 -apple-system, system-ui, sans-serif; border-radius: 22px; }
+  .them { align-self: flex-start; background: rgba(235,232,226,0.1); color: rgba(235,232,226,0.85); border-bottom-left-radius: 7px; }
+  .me { align-self: flex-end; background: linear-gradient(160deg,#3a9bff,#0a6ef0); color: #fff; border-bottom-right-radius: 7px; }
+  .bar { margin: 12px 22px 0; height: 52px; border-radius: 999px; border: 1.5px solid rgba(235,232,226,0.16);
+    display: flex; align-items: center; padding: 0 8px 0 22px; gap: 12px; }
+  .bar .ph { flex: 1; font: 400 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.35); }
+  .bar .w { background: #0a6ef0; color: #fff; border-radius: 999px; padding: 9px 20px; font: 600 21px "SF Mono", Menlo, monospace; }
+  .side { display: flex; flex-direction: column; gap: 22px; max-width: 300px; }
+  .side .h { font: 700 44px/1 "SF Mono", Menlo, monospace; color: #3a9bff; }
+  .side .l { font: 400 27px/1.55 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .side .l b { color: #ebe8e2; font-weight: 400; }
+  .side .rule { font: 400 24px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+</style>
+</head><body>
+<div id="frame" data-label="wiggle">
+  <div id="scene">
+    <div class="phone">
+      <div class="to"><div class="av"></div><div class="n">Mr. Lee · English</div><div class="r">the ask, drafted</div></div>
+      <div class="thread">
+        <div class="bub them">Essays are due tomorrow, no extensions.</div>
+        <div class="bub me">Hi Mr. Lee — could I please hand mine in Monday? I lost two days to the flu and want to submit my best work, not a rushed draft. Happy to show a doctor's note.</div>
+      </div>
+      <div class="bar"><span class="ph">describe it…</span><span class="w">wiggle ✦</span></div>
+    </div>
+    <div class="side">
+      <div class="h">the ask,<br>that lands</div>
+      <div class="l">parent · teacher · boss —<br>a <b>real case</b>, written to<br>actually get a yes</div>
+      <div class="rule">makes the case · never lies</div>
+    </div>
+  </div>
+</div>
+</body></html>

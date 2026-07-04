@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a map pin dropped on your house — I show up and install the agent inside your machine */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding-top: 20px; }
+  .cap { display: flex; align-items: baseline; gap: 20px; }
+  .town { color: #e9a23c; font: 600 34px "SF Mono", Menlo, monospace; letter-spacing: 0.02em; }
+  .hint { color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head><body>
+<div id="frame" data-label="agent-setup-sb">
+  <div id="scene">
+    <svg width="400" height="430" viewBox="0 0 400 430" fill="none">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+          <stop offset="0" stop-color="rgba(233,162,60,0.28)"/>
+          <stop offset="1" stop-color="rgba(233,162,60,0)"/>
+        </radialGradient>
+      </defs>
+      <!-- pin teardrop -->
+      <path d="M200 418 C 96 292, 44 236, 44 168 A156 156 0 1 1 356 168 C356 236 304 292 200 418 Z"
+            fill="rgba(233,162,60,0.06)" stroke="#e9a23c" stroke-width="4"/>
+      <circle cx="200" cy="168" r="130" fill="url(#glow)"/>
+      <!-- agent burst above the laptop -->
+      <g stroke="#e9a23c" stroke-width="4" stroke-linecap="round">
+        <line x1="200" y1="70" x2="200" y2="96"/>
+        <line x1="200" y1="128" x2="200" y2="146"/>
+        <line x1="151" y1="108" x2="169" y2="108"/>
+        <line x1="231" y1="108" x2="249" y2="108"/>
+        <line x1="166" y1="74" x2="179" y2="87"/>
+        <line x1="221" y1="129" x2="234" y2="142"/>
+        <line x1="234" y1="74" x2="221" y2="87"/>
+        <line x1="179" y1="129" x2="166" y2="142"/>
+      </g>
+      <circle cx="200" cy="108" r="13" fill="#e9a23c"/>
+      <!-- laptop being set up inside your home -->
+      <g transform="translate(200,220)">
+        <rect x="-72" y="-58" width="144" height="92" rx="11" fill="#151517" stroke="#e9a23c" stroke-width="3.5"/>
+        <rect x="-72" y="-58" width="144" height="14" rx="7" fill="none"/>
+        <line x1="-58" y1="-38" x2="30" y2="-38" stroke="rgba(233,162,60,0.7)" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="-58" y1="-18" x2="12" y2="-18" stroke="rgba(235,232,226,0.35)" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="-58" y1="2" x2="42" y2="2" stroke="rgba(235,232,226,0.35)" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M-92 34 H92 L106 56 H-106 Z" fill="#1d1d21" stroke="#e9a23c" stroke-width="3.5" stroke-linejoin="round"/>
+      </g>
+    </svg>
+    <div class="cap"><span class="town">Santa Barbara</span><span class="hint">house call · your machine</span></div>
+  </div>
+</div>
+</body></html>

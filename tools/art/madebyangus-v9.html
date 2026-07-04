@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the version outran the docs — tags march to v9 while the README still says v8 */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 56px; }
+  .glow { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    width: 760px; height: 560px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,160,77,0.18), transparent 66%); }
+  .steps { display: flex; align-items: center; gap: 0; z-index: 1; }
+  .tag { font: 600 34px "SF Mono", Menlo, monospace; padding: 14px 30px; border-radius: 12px;
+    border: 2px solid rgba(235,232,226,0.22); color: rgba(235,232,226,0.5); }
+  .tag.now { border-color: #e8a04d; color: #0f0f11; background: #e8a04d; box-shadow: 0 0 44px rgba(232,160,77,0.5); }
+  .arr { width: 46px; height: 2px; background: rgba(235,232,226,0.3); }
+  .doc { width: 640px; border: 1.5px solid rgba(235,232,226,0.2); border-radius: 16px; overflow: hidden; z-index: 1; }
+  .doc .bar { display: flex; align-items: center; gap: 12px; padding: 16px 24px; background: rgba(235,232,226,0.05);
+    font: 500 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.6); }
+  .doc .bar i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; font-style: normal; }
+  .doc .body { padding: 30px 34px; display: flex; align-items: baseline; gap: 20px;
+    font: 500 38px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .doc .body .h { color: rgba(235,232,226,0.4); }
+  .doc .body .wink { font-size: 24px; color: #e8a04d; }
+  .cap { position: absolute; right: 84px; bottom: 74px; text-align: right;
+    font: 400 25px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap b { color: #e8a04d; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="madebyangus-v9">
+  <div id="scene">
+    <div class="glow"></div>
+    <div class="steps">
+      <span class="tag">v6</span><span class="arr"></span>
+      <span class="tag">v7</span><span class="arr"></span>
+      <span class="tag">v8</span><span class="arr"></span>
+      <span class="tag now">v9</span>
+    </div>
+    <div class="doc">
+      <div class="bar"><i style="background:#e8664d"></i><i style="background:#e8b84d"></i><i style="background:#5ac77a"></i>&nbsp;&nbsp;README.md</div>
+      <div class="body"><span class="h">#</span> Made by Angus v8<span class="wink">← still</span></div>
+    </div>
+    <div class="cap">shipped <b>v9</b> ·<br>the docs didn't get the memo</div>
+  </div>
+</div>
+</body></html>

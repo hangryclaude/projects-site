@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 52px; }
+  .flow { display: flex; align-items: center; gap: 30px; }
+  .pill {
+    display: flex; align-items: center; gap: 12px;
+    padding: 20px 30px; border: 1.5px solid rgba(235,232,226,0.28); border-radius: 999px;
+    font: 500 30px "SF Mono", Menlo, monospace; color: #ebe8e2;
+  }
+  .pill .tok { color: #ff9a3f; }
+  .pill .ok { color: #34d372; font-weight: 700; }
+  .arrow { font: 400 34px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .badge {
+    padding: 20px 34px; border-radius: 18px; background: #ff7a1f; color: #0f0f11;
+    font: 800 48px "SF Mono", Menlo, monospace; letter-spacing: 0.04em;
+  }
+  .dest {
+    display: flex; align-items: center; gap: 14px;
+    padding: 20px 30px; border: 1.5px solid rgba(255,122,31,0.5); border-radius: 999px;
+    background: rgba(255,122,31,0.06); font: 500 30px "SF Mono", Menlo, monospace; color: #ff9a3f;
+  }
+  .memory { display: flex; align-items: flex-end; gap: 24px; }
+  .log { display: flex; align-items: flex-end; gap: 6px; height: 66px; }
+  .log b { width: 12px; border-radius: 3px 3px 0 0; background: rgba(255,122,31,0.55); }
+  .cnt { font: 700 34px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .cnt span { color: rgba(235,232,226,0.45); font-weight: 400; font-size: 26px; }
+</style>
+</head><body>
+<div id="frame" data-label="nox-redirect">
+  <div id="scene">
+    <div class="flow">
+      <div class="pill">/d/a8f3<span class="tok">?t=</span><span class="ok">✓</span></div>
+      <span class="arrow">→</span>
+      <div class="badge">302</div>
+      <span class="arrow">→</span>
+      <div class="dest">↓ download</div>
+    </div>
+    <div class="memory">
+      <div class="log"><b style="height:22px"></b><b style="height:34px"></b><b style="height:28px"></b><b style="height:46px"></b><b style="height:40px"></b><b style="height:58px"></b><b style="height:52px"></b><b style="height:66px"></b></div>
+      <div class="cnt">4,120 <span>clicks logged</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .modes { display: flex; gap: 22px; }
+  .chip { padding: 11px 34px; border-radius: 12px; font: 600 27px "SF Mono", Menlo, monospace; }
+  .chip.det { color: #ff9a3f; border: 2px solid rgba(255,122,31,0.7); background: rgba(255,122,31,0.08); }
+  .chip.sh  { color: rgba(235,232,226,0.85); border: 2px solid rgba(235,232,226,0.4); background: rgba(235,232,226,0.04); }
+</style>
+</head><body>
+<div id="frame" data-label="nox-logo-explode">
+  <div id="scene">
+    <svg width="1000" height="330" viewBox="0 0 1000 330">
+      <!-- detonate particles blowing off the left (N) -->
+      <g fill="#ff7a1f">
+        <circle cx="120" cy="70"  r="9"/><circle cx="70"  cy="130" r="7"/><circle cx="150" cy="150" r="6"/>
+        <circle cx="90"  cy="210" r="8"/><circle cx="160" cy="255" r="7"/><circle cx="60"  cy="260" r="5"/>
+        <circle cx="210" cy="55"  r="6"/><circle cx="200" cy="285" r="8"/>
+      </g>
+      <g fill="#ffb020"><circle cx="40" cy="90" r="5"/><circle cx="115" cy="285" r="5"/><circle cx="230" cy="180" r="5"/></g>
+      <!-- NOX wordmark, fractured -->
+      <text x="500" y="245" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif" font-weight="800" font-size="178" letter-spacing="-6" fill="#ebe8e2">NOX</text>
+      <!-- glass crack lines radiating from impact on the O -->
+      <g stroke="#fff" stroke-width="2.5" opacity="0.9" fill="none" stroke-linejoin="round">
+        <polyline points="500,150 470,110 430,70"/>
+        <polyline points="500,150 545,120 600,90"/>
+        <polyline points="500,150 460,200 410,255"/>
+        <polyline points="500,150 555,205 615,250"/>
+        <polyline points="500,150 500,90 505,50"/>
+        <polyline points="500,150 500,215 495,275"/>
+        <polyline points="470,110 545,120" opacity="0.5"/>
+        <polyline points="460,200 555,205" opacity="0.5"/>
+      </g>
+      <circle cx="500" cy="150" r="9" fill="#fff"/>
+    </svg>
+    <div class="modes"><span class="chip det">detonate</span><span class="chip sh">shatter</span></div>
+  </div>
+</div>
+</body></html>

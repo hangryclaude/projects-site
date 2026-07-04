@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a convincing Shopify storefront product card for a brand that has never shipped anything */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand .mark { width: 40px; height: 40px; border: 2px solid #ebe8e2; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; color: #ebe8e2;
+    font: 700 22px -apple-system, system-ui, sans-serif; }
+  .brand .nm { color: #ebe8e2; font: 500 32px -apple-system, system-ui, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; }
+  .card { width: 380px; background: #17181b; border: 1.5px solid rgba(235,232,226,0.14); border-radius: 16px; overflow: hidden; }
+  .ph { height: 240px; background: linear-gradient(160deg,#3a3d33,#24261f); display: flex; align-items: center; justify-content: center; }
+  .body { padding: 22px 26px 26px; }
+  .body .t { color: #ebe8e2; font: 400 27px -apple-system, system-ui, sans-serif; }
+  .body .price { color: #ebe8e2; font: 600 30px -apple-system, system-ui, sans-serif; margin-top: 8px; }
+  .buy { margin-top: 20px; background: #34d372; color: #0f0f11; text-align: center;
+    font: 600 25px -apple-system, system-ui, sans-serif; padding: 15px 0; border-radius: 10px; }
+  .cap { color: rgba(235,232,226,0.45); font: 400 27px "SF Mono", Menlo, monospace; }
+  .cap b { color: rgba(235,232,226,0.7); font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="larp-shopify">
+  <div id="scene">
+    <div class="brand"><span class="mark">M</span><span class="nm">Maple &amp; Stone Co.</span></div>
+    <div class="card">
+      <div class="ph">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(235,232,226,0.35)" stroke-width="1.2">
+          <path d="M9 3h6l-1 3c2 1 3 4 3 7 0 4-2 8-5 8s-5-4-5-8c0-3 1-6 3-7L9 3z"/>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="t">Hand-thrown Ceramic Vase</div>
+        <div class="price">$68.00</div>
+        <div class="buy">Add to cart</div>
+      </div>
+    </div>
+    <div class="cap">0 shipped · 0 refunds · <b>100% vibes</b></div>
+  </div>
+</div>
+</body></html>

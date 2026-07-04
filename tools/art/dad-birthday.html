@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the birthday page — starfield, italic "Dad," a giant gold age number, a cake */
+  #scene { display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  svg.stars { position:absolute; inset:0; width:100%; height:100%; }
+  .dad { font:italic 500 62px -apple-system,Georgia,system-ui,serif; color:#f6c667;
+    letter-spacing:0.02em; margin-bottom:-14px; position:relative; z-index:2; }
+  .age { font:800 270px -apple-system,system-ui,sans-serif; line-height:0.92; letter-spacing:-0.02em;
+    background:linear-gradient(150deg,#fff4cc 0%,#f6c667 42%,#e0972c 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent; position:relative; z-index:2; }
+  .cakewrap { position:relative; z-index:2; margin-top:14px; }
+  .cap { position:relative; z-index:2; margin-top:26px; color:rgba(246,198,103,0.6);
+    font:400 26px "SF Mono",Menlo,monospace; white-space:nowrap; }
+</style>
+</head><body>
+<div id="frame" data-label="dad-birthday"><div id="scene">
+  <svg class="stars" viewBox="0 0 1200 750">
+    <g fill="#ffffff">
+      <circle cx="90" cy="80" r="1.6" opacity="0.5"/><circle cx="180" cy="150" r="1" opacity="0.35"/>
+      <circle cx="260" cy="70" r="2.2" opacity="0.7"/><circle cx="340" cy="200" r="1.2" opacity="0.4"/>
+      <circle cx="120" cy="260" r="1.4" opacity="0.5"/><circle cx="70" cy="420" r="2" opacity="0.6"/>
+      <circle cx="200" cy="480" r="1" opacity="0.3"/><circle cx="150" cy="600" r="1.8" opacity="0.55"/>
+      <circle cx="300" cy="560" r="1.2" opacity="0.4"/><circle cx="420" cy="120" r="1.6" opacity="0.5"/>
+      <circle cx="500" cy="70" r="1" opacity="0.35"/><circle cx="560" cy="180" r="2.3" opacity="0.75"/>
+      <circle cx="640" cy="90" r="1.3" opacity="0.45"/><circle cx="720" cy="160" r="1.7" opacity="0.55"/>
+      <circle cx="800" cy="80" r="1.1" opacity="0.4"/><circle cx="880" cy="150" r="2" opacity="0.65"/>
+      <circle cx="960" cy="90" r="1.4" opacity="0.5"/><circle cx="1040" cy="170" r="1" opacity="0.35"/>
+      <circle cx="1120" cy="100" r="2.1" opacity="0.7"/><circle cx="1080" cy="280" r="1.3" opacity="0.45"/>
+      <circle cx="1140" cy="420" r="1.7" opacity="0.55"/><circle cx="1000" cy="470" r="1.1" opacity="0.4"/>
+      <circle cx="1090" cy="600" r="2" opacity="0.6"/><circle cx="940" cy="600" r="1.2" opacity="0.4"/>
+      <circle cx="1150" cy="560" r="1" opacity="0.35"/><circle cx="640" cy="640" r="1.6" opacity="0.5"/>
+      <circle cx="760" cy="600" r="1.1" opacity="0.4"/><circle cx="470" cy="620" r="1.9" opacity="0.6"/>
+      <circle cx="380" cy="660" r="1.2" opacity="0.4"/><circle cx="60" cy="180" r="1.2" opacity="0.4"/>
+      <circle cx="1150" cy="240" r="1.4" opacity="0.5"/><circle cx="30" cy="520" r="1.6" opacity="0.5"/>
+      <circle cx="230" cy="360" r="1" opacity="0.3"/><circle cx="960" cy="340" r="1.3" opacity="0.45"/>
+    </g>
+  </svg>
+  <div class="dad">Dad,</div>
+  <div class="age">52</div>
+  <div class="cakewrap">
+    <svg width="150" height="120" viewBox="0 0 150 120">
+      <!-- candles -->
+      <g stroke="#f6c667" stroke-width="4"><line x1="55" y1="40" x2="55" y2="62"/><line x1="75" y1="34" x2="75" y2="62"/><line x1="95" y1="40" x2="95" y2="62"/></g>
+      <g fill="#ffd98a"><ellipse cx="55" cy="34" rx="5" ry="8"/><ellipse cx="75" cy="28" rx="5" ry="8"/><ellipse cx="95" cy="34" rx="5" ry="8"/></g>
+      <!-- cake -->
+      <rect x="30" y="62" width="90" height="40" rx="8" fill="#e0972c"/>
+      <path d="M30 74 q15 12 30 0 t30 0 t30 0" fill="none" stroke="#fff4cc" stroke-width="4"/>
+      <!-- plate -->
+      <rect x="18" y="102" width="114" height="8" rx="4" fill="rgba(246,198,103,0.4)"/>
+    </svg>
+  </div>
+  <div class="cap">3 shipped &middot; one per birthday &middot; the streak continues</div>
+</div></div>
+</body></html>

@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a Mac OS 8 disk chopped into range-fetched chunks so a browser can boot it */
+  #scene { display:flex; align-items:center; justify-content:center; gap:78px; }
+  .macwrap { display:flex; flex-direction:column; align-items:center; gap:18px; }
+  .oslbl { color:rgba(235,232,226,0.55); font:500 26px "SF Mono",Menlo,monospace; letter-spacing:0.04em; }
+  .chunks { display:flex; flex-direction:column; gap:13px; }
+  .chunk { display:flex; align-items:center; gap:18px; width:430px;
+    padding:15px 22px; border-radius:10px; border:1.5px solid rgba(235,232,226,0.2);
+    background:rgba(235,232,226,0.03); color:rgba(235,232,226,0.7);
+    font:500 24px "SF Mono",Menlo,monospace; }
+  .chunk .nm { flex:1; }
+  .chunk .sz { color:rgba(235,232,226,0.45); font-size:21px; }
+  .chunk.hot { border-color:#4d90ff; background:rgba(77,144,255,0.12); color:#dfe9ff; }
+  .chunk.hot .sz { color:#4d90ff; }
+  .chunk.hot .nm::after { content:" ⤓"; color:#4d90ff; }
+  .cap { position:absolute; bottom:104px; left:50%; transform:translateX(-50%);
+    color:rgba(235,232,226,0.5); font:400 26px "SF Mono",Menlo,monospace; white-space:nowrap; }
+  .cap b { color:#4d90ff; font-weight:600; }
+</style>
+</head><body>
+<div id="frame" data-label="macintosh-disk"><div id="scene">
+  <div class="macwrap">
+    <svg width="290" height="330" viewBox="0 0 290 330">
+      <!-- compact Mac body -->
+      <rect x="20" y="10" width="250" height="290" rx="24" fill="#d7d3ca" stroke="#8f8b82" stroke-width="3"/>
+      <!-- screen bezel -->
+      <rect x="46" y="38" width="198" height="150" rx="10" fill="#9aa7ac" stroke="#6f6b63" stroke-width="3"/>
+      <!-- screen -->
+      <rect x="58" y="50" width="174" height="126" rx="6" fill="#cdd8dc"/>
+      <!-- happy mac face -->
+      <rect x="118" y="82" width="54" height="62" rx="6" fill="none" stroke="#2b2b2b" stroke-width="4"/>
+      <circle cx="132" cy="102" r="4.5" fill="#2b2b2b"/><circle cx="158" cy="102" r="4.5" fill="#2b2b2b"/>
+      <path d="M128 118 q17 16 34 0" fill="none" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round"/>
+      <!-- floppy slot + drive -->
+      <rect x="70" y="212" width="150" height="12" rx="4" fill="#b7b3aa"/>
+      <circle cx="200" cy="256" r="7" fill="#b7b3aa"/>
+      <rect x="70" y="246" width="80" height="9" rx="4" fill="#c6c2b9"/>
+    </svg>
+    <div class="oslbl">Mac OS 8 &middot; in a browser</div>
+  </div>
+  <div class="chunks">
+    <div class="chunk"><span class="nm">disk.part.0</span><span class="sz">0–95M</span></div>
+    <div class="chunk"><span class="nm">disk.part.1</span><span class="sz">95–190M</span></div>
+    <div class="chunk hot"><span class="nm">disk.part.2</span><span class="sz">190–285M</span></div>
+    <div class="chunk"><span class="nm">disk.part.3</span><span class="sz">285–380M</span></div>
+    <div class="chunk"><span class="nm">…</span><span class="sz">→ part.6</span></div>
+  </div>
+  <div class="cap">650&nbsp;MB &rarr; 7 chunks &middot; <b>HTTP Range-fetch</b> only what boots</div>
+</div></div>
+</body></html>

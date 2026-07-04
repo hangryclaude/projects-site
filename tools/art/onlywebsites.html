@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a creator link-hub, the business email extracted, sold a $1k site */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 78px; }
+  .card {
+    width: 392px; border-radius: 28px; padding: 40px 34px 34px;
+    background: rgba(235,232,226,0.035); border: 1.5px solid rgba(235,232,226,0.14);
+  }
+  .top { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 30px; }
+  .av { width: 92px; height: 92px; border-radius: 50%; background: linear-gradient(150deg,#20c4ff,#0a6ed6); }
+  .h { font: 600 34px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .sub { font: 400 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+  .pill {
+    height: 62px; border-radius: 16px; margin-top: 16px; display: flex; align-items: center;
+    padding: 0 26px; font: 400 26px "SF Mono", Menlo, monospace;
+    background: rgba(235,232,226,0.06); color: rgba(235,232,226,0.4);
+  }
+  .pill.mail {
+    background: rgba(20,179,240,0.12); border: 1.5px solid #14b3f0; color: #ebe8e2;
+    box-shadow: 0 0 40px rgba(20,179,240,0.18); gap: 16px;
+  }
+  .pill.mail .ic { color: #14b3f0; font-size: 30px; }
+  .pill.mail .rd { margin-left: auto; color: #14b3f0; font: 600 22px "SF Mono", Menlo, monospace; letter-spacing: 0.08em; }
+  .flow { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .arrow { font-size: 60px; color: rgba(235,232,226,0.5); line-height: 1; }
+  .site { width: 232px; border-radius: 16px; border: 1.5px solid rgba(235,232,226,0.2); overflow: hidden; background: rgba(235,232,226,0.03); }
+  .site .bar { height: 34px; background: rgba(235,232,226,0.08); display: flex; align-items: center; gap: 9px; padding: 0 16px; }
+  .site .bar i { width: 11px; height: 11px; border-radius: 50%; background: rgba(235,232,226,0.3); }
+  .site .body { padding: 22px 20px; display: flex; flex-direction: column; gap: 13px; }
+  .site .body b { height: 26px; border-radius: 6px; background: linear-gradient(90deg,#20c4ff,#0a6ed6); width: 70%; }
+  .site .body u { height: 15px; border-radius: 5px; background: rgba(235,232,226,0.15); }
+  .price { font: 700 40px "SF Mono", Menlo, monospace; color: #14b3f0; letter-spacing: -0.02em; }
+  .cap { position: absolute; top: 66px; right: 74px; font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+</style>
+</head><body>
+<div id="frame" data-label="onlywebsites">
+  <div id="scene">
+    <div class="cap">finds the email · sends cold · $0</div>
+    <div class="card">
+      <div class="top"><div class="av"></div><div class="h">@luna.vip</div><div class="sub">creator · 24k fans</div></div>
+      <div class="pill">subscribe ↗</div>
+      <div class="pill mail"><span class="ic">✉</span>luna@business.co<span class="rd">EXTRACTED</span></div>
+      <div class="pill">all my links ↗</div>
+    </div>
+    <div class="flow">
+      <div class="site"><div class="bar"><i></i><i></i><i></i></div><div class="body"><b></b><u style="width:90%"></u><u style="width:60%"></u></div></div>
+      <div class="arrow">↓</div>
+      <div class="price">$1,000</div>
+    </div>
+  </div>
+</div>
+</body></html>

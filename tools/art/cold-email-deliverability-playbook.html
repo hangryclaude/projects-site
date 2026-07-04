@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: authenticated mail forks to INBOX, not SPAM — placement = identity + wanted-ness */
+  #scene{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;}
+  svg{display:block;}
+  .eq{font:400 30px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.55);}
+  .eq b{color:#ebe8e2;font-weight:600;}
+  .eq .g{color:#34d372;}
+</style></head><body>
+<div id="frame" data-label="cold-email-deliverability-playbook"><div id="scene">
+  <svg width="900" height="480" viewBox="0 0 900 480" fill="none">
+    <!-- envelope -->
+    <rect x="360" y="34" width="180" height="120" rx="14" fill="rgba(235,232,226,0.06)" stroke="#ebe8e2" stroke-width="2.5"/>
+    <path d="M360 48 L450 118 L540 48" fill="none" stroke="#ebe8e2" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="540" cy="42" r="24" fill="#34d372"/>
+    <path d="M529 42 l8 8 l14 -16" stroke="#0f0f11" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- auth chips -->
+    <text x="450" y="200" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="27" font-weight="600" fill="#34d372">SPF &#10003;&#160;&#160;&#160;DKIM &#10003;&#160;&#160;&#160;DMARC &#10003;</text>
+    <!-- fork lines -->
+    <path d="M450 214 L450 250" stroke="rgba(235,232,226,0.4)" stroke-width="2.5"/>
+    <path d="M450 250 C 450 300, 270 300, 270 348" stroke="#34d372" stroke-width="4.5" fill="none"/>
+    <path d="M450 250 C 450 300, 640 300, 640 348" stroke="rgba(244,80,74,0.5)" stroke-width="3" stroke-dasharray="9 9" fill="none"/>
+    <polygon points="270,362 262,344 278,344" fill="#34d372"/>
+    <!-- INBOX (chosen) -->
+    <rect x="96" y="360" width="348" height="96" rx="16" fill="rgba(52,211,114,0.12)" stroke="#34d372" stroke-width="3"/>
+    <text x="270" y="422" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="46" font-weight="800" fill="#34d372" letter-spacing="3">INBOX</text>
+    <!-- SPAM (avoided) -->
+    <rect x="470" y="368" width="300" height="80" rx="14" fill="none" stroke="rgba(244,80,74,0.45)" stroke-width="2" stroke-dasharray="7 8"/>
+    <text x="620" y="418" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="34" font-weight="700" fill="rgba(244,80,74,0.6)" letter-spacing="2">SPAM</text>
+    <line x1="500" y1="440" x2="740" y2="376" stroke="rgba(244,80,74,0.4)" stroke-width="2.5"/>
+  </svg>
+  <div class="eq">inbox&nbsp;=&nbsp;<b>identity</b>&nbsp;<span class="g">+</span>&nbsp;<b>wanted&#8209;ness</b></div>
+</div></div></body></html>

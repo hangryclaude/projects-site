@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a tiger, running, spelled out of the word "tiger" — striped wordmark + word-stream negative space */
+  #scene { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .cap { position: absolute; bottom: 58px; right: 74px; font: 400 26px "SF Mono", Menlo, monospace; color: rgba(255,138,42,0.8); }
+</style>
+</head><body>
+<div id="frame" data-label="tiger-site">
+  <div id="scene">
+    <svg viewBox="0 0 1200 750" fill="none">
+      <defs>
+        <clipPath id="word">
+          <text x="705" y="470" text-anchor="middle" font-family="-apple-system, system-ui, sans-serif"
+                font-weight="800" font-size="262" letter-spacing="-6">tiger</text>
+        </clipPath>
+      </defs>
+      <!-- faint word-stream filling the negative space -->
+      <g fill="rgba(255,138,42,0.09)" font-family="-apple-system, system-ui, sans-serif" font-weight="700" font-size="30" letter-spacing="4">
+        <text x="70" y="150">tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger</text>
+        <text x="70" y="205">tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger</text>
+        <text x="70" y="605">tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger</text>
+        <text x="70" y="660">tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger tiger</text>
+      </g>
+      <!-- speed lines trailing the back of the running tiger -->
+      <g fill="#ff8a2a">
+        <rect x="150" y="322" width="200" height="14" rx="7" opacity="0.28"/>
+        <rect x="90"  y="368" width="270" height="16" rx="8" opacity="0.5"/>
+        <rect x="185" y="414" width="175" height="14" rx="7" opacity="0.34"/>
+      </g>
+      <!-- the striped wordmark -->
+      <g clip-path="url(#word)">
+        <rect x="360" y="200" width="700" height="300" fill="#ff8a2a"/>
+        <g fill="#141414">
+          <rect x="440" y="170" width="30" height="400" transform="rotate(15 455 370)"/>
+          <rect x="545" y="170" width="26" height="400" transform="rotate(15 558 370)"/>
+          <rect x="645" y="170" width="30" height="400" transform="rotate(15 660 370)"/>
+          <rect x="750" y="170" width="26" height="400" transform="rotate(15 763 370)"/>
+          <rect x="850" y="170" width="30" height="400" transform="rotate(15 865 370)"/>
+          <rect x="950" y="170" width="26" height="400" transform="rotate(15 963 370)"/>
+        </g>
+      </g>
+    </svg>
+    <div class="cap">runs across your screen — forever →</div>
+  </div>
+</div>
+</body></html>

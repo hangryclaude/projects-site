@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a reply drafted in my voice, held in a queue — posting is always a manual approve */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 108px; gap: 0; }
+
+  .lanes { position: absolute; top: 74px; right: 68px; display: flex; gap: 20px; }
+  .lane { display: flex; align-items: center; gap: 9px; color: rgba(235,232,226,0.45); font: 400 21px "SF Mono", Menlo, monospace; }
+  .lane i { width: 10px; height: 10px; border-radius: 50%; background: rgba(235,232,226,0.3); }
+  .lane.on i { background: #f5a623; }
+  .lane.on { color: rgba(235,232,226,0.7); }
+
+  .tweet { display: flex; gap: 20px; max-width: 760px; }
+  .av { width: 54px; height: 54px; border-radius: 50%; background: rgba(235,232,226,0.14); flex: none; }
+  .tweet .who { color: rgba(235,232,226,0.55); font: 500 25px "SF Mono", Menlo, monospace; }
+  .tweet .txt { margin-top: 8px; color: rgba(235,232,226,0.82); font: 400 31px/1.4 "SF Mono", Menlo, monospace; }
+
+  .thread { width: 3px; height: 34px; background: rgba(245,166,35,0.4); margin: 6px 0 6px 25px; }
+
+  .draft { margin-left: 74px; max-width: 720px; border: 1.5px solid rgba(245,166,35,0.5); border-radius: 16px;
+           background: rgba(245,166,35,0.06); box-shadow: 0 0 50px rgba(245,166,35,0.14); padding: 24px 28px; }
+  .draft .tag { display: inline-flex; align-items: center; gap: 10px; color: #f5a623; font: 600 22px "SF Mono", Menlo, monospace; letter-spacing: 0.03em; }
+  .draft .tag b { width: 9px; height: 9px; border-radius: 50%; background: #f5a623; }
+  .draft .reply { margin-top: 14px; color: #ebe8e2; font: 400 31px/1.4 "SF Mono", Menlo, monospace; }
+  .draft .caret { display: inline-block; width: 3px; height: 30px; background: #f5a623; vertical-align: -5px; margin-left: 2px; }
+
+  .actions { margin-top: 24px; display: flex; align-items: center; gap: 18px; }
+  .btn { display: inline-flex; align-items: center; gap: 11px; padding: 13px 26px; border-radius: 11px; font: 700 25px "SF Mono", Menlo, monospace; white-space: nowrap; }
+  .btn.ok { background: #f5a623; color: #0f0f11; }
+  .btn.no { border: 1.5px solid rgba(235,232,226,0.28); color: rgba(235,232,226,0.55); }
+  .btn svg { width: 22px; height: 22px; }
+  .gate { margin-left: auto; color: rgba(235,232,226,0.42); font: 400 23px "SF Mono", Menlo, monospace; white-space: nowrap; }
+
+  .cap { position: absolute; left: 250px; right: 90px; bottom: 62px; text-align: center;
+         color: rgba(235,232,226,0.42); font: 400 26px "SF Mono", Menlo, monospace; }
+  .cap b { color: #f5a623; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="x-growth">
+  <div id="scene">
+    <div class="lanes">
+      <span class="lane"><i></i>mentions</span>
+      <span class="lane"><i></i>trending</span>
+      <span class="lane on"><i></i>niche</span>
+      <span class="lane"><i></i>early replies</span>
+    </div>
+
+    <div class="tweet">
+      <div class="av"></div>
+      <div>
+        <div class="who">@indiehacker · niche lane</div>
+        <div class="txt">shipping solo is 10% code, 90% talking yourself off the ledge</div>
+      </div>
+    </div>
+
+    <div class="thread"></div>
+
+    <div class="draft">
+      <span class="tag"><b></b>drafted in your voice · $0</span>
+      <div class="reply">felt this. the ledge is where the good features get born tbh<span class="caret"></span></div>
+      <div class="actions">
+        <span class="btn ok"><svg viewBox="0 0 24 24" fill="none" stroke="#0f0f11" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l6 6L20 5.5"/></svg>approve &amp; post</span>
+        <span class="btn no"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(235,232,226,0.55)" stroke-width="3.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>reject</span>
+        <span class="gate">posting is manual</span>
+      </div>
+    </div>
+
+    <div class="cap">watches 4 lanes, drafts in your voice — but <b>never posts on its own</b></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; align-items: center; justify-content: center; gap: 46px; }
+  .src { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+  .codebox {
+    padding: 22px 26px; border: 1.5px solid rgba(255,122,31,0.5); border-radius: 16px;
+    background: rgba(255,122,31,0.06); font: 500 26px/1.7 "SF Mono", Menlo, monospace; color: #ff9a3f;
+  }
+  .codebox .mut { color: rgba(235,232,226,0.45); }
+  .fan { font: 700 30px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .grid { display: grid; grid-template-columns: repeat(6, 104px); gap: 16px; }
+  .card { height: 70px; border-radius: 9px; background: rgba(235,232,226,0.04); border: 1px solid rgba(235,232,226,0.12); padding: 9px 10px; }
+  .card .bar { display: flex; gap: 4px; margin-bottom: 9px; }
+  .card .bar i { width: 5px; height: 5px; border-radius: 50%; background: rgba(235,232,226,0.3); }
+  .card .h { height: 8px; border-radius: 3px; margin-bottom: 7px; width: 78%; }
+  .card .t { height: 4px; border-radius: 2px; background: rgba(235,232,226,0.16); width: 90%; }
+  .v1 .h { background: #ff7a1f; } .v2 .h { background: #ffb020; } .v3 .h { background: #ff9a3f; width: 60%; } .v4 .h { background: #e08a2c; width: 68%; }
+  .count { margin-top: 6px; font: 700 30px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .count span { color: rgba(235,232,226,0.45); font-weight: 400; font-size: 24px; }
+</style>
+</head><body>
+<div id="frame" data-label="nox-domain-sites">
+  <div id="scene">
+    <div class="src">
+      <div class="codebox">generate.cjs<br><span class="mut">→ manifest.json ✓</span></div>
+      <div class="fan">1 script →</div>
+      <div class="count">22 <span>domains · 22 voices</span></div>
+    </div>
+    <div class="grid">
+      <div class="card v1"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v2"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v3"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v4"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v1"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v2"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v3"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v4"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v1"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v2"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v3"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v4"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v2"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v1"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v4"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v3"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v1"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v2"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v3"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v4"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v2"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+      <div class="card v1"><div class="bar"><i></i><i></i><i></i></div><div class="h"></div><div class="t"></div></div>
+    </div>
+  </div>
+</div>
+</body></html>

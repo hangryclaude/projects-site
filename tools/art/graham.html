@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the read — a weighted rubric scorecard for one human being */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 0 90px; }
+  .quote { font: 400 34px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.75); font-style: italic; }
+  .card { display: flex; align-items: center; gap: 64px; }
+  .ring { position: relative; width: 220px; height: 220px; flex: none; }
+  .ring .num { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .ring .num b { font: 700 76px/1 "SF Mono", Menlo, monospace; color: #ebe8e2; letter-spacing: -0.03em; }
+  .ring .num span { font: 400 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); margin-top: 4px; }
+  .bars { display: flex; flex-direction: column; gap: 20px; width: 470px; }
+  .bar .lab { display: flex; justify-content: space-between; font: 400 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.7); margin-bottom: 9px; }
+  .bar .lab i { color: rgba(235,232,226,0.4); font-style: normal; }
+  .track { height: 12px; border-radius: 6px; background: rgba(235,232,226,0.12); overflow: hidden; }
+  .track > i { display: block; height: 100%; border-radius: 6px; background: #a78bfa; }
+  .flags { display: flex; gap: 40px; font: 400 27px "SF Mono", Menlo, monospace; }
+  .flags .g { color: #3fdc82; } .flags .r { color: #ff5f56; }
+</style>
+</head><body>
+<div id="frame" data-label="graham">
+  <div id="scene">
+    <div class="quote">"what's going on here, with this human being?"</div>
+    <div class="card">
+      <div class="ring">
+        <svg width="220" height="220" viewBox="0 0 220 220">
+          <circle cx="110" cy="110" r="96" fill="none" stroke="rgba(235,232,226,0.12)" stroke-width="14"/>
+          <circle cx="110" cy="110" r="96" fill="none" stroke="#a78bfa" stroke-width="14" stroke-linecap="round"
+                  stroke-dasharray="603" stroke-dashoffset="133" transform="rotate(-90 110 110)"/>
+        </svg>
+        <div class="num"><b>78</b><span>/ 100</span></div>
+      </div>
+      <div class="bars">
+        <div class="bar"><div class="lab"><span>self-awareness</span><i>25%</i></div><div class="track"><i style="width:88%"></i></div></div>
+        <div class="bar"><div class="lab"><span>game awareness</span><i>20%</i></div><div class="track"><i style="width:74%"></i></div></div>
+        <div class="bar"><div class="lab"><span>locus of control</span><i>18%</i></div><div class="track"><i style="width:82%"></i></div></div>
+        <div class="bar"><div class="lab"><span>learning velocity</span><i>15%</i></div><div class="track"><i style="width:66%"></i></div></div>
+        <div class="bar"><div class="lab"><span>credibility</span><i>12%</i></div><div class="track"><i style="width:70%"></i></div></div>
+      </div>
+    </div>
+    <div class="flags"><span class="g">&#9650; bet big if&hellip;</span><span class="r">&#9660; walk away if&hellip;</span></div>
+  </div>
+</div>
+</body></html>

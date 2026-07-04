@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: messy contact fragments resolve into one clean named profile inferred from how they talk */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 48px; padding: 0 64px; }
+  .messy { display: flex; flex-direction: column; gap: 18px; flex-shrink: 0; }
+  .frag { font: 500 34px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42);
+    background: rgba(235,232,226,0.05); border: 1px solid rgba(235,232,226,0.12);
+    border-radius: 10px; padding: 14px 22px; }
+  .arrow { display: flex; flex-direction: column; align-items: center; gap: 8px; color: #34d372; }
+  .arrow svg { display: block; }
+  .arrow .lbl { font: 500 22px "SF Mono", Menlo, monospace; color: rgba(52,211,114,0.75); }
+  .card { width: 450px; flex-shrink: 0; background: #141416; border: 1.5px solid rgba(52,211,114,0.35);
+    border-radius: 18px; padding: 34px 36px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .av { width: 118px; height: 118px; border-radius: 50%; background: rgba(52,211,114,0.16);
+    border: 2px solid #34d372; display: flex; align-items: center; justify-content: center;
+    color: #34d372; font: 700 50px -apple-system, system-ui, sans-serif; letter-spacing: 0.02em; }
+  .nm { color: #ebe8e2; font: 600 44px -apple-system, system-ui, sans-serif; letter-spacing: -0.01em; }
+  .conf { display: flex; align-items: center; gap: 12px; color: rgba(235,232,226,0.5);
+    font: 400 24px "SF Mono", Menlo, monospace; }
+  .conf b { color: #34d372; font-weight: 600; }
+  .basis { color: rgba(235,232,226,0.4); font: 400 21px "SF Mono", Menlo, monospace; white-space: nowrap; }
+</style>
+</head><body>
+<div id="frame" data-label="profile-namer">
+  <div id="scene">
+    <div class="messy">
+      <div class="frag">+1 415 555 0132</div>
+      <div class="frag">@dnc_chen</div>
+      <div class="frag">"sarah?"</div>
+    </div>
+    <div class="arrow">
+      <span class="lbl">infer</span>
+      <svg width="90" height="34" viewBox="0 0 90 34" fill="none" stroke="#34d372" stroke-width="3"><path d="M2 17h78M66 5l16 12-16 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="card">
+      <div class="av">SC</div>
+      <div class="nm">Sarah Chen</div>
+      <div class="conf">confidence <b>0.92</b></div>
+      <div class="basis">basis · sign-off "Sarah Chen"</div>
+    </div>
+  </div>
+</div>
+</body></html>

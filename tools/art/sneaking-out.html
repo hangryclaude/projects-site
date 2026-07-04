@@ -1,0 +1,58 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: CRT-green map — real location teleported to a fake pin walking a drawn route */
+  #scene { background:
+    repeating-linear-gradient(0deg, rgba(74,222,128,0.05) 0 2px, transparent 2px 5px); }
+  svg.map { position:absolute; inset:0; width:100%; height:100%; }
+  .grid { stroke:rgba(74,222,128,0.09); stroke-width:1.5; }
+  .route { fill:none; stroke:#4ade80; stroke-width:3.5; stroke-dasharray:10 10; }
+  .wp { fill:#0f0f11; stroke:#4ade80; stroke-width:3; }
+  .jump { fill:none; stroke:rgba(74,222,128,0.55); stroke-width:2.5; stroke-dasharray:5 9; }
+  .realo { fill:none; stroke:rgba(74,222,128,0.45); stroke-width:2.5; stroke-dasharray:4 6; }
+  .badge { position:absolute; top:72px; left:50%; transform:translateX(-50%);
+    display:flex; align-items:center; gap:15px; padding:14px 32px;
+    border:1.5px solid #4ade80; border-radius:999px; background:rgba(74,222,128,0.09);
+    color:#4ade80; font:700 28px "SF Mono",Menlo,monospace; letter-spacing:0.06em; white-space:nowrap; }
+  .badge .b { width:16px; height:16px; border-radius:50%; background:#4ade80; box-shadow:0 0 16px #4ade80; }
+  .speed { position:absolute; bottom:180px; right:110px; display:flex; align-items:center; gap:13px;
+    padding:12px 24px; border:1.5px solid rgba(74,222,128,0.4); border-radius:12px;
+    color:#4ade80; font:600 25px "SF Mono",Menlo,monospace; background:rgba(74,222,128,0.05); }
+  .cap { position:absolute; bottom:104px; left:50%; transform:translateX(-50%);
+    color:rgba(74,222,128,0.6); font:400 26px "SF Mono",Menlo,monospace; white-space:nowrap; }
+  .lbl { fill:rgba(74,222,128,0.7); font:500 22px "SF Mono",Menlo,monospace; }
+  .lbldim { fill:rgba(74,222,128,0.45); font:500 22px "SF Mono",Menlo,monospace; }
+</style>
+</head><body>
+<div id="frame" data-label="sneaking-out"><div id="scene">
+  <svg class="map" viewBox="0 0 1200 750">
+    <line class="grid" x1="150" y1="0" x2="150" y2="750"/><line class="grid" x1="300" y1="0" x2="300" y2="750"/>
+    <line class="grid" x1="450" y1="0" x2="450" y2="750"/><line class="grid" x1="600" y1="0" x2="600" y2="750"/>
+    <line class="grid" x1="750" y1="0" x2="750" y2="750"/><line class="grid" x1="900" y1="0" x2="900" y2="750"/>
+    <line class="grid" x1="1050" y1="0" x2="1050" y2="750"/>
+    <line class="grid" x1="0" y1="150" x2="1200" y2="150"/><line class="grid" x1="0" y1="300" x2="1200" y2="300"/>
+    <line class="grid" x1="0" y1="450" x2="1200" y2="450"/><line class="grid" x1="0" y1="600" x2="1200" y2="600"/>
+
+    <!-- real location (where you actually are), dim -->
+    <circle class="realo" cx="270" cy="470" r="30"/>
+    <circle cx="270" cy="470" r="7" fill="rgba(74,222,128,0.5)"/>
+    <text class="lbldim" x="230" y="540">actually here</text>
+
+    <!-- teleport jump to the fake route -->
+    <path class="jump" d="M296 452 Q520 300 690 300"/>
+
+    <!-- the drawn route the phone "walks" -->
+    <path class="route" d="M690 300 L840 250 L900 400 L780 470"/>
+    <g class="wp"><circle cx="690" cy="300" r="9"/><circle cx="840" cy="250" r="9"/><circle cx="900" cy="400" r="9"/></g>
+
+    <!-- fake pin (reported location) at head of route -->
+    <path d="M780 470 C780 442 822 442 822 470 C822 494 801 520 801 520 C801 520 780 494 780 470 Z"
+      fill="#4ade80" stroke="#bff3d4" stroke-width="2.5"/>
+    <circle cx="801" cy="470" r="8" fill="#0f0f11"/>
+    <text class="lbl" x="820" y="500">reported here</text>
+  </svg>
+  <div class="badge"><span class="b"></span>GPS &middot; SPOOFED</div>
+  <div class="speed">▶&nbsp; 1.4 m/s</div>
+  <div class="cap">draw a route &middot; set a pace &middot; the phone believes it</div>
+</div></div>
+</body></html>

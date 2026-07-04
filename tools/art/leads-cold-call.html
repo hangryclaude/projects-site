@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the cold-call cockpit — next lead + a rotating price A/B scoreboard */
+  #scene{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;}
+  .lead{display:flex;align-items:center;gap:20px;font:500 30px "SF Mono",Menlo,monospace;color:#ebe8e2;}
+  .lead .play{color:#f5a623;font-size:34px;}
+  .lead .s{color:#f5a623;}
+  .lead .ph{color:rgba(235,232,226,0.5);}
+  .prices{display:flex;gap:26px;}
+  .p{width:250px;border:1.5px solid rgba(235,232,226,0.2);border-radius:16px;padding:26px 28px;display:flex;flex-direction:column;gap:16px;}
+  .p.win{border-color:#f5a623;background:rgba(245,166,35,0.08);}
+  .p .plan{font:400 24px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.5);text-transform:uppercase;letter-spacing:0.04em;}
+  .p .amt{font:700 44px "SF Mono",Menlo,monospace;color:#ebe8e2;letter-spacing:-0.02em;}
+  .p.win .amt{color:#f5a623;}
+  .bar{height:12px;border-radius:6px;background:rgba(235,232,226,0.12);overflow:hidden;}
+  .bar i{display:block;height:100%;background:rgba(235,232,226,0.4);}
+  .p.win .bar i{background:#f5a623;}
+  .rate{font:600 24px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.55);}
+  .p.win .rate{color:#f5a623;}
+  .cap{font:400 26px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.5);}
+  .cap b{color:#f5a623;font-weight:600;}
+</style></head><body>
+<div id="frame" data-label="leads-cold-call"><div id="scene">
+  <div class="lead"><span class="play">&#9654;</span>next: Coastal Realty <span class="s">&#9733;4.9</span> <span class="ph">(805) 555&#8209;0148</span></div>
+  <div class="prices">
+    <div class="p"><span class="plan">monthly</span><span class="amt">$100</span><div class="bar"><i style="width:38%"></i></div><span class="rate">12% close</span></div>
+    <div class="p win"><span class="plan">annual</span><span class="amt">$960</span><div class="bar"><i style="width:62%"></i></div><span class="rate">19% close</span></div>
+    <div class="p"><span class="plan">lifetime</span><span class="amt">$2k</span><div class="bar"><i style="width:26%"></i></div><span class="rate">8% close</span></div>
+  </div>
+  <div class="cap">rotate the price &middot; keep score &middot; <b>you</b> dial every call</div>
+</div></div></body></html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a raw tool becomes a permanent Claude skill — thing → SKILL.md */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 44px; font-family: "SF Mono", Menlo, monospace; }
+  .src {
+    width: 260px; border: 1.5px solid rgba(235,232,226,0.2); border-radius: 16px;
+    background: rgba(235,232,226,0.02); padding: 26px 26px 30px;
+  }
+  .src .ic { font-size: 46px; margin-bottom: 16px; }
+  .src .nm { color: #ebe8e2; font: 500 30px "SF Mono", Menlo, monospace; }
+  .src .ty { color: rgba(235,232,226,0.42); font: 400 24px "SF Mono", Menlo, monospace; margin-top: 6px; }
+  .mid { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .arrow { color: #7aa2ff; font: 300 76px "SF Mono", Menlo, monospace; line-height: 0.6; }
+  .verb { color: #7aa2ff; font: 500 25px "SF Mono", Menlo, monospace; }
+  .skill {
+    width: 500px; border: 1.5px solid rgba(122,162,255,0.45); border-radius: 16px;
+    background: rgba(122,162,255,0.05); overflow: hidden;
+    box-shadow: 0 0 46px rgba(122,162,255,0.14);
+  }
+  .fn { padding: 18px 26px; border-bottom: 1px solid rgba(122,162,255,0.28);
+       color: #7aa2ff; font: 500 24px "SF Mono", Menlo, monospace; background: rgba(122,162,255,0.08); }
+  .body { padding: 24px 26px 28px; }
+  .kv { color: rgba(235,232,226,0.5); font: 400 24px/1.6 "SF Mono", Menlo, monospace; }
+  .kv b { color: #ebe8e2; font-weight: 500; }
+  .trig { color: #7aa2ff; font: 400 24px/1.55 "SF Mono", Menlo, monospace; margin-top: 14px; }
+  .cap { position: absolute; left: 0; right: 0; bottom: 92px; text-align: center;
+         color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="skillify">
+  <div id="scene">
+    <div class="src">
+      <div class="ic">⌘</div>
+      <div class="nm">depop-scout</div>
+      <div class="ty">a CLI you just built</div>
+    </div>
+    <div class="mid">
+      <div class="arrow">→</div>
+      <div class="verb">skillify</div>
+    </div>
+    <div class="skill">
+      <div class="fn">~/.claude/skills/depop-scout/SKILL.md</div>
+      <div class="body">
+        <div class="kv">name: <b>depop-scout</b></div>
+        <div class="kv">description: scans Depop for mispriced…</div>
+        <div class="trig">Use when the user wants to source resale deals…</div>
+      </div>
+    </div>
+    <div class="cap">any tool, script or repo → a permanent capability</div>
+  </div>
+</div>
+</body>
+</html>

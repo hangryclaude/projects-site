@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: one sentence in -> a full, filed project plan out */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 46px; }
+  .row { display: flex; align-items: center; gap: 44px; }
+  .prompt {
+    width: 380px; border: 1.5px solid rgba(167,139,250,0.6); border-radius: 14px;
+    padding: 26px 30px; font: 400 30px/1.35 "SF Mono", Menlo, monospace; color: #ebe8e2;
+    background: rgba(167,139,250,0.05);
+  }
+  .prompt .ps { color: #a78bfa; }
+  .prompt .caret { display: inline-block; width: 3px; height: 30px; background: #a78bfa; vertical-align: -6px; margin-left: 3px; }
+  .arrow { color: #a78bfa; font-size: 52px; font-weight: 300; }
+  .plan {
+    position: relative; width: 400px; border: 1.5px solid rgba(235,232,226,0.3); border-radius: 14px;
+    padding: 30px 34px; background: rgba(235,232,226,0.03);
+  }
+  .plan::before {
+    content: ""; position: absolute; top: -14px; left: 28px; width: 90px; height: 16px;
+    background: rgba(235,232,226,0.03); border: 1.5px solid rgba(235,232,226,0.3); border-bottom: none;
+    border-radius: 8px 8px 0 0;
+  }
+  .plan .id { font: 600 25px "SF Mono", Menlo, monospace; color: #a78bfa; margin-bottom: 22px; }
+  .sect { margin-bottom: 20px; }
+  .sect .h { font: 600 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.85); letter-spacing: 0.05em; }
+  .sect .b { height: 8px; border-radius: 4px; background: rgba(235,232,226,0.16); margin-top: 10px; }
+  .sect .b.short { width: 60%; }
+  .sect .b.mid { width: 82%; }
+  .cap { font: 400 30px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap b { color: #a78bfa; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="brainstorm">
+  <div id="scene">
+    <div class="row">
+      <div class="prompt"><span class="ps">&gt;</span> a menubar timer that guards deep work<span class="caret"></span></div>
+      <div class="arrow">&rarr;</div>
+      <div class="plan">
+        <div class="id">plan #14</div>
+        <div class="sect"><div class="h">GOAL</div><div class="b mid"></div></div>
+        <div class="sect"><div class="h">ARCHITECTURE</div><div class="b"></div><div class="b short" style="margin-top:8px"></div></div>
+        <div class="sect"><div class="h">FEATURES</div><div class="b mid"></div></div>
+      </div>
+    </div>
+    <div class="cap">one sentence in &middot; <b>a runnable plan on the shelf</b></div>
+  </div>
+</div>
+</body></html>

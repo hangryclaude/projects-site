@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: raw git log → a styled weekly report someone actually reads */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 50px; padding: 0 100px; }
+  .log { font: 400 23px/2.0 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); white-space: nowrap; }
+  .log .h { color: rgba(235,232,226,0.28); }
+  .arrow { display: flex; flex-direction: column; align-items: center; gap: 10px; color: #7aa2ff; }
+  .arrow .lab { font: 400 20px "SF Mono", Menlo, monospace; color: rgba(122,162,255,0.85); }
+  .card { width: 470px; border: 1px solid rgba(122,162,255,0.35); border-radius: 16px; overflow: hidden; background: rgba(122,162,255,0.04); }
+  .card .top { padding: 24px 30px 18px; border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .card .ttl { font: 700 34px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .card .range { font: 400 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); margin-top: 4px; }
+  .card .n { float: right; font: 700 46px/1 "SF Mono", Menlo, monospace; color: #7aa2ff; }
+  .card .n s { display: block; text-decoration: none; font-size: 18px; font-weight: 400; color: rgba(235,232,226,0.45); text-align: right; margin-top: 4px; }
+  .card .body { padding: 22px 30px 26px; }
+  .grp { font: 600 22px "SF Mono", Menlo, monospace; color: rgba(122,162,255,0.9); margin: 0 0 6px; }
+  .grp:not(:first-child) { margin-top: 20px; }
+  .b { font: 400 22px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.75); }
+</style>
+</head>
+<body>
+<div id="frame" data-label="work-report">
+  <div id="scene">
+    <div class="log">
+      <div><span class="h">a1c3f9</span> fix bounce parse</div>
+      <div><span class="h">4b7e21</span> wip</div>
+      <div><span class="h">9f0d55</span> add render step</div>
+      <div><span class="h">e2a180</span> ugh typo</div>
+      <div><span class="h">7c4b3e</span> 8 art tiles</div>
+      <div><span class="h">d90f11</span> deploy</div>
+    </div>
+    <div class="arrow">
+      <span class="lab">generate</span>
+      <svg width="80" height="24" viewBox="0 0 80 24"><path d="M2 12 H70 M58 4 L72 12 L58 20" fill="none" stroke="#7aa2ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="card">
+      <div class="top">
+        <div class="n">14<s>commits</s></div>
+        <div class="ttl">This week</div>
+        <div class="range">Jun 26 – Jul 3</div>
+      </div>
+      <div class="body">
+        <div class="grp">Growth machine</div>
+        <div class="b">Bounce parsing fixed · render step added</div>
+        <div class="grp">Portfolio site</div>
+        <div class="b">8 new art tiles · shipped to prod</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

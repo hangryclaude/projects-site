@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the brand front door — enter gate, huge 805 wordmark, LIVE, scanlines */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .scan { position: absolute; inset: 0; z-index: 3; pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0 3px, rgba(0,0,0,0.28) 3px 4px); }
+  .vig { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: radial-gradient(120% 90% at 50% 45%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.72) 100%); }
+  .live { position: absolute; top: 60px; left: 64px; z-index: 5; display: flex; align-items: center; gap: 14px;
+    font: 600 26px "SF Mono", Menlo, monospace; letter-spacing: 0.32em; color: #ff453a; }
+  .live .d { width: 16px; height: 16px; border-radius: 50%; background: #ff453a; box-shadow: 0 0 16px #ff453a; }
+  .est { position: absolute; top: 64px; right: 64px; z-index: 5;
+    font: 500 24px "SF Mono", Menlo, monospace; letter-spacing: 0.22em; color: rgba(235,232,226,0.5); text-align: right; }
+  .lock { position: relative; z-index: 5; text-align: center; }
+  .kick { font: 800 66px/1 -apple-system, system-ui, sans-serif; letter-spacing: 0.16em;
+    color: #ebe8e2; text-transform: uppercase; }
+  .huge { font: 900 250px/0.86 -apple-system, system-ui, sans-serif; letter-spacing: -0.02em;
+    color: #ff453a; text-shadow: 0 0 60px rgba(255,69,58,0.35); }
+  .enter { margin-top: 30px; display: inline-flex; align-items: center; gap: 18px;
+    padding: 20px 52px; border: 2.5px solid rgba(235,232,226,0.7); border-radius: 4px;
+    font: 700 32px "SF Mono", Menlo, monospace; letter-spacing: 0.28em; color: #ebe8e2; }
+  .enter .ar { color: #ff453a; }
+</style>
+</head><body>
+<div id="frame" data-label="underground805-theme">
+  <div id="scene">
+    <div class="live"><span class="d"></span>LIVE</div>
+    <div class="est">EST. 805<br>SANTA BARBARA · CA</div>
+    <div class="lock">
+      <div class="kick">Underground</div>
+      <div class="huge">805</div>
+      <div class="enter">ENTER<span class="ar">&#9656;</span></div>
+    </div>
+    <div class="vig"></div>
+    <div class="scan"></div>
+  </div>
+</div>
+</body></html>

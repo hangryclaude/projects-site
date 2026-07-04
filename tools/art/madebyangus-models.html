@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the low-poly parts bin — laptop, monitor, tower on catalog plinths with where-used tags */
+  svg.bin { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .l { fill: #aebfd8; } .m { fill: #7a90b0; } .d { fill: #52657f; }
+  .plinth { fill: rgba(126,144,176,0.14); stroke: rgba(174,191,216,0.3); stroke-width: 1.5; }
+  .name { font: 500 30px "SF Mono", Menlo, monospace; fill: #ebe8e2; text-anchor: middle; }
+  .tag { font: 400 22px "SF Mono", Menlo, monospace; fill: #7a90b0; text-anchor: middle; }
+  .top { position: absolute; top: 66px; right: 74px;
+    font: 400 26px "SF Mono", Menlo, monospace; color: rgba(174,191,216,0.6); }
+  .top b { color: #aebfd8; font-weight: 500; }
+  .cap { position: absolute; right: 84px; bottom: 74px; text-align: right;
+    font: 400 25px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .cap b { color: #aebfd8; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="madebyangus-models">
+  <div id="scene">
+    <svg class="bin" viewBox="0 0 1200 750">
+      <!-- LAPTOP -->
+      <g transform="translate(280 300)">
+        <ellipse class="plinth" cx="0" cy="150" rx="130" ry="26"/>
+        <!-- screen -->
+        <polygon class="l" points="-95,-90 80,-110 80,10 -95,20"/>
+        <polygon class="m" points="80,-110 108,-96 108,24 80,10"/>
+        <polygon points="-80,-76 66,-94 66,-2 -80,6" fill="#2c3646"/>
+        <!-- keyboard base (perspective) -->
+        <polygon class="m" points="-95,20 80,10 130,60 -70,74"/>
+        <polygon class="d" points="-95,20 -70,74 -70,86 -95,32"/>
+      </g>
+      <text class="name" x="280" y="500">laptop</text>
+      <text class="tag" x="280" y="534">used on · hero</text>
+
+      <!-- MONITOR -->
+      <g transform="translate(600 290)">
+        <ellipse class="plinth" cx="0" cy="160" rx="130" ry="26"/>
+        <polygon class="l" points="-115,-95 60,-95 60,55 -115,55"/>
+        <polygon class="m" points="60,-95 92,-79 92,71 60,55"/>
+        <polygon points="-98,-78 43,-78 43,38 -98,38" fill="#2c3646"/>
+        <!-- stand -->
+        <polygon class="m" points="-24,55 24,55 30,110 -30,110"/>
+        <polygon class="d" points="-52,110 52,110 66,132 -66,132"/>
+      </g>
+      <text class="name" x="600" y="500">monitor</text>
+      <text class="tag" x="600" y="534">used on · about</text>
+
+      <!-- DESKTOP TOWER -->
+      <g transform="translate(920 288)">
+        <ellipse class="plinth" cx="0" cy="162" rx="120" ry="26"/>
+        <polygon class="l" points="-58,-120 40,-120 40,140 -58,140"/>
+        <polygon class="m" points="40,-120 74,-102 74,158 40,140"/>
+        <polygon class="d" points="-58,-120 40,-120 40,-102 -58,-102"/>
+        <!-- vents / drive slots -->
+        <rect class="d" x="-42" y="-96" width="66" height="8" rx="2"/>
+        <rect class="d" x="-42" y="-78" width="66" height="8" rx="2"/>
+        <circle class="d" cx="-9" cy="52" r="20"/>
+        <circle cx="-9" cy="52" r="9" fill="#2c3646"/>
+      </g>
+      <text class="name" x="920" y="500">tower</text>
+      <text class="tag" x="920" y="534">used on · footer</text>
+    </svg>
+    <div class="top"><b>RECOMMENDATIONS</b>.md</div>
+    <div class="cap">low-poly parts bin ·<br><b>Kenney + Creative Trio</b></div>
+  </div>
+</div>
+</body></html>

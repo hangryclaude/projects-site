@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: on-chain, wallets are PUBLIC — two whales buy the same outcome, signal fires */
+  #scene { display: flex; align-items: center; padding: 0 96px; gap: 0; }
+  .head { position: absolute; top: 60px; left: 96px; font: 500 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); letter-spacing: 0.06em; }
+  .head b { color: #35d07f; font-weight: 500; }
+
+  .whales { display: flex; flex-direction: column; gap: 34px; width: 460px; }
+  .whale {
+    display: flex; align-items: center; gap: 20px;
+    border: 1.5px solid rgba(235,232,226,0.22); border-radius: 14px;
+    padding: 20px 24px; background: rgba(235,232,226,0.03);
+  }
+  .whale .addr { font: 500 32px "SF Mono", Menlo, monospace; color: #ebe8e2; letter-spacing: 0.01em; }
+  .whale .pnl { margin-left: auto; font: 700 30px "SF Mono", Menlo, monospace; color: #35d07f; }
+  .whale .side { font: 700 22px "SF Mono", Menlo, monospace; color: #35d07f; background: rgba(53,208,127,0.14); padding: 5px 12px; border-radius: 7px; }
+
+  .arrows { width: 150px; height: 320px; flex: none; }
+  .arrows path { fill: none; stroke: #35d07f; stroke-width: 3; opacity: 0.85; }
+  .arrows .hd { fill: #35d07f; stroke: none; }
+
+  .target { width: 400px; }
+  .card {
+    border: 1.5px solid rgba(53,208,127,0.55); border-radius: 16px;
+    background: rgba(53,208,127,0.07); box-shadow: 0 0 50px rgba(53,208,127,0.15);
+    padding: 26px 28px;
+  }
+  .card .mkt { font: 500 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.7); letter-spacing: 0.03em; }
+  .card .out { display: flex; align-items: baseline; gap: 16px; margin-top: 14px; }
+  .card .out .yes { font: 800 58px "SF Mono", Menlo, monospace; color: #35d07f; }
+  .card .out .px { font: 500 40px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .sig {
+    display: inline-flex; align-items: center; gap: 12px; margin-top: 22px;
+    background: #35d07f; color: #0f0f11; border-radius: 999px;
+    padding: 10px 22px; font: 800 24px "SF Mono", Menlo, monospace; letter-spacing: 0.06em;
+  }
+  .sig .dot { width: 12px; height: 12px; border-radius: 50%; background: #0f0f11; }
+  .cap { position: absolute; right: 96px; bottom: 66px; font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap b { color: rgba(235,232,226,0.85); font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="polymarket-copybot">
+  <div id="scene">
+    <div class="head">POLYMARKET · <b>on-chain, wallets public</b></div>
+    <div class="whales">
+      <div class="whale"><span class="addr">0xA3f9…21</span><span class="side">+YES</span><span class="pnl">+$412k</span></div>
+      <div class="whale"><span class="addr">0x9c2b…e4</span><span class="side">+YES</span><span class="pnl">+$88k</span></div>
+    </div>
+    <svg class="arrows" viewBox="0 0 150 320">
+      <path d="M0 74 C 70 74, 70 152, 132 156"/>
+      <path d="M0 246 C 70 246, 70 168, 132 164"/>
+      <path class="hd" d="M132 160 L 114 150 L 118 160 L 114 170 Z"/>
+    </svg>
+    <div class="target">
+      <div class="card">
+        <div class="mkt">US-PRES-24 · outcome</div>
+        <div class="out"><span class="yes">YES</span><span class="px">63¢</span></div>
+        <div class="sig"><span class="dot"></span>2 WHALES · 8 MIN</div>
+      </div>
+    </div>
+    <div class="cap">same outcome, one window → <b>follow in</b></div>
+  </div>
+</div>
+</body></html>

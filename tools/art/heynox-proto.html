@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the scroll-reveal headline resolving from chaos to calm */
+  #scene { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:0 90px; }
+  #scene::before { content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(60% 40% at 50% 72%, rgba(124,92,255,0.24), transparent 70%); }
+  .loud { position:relative; z-index:1; font: 800 82px/1.0 -apple-system, system-ui, sans-serif; letter-spacing:-0.03em; text-align:center; color:#ebe8e2; }
+  .loud .g1, .loud .g2 { position:absolute; left:0; right:0; top:0; }
+  .loud .g1 { color:#e0644a; opacity:0.5; transform: translate(-9px,-5px) rotate(-1.5deg); }
+  .loud .g2 { color:#7c5cff; opacity:0.5; transform: translate(11px,6px) rotate(1.2deg); }
+  .loud .real { position:relative; }
+  .loud em { font-style:normal; color:#e0644a; }
+  .arrow { position:relative; z-index:1; margin:30px 0; color:rgba(235,232,226,0.35); font-size:40px; line-height:1; }
+  .calm { position:relative; z-index:1; font: 300 78px/1.0 -apple-system, system-ui, sans-serif; letter-spacing:0.02em; text-align:center; color:#ebe8e2; }
+  .calm em { font-style:normal; font-weight:500; color:#a78bfa; }
+  .credit { position:absolute; right:70px; bottom:46px; z-index:2; color:rgba(235,232,226,0.4); font:400 24px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="heynox-proto">
+  <div id="scene">
+    <div class="loud">
+      <span class="g1">Everyone is screaming at you.</span>
+      <span class="g2">Everyone is screaming at you.</span>
+      <span class="real">Everyone is <em>screaming</em> at you.</span>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="calm">One calm <em>inbox.</em></div>
+    <div class="credit">scroll-reveal type · never shipped</div>
+  </div>
+</div>
+</body>
+</html>

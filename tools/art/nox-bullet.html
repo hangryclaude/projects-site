@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .cap { display: flex; align-items: center; gap: 18px; font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap .key {
+    padding: 8px 24px; border: 2px solid rgba(255,122,31,0.75); border-bottom-width: 5px;
+    border-radius: 11px; color: #ff9a3f; font-weight: 600; background: rgba(255,122,31,0.08);
+  }
+</style>
+</head><body>
+<div id="frame" data-label="nox-bullet">
+  <div id="scene">
+    <svg width="1040" height="330" viewBox="0 0 1040 330">
+      <defs>
+        <linearGradient id="brass" x1="0" y1="130" x2="0" y2="200" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#f0c766"/><stop offset="0.5" stop-color="#d9a441"/><stop offset="1" stop-color="#a97a26"/>
+        </linearGradient>
+      </defs>
+      <!-- speed streaks -->
+      <g stroke="#ff7a1f" stroke-linecap="round">
+        <line x1="10"  y1="150" x2="150" y2="150" stroke-width="4" opacity="0.25"/>
+        <line x1="40"  y1="165" x2="185" y2="165" stroke-width="6" opacity="0.5"/>
+        <line x1="20"  y1="182" x2="175" y2="182" stroke-width="4" opacity="0.3"/>
+        <line x1="55"  y1="197" x2="185" y2="197" stroke-width="5" opacity="0.4"/>
+      </g>
+      <!-- bullet (ogive, pointing right) -->
+      <g>
+        <path d="M200 148 H330 Q392 148 400 174 Q392 200 330 200 H200 Z" fill="url(#brass)"/>
+        <rect x="182" y="148" width="24" height="52" rx="5" fill="#b98b30"/>
+        <line x1="230" y1="152" x2="230" y2="196" stroke="#fff" stroke-width="2" opacity="0.35"/>
+      </g>
+      <!-- impact spark on the N -->
+      <g stroke="#ffb020" stroke-linecap="round" stroke-width="6">
+        <line x1="430" y1="174" x2="500" y2="174"/>
+        <line x1="446" y1="128" x2="486" y2="150"/>
+        <line x1="446" y1="220" x2="486" y2="198"/>
+        <line x1="452" y1="102" x2="470" y2="140"/>
+        <line x1="452" y1="246" x2="470" y2="208"/>
+      </g>
+      <circle cx="470" cy="174" r="16" fill="#fff"/>
+      <!-- NOX wordmark -->
+      <text x="500" y="228" font-family="-apple-system, system-ui, sans-serif" font-weight="800" font-size="168" letter-spacing="-4" fill="#ebe8e2">N<tspan fill="#ff7a1f">O</tspan>X</text>
+    </svg>
+    <div class="cap"><span class="key">space</span><span>fires the bullet · again · and again</span></div>
+  </div>
+</div>
+</body></html>

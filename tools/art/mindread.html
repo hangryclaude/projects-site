@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a draft message X-rayed against a person's profile — how it actually lands */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; }
+  .draft {
+    max-width: 720px; padding: 24px 32px; border-radius: 20px; border-bottom-right-radius: 6px;
+    background: rgba(235,232,226,0.08); color: #ebe8e2;
+    font: 400 30px/1.4 "SF Mono", Menlo, monospace; align-self: flex-end; margin-right: 40px;
+  }
+  .arrow { color: rgba(167,139,250,0.7); font-size: 40px; line-height: 1; }
+  .read {
+    width: 800px; border: 1.5px solid rgba(167,139,250,0.4); border-radius: 20px;
+    background: rgba(167,139,250,0.07); padding: 30px 36px;
+    display: flex; flex-direction: column; gap: 22px;
+  }
+  .who { font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .who b { color: #ebe8e2; font-weight: 600; }
+  .verdict { display: flex; align-items: baseline; gap: 20px; }
+  .verdict .k { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .verdict .v { font: 700 46px "SF Mono", Menlo, monospace; color: #ff6b6b; letter-spacing: 0.02em; }
+  .tags { display: flex; gap: 14px; flex-wrap: wrap; }
+  .tag { padding: 9px 20px; border: 1px solid rgba(167,139,250,0.45); border-radius: 999px;
+         font: 400 24px "SF Mono", Menlo, monospace; color: #a78bfa; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="mindread">
+  <div id="scene">
+    <div class="draft">"Hey, just circling back again &mdash; did you get a chance to look?"</div>
+    <div class="arrow">&darr;</div>
+    <div class="read">
+      <div class="who">against &nbsp;<b>Marcus</b> &nbsp;&middot;&nbsp; boss &middot; avoids being managed</div>
+      <div class="verdict"><span class="k">lands as</span><span class="v">NEEDY &amp; PUSHY</span></div>
+      <div class="tags">
+        <span class="tag">loss aversion</span>
+        <span class="tag">face threat</span>
+        <span class="tag">low status move</span>
+        <span class="tag">&rarr; rewrite ready</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

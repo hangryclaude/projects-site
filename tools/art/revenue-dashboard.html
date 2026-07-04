@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: one page answers "is anything making money?" — a total + honest per-stream bars */
+  #scene { display: flex; align-items: center; padding: 0 104px; gap: 92px; }
+  .left { display: flex; flex-direction: column; gap: 8px; }
+  .kicker { font: 500 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); letter-spacing: 0.06em; }
+  .kicker .live { color: #35d07f; }
+  .kicker .live::before { content: "● "; }
+  .total { font: 700 130px/1 -apple-system, system-ui, sans-serif; color: #35d07f; letter-spacing: -0.03em; margin-top: 10px; }
+  .sub { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); margin-top: 6px; }
+  .split { display: flex; gap: 26px; margin-top: 26px; font: 500 25px "SF Mono", Menlo, monospace; }
+  .split .paid { color: #35d07f; }
+  .split .open { color: rgba(235,232,226,0.5); }
+  .split .paid::before { content: ""; display: inline-block; width: 13px; height: 13px; border-radius: 3px; background: #35d07f; margin-right: 10px; vertical-align: 1px; }
+  .split .open::before { content: ""; display: inline-block; width: 13px; height: 13px; border-radius: 3px; border: 1.5px solid rgba(235,232,226,0.4); margin-right: 10px; vertical-align: 1px; }
+
+  .right { flex: 1; display: flex; flex-direction: column; gap: 24px; }
+  .stream { display: grid; grid-template-columns: 200px 1fr 120px; align-items: center; gap: 22px; }
+  .stream .name { font: 500 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.85); }
+  .bar { height: 22px; border-radius: 6px; background: rgba(235,232,226,0.08); overflow: hidden; }
+  .bar > span { display: block; height: 100%; border-radius: 6px; background: #35d07f; }
+  .stream .amt { text-align: right; font: 600 28px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .stream.muted .bar > span { background: rgba(53,208,127,0.45); }
+  .stream.muted .amt { color: rgba(235,232,226,0.7); }
+</style>
+</head><body>
+<div id="frame" data-label="revenue-dashboard">
+  <div id="scene">
+    <div class="left">
+      <div class="kicker">ALL STREAMS · <span class="live">LIVE</span></div>
+      <div class="total">$1,284</div>
+      <div class="sub">is anything making money?</div>
+      <div class="split"><span class="paid">paid $1,284</span><span class="open">open $600</span></div>
+    </div>
+    <div class="right">
+      <div class="stream"><span class="name">lead-agent</span><span class="bar"><span style="width:100%"></span></span><span class="amt">$840</span></div>
+      <div class="stream"><span class="name">consulting</span><span class="bar"><span style="width:41%"></span></span><span class="amt">$300</span></div>
+      <div class="stream muted"><span class="name">plinth</span><span class="bar"><span style="width:14%"></span></span><span class="amt">$92</span></div>
+      <div class="stream muted"><span class="name">misc</span><span class="bar"><span style="width:8%"></span></span><span class="amt">$52</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

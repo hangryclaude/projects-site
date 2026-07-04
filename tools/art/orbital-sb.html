@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: green CRT ground station — wireframe globe pinned with abandoned sites, one under the reticle */
+  #scene { --g:#3ce07a; }
+  .scan { position: absolute; inset: 0; pointer-events: none; z-index: 6;
+    background: repeating-linear-gradient(rgba(60,224,122,0.05) 0 2px, transparent 2px 5px); }
+  .boot { position: absolute; top: 62px; left: 74px; font: 400 25px/1.7 "SF Mono", Menlo, monospace; color: rgba(60,224,122,0.85); }
+  .boot .b { color: rgba(60,224,122,0.45); }
+  svg.globe { position: absolute; left: 50%; top: 52%; transform: translate(-50%,-50%); }
+  .cap { position: absolute; bottom: 58px; right: 74px; font: 400 26px "SF Mono", Menlo, monospace; color: rgba(60,224,122,0.8); }
+  .cap b { color: #ebe8e2; font-weight: 700; }
+</style>
+</head><body>
+<div id="frame" data-label="orbital-sb">
+  <div id="scene">
+    <div class="boot">&gt; GROUND STATION ONLINE<br><span class="b">&gt; loading 64 documented sites…</span><br>&gt; DEPLOY: satellite sweep</div>
+    <svg class="globe" width="560" height="560" viewBox="0 0 560 560" fill="none" stroke="#3ce07a">
+      <circle cx="280" cy="280" r="228" stroke-width="2" opacity="0.9"/>
+      <ellipse cx="280" cy="280" rx="228" ry="86" stroke-width="1.4" opacity="0.4"/>
+      <ellipse cx="280" cy="280" rx="228" ry="164" stroke-width="1.4" opacity="0.35"/>
+      <line x1="52" y1="280" x2="508" y2="280" stroke-width="1.4" opacity="0.4"/>
+      <ellipse cx="280" cy="280" rx="86" ry="228" stroke-width="1.4" opacity="0.4"/>
+      <ellipse cx="280" cy="280" rx="164" ry="228" stroke-width="1.4" opacity="0.35"/>
+      <line x1="280" y1="52" x2="280" y2="508" stroke-width="1.4" opacity="0.4"/>
+      <!-- pins -->
+      <g fill="#3ce07a" stroke="none">
+        <circle cx="200" cy="188" r="7"/><circle cx="356" cy="150" r="7"/>
+        <circle cx="150" cy="316" r="7"/><circle cx="410" cy="332" r="7"/>
+        <circle cx="256" cy="420" r="7"/><circle cx="336" cy="238" r="7"/>
+      </g>
+      <!-- reticle locked on one site -->
+      <g stroke="#ebe8e2" stroke-width="2.5" fill="none">
+        <circle cx="336" cy="238" r="34"/>
+        <line x1="336" y1="192" x2="336" y2="216"/><line x1="336" y1="260" x2="336" y2="284"/>
+        <line x1="290" y1="238" x2="314" y2="238"/><line x1="358" y1="238" x2="382" y2="238"/>
+      </g>
+      <text x="378" y="232" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="22" font-weight="600">HASHIMA</text>
+      <text x="378" y="260" fill="rgba(235,232,226,0.5)" font-family="SF Mono, Menlo, monospace" font-size="19">abandoned 1974</text>
+    </svg>
+    <div class="cap"><b>64</b> ghost sites · sweep from orbit</div>
+    <div class="scan"></div>
+  </div>
+</div>
+</body></html>

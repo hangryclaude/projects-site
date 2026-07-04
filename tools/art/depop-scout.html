@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: cohort of listing prices on a number line, a dashed median, one outlier far below flagged as a deal */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+  .head { color: rgba(235,232,226,0.5); font: 500 27px "SF Mono", Menlo, monospace; letter-spacing: 0.03em; align-self: flex-start; margin-left: 150px; }
+  .head b { color: #ebe8e2; font-weight: 700; }
+  .cap { color: rgba(235,232,226,0.45); font: 400 26px "SF Mono", Menlo, monospace; margin-top: 4px; }
+  .cap b { color: #34d372; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="depop-scout">
+  <div id="scene">
+    <div class="head">query <b>carhartt detroit</b> · 24 listings · median $58</div>
+    <svg width="1000" height="420" viewBox="0 0 1000 420">
+      <!-- axis -->
+      <line x1="70" y1="300" x2="930" y2="300" stroke="rgba(235,232,226,0.25)" stroke-width="2"/>
+      <g fill="rgba(235,232,226,0.4)" font-family="SF Mono, Menlo, monospace" font-size="22" text-anchor="middle">
+        <text x="70" y="340">$20</text><text x="500" y="340">$55</text><text x="930" y="340">$90</text>
+      </g>
+      <!-- median line -->
+      <line x1="530" y1="120" x2="530" y2="300" stroke="#e0c34a" stroke-width="2.5" stroke-dasharray="8 8"/>
+      <text x="530" y="105" fill="#e0c34a" font-family="SF Mono, Menlo, monospace" font-size="24" font-weight="600" text-anchor="middle">median $58</text>
+      <!-- cohort dots -->
+      <g fill="rgba(235,232,226,0.55)">
+        <circle cx="470" cy="300" r="12"/><circle cx="520" cy="300" r="12"/><circle cx="560" cy="300" r="12"/>
+        <circle cx="600" cy="300" r="12"/><circle cx="650" cy="300" r="12"/><circle cx="700" cy="300" r="12"/>
+        <circle cx="760" cy="300" r="12"/><circle cx="840" cy="300" r="12"/><circle cx="505" cy="300" r="12"/>
+        <circle cx="620" cy="300" r="12"/><circle cx="675" cy="300" r="12"/>
+      </g>
+      <!-- outlier deal -->
+      <circle cx="180" cy="300" r="22" fill="#34d372"/>
+      <circle cx="180" cy="300" r="34" fill="none" stroke="#34d372" stroke-width="2.5" opacity="0.5"/>
+      <line x1="180" y1="266" x2="180" y2="190" stroke="#34d372" stroke-width="2"/>
+      <rect x="70" y="140" width="220" height="52" rx="10" fill="rgba(52,211,114,0.14)" stroke="#34d372" stroke-width="1.5"/>
+      <text x="180" y="174" fill="#34d372" font-family="SF Mono, Menlo, monospace" font-size="27" font-weight="700" text-anchor="middle">$34 · −41%</text>
+    </svg>
+    <div class="cap">flags anything <b>under 70% of median</b> before anyone else</div>
+  </div>
+</div>
+</body></html>

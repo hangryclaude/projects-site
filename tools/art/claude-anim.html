@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the Claude sunburst mark rendered as terminal pixel-art, comet trail, prompt line */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  svg.mark { position: absolute; left: 50%; top: 300px; transform: translate(-50%,-50%); width: 520px; height: 520px; }
+  /* half-block pixel grid overlay to read as terminal pixel art */
+  .px {
+    position: absolute; left: 50%; top: 300px; transform: translate(-50%,-50%);
+    width: 760px; height: 760px; pointer-events: none;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(15,15,17,0.5) 0 1px, transparent 1px 13px),
+      repeating-linear-gradient(90deg, rgba(15,15,17,0.5) 0 1px, transparent 1px 13px);
+    mix-blend-mode: multiply;
+    -webkit-mask-image: radial-gradient(circle, #000 46%, transparent 62%);
+    mask-image: radial-gradient(circle, #000 46%, transparent 62%);
+  }
+  .glow { position: absolute; left: 50%; top: 300px; transform: translate(-50%,-50%);
+    width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(216,119,87,0.28), transparent 62%); }
+  .prompt {
+    position: absolute; left: 90px; bottom: 92px; right: 90px;
+    font: 500 34px/1 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.82);
+    display: flex; align-items: center; gap: 4px;
+  }
+  .prompt .dollar { color: #d97757; margin-right: 16px; }
+  .cursor { display: inline-block; width: 18px; height: 34px; background: #d97757; margin-left: 8px; }
+  .cap { position: absolute; right: 90px; top: 66px; text-align: right;
+    font: 400 26px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+  .cap b { color: #d97757; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="claude-anim">
+  <div id="scene">
+    <div class="glow"></div>
+    <svg class="mark" viewBox="0 0 520 520">
+      <defs>
+        <linearGradient id="pl" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f0a271"/>
+          <stop offset="1" stop-color="#c65f3c"/>
+        </linearGradient>
+        <path id="petal" d="M260 60 L286 226 L260 262 L234 226 Z" fill="url(#pl)"/>
+        <g id="star">
+          <use href="#petal"/>
+          <use href="#petal" transform="rotate(32.7 260 260)"/>
+          <use href="#petal" transform="rotate(65.5 260 260)"/>
+          <use href="#petal" transform="rotate(98.2 260 260)"/>
+          <use href="#petal" transform="rotate(130.9 260 260)"/>
+          <use href="#petal" transform="rotate(163.6 260 260)"/>
+          <use href="#petal" transform="rotate(196.4 260 260)"/>
+          <use href="#petal" transform="rotate(229.1 260 260)"/>
+          <use href="#petal" transform="rotate(261.8 260 260)"/>
+          <use href="#petal" transform="rotate(294.5 260 260)"/>
+          <use href="#petal" transform="rotate(327.3 260 260)"/>
+        </g>
+      </defs>
+      <!-- comet trail: fading ghost copies drifting -->
+      <use href="#star" opacity="0.10" transform="translate(-58 34) scale(0.9)" style="transform-origin:center"/>
+      <use href="#star" opacity="0.20" transform="translate(-30 18) scale(0.95)" style="transform-origin:center"/>
+      <use href="#star"/>
+      <circle cx="260" cy="260" r="30" fill="#f4b48a"/>
+    </svg>
+    <div class="px"></div>
+    <div class="cap"><b>5 phases</b> · lissajous drift<br>▀ half-blocks · truecolor ANSI</div>
+    <div class="prompt"><span class="dollar">$</span>python3 claude.py<span class="cursor"></span></div>
+  </div>
+</div>
+</body></html>

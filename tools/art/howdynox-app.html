@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the real heynox.com source, live on a second domain, download rerouted to RPLY.dmg */
+  #scene { display:flex; align-items:center; justify-content:center; gap:64px; }
+  #scene::before { content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(52% 52% at 56% 46%, rgba(124,92,255,0.22), transparent 70%); }
+  .domains { position:relative; z-index:1; display:flex; flex-direction:column; gap:34px; }
+  .dchip { display:flex; align-items:center; gap:12px; font: 500 27px "SF Mono", Menlo, monospace; padding:14px 22px; border-radius:12px; }
+  .dchip.prod { color:rgba(235,232,226,0.4); border:1px dashed rgba(235,232,226,0.25); }
+  .dchip.prod s { text-decoration:none; color:rgba(224,100,74,0.75); }
+  .dchip.live { color:#ebe8e2; border:1px solid rgba(167,139,250,0.55); background:rgba(167,139,250,0.08); }
+  .dchip .d { width:11px; height:11px; border-radius:50%; }
+  .prod .d { background:rgba(235,232,226,0.3); }
+  .live .d { background:#a78bfa; box-shadow:0 0 12px #a78bfa; }
+  .dchip small { display:block; font-size:19px; color:rgba(235,232,226,0.4); font-weight:400; }
+  /* browser window = the real site */
+  .win { position:relative; z-index:1; width:560px; border-radius:16px; overflow:hidden;
+    border:1px solid rgba(235,232,226,0.2); box-shadow:0 0 56px rgba(124,92,255,0.22); }
+  .bar { display:flex; align-items:center; gap:12px; background:#1a1626; padding:14px 18px; }
+  .bar .dots { display:flex; gap:8px; } .bar .dots i { width:12px; height:12px; border-radius:50%; background:rgba(235,232,226,0.25); display:block; }
+  .bar .url { flex:1; background:#0f0f11; border-radius:8px; color:rgba(235,232,226,0.65); font: 400 21px "SF Mono", Menlo, monospace; padding:8px 16px; }
+  .bar .url b { color:#a78bfa; font-weight:500; }
+  .bar .lv { color:#a78bfa; font: 700 18px "SF Mono", Menlo, monospace; letter-spacing:0.1em; display:flex; align-items:center; gap:7px; }
+  .bar .lv i { width:9px; height:9px; border-radius:50%; background:#a78bfa; box-shadow:0 0 10px #a78bfa; display:block; }
+  .hero { background:linear-gradient(160deg,#2b1a52,#150d29); padding:44px 40px 40px; }
+  .hero h2 { color:#ebe8e2; font: 800 46px/1.05 -apple-system, system-ui, sans-serif; letter-spacing:-0.02em; }
+  .hero h2 em { font-style:normal; color:#a78bfa; }
+  .hero p { color:rgba(235,232,226,0.55); font: 400 23px "SF Mono", Menlo, monospace; margin:14px 0 26px; }
+  .dl { display:inline-flex; align-items:center; gap:14px; background:#a78bfa; color:#160c2e;
+    font: 700 24px "SF Mono", Menlo, monospace; padding:14px 26px; border-radius:12px; }
+  .dl .reroute { color:rgba(22,12,46,0.7); font-weight:500; }
+  .credit { position:absolute; right:70px; bottom:46px; z-index:2; color:rgba(235,232,226,0.4); font:400 24px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="howdynox-app">
+  <div id="scene">
+    <div class="domains">
+      <div class="dchip prod"><span class="d"></span><div>heynox.com<small><s>✕ kept out of the click chain</s></small></div></div>
+      <div class="dchip live"><span class="d"></span><div>howdynox.com<small>same Next.js source · own funnel</small></div></div>
+    </div>
+    <div class="win">
+      <div class="bar"><div class="dots"><i></i><i></i><i></i></div><div class="url">howdynox.com</div><div class="lv"><i></i>LIVE</div></div>
+      <div class="hero">
+        <h2>Leave <em>read</em> behind.</h2>
+        <p>every app. one inbox.</p>
+        <a class="dl">Download for Mac <span class="reroute">→ RPLY.dmg</span></a>
+      </div>
+    </div>
+    <div class="credit">pixel-identical — it *is* the site</div>
+  </div>
+</div>
+</body>
+</html>

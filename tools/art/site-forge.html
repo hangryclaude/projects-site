@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: five finished design systems, fanned as swatch cards, feeding a generator */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .rack { display: flex; gap: 24px; align-items: flex-end; }
+  .th { width: 176px; height: 260px; border-radius: 16px; overflow: hidden; position: relative;
+    display: flex; flex-direction: column; }
+  .th .nm { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 14px;
+    font: 500 20px/1.2 "SF Mono", Menlo, monospace; background: rgba(0,0,0,0.4); }
+  /* Editorial Luxe */
+  .luxe { background: #efe9dd; }
+  .luxe .big { flex: 1; display: flex; align-items: center; justify-content: center;
+    font: 400 92px Georgia, serif; color: #1c1a17; font-style: italic; }
+  .luxe .nm { color: #1c1a17; background: rgba(255,255,255,0.55); }
+  /* Neon Dark SaaS */
+  .neon { background: #0c1020; display: flex; align-items: center; justify-content: center; }
+  .neon .orb { width: 118px; height: 118px; border-radius: 50%;
+    background: radial-gradient(circle at 38% 34%, #7af7ff, #2b6cff 55%, #6a3cf0); filter: blur(2px);
+    box-shadow: 0 0 60px rgba(60,140,255,0.7); }
+  .neon .nm { color: #9fd7ff; }
+  /* Brutalist */
+  .brut { background: #f3f2ee; border: 4px solid #111; }
+  .brut .big { flex: 1; display: flex; align-items: center; justify-content: center;
+    font: 800 60px "SF Mono", Menlo, monospace; color: #111; }
+  .brut .nm { color: #111; background: #ffe14d; font-weight: 700; }
+  /* Soft Playful */
+  .soft { background: linear-gradient(150deg,#ffd1e8,#c7d4ff 60%,#d0fff0); }
+  .soft .blob { position: absolute; width: 130px; height: 130px; border-radius: 46% 54% 60% 40%;
+    background: linear-gradient(140deg,#ff86c2,#8a7bff); left: 26px; top: 46px; filter: blur(1px); }
+  .soft .nm { color: #5a3a6e; background: rgba(255,255,255,0.5); }
+  /* Aether — break physics */
+  .aeth { background: #07070b; }
+  .aeth svg { position: absolute; inset: 0; }
+  .aeth .nm { color: #d6c9ff; }
+  .cap { font: 400 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .cap b { color: #ebe8e2; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="site-forge">
+  <div id="scene">
+    <div class="rack">
+      <div class="th luxe" style="transform:rotate(-3deg)"><div class="big">Aa</div><div class="nm">Editorial Luxe</div></div>
+      <div class="th neon" style="transform:rotate(1.5deg)"><div class="orb"></div><div class="nm">Neon Dark SaaS</div></div>
+      <div class="th brut"><div class="big">B_</div><div class="nm">Brutalist</div></div>
+      <div class="th soft" style="transform:rotate(-1.5deg)"><div class="blob"></div><div class="nm">Soft &amp; Playful</div></div>
+      <div class="th aeth" style="transform:rotate(3deg)">
+        <svg viewBox="0 0 176 260" fill="none" stroke="#8a6cff" stroke-width="1.4" opacity="0.9">
+          <path d="M20 210 C60 120 120 150 156 60" opacity="0.7"/>
+          <path d="M20 230 C70 150 110 170 156 90" opacity="0.5"/>
+          <ellipse cx="96" cy="120" rx="70" ry="30" transform="rotate(-24 96 120)" stroke="#c9a0ff"/>
+          <circle cx="96" cy="120" r="8" fill="#c9a0ff" stroke="none"/>
+        </svg>
+        <div class="nm">Aether</div>
+      </div>
+    </div>
+    <div class="cap">5 finished systems · <b>feed a generator, not improv CSS</b></div>
+  </div>
+</div>
+</body></html>

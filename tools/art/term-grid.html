@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a browser tab holding a wall of 12 real PTYs — an actual grid of live shells */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .browser {
+    width: 1000px; border: 1.5px solid rgba(235,232,226,0.2); border-radius: 16px; overflow: hidden;
+    background: #141417;
+  }
+  .chrome { display: flex; align-items: center; gap: 14px; padding: 15px 22px;
+    background: rgba(235,232,226,0.05); border-bottom: 1px solid rgba(235,232,226,0.1); }
+  .dot { width: 13px; height: 13px; border-radius: 50%; }
+  .dot.r { background: #f4574d; } .dot.y { background: #e0c34a; } .dot.g { background: #4ade80; }
+  .url { margin-left: 14px; flex: 1; background: rgba(235,232,226,0.07); border-radius: 999px;
+    padding: 9px 24px; color: rgba(235,232,226,0.6); font: 400 23px "SF Mono", Menlo, monospace; }
+  .url b { color: #7aa2ff; font-weight: 400; }
+  .wall { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 128px);
+    gap: 3px; background: rgba(235,232,226,0.1); padding: 3px; }
+  .cell { background: #101012; padding: 14px 15px; font: 400 17px/1.55 "SF Mono", Menlo, monospace;
+    color: rgba(235,232,226,0.62); overflow: hidden; }
+  .cell .p { color: #7aa2ff; }
+  .cell .cur { display: inline-block; width: 9px; height: 16px; background: #4ade80; vertical-align: -2px; }
+  .cell .dim { color: rgba(235,232,226,0.32); }
+</style></head><body>
+<div id="frame" data-label="term-grid">
+  <div id="scene">
+    <div class="browser">
+      <div class="chrome">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="url"><b>localhost</b>:3000/grid — 12 live shells</span>
+      </div>
+      <div class="wall">
+        <div class="cell"><span class="p">$</span> npm run dev<br><span class="dim">ready in 812ms</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">~</span> top<br><span class="dim">cpu 41% mem 6G</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> git log<br><span class="dim">a3f1 fix pty</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> tail -f log<br><span class="dim">200 GET /ws</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> ping api<br><span class="dim">time=22ms</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> htop<br><span class="dim">load 1.2</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> node build<br><span class="dim">bundled ✓</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> vitest<br><span class="dim">28 passed</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> ssh box<br><span class="dim">connected</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> curl -s<br><span class="dim">{"ok":true}</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> watch ls<br><span class="dim">every 2.0s</span><br><span class="p">$</span> <span class="cur"></span></div>
+        <div class="cell"><span class="p">$</span> ai smart<br><span class="dim">routed free</span><br><span class="p">$</span> <span class="cur"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

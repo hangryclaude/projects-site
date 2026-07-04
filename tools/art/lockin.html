@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: command center restored after a laptop sleep — projects + live terminal, state persisted */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; }
+  .app {
+    width: 900px; height: 420px; display: flex;
+    border: 1.5px solid rgba(235,232,226,0.22); border-radius: 18px; overflow: hidden;
+    background: rgba(235,232,226,0.03);
+  }
+  .side { width: 300px; border-right: 1.5px solid rgba(235,232,226,0.14); padding: 26px 24px; display: flex; flex-direction: column; gap: 20px; }
+  .prj { display: flex; align-items: center; gap: 14px; font: 400 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .prj .d { width: 12px; height: 12px; border-radius: 50%; background: rgba(235,232,226,0.3); }
+  .prj.on { color: #ebe8e2; }
+  .prj.on .d { background: #3fdc82; box-shadow: 0 0 14px rgba(63,220,130,0.7); }
+  .term { flex: 1; padding: 28px 30px; font: 400 26px/1.55 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.7); }
+  .term .p { color: #3fdc82; }
+  .term .c { color: #ebe8e2; }
+  .term .car { display: inline-block; width: 13px; height: 26px; background: #3fdc82; vertical-align: -5px; }
+  .pill { display: flex; align-items: center; gap: 16px; padding: 15px 30px; border: 1.5px solid rgba(63,220,130,0.55); border-radius: 999px; background: rgba(63,220,130,0.1); }
+  .pill .lk { color: #3fdc82; }
+  .pill .t { font: 500 27px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .pill .s { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+</style>
+</head>
+<body>
+<div id="frame" data-label="lockin">
+  <div id="scene">
+    <div class="app">
+      <div class="side">
+        <div class="prj on"><span class="d"></span>inbox-engine</div>
+        <div class="prj"><span class="d"></span>lead-agent</div>
+        <div class="prj on"><span class="d"></span>viral-x</div>
+        <div class="prj"><span class="d"></span>habit-warden</div>
+        <div class="prj"><span class="d"></span>local-llm</div>
+      </div>
+      <div class="term">
+        <div><span class="p">~/viral-x</span> $ node harvest.js</div>
+        <div class="c">restored session &middot; 41 turns cached</div>
+        <div class="c">pty reattached &middot; cwd intact</div>
+        <div><span class="p">$</span> <span class="car"></span></div>
+      </div>
+    </div>
+    <div class="pill">
+      <span class="lk"><svg width="26" height="30" viewBox="0 0 26 30"><rect x="3" y="13" width="20" height="15" rx="3" fill="none" stroke="#3fdc82" stroke-width="2.5"/><path d="M7 13 V9 a6 6 0 0 1 12 0 V13" fill="none" stroke="#3fdc82" stroke-width="2.5"/><circle cx="13" cy="20" r="2.5" fill="#3fdc82"/></svg></span>
+      <span class="t">close the laptop &rarr; open &rarr; exactly where you left off</span>
+      <span class="s">:7878</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

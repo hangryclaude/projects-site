@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the pipeline — a business with no website becomes a clean generated site + a $50 offer in the inbox */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 40px; }
+  .card { width: 320px; height: 300px; border-radius: 16px; overflow: hidden; }
+  /* before: no website */
+  .before { border: 2px dashed rgba(235,232,226,0.28); background: rgba(235,232,226,0.02);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+  .before .biz { color: rgba(235,232,226,0.55); font: 500 30px "SF Mono", Menlo, monospace; }
+  .before .none { color: rgba(235,232,226,0.35); font: 400 24px "SF Mono", Menlo, monospace; border: 1.5px solid rgba(235,232,226,0.2); border-radius: 8px; padding: 8px 18px; }
+  .before .broke { color: rgba(235,232,226,0.28); font: 700 60px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; }
+  /* arrow */
+  .arrow { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .arrow .lab { color: rgba(52,211,114,0.9); font: 500 22px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; }
+  /* after: generated site */
+  .after { border: 1.5px solid rgba(52,211,114,0.5); background: #12140f;
+    box-shadow: 0 0 60px rgba(52,211,114,0.12); }
+  .after .abar { display: flex; gap: 8px; padding: 14px 18px; border-bottom: 1px solid rgba(52,211,114,0.2); }
+  .after .abar span { width: 10px; height: 10px; border-radius: 50%; background: rgba(52,211,114,0.5); }
+  .after .ahero { height: 96px; margin: 18px; border-radius: 10px;
+    background: linear-gradient(120deg, #1f6b40, #34d372); display: flex; align-items: center; padding: 0 20px;
+    color: #0f1a13; font: 700 26px -apple-system, system-ui, sans-serif; }
+  .after .lines { padding: 0 18px; display: flex; flex-direction: column; gap: 12px; }
+  .after .lines i { display: block; height: 12px; border-radius: 6px; background: rgba(235,232,226,0.18); }
+  .tag { position: absolute; right: 70px; top: 96px; display: flex; align-items: center; gap: 16px;
+    padding: 16px 26px; border-radius: 14px; border: 1.5px solid #34d372; background: rgba(52,211,114,0.08);
+    color: #ebe8e2; font: 500 27px "SF Mono", Menlo, monospace; box-shadow: 0 0 40px rgba(52,211,114,0.15); }
+  .tag b { color: #34d372; font-weight: 700; }
+  .flow { position: absolute; left: 0; right: 0; bottom: 96px; text-align: center;
+    color: rgba(235,232,226,0.42); font: 400 25px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; }
+</style>
+</head><body>
+<div id="frame" data-label="alpha-sites">
+  <div id="scene">
+    <div class="tag"><b>$50</b> offer sent</div>
+    <div class="card before">
+      <div class="broke">404</div>
+      <div class="biz">Joe's Plumbing</div>
+      <div class="none">no website</div>
+    </div>
+    <div class="arrow">
+      <svg width="120" height="40" viewBox="0 0 120 40"><path d="M4 20 H104 M88 6 L108 20 L88 34" fill="none" stroke="#34d372" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="lab">generate</span>
+    </div>
+    <div class="card after">
+      <div class="abar"><span></span><span></span><span></span></div>
+      <div class="ahero">Joe's Plumbing</div>
+      <div class="lines"><i style="width:80%"></i><i style="width:60%"></i><i style="width:70%"></i></div>
+    </div>
+    <div class="flow">discover · enrich · generate · review · send</div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a SERP result climbing to #3 with the surname redacted — the one hard rule */
+  #scene{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;}
+  .card{width:860px;border:1.5px solid rgba(235,232,226,0.22);border-radius:20px;padding:44px 48px;display:flex;flex-direction:column;gap:26px;}
+  .top{display:flex;align-items:center;gap:22px;}
+  .rank{display:flex;align-items:center;gap:10px;background:rgba(52,211,114,0.14);border:1.5px solid #34d372;border-radius:12px;padding:10px 18px;font:700 34px "SF Mono",Menlo,monospace;color:#34d372;}
+  .rank .up{font-size:24px;}
+  .q{font:400 26px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.5);}
+  .title{display:flex;align-items:center;gap:20px;font:600 44px "SF Mono",Menlo,monospace;color:#ebe8e2;letter-spacing:-0.01em;}
+  .redact{position:relative;display:inline-block;width:280px;height:46px;background:#ebe8e2;border-radius:6px;}
+  .url{font:400 27px "SF Mono",Menlo,monospace;color:#5fbf8a;}
+  .rule{display:flex;align-items:center;gap:14px;font:400 25px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.5);}
+  .lock{width:20px;height:20px;border:2.5px solid rgba(235,232,226,0.55);border-radius:5px;border-top:none;position:relative;}
+  .lock:before{content:"";position:absolute;left:3px;top:-13px;width:10px;height:13px;border:2.5px solid rgba(235,232,226,0.55);border-bottom:none;border-radius:6px 6px 0 0;}
+  .chips{display:flex;gap:16px;font:500 24px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.55);}
+  .chips span{border:1px solid rgba(235,232,226,0.2);border-radius:999px;padding:8px 20px;}
+  .chips b{color:#34d372;}
+</style></head><body>
+<div id="frame" data-label="carly-seo"><div id="scene">
+  <div class="card">
+    <div class="top"><span class="rank">#3 <span class="up">&#9650;4</span></span><span class="q">courthouse wedding photographer &middot; santa barbara</span></div>
+    <div class="title">Captured&nbsp;&amp;&nbsp;Created&nbsp;&mdash;&nbsp;<span class="redact"></span></div>
+    <div class="url">capturedandcreated.com</div>
+    <div class="rule"><span class="lock"></span>surname &mdash; never appears in public rank</div>
+  </div>
+  <div class="chips"><span>36 keywords</span><span>cited by Claude <b>&#10003;</b></span><span>Perplexity <b>&#10003;</b></span></div>
+</div></div></body></html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a jailed local model on a countdown — RAM capped, auto-killed at expiry */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .card {
+    width: 760px; border: 1.5px solid rgba(235,232,226,0.2); border-radius: 22px;
+    background: rgba(235,232,226,0.02); padding: 40px 46px 44px;
+    font-family: "SF Mono", Menlo, monospace;
+  }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 34px; }
+  .model { color: #ebe8e2; font: 500 34px "SF Mono", Menlo, monospace; }
+  .ctx { color: #8fa6c8; font: 400 25px "SF Mono", Menlo, monospace; }
+  .badge { display: flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 12px;
+           border: 2px solid #eaa64d; color: #eaa64d; background: rgba(234,166,77,0.09);
+           font: 700 24px "SF Mono", Menlo, monospace; letter-spacing: 0.06em; }
+  .timer { text-align: center; margin: 8px 0 30px; }
+  .timer .t { color: #ebe8e2; font: 300 96px "SF Mono", Menlo, monospace; letter-spacing: 0.02em; }
+  .timer .lbl { color: rgba(235,232,226,0.42); font: 400 25px "SF Mono", Menlo, monospace; margin-top: 4px; }
+  .timer .t b { color: #eaa64d; font-weight: 300; }
+  .ram { display: flex; align-items: center; gap: 20px; }
+  .rlab { color: rgba(235,232,226,0.6); font: 400 26px "SF Mono", Menlo, monospace; width: 96px; }
+  .rtrack { flex: 1; height: 20px; border-radius: 10px; background: rgba(235,232,226,0.08); overflow: hidden; }
+  .rfill { display: block; height: 100%; width: 71%; border-radius: 10px; background: #7aa2ff; }
+  .rval { color: rgba(235,232,226,0.6); font: 400 26px "SF Mono", Menlo, monospace; }
+  .cap { position: absolute; left: 0; right: 0; bottom: 92px; text-align: center;
+         color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="openclaw-warden">
+  <div id="scene">
+    <div class="card">
+      <div class="top">
+        <div>
+          <div class="model">qwen-32b-uncensored</div>
+          <div class="ctx">capped at 4k ctx</div>
+        </div>
+        <div class="badge">🔒 JAILED</div>
+      </div>
+      <div class="timer">
+        <div class="t">27:<b>04</b></div>
+        <div class="lbl">until auto-kill</div>
+      </div>
+      <div class="ram">
+        <span class="rlab">RAM</span>
+        <span class="rtrack"><span class="rfill"></span></span>
+        <span class="rval">17 / 24 GB</span>
+      </div>
+    </div>
+    <div class="cap">time-boxed · RAM-capped · killed before it OOMs</div>
+  </div>
+</div>
+</body>
+</html>

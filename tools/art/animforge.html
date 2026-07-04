@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the generate -> screenshot -> argue loop, running until the render is clean */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 42px; }
+  svg { display: block; }
+  .cap { font: 400 30px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .cap b { color: #3fdc82; font-weight: 600; }
+</style>
+</head><body>
+<div id="frame" data-label="animforge">
+  <div id="scene">
+    <svg width="900" height="470" viewBox="0 0 900 470" fill="none">
+      <defs>
+        <marker id="ah" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
+          <path d="M0 0 L8 4 L0 8 z" fill="#a78bfa"/>
+        </marker>
+        <marker id="ahg" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
+          <path d="M0 0 L8 4 L0 8 z" fill="#3fdc82"/>
+        </marker>
+        <marker id="ahr" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
+          <path d="M0 0 L8 4 L0 8 z" fill="#ff5f56"/>
+        </marker>
+      </defs>
+
+      <!-- node 1: free model improves -->
+      <rect x="30" y="180" width="200" height="110" rx="14" fill="rgba(167,139,250,0.1)" stroke="#a78bfa" stroke-width="2.5"/>
+      <text x="130" y="228" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="25" font-weight="600" text-anchor="middle">free model</text>
+      <text x="130" y="262" fill="rgba(235,232,226,0.55)" font-family="SF Mono, Menlo, monospace" font-size="22" text-anchor="middle">improve()</text>
+
+      <!-- arrow 1 -> 2 -->
+      <line x1="238" y1="235" x2="330" y2="235" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#ah)"/>
+
+      <!-- node 2: headless chrome screenshot (the preview) -->
+      <rect x="345" y="150" width="210" height="170" rx="14" fill="rgba(235,232,226,0.03)" stroke="rgba(235,232,226,0.3)" stroke-width="2"/>
+      <rect x="345" y="150" width="210" height="34" rx="14" fill="rgba(235,232,226,0.05)"/>
+      <circle cx="366" cy="167" r="5" fill="rgba(235,232,226,0.3)"/><circle cx="384" cy="167" r="5" fill="rgba(235,232,226,0.3)"/><circle cx="402" cy="167" r="5" fill="rgba(235,232,226,0.3)"/>
+      <!-- rendered animation inside -->
+      <circle cx="450" cy="250" r="42" fill="none" stroke="#3fdc82" stroke-width="3"/>
+      <circle cx="450" cy="250" r="20" fill="rgba(63,220,130,0.25)"/>
+      <text x="450" y="308" fill="rgba(235,232,226,0.45)" font-family="SF Mono, Menlo, monospace" font-size="19" text-anchor="middle">screenshot</text>
+
+      <!-- arrow 2 -> 3 -->
+      <line x1="563" y1="235" x2="655" y2="235" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#ah)"/>
+
+      <!-- node 3: verify -->
+      <rect x="670" y="180" width="200" height="110" rx="14" fill="rgba(167,139,250,0.1)" stroke="#a78bfa" stroke-width="2.5"/>
+      <text x="770" y="228" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="25" font-weight="600" text-anchor="middle">verify()</text>
+      <text x="770" y="262" fill="rgba(235,232,226,0.55)" font-family="SF Mono, Menlo, monospace" font-size="22" text-anchor="middle">console?</text>
+
+      <!-- feedback loop: errors -> back to model (red, over the top) -->
+      <path d="M770 178 C770 70 130 70 130 176" stroke="#ff5f56" stroke-width="2.5" fill="none" stroke-dasharray="9 7" marker-end="url(#ahr)"/>
+      <rect x="368" y="46" width="164" height="46" rx="10" fill="#0f0f11" stroke="#ff5f56" stroke-width="2"/>
+      <text x="450" y="77" fill="#ff5f56" font-family="SF Mono, Menlo, monospace" font-size="22" font-weight="600" text-anchor="middle">&#10007; errors</text>
+
+      <!-- clean exit (green, down) -->
+      <path d="M770 292 C770 380 500 380 500 408" stroke="#3fdc82" stroke-width="3" fill="none" marker-end="url(#ahg)"/>
+      <text x="612" y="376" fill="#3fdc82" font-family="SF Mono, Menlo, monospace" font-size="23" font-weight="600" text-anchor="middle">&#10003; clean &rarr; swap</text>
+    </svg>
+    <div class="cap">generate &middot; screenshot &middot; argue &middot; <b>until it renders clean &middot; $0</b></div>
+  </div>
+</div>
+</body></html>

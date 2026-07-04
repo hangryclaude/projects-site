@@ -1,0 +1,83 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a flow-sim topology — work-units route through nodes, one node is a red bottleneck with a backed-up queue */
+  #scene { display: block; }
+  svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ntxt { font: 600 30px "SF Mono", Menlo, monospace; fill: #ebe8e2; }
+  .top { fill: rgba(235,232,226,0.5); font: 500 26px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="learn-smth">
+  <div id="scene">
+    <svg viewBox="0 0 1200 750" fill="none">
+      <defs>
+        <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="26"/>
+        </filter>
+        <marker id="ah" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto">
+          <path d="M0 0 L8 4 L0 8 Z" fill="rgba(122,162,255,0.75)"/>
+        </marker>
+        <marker id="ahr" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto">
+          <path d="M0 0 L8 4 L0 8 Z" fill="rgba(255,92,92,0.85)"/>
+        </marker>
+      </defs>
+
+      <!-- title -->
+      <text class="top" x="600" y="132" text-anchor="middle">one engine · every topic · the mechanic is the lesson</text>
+
+      <!-- edges -->
+      <g stroke="rgba(122,162,255,0.55)" stroke-width="3">
+        <line x1="292" y1="378" x2="386" y2="378" marker-end="url(#ah)"/>
+        <line x1="547" y1="360" x2="650" y2="272" marker-end="url(#ah)"/>
+        <line x1="810" y1="255" x2="905" y2="360" marker-end="url(#ah)"/>
+        <line x1="810" y1="500" x2="905" y2="392" marker-end="url(#ah)"/>
+      </g>
+      <!-- edge into the bottleneck (red) -->
+      <line x1="547" y1="392" x2="650" y2="486" stroke="rgba(255,92,92,0.7)" stroke-width="3" marker-end="url(#ahr)"/>
+
+      <!-- flowing work-units -->
+      <g fill="#7aa2ff">
+        <circle cx="330" cy="378" r="8"/><circle cx="360" cy="378" r="8"/>
+        <circle cx="585" cy="327" r="8"/><circle cx="620" cy="297" r="8"/>
+        <circle cx="850" cy="315" r="8"/>
+      </g>
+
+      <!-- bottleneck glow -->
+      <circle cx="735" cy="497" r="70" fill="#ff5c5c" opacity="0.28" filter="url(#glow)"/>
+
+      <!-- backed-up red queue piling before the db node -->
+      <g fill="#ff5c5c">
+        <rect x="612" y="452" width="24" height="24" rx="4" opacity="0.55"/>
+        <rect x="612" y="482" width="24" height="24" rx="4" opacity="0.7"/>
+        <rect x="612" y="512" width="24" height="24" rx="4" opacity="0.85"/>
+        <rect x="580" y="482" width="24" height="24" rx="4" opacity="0.5"/>
+        <rect x="580" y="512" width="24" height="24" rx="4" opacity="0.65"/>
+      </g>
+
+      <!-- nodes -->
+      <!-- spawn -->
+      <rect x="135" y="335" width="157" height="86" rx="16" fill="rgba(122,162,255,0.08)" stroke="#7aa2ff" stroke-width="2.5"/>
+      <text class="ntxt" x="213" y="388" text-anchor="middle">spawn</text>
+      <!-- route / balancer -->
+      <rect x="390" y="335" width="157" height="86" rx="16" fill="rgba(122,162,255,0.08)" stroke="#7aa2ff" stroke-width="2.5"/>
+      <text class="ntxt" x="468" y="388" text-anchor="middle">route</text>
+      <!-- web (ok) -->
+      <rect x="653" y="212" width="157" height="86" rx="16" fill="rgba(122,162,255,0.08)" stroke="#7aa2ff" stroke-width="2.5"/>
+      <text class="ntxt" x="731" y="265" text-anchor="middle">web</text>
+      <!-- db (bottleneck) -->
+      <rect x="653" y="454" width="157" height="86" rx="16" fill="rgba(255,92,92,0.14)" stroke="#ff5c5c" stroke-width="3"/>
+      <text class="ntxt" x="731" y="507" text-anchor="middle" fill="#ff5c5c">db</text>
+      <!-- done -->
+      <rect x="908" y="335" width="157" height="86" rx="16" fill="rgba(122,162,255,0.08)" stroke="#7aa2ff" stroke-width="2.5"/>
+      <text class="ntxt" x="986" y="388" text-anchor="middle">done</text>
+
+      <!-- bottleneck tag -->
+      <rect x="838" y="475" width="196" height="44" rx="22" fill="#ff5c5c"/>
+      <text x="936" y="505" text-anchor="middle" fill="#0f0f11" font-family="SF Mono, Menlo, monospace" font-size="24" font-weight="700" letter-spacing="0.08em">BOTTLENECK</text>
+    </svg>
+  </div>
+</div>
+</body>
+</html>

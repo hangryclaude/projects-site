@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a ChatGPT-style window running a local model, wifi off, tokens/s ticking */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .win {
+    width: 860px; border: 1.5px solid rgba(235,232,226,0.22); border-radius: 20px;
+    background: rgba(235,232,226,0.03); overflow: hidden;
+  }
+  .bar {
+    display: flex; align-items: center; gap: 16px;
+    padding: 22px 30px; border-bottom: 1.5px solid rgba(235,232,226,0.14);
+    font: 500 30px "SF Mono", Menlo, monospace; color: #ebe8e2;
+  }
+  .bar .diamond { width: 16px; height: 16px; border-radius: 4px; background: #a78bfa; transform: rotate(45deg); }
+  .bar .chev { color: rgba(235,232,226,0.5); font-size: 26px; }
+  .bar .grow { flex: 1; }
+  .bar .off { display: flex; align-items: center; gap: 12px; font-size: 25px; color: #3fdc82; }
+  .body { padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 24px; }
+  .msg { max-width: 640px; padding: 18px 26px; border-radius: 18px; font: 400 28px/1.4 "SF Mono", Menlo, monospace; }
+  .user { align-self: flex-end; background: rgba(235,232,226,0.08); color: rgba(235,232,226,0.75); border-bottom-right-radius: 6px; }
+  .ai { align-self: flex-start; background: rgba(167,139,250,0.12); color: #ebe8e2; border-bottom-left-radius: 6px; border: 1px solid rgba(167,139,250,0.35); }
+  .ai .car { display: inline-block; width: 3px; height: 26px; background: #a78bfa; vertical-align: -4px; margin-left: 3px; }
+  .cap { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); letter-spacing: 0.01em; }
+  .cap b { color: #a78bfa; font-weight: 500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="local-llm">
+  <div id="scene">
+    <div class="win">
+      <div class="bar">
+        <span class="diamond"></span><span>gpt-oss:20b</span><span class="chev">&#9662;</span>
+        <span class="grow"></span>
+        <span class="off">
+          <svg width="30" height="24" viewBox="0 0 30 24"><path d="M2 8 Q15 -2 28 8" fill="none" stroke="#3fdc82" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/><path d="M7 13 Q15 6 23 13" fill="none" stroke="#3fdc82" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/><circle cx="15" cy="19" r="3" fill="#3fdc82"/><line x1="4" y1="22" x2="26" y2="2" stroke="#3fdc82" stroke-width="2.5" stroke-linecap="round"/></svg>
+          offline
+        </span>
+      </div>
+      <div class="body">
+        <div class="msg user">explain MoE quantization, briefly</div>
+        <div class="msg ai">Sure — MXFP4 packs the experts to 4-bit so a 20B model fits in 24&nbsp;GB<span class="car"></span></div>
+      </div>
+    </div>
+    <div class="cap">runs on your MacBook &middot; <b>0 tokens spent</b> &middot; 62 tok/s</div>
+  </div>
+</div>
+</body>
+</html>

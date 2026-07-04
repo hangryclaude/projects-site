@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: your dot at center, ALPR cameras all around aiming their view-cones at you */
+  svg.map { position:absolute; inset:0; width:100%; height:100%; }
+  .grid { stroke: rgba(235,232,226,0.06); stroke-width:1.5; }
+  .ring { fill:none; stroke:#f5a524; }
+  .you  { fill:#f5a524; }
+  .youo { fill:none; stroke:#f5a524; stroke-width:3; }
+  .cone { fill:#ff4545; opacity:0.12; }
+  .cbody{ fill:#141416; stroke:rgba(235,232,226,0.55); stroke-width:3; }
+  .lens { fill:#ff4545; }
+  .alert {
+    position:absolute; top:74px; left:50%; transform:translateX(-50%);
+    display:flex; align-items:center; gap:16px;
+    padding:15px 34px; border:1.5px solid #ff4545; border-radius:999px;
+    background:rgba(255,69,69,0.08); color:#ff4545;
+    font:700 29px "SF Mono",Menlo,monospace; letter-spacing:0.04em; white-space:nowrap;
+  }
+  .rec { width:17px; height:17px; border-radius:50%; background:#ff4545; box-shadow:0 0 18px #ff4545; }
+  .cap { position:absolute; bottom:62px; left:50%; transform:translateX(-50%);
+    color:rgba(235,232,226,0.5); font:400 27px "SF Mono",Menlo,monospace; white-space:nowrap; }
+  .cap b { color:#f5a524; font-weight:600; }
+</style>
+</head><body>
+<div id="frame" data-label="camera-watch"><div id="scene">
+  <svg class="map" viewBox="0 0 1200 750">
+    <line class="grid" x1="150" y1="0" x2="150" y2="750"/>
+    <line class="grid" x1="300" y1="0" x2="300" y2="750"/>
+    <line class="grid" x1="450" y1="0" x2="450" y2="750"/>
+    <line class="grid" x1="600" y1="0" x2="600" y2="750"/>
+    <line class="grid" x1="750" y1="0" x2="750" y2="750"/>
+    <line class="grid" x1="900" y1="0" x2="900" y2="750"/>
+    <line class="grid" x1="1050" y1="0" x2="1050" y2="750"/>
+    <line class="grid" x1="0" y1="150" x2="1200" y2="150"/>
+    <line class="grid" x1="0" y1="300" x2="1200" y2="300"/>
+    <line class="grid" x1="0" y1="450" x2="1200" y2="450"/>
+    <line class="grid" x1="0" y1="600" x2="1200" y2="600"/>
+
+    <!-- view cones converging on you -->
+    <polygon class="cone" points="330,200 566,430 633,330"/>
+    <polygon class="cone" points="900,210 570,328 630,432"/>
+    <polygon class="cone" points="960,520 622,324 578,436"/>
+    <polygon class="cone" points="250,470 615,438 585,322"/>
+
+    <!-- pulse rings + you -->
+    <circle class="ring" cx="600" cy="380" r="92"  opacity="0.55"/>
+    <circle class="ring" cx="600" cy="380" r="162" opacity="0.30"/>
+    <circle class="ring" cx="600" cy="380" r="236" opacity="0.14"/>
+    <circle class="youo" cx="600" cy="380" r="26"/>
+    <circle class="you"  cx="600" cy="380" r="12"/>
+
+    <!-- cameras (body + lens) -->
+    <g><rect class="cbody" x="304" y="184" width="52" height="30" rx="6"/><circle class="lens" cx="360" cy="199" r="9"/></g>
+    <g><rect class="cbody" x="874" y="194" width="52" height="30" rx="6"/><circle class="lens" cx="874" cy="209" r="9"/></g>
+    <g><rect class="cbody" x="934" y="504" width="52" height="30" rx="6"/><circle class="lens" cx="934" cy="519" r="9"/></g>
+    <g><rect class="cbody" x="224" y="454" width="52" height="30" rx="6"/><circle class="lens" cx="276" cy="469" r="9"/></g>
+  </svg>
+  <div class="alert"><span class="rec"></span>REC &middot; YOU'RE BEING RECORDED</div>
+  <div class="cap"><b>4 ALPR cameras</b> nearby &middot; nearest 90m</div>
+</div></div>
+</body></html>

@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a self-paced course — 5 module checklist with a sticky progress bar, nearly done */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 130px; gap: 30px; }
+  .head { display: flex; align-items: baseline; justify-content: space-between; }
+  .title { color: #ebe8e2; font: 600 44px -apple-system, system-ui, sans-serif; letter-spacing: -0.01em; }
+  .count { color: #3fdc82; font: 600 34px "SF Mono", Menlo, monospace; }
+  .track { height: 14px; border-radius: 8px; background: rgba(235,232,226,0.12); overflow: hidden; }
+  .fill { width: 80%; height: 100%; border-radius: 8px; background: #7aa2ff; }
+  .mods { display: flex; flex-direction: column; gap: 20px; margin-top: 12px; }
+  .mod { display: flex; align-items: center; gap: 26px; }
+  .cb { width: 44px; height: 44px; border-radius: 11px; flex: 0 0 auto;
+        border: 2px solid rgba(235,232,226,0.3); display: flex; align-items: center; justify-content: center; }
+  .cb.done { background: #3fdc82; border-color: #3fdc82; color: #0f0f11; font: 700 30px "SF Mono", Menlo, monospace; }
+  .mtxt { color: #ebe8e2; font: 400 36px "SF Mono", Menlo, monospace; }
+  .mod.todo .mtxt { color: rgba(235,232,226,0.5); }
+  .foot { color: rgba(235,232,226,0.45); font: 400 26px "SF Mono", Menlo, monospace; margin-top: 10px; align-self: flex-end; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="prompting-course">
+  <div id="scene">
+    <div class="head">
+      <span class="title">Prompting &amp; Claude</span>
+      <span class="count">4 / 5</span>
+    </div>
+    <div class="track"><div class="fill"></div></div>
+    <div class="mods">
+      <div class="mod"><span class="cb done">&#10003;</span><span class="mtxt">What an LLM actually is</span></div>
+      <div class="mod"><span class="cb done">&#10003;</span><span class="mtxt">Prompting fundamentals</span></div>
+      <div class="mod"><span class="cb done">&#10003;</span><span class="mtxt">Prompt like Anthropic's engineers</span></div>
+      <div class="mod"><span class="cb done">&#10003;</span><span class="mtxt">Prompting Claude Code (agents)</span></div>
+      <div class="mod todo"><span class="cb"></span><span class="mtxt">Free official courses + certs</span></div>
+    </div>
+    <div class="foot">self-paced · one HTML page · no server</div>
+  </div>
+</div>
+</body>
+</html>

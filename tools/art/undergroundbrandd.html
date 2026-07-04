@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the operating manual — a tabbed binder, ~60 playbooks, brand DNA */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .scan { position: absolute; inset: 0; z-index: 6; pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0 3px, rgba(0,0,0,0.20) 3px 4px); }
+  .est { position: absolute; top: 62px; left: 64px; z-index: 6;
+    font: 600 24px "SF Mono", Menlo, monospace; letter-spacing: 0.26em; color: rgba(235,232,226,0.5); }
+  .est b { color: #ff453a; font-weight: 600; }
+  .stack { display: flex; align-items: center; }
+  .binder { position: relative; width: 600px; height: 440px; z-index: 2; }
+  .page { position: absolute; border-radius: 6px; background: #17171a; border: 1.5px solid rgba(235,232,226,0.12); }
+  .p1 { inset: -22px -22px 22px 22px; }
+  .p2 { inset: -11px -11px 11px 11px; background: #1b1b1f; }
+  .cover { position: absolute; inset: 0; border-radius: 6px;
+    background: #101013; border: 2px solid #ff453a; padding: 58px 54px; z-index: 3; }
+  .cbrand { font: 700 28px "SF Mono", Menlo, monospace; letter-spacing: 0.24em; color: #ff453a; }
+  .ctitle { margin-top: 30px; font: 900 84px/0.96 -apple-system, system-ui, sans-serif;
+    text-transform: uppercase; letter-spacing: -0.01em; color: #ebe8e2; }
+  .cmeta { margin-top: 46px; font: 500 30px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; color: rgba(235,232,226,0.5); }
+  .cmeta b { color: #ebe8e2; }
+  .cmeta .sub { display: block; margin-top: 8px; font-size: 26px; }
+  .tabs { display: flex; flex-direction: column; gap: 22px; margin-left: -2px; z-index: 4; }
+  .tab { padding: 15px 26px 15px 34px; border-radius: 0 9px 9px 0; background: #ff453a;
+    color: #0f0f11; font: 700 25px "SF Mono", Menlo, monospace; letter-spacing: 0.06em; }
+  .tab.alt { background: #2a2a2f; color: rgba(235,232,226,0.78); }
+</style>
+</head><body>
+<div id="frame" data-label="undergroundbrandd">
+  <div id="scene">
+    <div class="est"><b>&#9679;</b> UNDERGROUND 805</div>
+    <div class="stack">
+      <div class="binder">
+        <div class="page p1"></div>
+        <div class="page p2"></div>
+        <div class="cover">
+          <div class="cbrand">UNDERGROUND 805</div>
+          <div class="ctitle">Operating<br>Manual</div>
+          <div class="cmeta"><b>&#8776;60</b> playbooks<span class="sub">idea &rarr; drop day</span></div>
+        </div>
+      </div>
+      <div class="tabs">
+        <div class="tab">THEME</div>
+        <div class="tab alt">ADS</div>
+        <div class="tab alt">SMS</div>
+        <div class="tab alt">SUPPLIERS</div>
+        <div class="tab alt">DROP DAY</div>
+      </div>
+    </div>
+    <div class="scan"></div>
+  </div>
+</div>
+</body></html>

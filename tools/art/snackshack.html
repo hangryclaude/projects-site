@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: touch POS card grid; a tap appends a row to the Google Sheet, stock -1, $0 hosting */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 46px; }
+  .pos { width: 456px; }
+  .poslbl { font: 700 25px "SF Mono", Menlo, monospace; letter-spacing: 0.16em; color: rgba(235,232,226,0.5); text-transform: uppercase; }
+  .grid { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .item { height: 128px; border-radius: 15px; background: #17171a; border: 1.5px solid rgba(235,232,226,0.12);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+  .item .em { font-size: 44px; line-height: 1; }
+  .item .pr { font: 700 28px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .item.tap { background: rgba(52,211,114,0.16); border-color: #34d372; box-shadow: 0 0 40px rgba(52,211,114,0.3); }
+  .item.tap .pr { color: #34d372; }
+  .arrow { font: 300 76px "SF Mono", Menlo, monospace; color: #34d372; }
+  .sheet { width: 380px; border-radius: 12px; overflow: hidden; border: 1.5px solid rgba(52,211,114,0.4); }
+  .sh { padding: 18px 24px; background: rgba(52,211,114,0.16); font: 700 26px "SF Mono", Menlo, monospace; color: #34d372; letter-spacing: 0.04em; }
+  .row { display: grid; grid-template-columns: 1.4fr 1fr 0.9fr; }
+  .row > div { padding: 20px 20px; border-top: 1px solid rgba(52,211,114,0.16);
+    font: 500 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.8); }
+  .row.head > div { color: rgba(235,232,226,0.45); font-weight: 700; }
+  .row.new > div { color: #34d372; }
+  .stock { margin-top: 24px; font: 500 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .stock b { color: #34d372; }
+  .tag { position: absolute; bottom: 56px; right: 64px; font: 500 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+</style>
+</head><body>
+<div id="frame" data-label="snackshack">
+  <div id="scene">
+    <div class="pos">
+      <div class="poslbl">tap to sell</div>
+      <div class="grid">
+        <div class="item"><span class="em">&#127871;</span><span class="pr">$2</span></div>
+        <div class="item tap"><span class="em">&#129380;</span><span class="pr">$1.50</span></div>
+        <div class="item"><span class="em">&#127851;</span><span class="pr">$1</span></div>
+        <div class="item"><span class="em">&#129367;</span><span class="pr">$1</span></div>
+        <div class="item"><span class="em">&#128167;</span><span class="pr">$1</span></div>
+        <div class="item"><span class="em">&#127850;</span><span class="pr">$3</span></div>
+      </div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div>
+      <div class="sheet">
+        <div class="sh">SALES LOG &middot; Sheet</div>
+        <div class="row head"><div>item</div><div>price</div><div>time</div></div>
+        <div class="row"><div>Chips</div><div>$2.00</div><div>1:02</div></div>
+        <div class="row"><div>Soda</div><div>$1.00</div><div>1:04</div></div>
+        <div class="row new"><div>Soda</div><div>$1.50</div><div>now</div></div>
+      </div>
+      <div class="stock">Inventory: Soda <b>&minus;1</b> &rarr; 23 left</div>
+    </div>
+    <div class="tag">$0 hosting &bull; the sheet is the database</div>
+  </div>
+</div>
+</body></html>

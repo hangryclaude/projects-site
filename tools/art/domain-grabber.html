@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: RDAP availability check — AI-brainstormed domains, each with its HTTP code, 404=available green / 200=taken red */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 130px; gap: 30px; }
+  .prompt { font: 400 30px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); }
+  .prompt .dollar { color: #34d372; margin-right: 14px; }
+  .prompt b { color: #ebe8e2; font-weight: 500; }
+  .rows { display: flex; flex-direction: column; gap: 16px; }
+  .r { display: flex; align-items: center; font: 500 34px "SF Mono", Menlo, monospace; }
+  .r .name { width: 380px; color: #ebe8e2; }
+  .r .code { width: 90px; color: rgba(235,232,226,0.4); font-weight: 400; }
+  .r .stat { display: flex; align-items: center; gap: 14px; }
+  .free { color: #34d372; }
+  .taken { color: rgba(235,232,226,0.35); }
+  .r.taken .name { color: rgba(235,232,226,0.4); text-decoration: line-through; text-decoration-color: rgba(244,80,74,0.6); }
+  .dot { width: 15px; height: 15px; border-radius: 50%; }
+  .dot.g { background: #34d372; }
+  .x { color: #f4504a; font-weight: 700; }
+</style>
+</head><body>
+<div id="frame" data-label="domain-grabber">
+  <div id="scene">
+    <div class="prompt"><span class="dollar">$</span>dgrab <b>"fintech for teens"</b> --tlds com,io</div>
+    <div class="rows">
+      <div class="r"><span class="name">vaultly.com</span><span class="code">404</span><span class="stat free"><span class="dot g"></span>available</span></div>
+      <div class="r taken"><span class="name">piggy.io</span><span class="code">200</span><span class="stat taken"><span class="x">✕</span>taken</span></div>
+      <div class="r"><span class="name">centsly.com</span><span class="code">404</span><span class="stat free"><span class="dot g"></span>available</span></div>
+      <div class="r taken"><span class="name">nudge.io</span><span class="code">200</span><span class="stat taken"><span class="x">✕</span>taken</span></div>
+      <div class="r"><span class="name">quidly.com</span><span class="code">404</span><span class="stat free"><span class="dot g"></span>available</span></div>
+    </div>
+  </div>
+</div>
+</body></html>

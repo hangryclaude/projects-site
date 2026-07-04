@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: nameserver repoint — porkbun NS struck, cloudflare NS set, ×22 idempotent */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 50px; }
+  .title { font: 500 36px "SF Mono", Menlo, monospace; color: #ebe8e2; display: flex; align-items: center; gap: 18px; }
+  .title b { color: #f6821f; font-weight: 700; }
+  .flow { display: flex; align-items: center; gap: 46px; }
+  .ns { border-radius: 16px; padding: 26px 34px; font: 400 27px/1.7 "SF Mono", Menlo, monospace; }
+  .ns .cap { display: block; font-size: 21px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; opacity: 0.7; }
+  .old { color: rgba(235,232,226,0.42); border: 1.5px solid rgba(235,232,226,0.2); }
+  .old s { text-decoration: line-through; text-decoration-color: rgba(235,232,226,0.5); }
+  .new { color: #f6821f; border: 1.5px solid rgba(246,130,31,0.55); background: rgba(246,130,31,0.06); }
+  .arrow { display: flex; flex-direction: column; align-items: center; gap: 8px; color: #f6821f; }
+  .arrow .lab { font: 400 20px "SF Mono", Menlo, monospace; color: rgba(246,130,31,0.85); }
+  .arrow svg { display: block; }
+  .hint { font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .hint b { color: rgba(235,232,226,0.7); font-weight: 500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="cf-migrate">
+  <div id="scene">
+    <div class="title">
+      <svg width="46" height="30" viewBox="0 0 46 30"><path d="M12 26 h24 a8 8 0 0 0 1-15.9 A11 11 0 0 0 16 8 A9 9 0 0 0 12 26 Z" fill="none" stroke="#f6821f" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      <span><b>22 domains</b> → Cloudflare DNS</span>
+    </div>
+    <div class="flow">
+      <div class="ns old"><span class="cap">Porkbun NS</span><s>ns1.porkbun.com</s><br><s>ns2.porkbun.com</s></div>
+      <div class="arrow">
+        <span class="lab">updateNs</span>
+        <svg width="90" height="26" viewBox="0 0 90 26"><path d="M2 13 H80 M68 4 L82 13 L68 22" fill="none" stroke="#f6821f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="lab">×22 · idempotent</span>
+      </div>
+      <div class="ns new"><span class="cap">Cloudflare NS</span>elle.ns.cloudflare.com<br>rob.ns.cloudflare.com</div>
+    </div>
+    <div class="hint"><b>DRY_RUN=1</b> first · verify with <b>dig</b> · registration stays at Porkbun</div>
+  </div>
+</div>
+</body>
+</html>

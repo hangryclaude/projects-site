@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a fictional in-game inbox full of NPC sales spam — the generator's output */
+  #scene { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:34px; }
+  .win { width:912px; border:1.5px solid rgba(235,232,226,0.22); border-radius:16px; overflow:hidden;
+    background:rgba(176,155,255,0.03); }
+  .bar { display:flex; align-items:center; justify-content:space-between; padding:20px 30px;
+    border-bottom:1px solid rgba(235,232,226,0.14); }
+  .bar .t { color:#ebe8e2; font:600 29px "SF Mono",Menlo,monospace; }
+  .bar .t b { color:#b09bff; }
+  .bar .cnt { color:#b09bff; font:600 25px "SF Mono",Menlo,monospace; }
+  .row { display:flex; align-items:center; gap:22px; padding:20px 30px; border-bottom:1px solid rgba(235,232,226,0.07); }
+  .row:last-child { border-bottom:none; }
+  .av { width:56px; height:56px; border-radius:50%; flex:none; display:flex; align-items:center; justify-content:center;
+    font:600 25px "SF Mono",Menlo,monospace; color:#0f0f11; }
+  .meta { flex:1; min-width:0; }
+  .snd { color:#ebe8e2; font:500 26px "SF Mono",Menlo,monospace; }
+  .subj { color:rgba(235,232,226,0.5); font:400 24px "SF Mono",Menlo,monospace; margin-top:6px;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .subj .hi { color:#b09bff; }
+  .cap { color:rgba(235,232,226,0.55); font:400 27px "SF Mono",Menlo,monospace; white-space:nowrap; }
+  .cap b { color:#b09bff; font-weight:600; }
+</style>
+</head><body>
+<div id="frame" data-label="caspian-game"><div id="scene">
+  <div class="win">
+    <div class="bar"><span class="t">Caspian&nbsp;<b>Mail</b>&nbsp;&middot;&nbsp;Inbox</span><span class="cnt">2,000 unread</span></div>
+    <div class="row"><span class="av" style="background:#8fd98f">GV</span><div class="meta">
+      <div class="snd">Gillim Vott &middot; Caravan Wares</div>
+      <div class="subj">RE: your ox-cart's extended warranty <span class="hi">(act now)</span></div></div></div>
+    <div class="row"><span class="av" style="background:#f5c451">MP</span><div class="meta">
+      <div class="snd">Madam Peska &middot; Fortunes</div>
+      <div class="subj">You have been <span class="hi">SELECTED</span> for a Caspian cruise</div></div></div>
+    <div class="row"><span class="av" style="background:#b09bff">T3</span><div class="meta">
+      <div class="snd">a boy in the market &middot; ??</div>
+      <div class="subj">yo. wanna buy a sword. cheap. no questions</div></div></div>
+    <div class="row"><span class="av" style="background:#ff7a7a">SB</span><div class="meta">
+      <div class="snd">Syndic Burl &middot; Tithe Office</div>
+      <div class="subj"><span class="hi">FINAL NOTICE:</span> your tribute is overdue</div></div></div>
+  </div>
+  <div class="cap"><b>50 senders</b> &times; <b>50 angles</b>, rule-gated &rarr; 2,000 valid combos</div>
+</div></div>
+</body></html>

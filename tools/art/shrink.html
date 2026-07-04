@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a fat token payload squeezed small before it hits the LLM */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 46px; }
+  .pipe { color: rgba(235,232,226,0.6); font: 400 30px "SF Mono", Menlo, monospace; }
+  .pipe b { color: #ebe8e2; font-weight: 500; }
+  .pipe span { color: #7aa2ff; }
+  .rows { display: flex; flex-direction: column; gap: 30px; }
+  .row { display: flex; align-items: center; gap: 26px; }
+  .tag { width: 130px; text-align: right; color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+  .barc { width: 620px; height: 44px; border-radius: 10px; background: rgba(235,232,226,0.06); position: relative; }
+  .barf { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 10px; display: flex; align-items: center; padding-left: 24px;
+          font: 600 27px "SF Mono", Menlo, monospace; }
+  .before { width: 100%; background: rgba(235,232,226,0.16); color: #ebe8e2; }
+  .after { width: 25%; background: #7aa2ff; color: #0f1220; }
+  .save { color: #3fdc82; font: 700 40px "SF Mono", Menlo, monospace; letter-spacing: 0.02em; }
+  .cap { color: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="shrink">
+  <div id="scene">
+    <div class="pipe"><b>repomix --stdout</b> <span>|</span> <b>shrink --ai</b></div>
+    <div class="rows">
+      <div class="row"><span class="tag">before</span><span class="barc"><span class="barf before">4,812 tokens</span></span></div>
+      <div class="row"><span class="tag">after</span><span class="barc"><span class="barf after">1,206</span></span><span class="save">−75%</span></div>
+    </div>
+    <div class="cap">smaller payload · facts, names & code kept</div>
+  </div>
+</div>
+</body>
+</html>

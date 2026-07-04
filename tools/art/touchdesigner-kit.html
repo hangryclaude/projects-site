@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: interrogating a TD op tree — a MediaPipe hand skeleton + the textport that found its channels */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 66px; }
+  .hand { width: 360px; overflow: visible; }
+  .term { width: 520px; border-radius: 16px; overflow: hidden; border: 1.5px solid rgba(235,232,226,0.16); background: rgba(235,232,226,0.02); }
+  .term .tb { height: 42px; display: flex; align-items: center; gap: 9px; padding: 0 18px; background: rgba(235,232,226,0.06); }
+  .term .tb i { width: 12px; height: 12px; border-radius: 50%; background: rgba(235,232,226,0.3); }
+  .term .tb span { margin-left: 12px; font: 500 21px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .term .out { padding: 22px 26px; font: 400 24px/1.62 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.66); }
+  .term .out .p { color: #ebe8e2; }
+  .term .out .c { color: #29d3c4; }
+  .term .out .d { color: rgba(235,232,226,0.4); }
+  .term .out .pr { color: #29d3c4; }
+  .cap { position: absolute; bottom: 58px; right: 74px; font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+</style>
+</head><body>
+<div id="frame" data-label="touchdesigner-kit">
+  <div id="scene">
+    <svg class="hand" viewBox="0 0 300 380" fill="none" stroke="#29d3c4" stroke-width="3">
+      <!-- palm bones -->
+      <path d="M150 350 L96 250 M150 350 L128 210 M150 350 L168 206 M150 350 L206 214 M150 350 L244 250" opacity="0.85"/>
+      <!-- thumb -->
+      <path d="M96 250 L66 210 L52 176" stroke-linecap="round"/>
+      <!-- index (highlighted) -->
+      <path d="M128 210 L120 150 L114 98 L110 58" stroke="#ebe8e2" stroke-linecap="round"/>
+      <!-- middle -->
+      <path d="M168 206 L172 142 L176 88" stroke-linecap="round"/>
+      <!-- ring -->
+      <path d="M206 214 L216 156 L224 108" stroke-linecap="round"/>
+      <!-- pinky -->
+      <path d="M244 250 L256 204 L264 168" stroke-linecap="round"/>
+      <!-- landmark dots -->
+      <g fill="#29d3c4" stroke="none">
+        <circle cx="150" cy="350" r="8"/>
+        <circle cx="96" cy="250" r="6"/><circle cx="66" cy="210" r="6"/><circle cx="52" cy="176" r="6"/>
+        <circle cx="128" cy="210" r="6"/><circle cx="120" cy="150" r="6"/><circle cx="114" cy="98" r="6"/>
+        <circle cx="168" cy="206" r="6"/><circle cx="172" cy="142" r="6"/><circle cx="176" cy="88" r="6"/>
+        <circle cx="206" cy="214" r="6"/><circle cx="216" cy="156" r="6"/><circle cx="224" cy="108" r="6"/>
+        <circle cx="244" cy="250" r="6"/><circle cx="256" cy="204" r="6"/><circle cx="264" cy="168" r="6"/>
+      </g>
+      <!-- index fingertip highlighted -->
+      <circle cx="110" cy="58" r="13" fill="none" stroke="#ebe8e2" stroke-width="3"/>
+      <circle cx="110" cy="58" r="6" fill="#ebe8e2" stroke="none"/>
+      <text x="128" y="52" fill="#ebe8e2" font-family="SF Mono, Menlo, monospace" font-size="17" font-weight="600" stroke="none">index_finger_tip</text>
+    </svg>
+    <div class="term">
+      <div class="tb"><i></i><i></i><i></i><span>TD · Textport</span></div>
+      <div class="out">
+<span class="d">&gt;</span> scan <span class="p">/project1</span> …<br>
+<span class="p">/project1/handtrack1</span> <span class="d">CHOP</span><br>
+&nbsp;&nbsp;<span class="c">h1:index_finger_tip</span> <span class="pr">✓</span><br>
+&nbsp;&nbsp;<span class="c">h1:thumb_tip</span> <span class="pr">✓</span><br>
+<span class="p">/project1/videodev1</span> <span class="d">TOP 1280×720</span><br>
+<span class="d">→ 42 channels · 3 TOPs found</span>
+      </div>
+    </div>
+    <div class="cap">walk the op tree · find where the data lives</div>
+  </div>
+</div>
+</body></html>

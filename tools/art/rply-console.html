@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .console {
+    width: 940px; border: 1.5px solid rgba(157,141,255,0.4); border-radius: 22px;
+    background: rgba(157,141,255,0.05); overflow: hidden;
+  }
+  .top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 34px; border-bottom: 1px solid rgba(235,232,226,0.12);
+  }
+  .title { font: 700 30px "SF Mono", Menlo, monospace; color: #ebe8e2; letter-spacing: 0.02em; }
+  .title b { color: #9d8dff; }
+  .status { padding: 9px 22px; border-radius: 999px; background: rgba(224,195,74,0.14); color: #e0c34a; font: 600 24px "SF Mono", Menlo, monospace; }
+  .body { display: flex; gap: 0; }
+  .cell { flex: 1; padding: 30px 34px; }
+  .cell + .cell { border-left: 1px solid rgba(235,232,226,0.1); }
+  .lab { font: 400 23px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); margin-bottom: 14px; }
+  .big { font: 800 72px/1 "SF Mono", Menlo, monospace; color: #9d8dff; letter-spacing: -0.03em; }
+  .big span { font-size: 26px; color: rgba(235,232,226,0.5); font-weight: 400; }
+  .lanes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 8px; }
+  .lanes i { height: 26px; border-radius: 6px; background: rgba(52,211,114,0.2); border: 1.5px solid #34d372; }
+  .lanes i.burn { background: rgba(244,80,74,0.2); border-color: #f4504a; }
+  .foot { padding: 20px 34px; border-top: 1px solid rgba(235,232,226,0.12); font: 400 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .foot .g { color: #34d372; } .foot .r { color: #f4504a; }
+</style>
+</head><body>
+<div id="frame" data-label="rply-console">
+  <div id="scene">
+    <div class="console">
+      <div class="top"><div class="title"><b>RPLY</b> · campaign console</div><div class="status">PREFLIGHT</div></div>
+      <div class="body">
+        <div class="cell">
+          <div class="lab">influencers scored</div>
+          <div class="big">116 <span>prospects</span></div>
+        </div>
+        <div class="cell">
+          <div class="lab">mail lanes · burn-and-replace</div>
+          <div class="lanes"><i></i><i></i><i></i><i></i><i></i><i class="burn"></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="foot"><span class="g">✓</span> dry-run passed &nbsp;·&nbsp; <span class="r">✗</span> go-live blocked: resend key + domains</div>
+    </div>
+  </div>
+</div>
+</body></html>

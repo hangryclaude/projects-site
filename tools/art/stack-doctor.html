@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a one-glance stack vitals readout — mostly green, one degraded, one silent break caught */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 96px; gap: 40px; }
+  .head { display: flex; align-items: center; gap: 28px; }
+  .head .title { color: #ebe8e2; font: 600 44px "SF Mono", Menlo, monospace; letter-spacing: -0.01em; }
+  .pulse { flex: 1; }
+  .grid {
+    display: grid; grid-template-columns: 1fr 1fr; column-gap: 60px; row-gap: 24px;
+    font: 400 31px/1 "SF Mono", Menlo, monospace;
+  }
+  .r { display: flex; align-items: center; gap: 20px; color: rgba(235,232,226,0.82); }
+  .r .g { width: 34px; text-align: center; font-weight: 700; }
+  .r .name { flex: 1; }
+  .r .val { color: rgba(235,232,226,0.38); font-size: 27px; }
+  .ok  .g { color: #4ade80; }
+  .warn .g, .warn .name { color: #e0c34a; }
+  .bad .g, .bad .name  { color: #f4574d; }
+  .foot { display: flex; align-items: center; gap: 22px; margin-top: 6px; font: 400 28px "SF Mono", Menlo, monospace; }
+  .tally b { font-weight: 700; }
+  .tally .cg { color: #4ade80; } .tally .cy { color: #e0c34a; } .tally .cr { color: #f4574d; }
+  .hint { color: rgba(235,232,226,0.4); }
+</style></head><body>
+<div id="frame" data-label="stack-doctor">
+  <div id="scene">
+    <div class="head">
+      <span class="title">stack vitals</span>
+      <svg class="pulse" height="60" viewBox="0 0 560 60" fill="none" preserveAspectRatio="none">
+        <path d="M0 30 H190 l16 -22 l20 44 l18 -50 l16 28 H320 l14 -14 l14 14 H560"
+              stroke="#4ade80" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="grid">
+      <div class="r ok"><span class="g">✓</span><span class="name">node · rustc · gh</span><span class="val">ok</span></div>
+      <div class="r ok"><span class="g">✓</span><span class="name">ai providers</span><span class="val">6/6</span></div>
+      <div class="r ok"><span class="g">✓</span><span class="name">ollama · gateway</span><span class="val">:7600</span></div>
+      <div class="r ok"><span class="g">✓</span><span class="name">spend-guard</span><span class="val">armed</span></div>
+      <div class="r ok"><span class="g">✓</span><span class="name">clone-brain</span><span class="val">loaded</span></div>
+      <div class="r warn"><span class="g">!</span><span class="name">second-take hook</span><span class="val">stale</span></div>
+      <div class="r ok"><span class="g">✓</span><span class="name">subagents · cmds</span><span class="val">14</span></div>
+      <div class="r bad"><span class="g">✗</span><span class="name">playwright</span><span class="val">missing</span></div>
+    </div>
+    <div class="foot">
+      <span class="tally"><b class="cg">18 ✓</b> · <b class="cy">1 !</b> · <b class="cr">1 ✗</b></span>
+      <span class="hint">read-only · nothing mutated</span>
+    </div>
+  </div>
+</div>
+</body></html>

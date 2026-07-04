@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a flawless product card for a store with no inventory — ambient-light gadget, price, add to cart */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; }
+  .flow { display: flex; align-items: center; gap: 18px;
+    font: 500 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .flow .on { color: #ebe8e2; }
+  .flow .done { color: #f0a35a; }
+  .flow .sep { color: rgba(235,232,226,0.25); }
+  .card {
+    width: 560px; border: 1.5px solid rgba(235,232,226,0.18); border-radius: 24px;
+    background: rgba(235,232,226,0.03); padding: 40px 44px 36px;
+  }
+  .shot { height: 240px; border-radius: 16px; position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #1a1815, #131316);
+    display: flex; align-items: center; justify-content: center; }
+  .bar { width: 300px; height: 26px; border-radius: 14px;
+    background: linear-gradient(90deg, #f0a35a, #ffd9a0);
+    box-shadow: 0 0 70px 22px rgba(240,163,90,0.55); }
+  .meta { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 30px; }
+  .name { font: 600 40px/1.1 -apple-system, system-ui, sans-serif; color: #ebe8e2; }
+  .name span { display: block; font: 400 25px/1.6 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .price { font: 600 44px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .cart { margin-top: 30px; height: 62px; border-radius: 14px; background: #f0a35a;
+    display: flex; align-items: center; justify-content: center;
+    font: 600 28px "SF Mono", Menlo, monospace; color: #0f0f11; }
+  .cap { font: 400 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+  .cap b { color: #f0a35a; font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="flux-store">
+  <div id="scene">
+    <div class="flow"><span class="on">shop</span><span class="sep">›</span>cart<span class="sep">›</span>checkout<span class="sep">›</span><span class="done">✓</span></div>
+    <div class="card">
+      <div class="shot"><div class="bar"></div></div>
+      <div class="meta">
+        <div class="name">Aura Bar<span>ambient desk light</span></div>
+        <div class="price">$68</div>
+      </div>
+      <div class="cart">Add to cart</div>
+    </div>
+    <div class="cap">a flawless checkout for <b>$0.00 of stock</b></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .stage { position: relative; }
+  .card {
+    display: flex; align-items: center; gap: 34px; width: 860px;
+    padding: 40px 46px; border-radius: 24px; border: 1.5px solid rgba(157,141,255,0.4); background: rgba(157,141,255,0.05);
+  }
+  .vote {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 20px 28px; border-radius: 18px; border: 2px solid rgba(157,141,255,0.6); background: rgba(157,141,255,0.08); color: #9d8dff;
+  }
+  .vote .tri { font-size: 36px; line-height: 1; }
+  .vote .n { font: 700 40px "SF Mono", Menlo, monospace; }
+  .icon { width: 92px; height: 92px; border-radius: 22px; flex: none;
+          background: linear-gradient(135deg,#9d8dff,#6d5cff); display: flex; align-items: center; justify-content: center;
+          font: 800 46px -apple-system, system-ui, sans-serif; color: #fff; }
+  .meta { flex: 1; }
+  .name { font: 800 44px -apple-system, system-ui, sans-serif; color: #ebe8e2; margin-bottom: 10px; }
+  .tag { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.55); margin-bottom: 18px; }
+  .where { display: flex; gap: 12px; }
+  .where span { padding: 8px 18px; border-radius: 8px; font: 500 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.6); background: rgba(235,232,226,0.06); border: 1px solid rgba(235,232,226,0.14); }
+  .stamp {
+    position: absolute; bottom: -46px; right: -30px; transform: rotate(-9deg);
+    padding: 12px 30px; border: 4px solid #e0c34a; border-radius: 12px;
+    font: 800 38px "SF Mono", Menlo, monospace; color: #e0c34a; letter-spacing: 0.05em;
+    background: #14130e; box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  }
+</style>
+</head><body>
+<div id="frame" data-label="rply-launch">
+  <div id="scene">
+    <div class="stage">
+      <div class="card">
+        <div class="vote"><span class="tri">▲</span><span class="n">0</span></div>
+        <div class="icon">R</div>
+        <div class="meta">
+          <div class="name">RPLY</div>
+          <div class="tag">Everyone is screaming at you. One calm inbox.</div>
+          <div class="where"><span>Product Hunt</span><span>Show HN</span><span>X</span></div>
+        </div>
+      </div>
+      <div class="stamp">AWAITING SIGN-OFF</div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the Resend dashboard, cloned — sidebar + emails table, monochrome restraint */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .win { width: 936px; height: 552px; border-radius: 20px; overflow: hidden; display: flex;
+    border: 1.5px solid rgba(235,232,226,0.16); background: #131316; }
+  .side { width: 236px; background: rgba(235,232,226,0.025); border-right: 1px solid rgba(235,232,226,0.1);
+    padding: 30px 24px; display: flex; flex-direction: column; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+  .brand .mk { width: 34px; height: 34px; border-radius: 9px; background: #ebe8e2; }
+  .brand span { font: 600 27px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .nav { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: 10px;
+    font: 400 24px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .nav .d { width: 16px; height: 16px; border-radius: 4px; border: 1.5px solid rgba(235,232,226,0.4); }
+  .nav.on { background: rgba(235,232,226,0.08); color: #ebe8e2; }
+  .nav.on .d { background: #ebe8e2; border-color: #ebe8e2; }
+  .main { flex: 1; padding: 30px 32px; }
+  .head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+  .head h { font: 600 34px "SF Mono", Menlo, monospace; color: #ebe8e2; }
+  .btn { background: #ebe8e2; color: #0f0f11; border-radius: 10px; padding: 12px 26px; font: 600 24px "SF Mono", Menlo, monospace; }
+  .row { display: grid; grid-template-columns: 34px 1fr 130px; align-items: center; gap: 18px;
+    padding: 17px 6px; border-top: 1px solid rgba(235,232,226,0.08); font: 400 23px "SF Mono", Menlo, monospace; }
+  .row .dot { width: 22px; height: 22px; border-radius: 50%; background: rgba(235,232,226,0.12); }
+  .row .to { color: #ebe8e2; }
+  .row .to i { color: rgba(235,232,226,0.4); font-style: normal; }
+  .row .st { color: #39d98a; text-align: right; }
+  .cap { position: absolute; bottom: 58px; right: 74px; font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+</style>
+</head><body>
+<div id="frame" data-label="resend-clone-site">
+  <div id="scene">
+    <div class="win">
+      <div class="side">
+        <div class="brand"><div class="mk"></div><span>Resend</span></div>
+        <div class="nav on"><span class="d"></span>Emails</div>
+        <div class="nav"><span class="d"></span>Domains</div>
+        <div class="nav"><span class="d"></span>API Keys</div>
+        <div class="nav"><span class="d"></span>Logs</div>
+        <div class="nav"><span class="d"></span>Settings</div>
+      </div>
+      <div class="main">
+        <div class="head"><h>Emails</h><div class="btn">Send</div></div>
+        <div class="row"><span class="dot"></span><span class="to">welcome@acme.io <i>→ jane@…</i></span><span class="st">Delivered</span></div>
+        <div class="row"><span class="dot"></span><span class="to">hello@acme.io <i>→ omar@…</i></span><span class="st">Delivered</span></div>
+        <div class="row"><span class="dot"></span><span class="to">notify@acme.io <i>→ mia@…</i></span><span class="st">Delivered</span></div>
+        <div class="row"><span class="dot"></span><span class="to">digest@acme.io <i>→ theo@…</i></span><span class="st" style="color:rgba(235,232,226,0.4)">Sending…</span></div>
+      </div>
+    </div>
+    <div class="cap">pixel-for-pixel clone · a study, not a product</div>
+  </div>
+</div>
+</body></html>

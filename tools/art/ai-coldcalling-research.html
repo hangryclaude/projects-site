@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a voice waveform + the low-latency round trip before they hang up */
+  #scene{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:64px;}
+  .wave{display:flex;align-items:center;gap:11px;height:240px;}
+  .wave i{display:block;width:11px;border-radius:6px;background:#f5a623;}
+  .wave i.dim{background:rgba(245,166,35,0.32);}
+  .pipe{display:flex;align-items:center;gap:30px;}
+  .stage{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .stage b{font:600 34px "SF Mono",Menlo,monospace;color:#ebe8e2;}
+  .stage span{font:400 22px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.42);}
+  .arw{color:#f5a623;font:400 38px "SF Mono",Menlo,monospace;}
+  .cap{display:flex;align-items:center;gap:16px;font:400 27px "SF Mono",Menlo,monospace;color:rgba(235,232,226,0.5);}
+  .cap b{color:#f5a623;font-weight:700;}
+</style></head><body>
+<div id="frame" data-label="ai-coldcalling-research"><div id="scene">
+  <div class="wave">
+    <i style="height:32px"></i><i class="dim" style="height:58px"></i><i style="height:96px"></i><i style="height:150px"></i><i class="dim" style="height:88px"></i><i style="height:124px"></i><i style="height:196px"></i><i class="dim" style="height:110px"></i><i style="height:66px"></i><i style="height:148px"></i><i style="height:188px"></i><i class="dim" style="height:92px"></i><i style="height:48px"></i><i style="height:120px"></i><i style="height:176px"></i><i class="dim" style="height:74px"></i><i style="height:140px"></i><i style="height:204px"></i><i class="dim" style="height:104px"></i><i style="height:58px"></i><i style="height:116px"></i><i style="height:168px"></i><i class="dim" style="height:84px"></i><i style="height:40px"></i><i style="height:96px"></i><i style="height:158px"></i><i style="height:192px"></i><i class="dim" style="height:112px"></i><i style="height:64px"></i><i style="height:132px"></i><i style="height:182px"></i><i class="dim" style="height:76px"></i><i style="height:142px"></i><i style="height:104px"></i><i class="dim" style="height:56px"></i><i style="height:122px"></i><i style="height:170px"></i><i class="dim" style="height:86px"></i><i style="height:46px"></i><i style="height:94px"></i><i style="height:150px"></i><i class="dim" style="height:110px"></i><i style="height:66px"></i><i style="height:36px"></i>
+  </div>
+  <div class="pipe">
+    <div class="stage"><b>hear</b><span>speech → text</span></div>
+    <span class="arw">&rarr;</span>
+    <div class="stage"><b>think</b><span>LLM</span></div>
+    <span class="arw">&rarr;</span>
+    <div class="stage"><b>speak</b><span>text → voice</span></div>
+  </div>
+  <div class="cap"><b>638&nbsp;ms</b> round trip &middot; before they hang up</div>
+</div></div></body></html>

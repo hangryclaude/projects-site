@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the anonymous trade tape — every trader redacted, one large print flagged */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 110px; gap: 30px; }
+  .head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    font: 500 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5);
+    letter-spacing: 0.06em; padding-bottom: 6px;
+  }
+  .head .anon { color: #ff5c5c; }
+  .tape { display: flex; flex-direction: column; gap: 4px; }
+  .row {
+    display: grid; grid-template-columns: 210px 96px 150px 1fr;
+    align-items: center; gap: 26px;
+    font: 400 31px "SF Mono", Menlo, monospace; color: #ebe8e2;
+    padding: 12px 20px; border-radius: 10px;
+  }
+  .mkt { color: rgba(235,232,226,0.85); letter-spacing: 0.02em; }
+  .side { font-weight: 700; text-align: center; padding: 4px 0; border-radius: 7px; font-size: 25px; }
+  .yes { color: #35d07f; background: rgba(53,208,127,0.12); }
+  .no  { color: #ff5c5c; background: rgba(255,92,92,0.12); }
+  .size { text-align: right; color: rgba(235,232,226,0.9); }
+  /* redacted trader identity — you literally cannot see who traded */
+  .who { height: 26px; border-radius: 5px; background: rgba(235,232,226,0.22); }
+  .w1 { width: 150px; } .w2 { width: 200px; } .w3 { width: 120px; } .w4 { width: 175px; }
+
+  .row.big {
+    background: rgba(53,208,127,0.09);
+    box-shadow: inset 0 0 0 1.5px rgba(53,208,127,0.55), 0 0 44px rgba(53,208,127,0.14);
+  }
+  .row.big .size { color: #35d07f; font-weight: 700; font-size: 34px; }
+  .row.big .who { background: rgba(53,208,127,0.35); width: 175px; }
+  .last { display: flex; align-items: center; }
+  .flag {
+    display: inline-flex; align-items: center; gap: 12px; margin-left: 22px;
+    color: #35d07f; font: 700 22px "SF Mono", Menlo, monospace; letter-spacing: 0.08em; white-space: nowrap;
+  }
+  .flag .dot { width: 12px; height: 12px; border-radius: 50%; background: #35d07f; box-shadow: 0 0 14px #35d07f; }
+  .cap {
+    align-self: flex-end; margin-top: 14px;
+    font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5);
+  }
+  .cap b { color: rgba(235,232,226,0.85); font-weight: 500; }
+</style>
+</head><body>
+<div id="frame" data-label="kalshi-copybot">
+  <div id="scene">
+    <div class="head"><span>KALSHI · TRADE TAPE</span><span class="anon">trader: anonymous</span></div>
+    <div class="tape">
+      <div class="row"><span class="mkt">NBA-LAL</span><span class="side yes">YES</span><span class="size">120</span><span class="who w1"></span></div>
+      <div class="row"><span class="mkt">CPI-MAR</span><span class="side no">NO</span><span class="size">80</span><span class="who w2"></span></div>
+      <div class="row big"><span class="mkt">NBA-LAL</span><span class="side yes">YES</span><span class="size">4,200</span><span class="last"><span class="who"></span><span class="flag"><span class="dot"></span>LARGE PRINT</span></span></div>
+      <div class="row"><span class="mkt">ESPT-T1</span><span class="side no">NO</span><span class="size">55</span><span class="who w3"></span></div>
+      <div class="row"><span class="mkt">TEN-ALC</span><span class="side yes">YES</span><span class="size">95</span><span class="who w4"></span></div>
+    </div>
+    <div class="cap">flag the <b>size</b>, not the name</div>
+  </div>
+</div>
+</body></html>

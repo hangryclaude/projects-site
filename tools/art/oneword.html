@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a long panicked question, a one-word reply — the whole bit at a glance */
+  #scene { display: flex; flex-direction: column; justify-content: center; padding: 0 120px; gap: 40px; }
+  .user {
+    align-self: flex-end; max-width: 760px; padding: 24px 32px;
+    border-radius: 22px; border-bottom-right-radius: 6px;
+    background: rgba(235,232,226,0.08); color: rgba(235,232,226,0.8);
+    font: 400 30px/1.42 "SF Mono", Menlo, monospace;
+  }
+  .reply {
+    align-self: flex-start; display: flex; align-items: center; gap: 26px;
+  }
+  .bubble {
+    padding: 26px 54px; border-radius: 24px; border-bottom-left-radius: 6px;
+    background: rgba(167,139,250,0.14); border: 1.5px solid rgba(167,139,250,0.5);
+    color: #ebe8e2; font: 600 84px "SF Mono", Menlo, monospace; letter-spacing: -0.01em;
+  }
+  .cap { font: 400 27px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.42); }
+  .cap b { color: #a78bfa; font-weight: 500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="oneword">
+  <div id="scene">
+    <div class="user">huge presentation in 20 min and my slides just crashed, i think i'm going to be sick, what do i do</div>
+    <div class="reply">
+      <span class="bubble">Breathe.</span>
+      <span class="cap">every reply &middot;<br><b>exactly one word</b></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a chalkboard "figure" — a mechanism drawn + annotated, write-it-down-to-understand-it */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  .chalk { stroke: #ebe8e2; fill: none; }
+  .tooth { stroke: #ebe8e2; stroke-width: 9; stroke-linecap: round; }
+  .lead { stroke: #7aa2ff; stroke-width: 2; stroke-dasharray: 2 8; stroke-linecap: round; fill: none; }
+  .note { fill: #7aa2ff; font: 400 32px "SF Mono", Menlo, monospace; }
+  .idx  { fill: #0f0f11; font: 700 26px "SF Mono", Menlo, monospace; text-anchor: middle; }
+  .title{ fill: #ebe8e2; font: 600 44px "SF Mono", Menlo, monospace; }
+  .sub  { fill: rgba(235,232,226,0.5); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="how-tech-works">
+  <div id="scene">
+    <svg width="1030" height="620" viewBox="95 60 1010 610" fill="none">
+      <text class="title" x="150" y="135">how does it actually work?</text>
+      <line x1="150" y1="156" x2="695" y2="156" stroke="#7aa2ff" stroke-width="3" stroke-linecap="round"/>
+      <text class="sub" x="150" y="205">written down until it made sense</text>
+
+      <!-- gear A -->
+      <g>
+        <g class="tooth">
+          <line x1="380" y1="300" x2="380" y2="332"/>
+          <line x1="458" y1="330" x2="441" y2="358"/>
+          <line x1="512" y1="392" x2="484" y2="409"/>
+          <line x1="512" y1="488" x2="484" y2="471"/>
+          <line x1="458" y1="550" x2="441" y2="522"/>
+          <line x1="380" y1="580" x2="380" y2="548"/>
+          <line x1="302" y1="550" x2="319" y2="522"/>
+          <line x1="248" y1="488" x2="276" y2="471"/>
+          <line x1="248" y1="392" x2="276" y2="409"/>
+          <line x1="302" y1="330" x2="319" y2="358"/>
+        </g>
+        <circle class="chalk" cx="380" cy="440" r="110" stroke-width="7"/>
+        <circle class="chalk" cx="380" cy="440" r="38" stroke-width="6"/>
+      </g>
+      <!-- gear B -->
+      <g>
+        <g class="tooth">
+          <line x1="628" y1="502" x2="628" y2="530"/>
+          <line x1="690" y1="536" x2="675" y2="558"/>
+          <line x1="720" y1="596" x2="693" y2="609"/>
+          <line x1="628" y1="628" x2="628" y2="656"/>
+          <line x1="566" y1="536" x2="581" y2="558"/>
+          <line x1="536" y1="596" x2="563" y2="609"/>
+        </g>
+        <circle class="chalk" cx="628" cy="596" r="82" stroke-width="7"/>
+        <circle class="chalk" cx="628" cy="596" r="28" stroke-width="6"/>
+      </g>
+
+      <!-- annotations, right column -->
+      <path class="lead" d="M470 355 L715 320 L748 320"/>
+      <circle cx="748" cy="320" r="18" fill="#7aa2ff"/><text class="idx" x="748" y="329">1</text>
+      <text class="note" x="778" y="330">input goes in</text>
+
+      <path class="lead" d="M418 440 L748 452"/>
+      <circle cx="748" cy="452" r="18" fill="#7aa2ff"/><text class="idx" x="748" y="461">2</text>
+      <text class="note" x="778" y="446">the bit that</text>
+      <text class="note" x="778" y="484">actually matters</text>
+
+      <path class="lead" d="M710 596 L720 596 L748 596"/>
+      <circle cx="748" cy="596" r="18" fill="#7aa2ff"/><text class="idx" x="748" y="605">3</text>
+      <text class="note" x="778" y="606">out comes sense</text>
+    </svg>
+  </div>
+</div>
+</body>
+</html>

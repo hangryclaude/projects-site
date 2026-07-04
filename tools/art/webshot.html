@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: one command captures a live page through a camera frame into a .png file */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 44px; padding: 0 90px; }
+  .cmd { font: 400 32px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.85); }
+  .cmd .p { color: #7aa2ff; }
+  .cmd .fl { color: rgba(235,232,226,0.45); }
+  .cmd .out { color: #7aa2ff; }
+  .stage { position: relative; width: 720px; height: 360px; }
+  /* camera crop brackets */
+  .crop { position: absolute; width: 46px; height: 46px; border: 4px solid #7aa2ff; }
+  .crop.tl { left: -22px; top: -22px; border-right: none; border-bottom: none; }
+  .crop.tr { right: -22px; top: -22px; border-left: none; border-bottom: none; }
+  .crop.bl { left: -22px; bottom: -22px; border-right: none; border-top: none; }
+  .crop.br { right: -22px; bottom: -22px; border-left: none; border-top: none; }
+  .page { position: absolute; inset: 0; background: #17171b; border-radius: 8px; overflow: hidden;
+    border: 1px solid rgba(235,232,226,0.14); }
+  .ptb { height: 40px; display: flex; align-items: center; gap: 9px; padding: 0 18px;
+    background: rgba(235,232,226,0.05); border-bottom: 1px solid rgba(235,232,226,0.08); }
+  .ptb .d { width: 11px; height: 11px; border-radius: 50%; background: rgba(235,232,226,0.28); }
+  .pbody { padding: 30px 34px; }
+  .hero { width: 340px; height: 34px; border-radius: 6px; background: rgba(122,162,255,0.55); margin-bottom: 20px; }
+  .ln { height: 15px; border-radius: 4px; background: rgba(235,232,226,0.16); margin-bottom: 15px; }
+  .ln.a { width: 460px; } .ln.b { width: 520px; } .ln.c { width: 300px; }
+  .blocks { display: flex; gap: 18px; margin-top: 28px; }
+  .blk { width: 150px; height: 96px; border-radius: 8px; background: rgba(235,232,226,0.09); }
+  /* png badge */
+  .badge { position: absolute; right: -34px; bottom: -30px; display: flex; align-items: center; gap: 12px;
+    background: #7aa2ff; color: #0f0f11; border-radius: 10px; padding: 12px 22px;
+    font: 700 26px "SF Mono", Menlo, monospace; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+  .badge .dim { font-weight: 500; opacity: 0.7; font-size: 22px; }
+  .cap { color: rgba(235,232,226,0.45); font: 400 27px "SF Mono", Menlo, monospace; margin-top: 6px; }
+</style></head><body>
+<div id="frame" data-label="webshot">
+  <div id="scene">
+    <div class="cmd"><span class="p">$</span> webshot example.com <span class="fl">--full</span> <span class="out">shot.png</span></div>
+    <div class="stage">
+      <div class="page">
+        <div class="ptb"><span class="d"></span><span class="d"></span><span class="d"></span></div>
+        <div class="pbody">
+          <div class="hero"></div>
+          <div class="ln a"></div><div class="ln b"></div><div class="ln c"></div>
+          <div class="blocks"><div class="blk"></div><div class="blk"></div><div class="blk"></div></div>
+        </div>
+      </div>
+      <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+      <div class="badge">shot.png <span class="dim">1280×full</span></div>
+    </div>
+    <div class="cap">any url · headless chromium · → png</div>
+  </div>
+</div>
+</body></html>

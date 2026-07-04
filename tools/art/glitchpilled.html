@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the two output assets — a glitched banner + pfp in the NZT gold/cyan palette */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 70px; }
+  .card { position: relative; width: 860px; }
+  .banner {
+    position: relative; height: 300px; border-radius: 18px; overflow: hidden;
+    background: radial-gradient(120% 160% at 72% 20%, #17223f 0%, #0b1024 55%, #070a16 100%);
+    border: 1px solid rgba(79,229,229,0.18);
+  }
+  .glow { position: absolute; width: 420px; height: 420px; border-radius: 50%;
+          background: radial-gradient(circle, rgba(245,184,64,0.42), rgba(245,184,64,0) 62%);
+          top: -160px; left: 46%; filter: blur(6px); }
+  .slice { position: absolute; left: 0; right: 0; height: 3px; background: rgba(79,229,229,0.55); }
+  .s1 { top: 118px; transform: translateX(10px); }
+  .s2 { top: 176px; width: 60%; transform: translateX(-14px); background: rgba(255,59,107,0.5); }
+  .btext {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font: 800 84px "SF Mono", Menlo, monospace; letter-spacing: 0.04em; color: #f5b840;
+    text-shadow: 4px 0 rgba(255,59,107,0.85), -4px 0 rgba(79,229,229,0.85);
+  }
+  .pfp {
+    position: absolute; left: 46px; bottom: -56px; width: 158px; height: 158px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 38%, #1c2a4a, #0a1022);
+    border: 4px solid #f5b840; box-shadow: 0 0 34px rgba(245,184,64,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font: 800 58px "SF Mono", Menlo, monospace; color: #f5b840;
+    text-shadow: 3px 0 rgba(255,59,107,0.8), -3px 0 rgba(79,229,229,0.8);
+  }
+  .cap { font: 400 25px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); white-space: nowrap; }
+  .cap b { color: rgba(245,184,64,0.85); font-weight: 500; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="glitchpilled">
+  <div id="scene">
+    <div class="card">
+      <div class="banner">
+        <div class="glow"></div>
+        <div class="btext">GLITCHPILLED</div>
+        <div class="slice s1"></div>
+        <div class="slice s2"></div>
+      </div>
+      <div class="pfp">G</div>
+    </div>
+    <div class="cap"><b>banner + pfp</b> · gold glow · cyan glitch · seeded, repeatable</div>
+  </div>
+</div>
+</body>
+</html>

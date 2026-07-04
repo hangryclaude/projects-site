@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  #scene { display: flex; align-items: center; justify-content: center; gap: 60px; }
+  .phone {
+    width: 500px; border-radius: 40px; border: 2px solid rgba(235,232,226,0.16);
+    background: rgba(235,232,226,0.03); padding: 34px 26px 0; overflow: hidden;
+  }
+  .thread { padding: 0 8px 26px; display: flex; flex-direction: column; gap: 16px; }
+  .bub { max-width: 82%; padding: 16px 22px; font: 400 26px/1.35 -apple-system, system-ui, sans-serif; border-radius: 22px; }
+  .them { align-self: flex-start; background: rgba(235,232,226,0.1); color: #ebe8e2; border-bottom-left-radius: 7px; }
+  .rply { align-self: flex-end; background: linear-gradient(135deg,#9d8dff,#6d5cff); color: #fff; border-bottom-right-radius: 7px; }
+  .kb { margin: 0 -26px; padding: 20px 22px 26px; background: rgba(120,110,170,0.14); border-top: 1px solid rgba(235,232,226,0.12); }
+  .tones { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+  .tone { padding: 9px 18px; border-radius: 999px; font: 500 22px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.6); background: rgba(235,232,226,0.06); border: 1px solid rgba(235,232,226,0.14); }
+  .tone.on { color: #fff; background: #9d8dff; border-color: #9d8dff; }
+  .keys { display: flex; gap: 8px; }
+  .keys i { flex: 1; height: 30px; border-radius: 6px; background: rgba(235,232,226,0.12); }
+  .keys i.wide { flex: 3; }
+  .side { display: flex; flex-direction: column; gap: 20px; }
+  .side .h { font: 700 40px "SF Mono", Menlo, monospace; color: #9d8dff; }
+  .side .l { font: 400 27px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+</style>
+</head><body>
+<div id="frame" data-label="rply-phone">
+  <div id="scene">
+    <div class="phone">
+      <div class="thread">
+        <div class="bub them">so are we still on for tonight or not??</div>
+        <div class="bub rply">Yes! 8pm still works for me — see you there 🙌</div>
+      </div>
+      <div class="kb">
+        <div class="tones"><span class="tone">Natural</span><span class="tone on">Warm</span><span class="tone">Direct</span><span class="tone">Funny</span><span class="tone">Flirty</span></div>
+        <div class="keys"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="h">6 tones</div>
+      <div class="l">clipboard in →<br>reply out</div>
+      <div class="l" style="color:#9d8dff">on-device · $0<br>offline · MLX</div>
+    </div>
+  </div>
+</div>
+</body></html>
