@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: tiny crew + crane assembling a giant pizza slice, tilt-shift diorama */
+  .warm {
+    position: absolute; inset: 0;
+    background: radial-gradient(640px 420px at 50% 55%, rgba(255,145,60,0.10), transparent 70%);
+  }
+  #scene svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  /* tilt-shift blur bands */
+  .ts { position: absolute; left: 0; right: 0; z-index: 20; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
+  .ts.top { top: 0; height: 120px;
+    -webkit-mask-image: linear-gradient(#000 25%, transparent); mask-image: linear-gradient(#000 25%, transparent); }
+  .ts.bot { bottom: 0; height: 130px;
+    -webkit-mask-image: linear-gradient(transparent, #000 75%); mask-image: linear-gradient(transparent, #000 75%); }
+</style>
+</head>
+<body>
+<div id="frame" data-label="mini-men">
+  <div id="scene">
+    <div class="warm"></div>
+    <svg viewBox="0 0 1200 750">
+      <defs>
+        <linearGradient id="cheese" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f6c453"/><stop offset="1" stop-color="#e39c2e"/>
+        </linearGradient>
+        <linearGradient id="crust" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#d29a5b"/><stop offset="1" stop-color="#a96a33"/>
+        </linearGradient>
+      </defs>
+
+      <!-- ground -->
+      <line x1="270" y1="620" x2="1010" y2="620" stroke="rgba(235,232,226,0.18)" stroke-width="2"/>
+      <ellipse cx="565" cy="622" rx="215" ry="14" fill="rgba(0,0,0,0.5)"/>
+      <ellipse cx="880" cy="622" rx="70" ry="9" fill="rgba(0,0,0,0.45)"/>
+
+      <!-- giant pizza slice -->
+      <path d="M 392 300 L 562 618 L 688 272 Z" fill="url(#cheese)"/>
+      <!-- cheese drips along left edge -->
+      <path d="M 424 360 q 10 26 2 34 q -8 10 -12 -6 q -4 -18 10 -28 Z" fill="#f2bd49"/>
+      <path d="M 470 448 q 9 22 2 30 q -8 9 -11 -5 q -3 -16 9 -25 Z" fill="#f2bd49"/>
+      <!-- crust -->
+      <path d="M 378 292 Q 540 218 702 264" fill="none" stroke="url(#crust)" stroke-width="44" stroke-linecap="round"/>
+      <path d="M 386 278 Q 540 210 694 252" fill="none" stroke="rgba(255,225,170,0.5)" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- pepperoni -->
+      <g>
+        <circle cx="505" cy="352" r="27" fill="#cf4433"/><circle cx="505" cy="352" r="27" fill="none" stroke="#9c2f22" stroke-width="4"/>
+        <circle cx="596" cy="336" r="24" fill="#cf4433"/><circle cx="596" cy="336" r="24" fill="none" stroke="#9c2f22" stroke-width="4"/>
+        <circle cx="548" cy="446" r="21" fill="#cf4433"/><circle cx="548" cy="446" r="21" fill="none" stroke="#9c2f22" stroke-width="4"/>
+      </g>
+
+      <!-- crane -->
+      <g stroke="#e8b34b" stroke-width="6" fill="none" stroke-linecap="round">
+        <line x1="874" y1="618" x2="874" y2="186"/>
+        <line x1="890" y1="618" x2="890" y2="186"/>
+        <!-- lattice ticks -->
+        <g stroke-width="3" opacity="0.9">
+          <line x1="874" y1="580" x2="890" y2="556"/><line x1="890" y1="556" x2="874" y2="532"/>
+          <line x1="874" y1="532" x2="890" y2="508"/><line x1="890" y1="508" x2="874" y2="484"/>
+          <line x1="874" y1="484" x2="890" y2="460"/><line x1="890" y1="460" x2="874" y2="436"/>
+          <line x1="874" y1="436" x2="890" y2="412"/><line x1="890" y1="412" x2="874" y2="388"/>
+          <line x1="874" y1="388" x2="890" y2="364"/><line x1="890" y1="364" x2="874" y2="340"/>
+          <line x1="874" y1="340" x2="890" y2="316"/><line x1="890" y1="316" x2="874" y2="292"/>
+          <line x1="874" y1="292" x2="890" y2="268"/><line x1="890" y1="268" x2="874" y2="244"/>
+          <line x1="874" y1="244" x2="890" y2="220"/><line x1="890" y1="220" x2="874" y2="196"/>
+        </g>
+        <!-- jib + counter-jib -->
+        <line x1="882" y1="186" x2="596" y2="158"/>
+        <line x1="882" y1="186" x2="996" y2="176"/>
+        <!-- apex ties -->
+        <line x1="882" y1="186" x2="882" y2="140" stroke-width="5"/>
+        <line x1="882" y1="140" x2="700" y2="148" stroke-width="3"/>
+        <line x1="882" y1="140" x2="990" y2="170" stroke-width="3"/>
+      </g>
+      <rect x="984" y="176" width="26" height="34" rx="4" fill="#c98232"/>
+      <rect x="858" y="600" width="48" height="20" rx="4" fill="#c98232"/>
+      <!-- cab -->
+      <rect x="862" y="188" width="34" height="26" rx="5" fill="#e8b34b"/>
+
+      <!-- cable + lifted pepperoni (hanging in clear air between slice and crane) -->
+      <line x1="748" y1="173" x2="748" y2="300" stroke="rgba(235,232,226,0.55)" stroke-width="3"/>
+      <line x1="728" y1="314" x2="768" y2="314" stroke="rgba(235,232,226,0.55)" stroke-width="3"/>
+      <line x1="728" y1="314" x2="748" y2="300" stroke="rgba(235,232,226,0.55)" stroke-width="3"/>
+      <line x1="768" y1="314" x2="748" y2="300" stroke="rgba(235,232,226,0.55)" stroke-width="3"/>
+      <circle cx="748" cy="340" r="25" fill="#cf4433"/>
+      <circle cx="748" cy="340" r="25" fill="none" stroke="#9c2f22" stroke-width="4"/>
+
+      <!-- workers: hard-hat silhouettes -->
+      <!-- two on the crust -->
+      <g transform="translate(459,220)">
+        <rect x="-6" y="0" width="12" height="20" rx="5" fill="#1d1d22"/>
+        <circle cx="0" cy="-6" r="6" fill="#1d1d22"/>
+        <path d="M -7 -8 a 7 7 0 0 1 14 0 Z" fill="#ffce3d"/>
+      </g>
+      <g transform="translate(532,207)">
+        <rect x="-6" y="0" width="12" height="20" rx="5" fill="#1d1d22"/>
+        <circle cx="0" cy="-6" r="6" fill="#1d1d22"/>
+        <path d="M -7 -8 a 7 7 0 0 1 14 0 Z" fill="#ffce3d"/>
+        <line x1="6" y1="6" x2="18" y2="-4" stroke="#1d1d22" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <!-- one on the ground pointing up -->
+      <g transform="translate(680,600)">
+        <rect x="-6" y="0" width="12" height="20" rx="5" fill="#1d1d22"/>
+        <circle cx="0" cy="-6" r="6" fill="#1d1d22"/>
+        <path d="M -7 -8 a 7 7 0 0 1 14 0 Z" fill="#ffce3d"/>
+        <line x1="-6" y1="6" x2="-18" y2="-6" stroke="#1d1d22" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <!-- one by the crane base -->
+      <g transform="translate(824,600)">
+        <rect x="-6" y="0" width="12" height="20" rx="5" fill="#1d1d22"/>
+        <circle cx="0" cy="-6" r="6" fill="#1d1d22"/>
+        <path d="M -7 -8 a 7 7 0 0 1 14 0 Z" fill="#ffce3d"/>
+      </g>
+
+      <!-- the dangler: cheese strand off the slice edge + hanging worker -->
+      <path d="M 448 402 q -10 34 2 62 q 10 24 -4 52" fill="none" stroke="#f2bd49" stroke-width="7" stroke-linecap="round"/>
+      <g transform="translate(446,540)">
+        <circle cx="0" cy="0" r="6" fill="#1d1d22"/>
+        <path d="M -7 -2 a 7 7 0 0 1 14 0 Z" fill="#ffce3d"/>
+        <rect x="-6" y="4" width="12" height="20" rx="5" fill="#1d1d22"/>
+        <!-- arms up gripping the strand -->
+        <line x1="-4" y1="2" x2="-2" y2="-14" stroke="#1d1d22" stroke-width="4" stroke-linecap="round"/>
+        <line x1="4" y1="2" x2="2" y2="-14" stroke="#1d1d22" stroke-width="4" stroke-linecap="round"/>
+        <!-- kicking legs -->
+        <line x1="-4" y1="24" x2="-12" y2="32" stroke="#1d1d22" stroke-width="4" stroke-linecap="round"/>
+        <line x1="4" y1="24" x2="10" y2="34" stroke="#1d1d22" stroke-width="4" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <div class="ts top"></div>
+    <div class="ts bot"></div>
+  </div>
+</div>
+</body>
+</html>

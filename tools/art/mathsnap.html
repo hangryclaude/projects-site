@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: camera viewfinder framing an integral, answer stamped beneath */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 54px; }
+  .finder { position: relative; width: 560px; height: 230px; display: flex; align-items: center; justify-content: center; }
+  .finder .c { position: absolute; width: 52px; height: 52px; border: 4px solid rgba(235,232,226,0.85); }
+  .c.tl { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+  .c.tr { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+  .c.bl { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+  .c.br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+  .expr { font: 400 76px "SF Mono", Menlo, monospace; color: #ebe8e2; letter-spacing: 0.02em; }
+  .answer {
+    font: 600 60px "SF Mono", Menlo, monospace; color: #ff9640;
+    border: 3px solid rgba(255, 150, 64, 0.85); border-radius: 12px;
+    padding: 14px 38px; transform: rotate(-2deg);
+    background: rgba(255, 150, 64, 0.07);
+  }
+  .hint { color: rgba(235,232,226,0.45); font: 400 26px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="mathsnap">
+  <div id="scene">
+    <div class="finder">
+      <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+      <div class="expr">∫ 2x dx</div>
+    </div>
+    <div class="answer">= x² + C</div>
+    <div class="hint">point camera · get answer</div>
+  </div>
+</div>
+</body>
+</html>

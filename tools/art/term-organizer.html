@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: a jumbled word-cloud funneled into clean alphabetized columns */
+  #scene { font-family: "SF Mono", Menlo, monospace; }
+  .w { position: absolute; color: rgba(235, 232, 226, 0.6); font: 400 30px "SF Mono", Menlo, monospace; white-space: nowrap; }
+  .funnel { position: absolute; left: 470px; top: 155px; }
+  .cols { position: absolute; left: 736px; top: 232px; display: flex; gap: 92px; }
+  .col { display: flex; flex-direction: column; gap: 40px; }
+  .col span { color: rgba(235, 232, 226, 0.85); font: 400 36px "SF Mono", Menlo, monospace; }
+  .col b { color: #8fb0dc; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="term-organizer">
+  <div id="scene">
+    <div class="w" style="left:214px; top:170px; transform:rotate(-8deg)">fjord</div>
+    <div class="w" style="left:118px; top:262px; transform:rotate(4deg)">cursor</div>
+    <div class="w" style="left:300px; top:250px; transform:rotate(9deg)">anchor</div>
+    <div class="w" style="left:158px; top:352px; transform:rotate(-4deg)">helix</div>
+    <div class="w" style="left:320px; top:362px; transform:rotate(-10deg)">delta</div>
+    <div class="w" style="left:110px; top:452px; transform:rotate(7deg)">gamma</div>
+    <div class="w" style="left:282px; top:470px; transform:rotate(-3deg)">bezel</div>
+    <div class="w" style="left:200px; top:556px; transform:rotate(5deg)">ember</div>
+    <svg class="funnel" width="230" height="440" viewBox="0 0 230 440" fill="none">
+      <path d="M0 40 L150 190" stroke="rgba(143,176,220,0.55)" stroke-width="2"/>
+      <path d="M0 400 L150 250" stroke="rgba(143,176,220,0.55)" stroke-width="2"/>
+      <path d="M150 190 L205 190" stroke="rgba(143,176,220,0.55)" stroke-width="2"/>
+      <path d="M150 250 L205 250" stroke="rgba(143,176,220,0.55)" stroke-width="2"/>
+      <circle cx="164" cy="220" r="5" fill="#8fb0dc" opacity="0.35"/>
+      <circle cx="186" cy="220" r="5" fill="#8fb0dc" opacity="0.65"/>
+      <circle cx="208" cy="220" r="5" fill="#8fb0dc"/>
+    </svg>
+    <div class="cols">
+      <div class="col">
+        <span><b>a</b>nchor</span>
+        <span><b>b</b>ezel</span>
+        <span><b>c</b>ursor</span>
+        <span><b>d</b>elta</span>
+      </div>
+      <div class="col">
+        <span><b>e</b>mber</span>
+        <span><b>f</b>jord</span>
+        <span><b>g</b>amma</span>
+        <span><b>h</b>elix</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

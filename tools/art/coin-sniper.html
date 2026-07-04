@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: candle chart, one violent spike, crosshair locked, phone ping */
+  svg.chart { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .up { fill: #35d07f; } .up-w { stroke: #35d07f; stroke-width: 3; }
+  .dn { fill: #ff5c5c; } .dn-w { stroke: #ff5c5c; stroke-width: 3; }
+  .xhair { stroke: rgba(235, 232, 226, 0.55); stroke-width: 1.5; stroke-dasharray: 7 8; }
+  .lock { fill: none; stroke: #35d07f; stroke-width: 2.5; }
+  .notif {
+    position: absolute; top: 66px; right: 70px;
+    display: flex; align-items: center; gap: 18px;
+    padding: 18px 28px; border: 1.5px solid rgba(235, 232, 226, 0.35); border-radius: 16px;
+    background: rgba(235, 232, 226, 0.05); font: 500 27px "SF Mono", Menlo, monospace;
+    color: #ebe8e2; box-shadow: 0 0 40px rgba(53, 208, 127, 0.12);
+  }
+  .notif .dot { width: 14px; height: 14px; border-radius: 50%; background: #35d07f; }
+  .notif .pct { color: #35d07f; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="coin-sniper">
+  <div id="scene">
+    <svg class="chart" viewBox="0 0 1200 750">
+      <!-- baseline chop: small red/green candles -->
+      <line class="dn-w" x1="150" y1="480" x2="150" y2="586"/><rect class="dn" x="138" y="500" width="24" height="62" rx="3"/>
+      <line class="up-w" x1="212" y1="486" x2="212" y2="580"/><rect class="up" x="200" y="506" width="24" height="52" rx="3"/>
+      <line class="dn-w" x1="274" y1="492" x2="274" y2="596"/><rect class="dn" x="262" y="514" width="24" height="60" rx="3"/>
+      <line class="dn-w" x1="336" y1="502" x2="336" y2="604"/><rect class="dn" x="324" y="524" width="24" height="58" rx="3"/>
+      <line class="up-w" x1="398" y1="496" x2="398" y2="598"/><rect class="up" x="386" y="516" width="24" height="60" rx="3"/>
+      <line class="dn-w" x1="460" y1="500" x2="460" y2="600"/><rect class="dn" x="448" y="520" width="24" height="56" rx="3"/>
+      <line class="up-w" x1="522" y1="490" x2="522" y2="592"/><rect class="up" x="510" y="510" width="24" height="58" rx="3"/>
+      <line class="dn-w" x1="584" y1="494" x2="584" y2="590"/><rect class="dn" x="572" y="512" width="24" height="56" rx="3"/>
+      <line class="up-w" x1="646" y1="482" x2="646" y2="584"/><rect class="up" x="634" y="500" width="24" height="60" rx="3"/>
+      <line class="up-w" x1="708" y1="466" x2="708" y2="570"/><rect class="up" x="696" y="484" width="24" height="62" rx="3"/>
+      <!-- the violent spike -->
+      <line class="up-w" x1="790" y1="172" x2="790" y2="560"/><rect class="up" x="774" y="210" width="32" height="316" rx="4"/>
+      <!-- after: still climbing -->
+      <line class="up-w" x1="872" y1="220" x2="872" y2="330"/><rect class="up" x="860" y="240" width="24" height="66" rx="3"/>
+      <line class="up-w" x1="934" y1="196" x2="934" y2="300"/><rect class="up" x="922" y="214" width="24" height="64" rx="3"/>
+      <line class="dn-w" x1="996" y1="216" x2="996" y2="308"/><rect class="dn" x="984" y="234" width="24" height="56" rx="3"/>
+      <!-- crosshair locked on the spike top -->
+      <line class="xhair" x1="46" y1="210" x2="742" y2="210"/>
+      <line class="xhair" x1="838" y1="210" x2="1154" y2="210"/>
+      <line class="xhair" x1="790" y1="46" x2="790" y2="162"/>
+      <line class="xhair" x1="790" y1="258" x2="790" y2="640"/>
+      <circle class="lock" cx="790" cy="210" r="42"/>
+      <line class="lock" x1="790" y1="158" x2="790" y2="180"/>
+      <line class="lock" x1="790" y1="240" x2="790" y2="262"/>
+      <line class="lock" x1="738" y1="210" x2="760" y2="210"/>
+      <line class="lock" x1="820" y1="210" x2="842" y2="210"/>
+    </svg>
+    <div class="notif"><span class="dot"></span>NEW:&nbsp;$WIF&nbsp;<span class="pct">+420%</span></div>
+  </div>
+</div>
+</body>
+</html>

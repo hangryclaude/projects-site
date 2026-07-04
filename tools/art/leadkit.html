@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the outreach pipeline as wired chips, reply node lit */
+  #scene { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 56px; padding: 0 90px; }
+  .pipe { display: flex; align-items: center; width: 100%; }
+  .chip {
+    padding: 18px 30px; border: 2px solid rgba(235, 232, 226, 0.38); border-radius: 14px;
+    color: rgba(235, 232, 226, 0.75); font: 500 30px "SF Mono", Menlo, monospace;
+    background: rgba(235, 232, 226, 0.04); white-space: nowrap;
+  }
+  .wire { flex: 1; height: 2px; background: rgba(235, 232, 226, 0.28); min-width: 34px; position: relative; }
+  .wire::after {
+    content: ""; position: absolute; right: 0; top: -4px;
+    border-left: 10px solid rgba(235, 232, 226, 0.28);
+    border-top: 5px solid transparent; border-bottom: 5px solid transparent;
+  }
+  .wire.hot { background: rgba(255, 149, 51, 0.6); }
+  .wire.hot::after { border-left-color: rgba(255, 149, 51, 0.6); }
+  .chip.lit {
+    border-color: #ff9533; color: #ff9533; background: rgba(255, 149, 51, 0.1);
+    box-shadow: 0 0 44px rgba(255, 149, 51, 0.28); position: relative;
+  }
+  .chip.lit::after {
+    content: "1"; position: absolute; top: -16px; right: -16px;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: #ff9533; color: #0f0f11;
+    font: 700 22px/34px "SF Mono", Menlo, monospace; text-align: center;
+  }
+  .hint { color: rgba(235, 232, 226, 0.45); font: 400 26px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="leadkit">
+  <div id="scene">
+    <div class="pipe">
+      <span class="chip">find</span><span class="wire"></span>
+      <span class="chip">enrich</span><span class="wire"></span>
+      <span class="chip">validate</span><span class="wire"></span>
+      <span class="chip">send</span><span class="wire hot"></span>
+      <span class="chip lit">reply</span>
+    </div>
+    <div class="hint">the whole pipeline runs itself — you only read the replies</div>
+  </div>
+</div>
+</body>
+</html>

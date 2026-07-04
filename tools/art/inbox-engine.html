@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the fleet — 100 sending domains as envelopes, all green, one burned */
+  #scene { display: flex; align-items: center; justify-content: center; gap: 90px; }
+  .grid { display: block; }
+  .stats { display: flex; flex-direction: column; gap: 36px; }
+  .stat .n { font: 700 84px/1 "SF Mono", Menlo, monospace; color: #ebe8e2; letter-spacing: -0.03em; }
+  .stat .u { font: 400 30px/1.5 "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.5); }
+  .stat .n b { color: #34d372; font-weight: 700; }
+  .burn { font: 400 26px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.4); }
+  .burn i { color: #f4504a; font-style: normal; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="inbox-engine">
+  <div id="scene">
+    <svg class="grid" width="500" height="470" viewBox="0 0 500 470">
+      <defs>
+        <g id="env">
+          <rect x="0" y="0" width="38" height="27" rx="5" fill="rgba(52,211,114,0.12)" stroke="#34d372" stroke-width="2.5"/>
+          <path d="M3 4 L19 16 L35 4" fill="none" stroke="#34d372" stroke-width="2.5" stroke-linejoin="round"/>
+        </g>
+        <g id="envred">
+          <rect x="0" y="0" width="38" height="27" rx="5" fill="rgba(244,80,74,0.16)" stroke="#f4504a" stroke-width="2.5"/>
+          <path d="M3 4 L19 16 L35 4" fill="none" stroke="#f4504a" stroke-width="2.5" stroke-linejoin="round"/>
+        </g>
+      </defs>
+      <use href="#env" x="0" y="0"/><use href="#env" x="50" y="0"/><use href="#env" x="100" y="0"/><use href="#env" x="150" y="0"/><use href="#env" x="200" y="0"/><use href="#env" x="250" y="0"/><use href="#env" x="300" y="0"/><use href="#env" x="350" y="0"/><use href="#env" x="400" y="0"/><use href="#env" x="450" y="0"/>
+      <use href="#env" x="0" y="46"/><use href="#env" x="50" y="46"/><use href="#env" x="100" y="46"/><use href="#env" x="150" y="46"/><use href="#env" x="200" y="46"/><use href="#env" x="250" y="46"/><use href="#env" x="300" y="46"/><use href="#env" x="350" y="46"/><use href="#env" x="400" y="46"/><use href="#env" x="450" y="46"/>
+      <use href="#env" x="0" y="92"/><use href="#env" x="50" y="92"/><use href="#env" x="100" y="92"/><use href="#env" x="150" y="92"/><use href="#env" x="200" y="92"/><use href="#env" x="250" y="92"/><use href="#env" x="300" y="92"/><use href="#env" x="350" y="92"/><use href="#env" x="400" y="92"/><use href="#env" x="450" y="92"/>
+      <use href="#env" x="0" y="138"/><use href="#env" x="50" y="138"/><use href="#env" x="100" y="138"/><use href="#env" x="150" y="138"/><use href="#env" x="200" y="138"/><use href="#env" x="250" y="138"/><use href="#env" x="300" y="138"/><use href="#env" x="350" y="138"/><use href="#env" x="400" y="138"/><use href="#env" x="450" y="138"/>
+      <use href="#env" x="0" y="184"/><use href="#env" x="50" y="184"/><use href="#env" x="100" y="184"/><use href="#env" x="150" y="184"/><use href="#env" x="200" y="184"/><use href="#env" x="250" y="184"/><use href="#env" x="300" y="184"/><use href="#env" x="350" y="184"/><use href="#env" x="400" y="184"/><use href="#env" x="450" y="184"/>
+      <use href="#env" x="0" y="230"/><use href="#env" x="50" y="230"/><use href="#env" x="100" y="230"/><use href="#env" x="150" y="230"/><use href="#env" x="200" y="230"/><use href="#env" x="250" y="230"/><use href="#env" x="300" y="230"/><use href="#env" x="350" y="230"/><use href="#env" x="400" y="230"/><use href="#env" x="450" y="230"/>
+      <use href="#env" x="0" y="276"/><use href="#env" x="50" y="276"/><use href="#envred" x="100" y="276"/><use href="#env" x="150" y="276"/><use href="#env" x="200" y="276"/><use href="#env" x="250" y="276"/><use href="#env" x="300" y="276"/><use href="#env" x="350" y="276"/><use href="#env" x="400" y="276"/><use href="#env" x="450" y="276"/>
+      <use href="#env" x="0" y="322"/><use href="#env" x="50" y="322"/><use href="#env" x="100" y="322"/><use href="#env" x="150" y="322"/><use href="#env" x="200" y="322"/><use href="#env" x="250" y="322"/><use href="#env" x="300" y="322"/><use href="#env" x="350" y="322"/><use href="#env" x="400" y="322"/><use href="#env" x="450" y="322"/>
+      <use href="#env" x="0" y="368"/><use href="#env" x="50" y="368"/><use href="#env" x="100" y="368"/><use href="#env" x="150" y="368"/><use href="#env" x="200" y="368"/><use href="#env" x="250" y="368"/><use href="#env" x="300" y="368"/><use href="#env" x="350" y="368"/><use href="#env" x="400" y="368"/><use href="#env" x="450" y="368"/>
+      <use href="#env" x="0" y="414"/><use href="#env" x="50" y="414"/><use href="#env" x="100" y="414"/><use href="#env" x="150" y="414"/><use href="#env" x="200" y="414"/><use href="#env" x="250" y="414"/><use href="#env" x="300" y="414"/><use href="#env" x="350" y="414"/><use href="#env" x="400" y="414"/><use href="#env" x="450" y="414"/>
+    </svg>
+    <div class="stats">
+      <div class="stat"><div class="n"><b>100</b></div><div class="u">domains</div></div>
+      <div class="stat"><div class="n">5,000</div><div class="u">cold / day</div></div>
+      <div class="burn"><i>■</i> one always burns. it's fine.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -31,7 +31,7 @@
   },
   {
     "slug": "file-warden",
-    "title": "file-warden",
+    "title": "File Warden",
     "tagline": "A janitor for Home, Desktop, and Downloads. Idle files get filed by type and month. Never deletes.",
     "category": "macOS power tools",
     "repo": null,

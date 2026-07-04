@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: teh → the, everywhere, before you even see it */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 58px; }
+  .main { display: flex; align-items: center; gap: 54px; font: 600 128px "SF Mono", Menlo, monospace; }
+  .bad { position: relative; color: rgba(235, 232, 226, 0.38); }
+  .bad svg { position: absolute; left: 0; bottom: -12px; width: 100%; }
+  .keycap {
+    padding: 10px 28px; border: 2px solid rgba(244, 87, 77, 0.85); border-bottom-width: 6px;
+    border-radius: 14px; color: #f4574d; font: 500 52px "SF Mono", Menlo, monospace;
+    background: rgba(244, 87, 77, 0.08);
+  }
+  .good { color: #ebe8e2; }
+  .caret { display: inline-block; width: 5px; height: 108px; background: #f4574d; vertical-align: -10px; margin-left: 8px; }
+  .hint { color: rgba(235, 232, 226, 0.45); font: 400 27px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="spellfix">
+  <div id="scene">
+    <div class="main">
+      <span class="bad">teh<svg height="14" viewBox="0 0 240 14" preserveAspectRatio="none" fill="none"><path d="M0 7 Q10 0 20 7 T40 7 T60 7 T80 7 T100 7 T120 7 T140 7 T160 7 T180 7 T200 7 T220 7 T240 7" stroke="#f4574d" stroke-width="4"/></svg></span>
+      <span class="keycap">⌫</span>
+      <span class="good">the<span class="caret"></span></span>
+    </div>
+    <div class="hint">fixed before you saw it · every app · system-wide</div>
+  </div>
+</div>
+</body>
+</html>

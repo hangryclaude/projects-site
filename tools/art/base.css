@@ -1,0 +1,24 @@
+/* shared tile scaffold — every art tile uses this. DO NOT restyle the frame/label. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #222; }
+#frame {
+  width: 1200px; height: 750px;
+  position: relative; overflow: hidden;
+  background: #0f0f11;
+  font-family: "SF Mono", Menlo, monospace;
+}
+/* hairline inset frame */
+#frame::before {
+  content: ""; position: absolute; inset: 28px;
+  border: 1px solid rgba(235, 232, 226, 0.28);
+  pointer-events: none; z-index: 40;
+}
+/* slug label bottom-left */
+#frame::after {
+  content: attr(data-label);
+  position: absolute; left: 46px; bottom: 40px;
+  background: #0f0f11; color: #ebe8e2;
+  font: 500 26px/44px "SF Mono", Menlo, monospace;
+  padding: 0 16px; z-index: 50; letter-spacing: 0.02em;
+}
+#scene { position: absolute; inset: 0; }

@@ -21,7 +21,7 @@
   },
   {
     "slug": "dropkit",
-    "title": "dropkit",
+    "title": "DropKit",
     "tagline": "AirDrop as a CLI: fleet fan-out, watch folders, live radar. Refuses to spam strangers on principle.",
     "category": "macOS power tools",
     "repo": "hangryclaude/dropkit",

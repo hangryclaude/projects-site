@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: AA letterforms echoing through stroke weights, left ghost -> right solid */
+  #scene { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+  .stack { position: relative; width: 700px; height: 480px; }
+  .aa {
+    position: absolute; left: 50%; top: 50%;
+    font: 900 430px/1 -apple-system, "Helvetica Neue", sans-serif;
+    letter-spacing: -0.16em; color: transparent; white-space: nowrap;
+  }
+  .a1 { transform: translate(-50%, -54%) translateX(-168px) skewX(-11deg); font-weight: 100; -webkit-text-stroke: 1.5px rgba(162, 107, 255, 0.4); }
+  .a2 { transform: translate(-50%, -54%) translateX(-104px) skewX(-7deg);  font-weight: 300; -webkit-text-stroke: 2px rgba(162, 107, 255, 0.6); }
+  .a3 { transform: translate(-50%, -54%) translateX(-42px) skewX(-3.5deg); font-weight: 600; -webkit-text-stroke: 3px rgba(162, 107, 255, 0.85); }
+  .a4 { transform: translate(-50%, -54%) translateX(28px); font-weight: 900; color: #a26bff; text-shadow: 0 0 60px rgba(162, 107, 255, 0.25); }
+  .hint { color: rgba(235, 232, 226, 0.45); font: 400 26px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="angusangus">
+  <div id="scene">
+    <div class="stack">
+      <span class="aa a1">AA</span>
+      <span class="aa a2">AA</span>
+      <span class="aa a3">AA</span>
+      <span class="aa a4">AA</span>
+    </div>
+    <div class="hint">so nice, he named it twice</div>
+  </div>
+</div>
+</body>
+</html>

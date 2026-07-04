@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: one giant pair of glasses — problem in the left lens, answer whispered in the right */
+  #scene { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 48px; }
+  .glasses { display: block; filter: drop-shadow(0 0 30px rgba(224,176,80,0.18)); }
+  .caption { font: 400 28px "SF Mono", Menlo, monospace; color: rgba(235,232,226,0.45); }
+  .caption b { color: #e0b050; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="cheat-glasses">
+  <div id="scene">
+    <svg class="glasses" width="1000" height="360" viewBox="0 0 1000 360">
+      <g fill="none" stroke="#e0b050" stroke-width="7">
+        <!-- temples -->
+        <path d="M65 120 L14 96" stroke-linecap="round"/>
+        <path d="M935 120 L986 96" stroke-linecap="round"/>
+        <!-- lenses -->
+        <rect x="65" y="70" width="390" height="250" rx="70"/>
+        <rect x="545" y="70" width="390" height="250" rx="70"/>
+        <!-- bridge -->
+        <path d="M455 150 Q500 110 545 150"/>
+      </g>
+      <!-- left lens: the problem -->
+      <text x="260" y="180" text-anchor="middle" fill="#ebe8e2"
+            font-family="SF Mono, Menlo, monospace" font-size="46">x² − x = 6</text>
+      <text x="260" y="252" text-anchor="middle" fill="rgba(235,232,226,0.45)"
+            font-family="SF Mono, Menlo, monospace" font-size="40">x = ?</text>
+      <!-- right lens: the whisper -->
+      <text x="740" y="180" text-anchor="middle" fill="#e0b050"
+            font-family="SF Mono, Menlo, monospace" font-size="46">x = 3, −2</text>
+      <text x="740" y="250" text-anchor="middle" fill="rgba(224,176,80,0.55)"
+            font-family="SF Mono, Menlo, monospace" font-size="30" font-style="italic">( psst )</text>
+    </svg>
+    <div class="caption">see the problem · <b>see the answer</b></div>
+  </div>
+</div>
+</body>
+</html>

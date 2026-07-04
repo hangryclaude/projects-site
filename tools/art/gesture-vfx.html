@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: MediaPipe hand skeleton, cyan motion trails sweeping off the fingertips */
+  #scene svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="gesture-vfx">
+  <div id="scene">
+    <svg viewBox="0 0 1200 750">
+      <defs>
+        <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+          <stop offset="0.55" stop-color="#22d3ee" stop-opacity="0.45"/>
+          <stop offset="1" stop-color="#67e8f9" stop-opacity="0.95"/>
+        </linearGradient>
+      </defs>
+
+      <!-- motion trails off the fingertips -->
+      <g fill="none" stroke-linecap="round">
+        <g stroke="#22d3ee" stroke-width="16" opacity="0.10">
+          <path d="M 534 428 C 440 436, 336 468, 244 526"/>
+          <path d="M 620 300 C 486 238, 350 232, 232 304"/>
+          <path d="M 695 272 C 556 186, 388 176, 252 238"/>
+          <path d="M 765 292 C 656 198, 500 184, 356 226"/>
+          <path d="M 830 344 C 738 268, 604 248, 478 280"/>
+        </g>
+        <g stroke="url(#trail)" stroke-width="5">
+          <path d="M 534 428 C 440 436, 336 468, 244 526"/>
+          <path d="M 620 300 C 486 238, 350 232, 232 304"/>
+          <path d="M 695 272 C 556 186, 388 176, 252 238"/>
+          <path d="M 765 292 C 656 198, 500 184, 356 226"/>
+          <path d="M 830 344 C 738 268, 604 248, 478 280"/>
+        </g>
+      </g>
+      <!-- trail spark particles -->
+      <g fill="#67e8f9">
+        <circle cx="392" cy="446" r="3" opacity="0.7"/>
+        <circle cx="300" cy="268" r="2.5" opacity="0.55"/>
+        <circle cx="430" cy="206" r="3" opacity="0.7"/>
+        <circle cx="330" cy="212" r="2" opacity="0.4"/>
+        <circle cx="540" cy="212" r="3.4" opacity="0.8"/>
+        <circle cx="560" cy="262" r="2.4" opacity="0.5"/>
+        <circle cx="470" cy="330" r="2.6" opacity="0.5"/>
+        <circle cx="284" cy="486" r="2.6" opacity="0.5"/>
+      </g>
+
+      <!-- echo skeleton (previous frame ghost) -->
+      <g transform="translate(-74,28) rotate(-5 700 600)" stroke="rgba(235,232,226,0.12)" stroke-width="5" fill="none" stroke-linecap="round">
+        <path d="M 700 600 L 640 558 L 596 508 L 562 464 L 534 428"/>
+        <path d="M 700 600 L 655 470 L 638 398 L 628 346 L 620 300"/>
+        <path d="M 655 470 L 705 460 L 700 380 L 697 322 L 695 272"/>
+        <path d="M 705 460 L 752 468 L 758 392 L 762 338 L 765 292"/>
+        <path d="M 700 600 L 795 488 L 812 428 L 822 384 L 830 344"/>
+        <path d="M 752 468 L 795 488"/>
+        <path d="M 640 558 L 655 470"/>
+      </g>
+
+      <!-- bones -->
+      <g stroke="rgba(255,255,255,0.9)" stroke-width="5" fill="none" stroke-linecap="round">
+        <path d="M 700 600 L 640 558 L 596 508 L 562 464 L 534 428"/>
+        <path d="M 700 600 L 655 470 L 638 398 L 628 346 L 620 300"/>
+        <path d="M 655 470 L 705 460 L 700 380 L 697 322 L 695 272"/>
+        <path d="M 705 460 L 752 468 L 758 392 L 762 338 L 765 292"/>
+        <path d="M 700 600 L 795 488 L 812 428 L 822 384 L 830 344"/>
+        <path d="M 752 468 L 795 488"/>
+        <path d="M 640 558 L 655 470"/>
+      </g>
+
+      <!-- joints -->
+      <g fill="#ffffff">
+        <circle cx="700" cy="600" r="9"/>
+        <circle cx="640" cy="558" r="6.5"/><circle cx="596" cy="508" r="6.5"/><circle cx="562" cy="464" r="6.5"/>
+        <circle cx="655" cy="470" r="6.5"/><circle cx="638" cy="398" r="6.5"/><circle cx="628" cy="346" r="6.5"/>
+        <circle cx="705" cy="460" r="6.5"/><circle cx="700" cy="380" r="6.5"/><circle cx="697" cy="322" r="6.5"/>
+        <circle cx="752" cy="468" r="6.5"/><circle cx="758" cy="392" r="6.5"/><circle cx="762" cy="338" r="6.5"/>
+        <circle cx="795" cy="488" r="6.5"/><circle cx="812" cy="428" r="6.5"/><circle cx="822" cy="384" r="6.5"/>
+      </g>
+      <!-- fingertips: cyan, glowing -->
+      <g>
+        <circle cx="534" cy="428" r="14" fill="#22d3ee" opacity="0.3"/><circle cx="534" cy="428" r="7.5" fill="#67e8f9"/>
+        <circle cx="620" cy="300" r="14" fill="#22d3ee" opacity="0.3"/><circle cx="620" cy="300" r="7.5" fill="#67e8f9"/>
+        <circle cx="695" cy="272" r="14" fill="#22d3ee" opacity="0.3"/><circle cx="695" cy="272" r="7.5" fill="#67e8f9"/>
+        <circle cx="765" cy="292" r="14" fill="#22d3ee" opacity="0.3"/><circle cx="765" cy="292" r="7.5" fill="#67e8f9"/>
+        <circle cx="830" cy="344" r="14" fill="#22d3ee" opacity="0.3"/><circle cx="830" cy="344" r="7.5" fill="#67e8f9"/>
+      </g>
+    </svg>
+  </div>
+</div>
+</body>
+</html>

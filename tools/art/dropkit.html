@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: AirDrop as radar — rings, device blips, one mid-transfer */
+  #scene { display: flex; align-items: center; justify-content: center; }
+  svg { display: block; }
+  .hint { position: absolute; top: 64px; right: 70px; color: rgba(235,232,226,0.45); font: 400 26px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="dropkit">
+  <div id="scene">
+    <div class="hint">3 devices in range</div>
+    <svg width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+      <defs>
+        <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#54e0f0" stop-opacity="0.16"/>
+          <stop offset="1" stop-color="#54e0f0" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- rings -->
+      <circle cx="600" cy="380" r="95"  stroke="rgba(84,224,240,0.38)" stroke-width="1.5"/>
+      <circle cx="600" cy="380" r="185" stroke="rgba(84,224,240,0.26)" stroke-width="1.5"/>
+      <circle cx="600" cy="380" r="275" stroke="rgba(84,224,240,0.16)" stroke-width="1.5"/>
+      <!-- crosshair -->
+      <line x1="600" y1="105" x2="600" y2="655" stroke="rgba(235,232,226,0.10)" stroke-width="1"/>
+      <line x1="325" y1="380" x2="875" y2="380" stroke="rgba(235,232,226,0.10)" stroke-width="1"/>
+      <!-- sweep wedge -->
+      <path d="M600 380 L600 105 A275 275 0 0 1 794 186 Z" fill="url(#sweep)"/>
+      <!-- self, at center -->
+      <circle cx="600" cy="380" r="11" fill="#ebe8e2"/>
+      <circle cx="600" cy="380" r="22" stroke="rgba(235,232,226,0.35)" stroke-width="1.5"/>
+      <!-- idle device blips -->
+      <circle cx="452" cy="272" r="9" fill="#54e0f0" opacity="0.75"/>
+      <circle cx="700" cy="551" r="9" fill="#54e0f0" opacity="0.55"/>
+      <!-- device mid-transfer: blip + progress arc -->
+      <circle cx="791" cy="248" r="11" fill="#54e0f0"/>
+      <circle cx="791" cy="248" r="30" stroke="rgba(84,224,240,0.25)" stroke-width="4"/>
+      <circle cx="791" cy="248" r="30" stroke="#54e0f0" stroke-width="4" stroke-linecap="round"
+              stroke-dasharray="128 188.5" transform="rotate(-90 791 248)"/>
+      <text x="838" y="240" fill="#54e0f0" font-family="SF Mono, Menlo, monospace" font-size="27" font-weight="600">68%</text>
+      <text x="838" y="274" fill="rgba(235,232,226,0.5)" font-family="SF Mono, Menlo, monospace" font-size="23">mum's iPad</text>
+    </svg>
+  </div>
+</div>
+</body>
+</html>

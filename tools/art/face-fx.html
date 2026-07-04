@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: triangulated face mesh, right half dissolving into particles */
+  .glow {
+    position: absolute; left: 50%; top: 52%; width: 560px; height: 560px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(closest-side, rgba(34,197,94,0.09), transparent 70%);
+  }
+  #scene svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="face-fx">
+  <div id="scene">
+    <div class="glow"></div>
+    <svg viewBox="0 0 1200 750">
+      <!-- left + center mesh (intact) -->
+      <g stroke="#22c55e" stroke-width="1.6" opacity="0.55" fill="none">
+        <path d="M 600 190 L 520 215 L 462 300"/>
+        <path d="M 520 215 L 495 320 L 462 300"/>
+        <path d="M 520 215 L 560 315 L 600 190"/>
+        <path d="M 495 320 L 560 315 L 565 358"/>
+        <path d="M 495 320 L 500 355 L 462 300"/>
+        <path d="M 500 355 L 565 358 L 560 315"/>
+        <path d="M 560 315 L 600 340 L 565 358"/>
+        <path d="M 600 190 L 600 340"/>
+        <path d="M 462 300 L 470 410 L 500 355"/>
+        <path d="M 470 410 L 560 440 L 565 358"/>
+        <path d="M 600 340 L 560 440 L 600 462"/>
+        <path d="M 565 358 L 560 440"/>
+        <path d="M 470 410 L 490 490 L 535 510"/>
+        <path d="M 560 440 L 535 510 L 600 462"/>
+        <path d="M 600 462 L 600 498 L 535 510"/>
+        <path d="M 535 510 L 545 575 L 600 540"/>
+        <path d="M 600 498 L 600 540"/>
+        <path d="M 490 490 L 545 575 L 600 600 L 600 540"/>
+      </g>
+      <!-- right mesh (dissolving: displaced, faded, gaps) -->
+      <g stroke="#22c55e" stroke-width="1.6" opacity="0.26" fill="none">
+        <path d="M 600 190 L 688 214 L 752 296"/>
+        <path d="M 688 214 L 640 315 L 600 190"/>
+        <path d="M 688 214 L 708 318"/>
+        <path d="M 708 318 L 640 315 L 635 358"/>
+        <path d="M 708 318 L 712 352"/>
+        <path d="M 635 358 L 600 340 L 640 315"/>
+        <path d="M 712 352 L 635 358"/>
+        <path d="M 752 296 L 748 406" stroke-dasharray="7 9"/>
+        <path d="M 748 406 L 640 440 L 635 358"/>
+        <path d="M 600 340 L 640 440 L 600 462"/>
+        <path d="M 748 406 L 724 486" stroke-dasharray="6 10"/>
+        <path d="M 640 440 L 662 510 L 600 462"/>
+        <path d="M 600 498 L 662 510"/>
+        <path d="M 662 510 L 664 572 L 600 540" stroke-dasharray="8 8"/>
+        <path d="M 724 486 L 662 510"/>
+        <path d="M 664 572 L 600 600" stroke-dasharray="5 11"/>
+      </g>
+
+      <!-- landmark dots: intact side -->
+      <g fill="#86efac">
+        <circle cx="600" cy="190" r="4.5"/><circle cx="520" cy="215" r="4.5"/>
+        <circle cx="462" cy="300" r="4.5"/><circle cx="495" cy="320" r="4"/>
+        <circle cx="560" cy="315" r="4"/><circle cx="500" cy="355" r="4.5"/>
+        <circle cx="565" cy="358" r="4.5"/><circle cx="600" cy="340" r="4"/>
+        <circle cx="470" cy="410" r="4.5"/><circle cx="560" cy="440" r="4"/>
+        <circle cx="600" cy="462" r="4.5"/><circle cx="490" cy="490" r="4.5"/>
+        <circle cx="535" cy="510" r="4.5"/><circle cx="600" cy="498" r="4"/>
+        <circle cx="600" cy="540" r="4"/><circle cx="545" cy="575" r="4.5"/>
+        <circle cx="600" cy="600" r="4.5"/>
+      </g>
+      <!-- landmark dots: dissolving side -->
+      <g fill="#86efac">
+        <circle cx="688" cy="214" r="3.6" opacity="0.75"/><circle cx="752" cy="296" r="3.2" opacity="0.5"/>
+        <circle cx="708" cy="318" r="3.4" opacity="0.6"/><circle cx="640" cy="315" r="4" opacity="0.85"/>
+        <circle cx="712" cy="352" r="3" opacity="0.5"/><circle cx="635" cy="358" r="4" opacity="0.85"/>
+        <circle cx="748" cy="406" r="3" opacity="0.45"/><circle cx="640" cy="440" r="3.8" opacity="0.8"/>
+        <circle cx="724" cy="486" r="3" opacity="0.45"/><circle cx="662" cy="510" r="3.6" opacity="0.7"/>
+        <circle cx="664" cy="572" r="3.2" opacity="0.55"/>
+      </g>
+
+      <!-- particle stream drifting right -->
+      <g fill="#4ade80">
+        <circle cx="782" cy="270" r="3.4" opacity="0.6"/><circle cx="820" cy="238" r="2.6" opacity="0.5"/>
+        <circle cx="866" cy="286" r="2.2" opacity="0.42"/><circle cx="912" cy="252" r="1.8" opacity="0.3"/>
+        <circle cx="796" cy="330" r="3.8" opacity="0.62"/><circle cx="848" cy="352" r="2.8" opacity="0.48"/>
+        <circle cx="902" cy="326" r="2" opacity="0.34"/><circle cx="948" cy="366" r="1.7" opacity="0.24"/>
+        <circle cx="780" cy="412" r="3.4" opacity="0.58"/><circle cx="836" cy="436" r="2.6" opacity="0.44"/>
+        <circle cx="890" cy="410" r="2.2" opacity="0.32"/><circle cx="938" cy="452" r="1.6" opacity="0.22"/>
+        <circle cx="768" cy="500" r="3.2" opacity="0.55"/><circle cx="818" cy="524" r="2.4" opacity="0.4"/>
+        <circle cx="872" cy="498" r="1.9" opacity="0.28"/><circle cx="922" cy="540" r="1.5" opacity="0.2"/>
+        <circle cx="742" cy="568" r="3" opacity="0.5"/><circle cx="790" cy="592" r="2.2" opacity="0.36"/>
+        <circle cx="842" cy="574" r="1.7" opacity="0.24"/>
+        <circle cx="762" cy="214" r="2.8" opacity="0.5"/><circle cx="806" cy="186" r="2" opacity="0.35"/>
+        <circle cx="856" cy="206" r="1.6" opacity="0.24"/>
+      </g>
+      <!-- drifting mesh fragments -->
+      <g stroke="#4ade80" fill="none" stroke-width="1.4">
+        <path d="M 800 296 l 18 -8 l -4 18 z" opacity="0.5"/>
+        <path d="M 858 380 l 15 -6 l -3 15 z" opacity="0.38"/>
+        <path d="M 828 470 l 14 -5 l -3 14 z" opacity="0.34"/>
+        <path d="M 884 230 l 13 -5 l -3 13 z" opacity="0.28"/>
+        <path d="M 902 452 l 11 -4 l -2 11 z" opacity="0.22"/>
+      </g>
+    </svg>
+  </div>
+</div>
+</body>
+</html>

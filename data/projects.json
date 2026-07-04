@@ -389,7 +389,7 @@
     },
     {
       "slug": "cheat-glasses",
-      "title": "cheat-glasses",
+      "title": "Cheat Glasses",
       "tagline": "Camera sees the homework, Claude solves it, the answer arrives in your ear. The name says what it's for.",
       "category": "AI agents & orchestration",
       "repo": "hangryclaude/cheat-glasses",
@@ -439,7 +439,7 @@
     },
     {
       "slug": "laptop-agent",
-      "title": "laptop-agent",
+      "title": "Laptop Agent",
       "tagline": "Queue a task, a headless Claude drives the Mac's GUI itself. Stuck on 2FA? It texts me and waits.",
       "category": "AI agents & orchestration",
       "repo": "hangryclaude/laptop-agent",
@@ -479,7 +479,7 @@
     },
     {
       "slug": "malware-scanner",
-      "title": "malware-scanner",
+      "title": "Malware Scanner",
       "tagline": "Six engines and a jury of free models vote on whether a website is hostile. 0% false positives, by design.",
       "category": "AI agents & orchestration",
       "repo": "hangryclaude/malware-scanner",
@@ -519,7 +519,7 @@
     },
     {
       "slug": "samewave",
-      "title": "samewave",
+      "title": "Samewave",
       "tagline": "Log in with Spotify and it scores your vibe against someone else's out of 100, songs to bridge included.",
       "category": "AI agents & orchestration",
       "repo": "hangryclaude/samewave",
@@ -559,7 +559,7 @@
     },
     {
       "slug": "spend-guard",
-      "title": "spend-guard",
+      "title": "Spend Guard",
       "tagline": "A watchdog with a kill-switch, so a runaway AI bot costs at most $20 before everything shuts off and texts me.",
       "category": "AI agents & orchestration",
       "repo": "hangryclaude/spend-guard",
@@ -609,7 +609,7 @@
     },
     {
       "slug": "dropkit",
-      "title": "dropkit",
+      "title": "DropKit",
       "tagline": "AirDrop as a CLI: fleet fan-out, watch folders, live radar. Refuses to spam strangers on principle.",
       "category": "macOS power tools",
       "repo": "hangryclaude/dropkit",
@@ -629,7 +629,7 @@
     },
     {
       "slug": "file-warden",
-      "title": "file-warden",
+      "title": "File Warden",
       "tagline": "A janitor for Home, Desktop, and Downloads. Idle files get filed by type and month. Never deletes.",
       "category": "macOS power tools",
       "repo": null,

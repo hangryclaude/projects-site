@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: 4 platforms funnel into one cold email, stamped $50 */
+  .tiles { position: absolute; top: 104px; left: 0; right: 0; display: flex; justify-content: center; gap: 78px; }
+  .tile { width: 128px; text-align: center; }
+  .tile .box {
+    width: 128px; height: 128px; border: 2px solid rgba(235, 232, 226, 0.35); border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(235, 232, 226, 0.04);
+  }
+  .tile .name { margin-top: 14px; color: rgba(235, 232, 226, 0.45); font: 400 21px "SF Mono", Menlo, monospace; }
+  .tile svg { stroke: rgba(235, 232, 226, 0.8); fill: none; stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+  svg.funnel { position: absolute; inset: 0; width: 100%; height: 100%; }
+  svg.funnel path { stroke: rgba(255, 92, 168, 0.4); stroke-width: 2; fill: none; }
+  .mail {
+    position: absolute; left: 50%; top: 476px; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 22px;
+    padding: 22px 40px; border: 2px solid rgba(235, 232, 226, 0.55); border-radius: 16px;
+    background: #0f0f11; color: #ebe8e2; font: 500 30px "SF Mono", Menlo, monospace;
+    white-space: nowrap;
+  }
+  .mail svg { stroke: #ebe8e2; fill: none; stroke-width: 4; }
+  .stamp {
+    position: absolute; left: 50%; top: 432px; transform: translateX(196px) rotate(-9deg);
+    padding: 8px 20px; border: 3px solid #ff5ca8; border-radius: 10px;
+    color: #ff5ca8; font: 700 28px "SF Mono", Menlo, monospace; letter-spacing: 0.06em;
+    background: rgba(15, 15, 17, 0.9); box-shadow: 0 0 36px rgba(255, 92, 168, 0.25);
+  }
+</style>
+</head>
+<body>
+<div id="frame" data-label="creator-hunt">
+  <div id="scene">
+    <svg class="funnel" viewBox="0 0 1200 750" preserveAspectRatio="none">
+      <path d="M 291 292 C 291 400, 560 380, 578 470"/>
+      <path d="M 497 292 C 497 390, 585 400, 593 470"/>
+      <path d="M 703 292 C 703 390, 615 400, 607 470"/>
+      <path d="M 909 292 C 909 400, 640 380, 622 470"/>
+    </svg>
+    <div class="tiles">
+      <div class="tile">
+        <div class="box"><svg width="58" height="58" viewBox="0 0 48 48"><circle cx="15" cy="36" r="7"/><path d="M22 36 V10 c0 8 6 12 13 12"/></svg></div>
+        <div class="name">tiktok</div>
+      </div>
+      <div class="tile">
+        <div class="box"><svg width="58" height="58" viewBox="0 0 48 48"><rect x="7" y="7" width="34" height="34" rx="10"/><circle cx="24" cy="24" r="8"/><circle cx="35" cy="13" r="1.5" fill="rgba(235,232,226,0.8)" stroke="none"/></svg></div>
+        <div class="name">instagram</div>
+      </div>
+      <div class="tile">
+        <div class="box"><svg width="58" height="58" viewBox="0 0 48 48"><rect x="5" y="10" width="38" height="28" rx="9"/><path d="M20 18 L30 24 L20 30 Z" fill="rgba(235,232,226,0.8)" stroke="none"/></svg></div>
+        <div class="name">youtube</div>
+      </div>
+      <div class="tile">
+        <div class="box"><svg width="58" height="58" viewBox="0 0 48 48"><path d="M11 11 L37 37 M37 11 L11 37"/></svg></div>
+        <div class="name">x</div>
+      </div>
+    </div>
+    <div class="mail">
+      <svg width="42" height="42" viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="6"/><path d="M6 14 L24 27 L42 14"/></svg>
+      hey — quick offer for you
+    </div>
+    <div class="stamp">$50 OFFER</div>
+  </div>
+</div>
+</body>
+</html>

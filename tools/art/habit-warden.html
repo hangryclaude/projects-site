@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* scene: the menubar knows — three habits green, sleep missed, the fine is due */
+  #scene { font-family: "SF Mono", Menlo, monospace; }
+  .bar {
+    position: absolute; left: 70px; right: 70px; top: 92px; height: 66px;
+    border: 1.5px solid rgba(235, 232, 226, 0.22); border-radius: 14px;
+    background: rgba(235, 232, 226, 0.04);
+    display: flex; align-items: center; justify-content: flex-end;
+    gap: 34px; padding: 0 32px; font: 500 26px "SF Mono", Menlo, monospace;
+    white-space: nowrap;
+  }
+  .item { color: rgba(235, 232, 226, 0.8); }
+  .item i { font-style: normal; color: #4ade80; }
+  .item.miss, .item.miss i { color: #f4574d; }
+  .clock { color: rgba(235, 232, 226, 0.45); }
+  .menus { margin-right: auto; display: flex; gap: 30px; color: rgba(235, 232, 226, 0.28); font-weight: 400; }
+  .panel {
+    position: absolute; right: 172px; top: 190px; width: 520px;
+    border: 1.5px solid rgba(235, 232, 226, 0.22); border-radius: 18px;
+    background: #131316; padding: 14px 0 34px;
+  }
+  .panel::before {
+    content: ""; position: absolute; top: -9px; right: 300px; width: 16px; height: 16px;
+    background: #131316; border-left: 1.5px solid rgba(235,232,226,0.22);
+    border-top: 1.5px solid rgba(235,232,226,0.22); transform: rotate(45deg);
+  }
+  .row {
+    display: flex; justify-content: space-between; padding: 19px 34px;
+    font: 400 29px "SF Mono", Menlo, monospace; color: rgba(235, 232, 226, 0.82);
+  }
+  .row em { font-style: normal; color: #4ade80; }
+  .row.miss, .row.miss em { color: #f4574d; }
+  .streak { color: rgba(235, 232, 226, 0.42); font-size: 24px; }
+  .pay {
+    margin: 16px 34px 0; padding: 20px 0; text-align: center;
+    border: 2.5px solid #f4574d; border-radius: 14px;
+    color: #f4574d; font: 700 42px "SF Mono", Menlo, monospace;
+    background: rgba(244, 87, 77, 0.09); letter-spacing: 0.06em;
+  }
+  .fine { margin: 18px 34px 0; text-align: center; color: rgba(235, 232, 226, 0.42);
+    font: 400 23px "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div id="frame" data-label="habit-warden">
+  <div id="scene">
+    <div class="bar">
+      <span class="menus"><span>File</span><span>Edit</span><span>View</span></span>
+      <span class="item">gym <i>✓</i></span>
+      <span class="item">read <i>✓</i></span>
+      <span class="item">ship <i>✓</i></span>
+      <span class="item miss">sleep <i>✗</i></span>
+      <span class="clock">11:58 PM</span>
+    </div>
+    <div class="panel">
+      <div class="row"><span>gym</span><span><span class="streak">14d&nbsp;&nbsp;</span><em>✓</em></span></div>
+      <div class="row"><span>read</span><span><span class="streak">9d&nbsp;&nbsp;</span><em>✓</em></span></div>
+      <div class="row"><span>ship</span><span><span class="streak">31d&nbsp;&nbsp;</span><em>✓</em></span></div>
+      <div class="row miss"><span>sleep by 11:30</span><em>missed</em></div>
+      <div class="pay">PAY $5</div>
+      <div class="fine">auto-charged at midnight</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
