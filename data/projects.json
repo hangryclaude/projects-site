@@ -660,7 +660,7 @@
     {
       "slug": "screentime-remover",
       "title": "Lockless",
-      "tagline": "Locked yourself out of Screen Time? Brute-force your own forgotten PIN out of an old iTunes backup.",
+      "tagline": "Recover your own forgotten Screen Time passcode — from a backup, a jailbroken device's keychain (iOS 12–16), or the universal erase path for any iPhone.",
       "category": "macOS power tools",
       "repo": "hangryclaude/screentime-remover",
       "live": null,

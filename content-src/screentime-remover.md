@@ -1,30 +1,38 @@
 # Lockless 🔓
 
-Recover a forgotten **Screen Time / Restrictions PIN** from an iTunes backup.
+Recover a forgotten **Screen Time / Restrictions PIN** — from an iTunes backup, or
+straight off a jailbroken device's keychain — and, when a modern iPhone leaves no PIN to
+read, lay out every real way to clear Screen Time.
 
-Works on **iOS 7 → 11.4**, where the Restrictions/Screen Time passcode was stored as
-a PBKDF2-SHA1 hash inside the backup. On iOS 12+ the passcode moved into the
-Secure-Enclave keychain and isn't recoverable this way — there, use
-**Settings → Screen Time → "Forgot Passcode?"** with your Apple ID.
+| iOS | Method | Wipe? |
+|-----|--------|-------|
+| 7 – 11.4 | read the PBKDF2-SHA1 hash from an **iTunes backup**, brute-force it | no |
+| 12 – 16 | **jailbroken ≤ iPhone X** → dump the live keychain over SSH → read the PIN | no |
+| 17+ / A12+ | PIN can't be read — Apple-ID reset (no wipe) or erase+restore | — |
 
-This is a recovery tool for *your own* backup and *your own* PIN.
+This is a recovery tool for *your own* device. It does **not** bypass Activation Lock:
+after an erase the device still needs its owner's Apple ID, so it only helps the real owner.
 
 ## Use
 
 ```bash
-python3 lockless.py            # interactive: list backups, pick one
-python3 lockless.py <backup>   # target a specific backup dir
-python3 lockless.py --six      # try 6-digit PINs instead of 4
+python3 lockless.py                       # iOS 7–11.4: recover the PIN from a backup
+python3 lockless.py --keychain            # iOS 12–16: read it off a jailbroken device
+python3 lockless.py --remove              # any iPhone: show every real removal option
+python3 lockless.py --erase --yes-wipe    # universal: wipe + restore in recovery mode
+python3 lockless.py --doctor              # check tools + device, print a readiness report
 ```
-
-Tests: `python3 -m unittest test_lockless.py`
 
 ## How it works
 
-Reads the Restrictions hash + salt from the backup, then brute-forces the (small)
-PIN space against the stored PBKDF2-SHA1 hash. `probe.html` is a companion
-rate-limit probe.
+The passcode is `PBKDF2-HMAC-SHA1(pin, salt, 1000)`. Pre-iOS-12 it lives in a plist inside
+every backup; iOS 12+ moved it into the Secure-Enclave keychain, so Lockless reads the
+**live** keychain over an `iproxy` USB tunnel on a jailbroken device and pulls the
+`ParentalControls` item — handling both the plaintext and the binary key+salt forms. It
+detects the exact model (checkm8 eligibility) so it tells you what's possible for *your*
+device, not a generic guess.
 
 ## Stack
 
-Python 3 (stdlib only — `hashlib`, `plistlib`, `sqlite3`). No dependencies.
+Python 3, stdlib only (`hashlib`, `plistlib`, `sqlite3`, `subprocess`); shells out to
+`libimobiledevice` + `ssh`/`scp` for the device paths. Bundles `keychain_dumper` (BSD-3).
